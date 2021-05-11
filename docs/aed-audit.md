@@ -2,6 +2,7 @@
 layout: dag
 title: AeD/Audit DAG
 intro: Discover and Respond
+
 ---
 
 *Last updated: 05/11/2021*
@@ -434,3 +435,4 @@ Before you get started with Advanced Audit, you should confirm your Microsoft 36
 * Microsoft 365 G5 subscription + the Microsoft 365 G5 Discovery & Audit add-on
 * Office 365 Enterprise E5 subscription 
 * Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)
+* 
