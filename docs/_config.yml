@@ -1,0 +1,10 @@
+theme: minima
+title: M365 Compliance CxE
+description: M365 Compliance Customer Experience Engineering (CxE) Resource Docs
+minima:
+header_pages:
+ - index.md
+ - dag.md
+ - webinars.md
+ - playbooks.md
+ - previews.md
