@@ -2,7 +2,6 @@
 layout: dag
 title: AeD/Audit DAG
 intro: Discover and Respond
-
 ---
 
 *Last updated: 05/11/2021*
