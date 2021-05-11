@@ -13,15 +13,17 @@ The Compliance CxE team encourages collaboration of our content.  This article d
 
 ### Submitting an Issue
 
-Notice something incorrect? Have a comment? You can submit an issue or make a comment by clicking the 'Submit Issue'  link at the top right of the page.
+Notice something incorrect? Have a comment? Submit an issue or make a comment.
 
-![](images\submitissue.png)
+1. Select the 'Submit Issue'  link at the top right of the page.
 
-This will take you to GitHub, where you will fill out a new 'Issue', then click *Submit new issue*
+    ![](images\submitissue.png)
 
-> **NOTE:** You must be logged in to GitHub to submit an issue.
+1. This will take you to GitHub, where you will fill out a new 'Issue', then click *Submit new issue*
 
-![](images\submitissue-github.png)
+    > **NOTE:** You must be logged in to GitHub to submit an issue.
+
+    ![](images\submitissue-github.png)
 
 ### Quick Editing a Page
 
