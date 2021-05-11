@@ -4,7 +4,7 @@ title: AeD/Audit DAG
 intro: Discover and Respond
 ---
 
-*Last updated: 05/10/2021*
+*Last updated: 05/11/2021*
 
 How can [Advanced eDiscovery](#aed-intro) and [Advanced Audit](#audit-intro) support your organization in responding to legal, regulatory, and compliance obligations? It starts with discovering the data that is relevant without the need to export this data out of Microsoft 365. The ability to natively search for data in Teams, Yammer, SharePoint Online, OneDrive for Business, Exchange Online leveraging conversations reconstruction, along with support other file types using 3rd party connectors, enhances your collection prowess.
 
