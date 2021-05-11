@@ -31,7 +31,7 @@ How can [Advanced eDiscovery](#aed-intro) and [Advanced Audit](#audit-intro) sup
 * [Analysis](#analysis)
     - [Analyze](#analyze)
     - [Themes](#themes)
-    - [Attorney-Client Privledge]()
+    - [Attorney-Client Privledge](#attorney-client-privledge)
     - [Relevance](#relavance)
 * [Review](#review)
     - [Review set](#review-set)
@@ -95,31 +95,31 @@ In the suggested workflows below you have the ability to hit the ground running 
 
 ### Basic Workflow
 
-* [Create a case]() in Advanced eDiscovery.
-* Identify your custodial and non-custodial source locations and [add to case]() for advanced indexing. 
-* [Create a search]() on identified source locations
+* [Create a case](#case-management) in Advanced eDiscovery.
+* Identify your custodial and non-custodial source locations and [add to case](#source-location-management) for advanced indexing. 
+* [Create a search](#collection) on identified source locations
 * Add your results to a Review Set 
-* Further [reduce content]() in your review set using the Analytics to find near duplicates and thread messages
-* [Export]() out of AeD 
+* Further [reduce content](#review) in your review set using the Analytics to find near duplicates and thread messages
+* [Export](#production) out of AeD 
 
 ### Advanced Workflow
 
-* [Create a case]() in Advanced eDiscovery.
-* Identify your custodial and non-custodial source locations and [add to case]() for advanced indexing. 
-* [Remediate]() any processing errors
-* [Create and send legal hold notifications]() to custodians
-* [Create and run a search]() on identified source locations
-* Add your results to a review set. Select the [options]() to include modern attachments as well as contextual conversation review. 
-* Further reduce using [Analyze]() to group together near duplicates and email threads, and identify content that is [potentially privileged](). 
-* [Review]() the content within your review set for responsiveness using tags. 
+* [Create a case](#case-management) in Advanced eDiscovery.
+* Identify your custodial and non-custodial source locations and [add to case](#source-location-management) for advanced indexing. 
+* [Remediate](#processing) any processing errors
+* [Create and send legal hold notifications](#hold-notifications) to custodians
+* [Create and run a search](#collection) on identified source locations
+* Add your results to a review set. Select the [options](#collection) to include modern attachments as well as contextual conversation review. 
+* Further reduce using [Analyze](#analyze) to group together near duplicates and email threads, and identify content that is [potentially privileged](#attorney-client-privledge). 
+* [Review](#review-set) the content within your review set for responsiveness using tags. 
 * Annotate and Redact documents
-* [Export]() out only case relevant content 
+* [Export](#production) out only case relevant content 
 
 ### Next Steps Workflow
 
-* Set up [attorney-client privilege]()	
-* [Custodian Audit Activity]()
-* [Themes]()
+* Set up [attorney-client privilege](#attorney-client-privledge)	
+* [Custodian Audit Activity](#custodian-audit-activity)
+* [Themes](#themes)
 
 ## Case Management
 
@@ -151,7 +151,7 @@ Once your legal team has identified a custodian, you can use the Data Sources ta
 
 * Sharepoint sites a custodian may have accessed or contributed to 
 
-Custodians and source locations can be added on-by-one in the user interface using the picker or they can be added in bulk using the Import Custodian feature. If your legal team has given you a list of custodians, consider using the [custodian template](https://scc.azureedge.net/ediscovery/static/resources/ImportCustodian.csv) to import your custodial locations. For tips on how to populate the .csv, please follow our guidance found [here](). 
+Custodians and source locations can be added on-by-one in the user interface using the picker or they can be added in bulk using the Import Custodian feature. If your legal team has given you a list of custodians, consider using the [custodian template](https://scc.azureedge.net/ediscovery/static/resources/ImportCustodian.csv) to import your custodial locations. For tips on how to populate the .csv, please follow our guidance found [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/bulk-add-custodians?view=o365-worldwide#custodian-csv-file). 
 
 The Data Sources tab within an Advanced eDiscovery case contains a list of all custodians that have been added to the case. After you add custodians to a case, details about each custodian are automatically collected from Azure Active Directory and are viewable in Advanced eDiscovery.
 
