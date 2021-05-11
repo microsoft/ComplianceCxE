@@ -283,7 +283,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 * The analytics similarity threshold is set to 65% by default. When creating your case, discuss the expected similarity threshold with your legal team to ensure the value is correct. This setting cannot be changed once Analytics are run on the case data.
 
-* When applying a hold to a custodian, an in-place hold is placed on their mailbox. This differs from a Litigation Hold in that it can be query based. There is also no limit to the number of in-place holds that can be applied to a mailbox or site. The holds within Advanced eDiscovery should be used for legal preservation and **not for overall governance in your organizatio**n. If you require additional governance policies, please use the Microsoft 365 Retention policies. 
+* When applying a hold to a custodian, an in-place hold is placed on their mailbox. This differs from a Litigation Hold in that it can be query based. There is also no limit to the number of in-place holds that can be applied to a mailbox or site. The holds within Advanced eDiscovery should be used for legal preservation and **not for overall governance in your organization**. If you require additional governance policies, please use the Microsoft 365 Retention policies. 
 
 * When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you analyze the data in the review set. The model uses machine leaning to determine the likelihood that the content is legal in nature. It will also compare the participants of the document against the pre-submitted list of attorneys for your organization. 
 
