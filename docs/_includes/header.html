@@ -4,7 +4,7 @@
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-      <img class ='site-title' src="/images/cxe.png">
+      <img class ='site-title' src="{{ "/images/cxe.png" | relative_url }}">
   
       {%- if titles_size > 0 -%}
         <nav class="site-nav">
