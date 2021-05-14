@@ -27,7 +27,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Webinar Topic|Date & Time|Registration Link|
 |---|---|---|---|
 |**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*EMEA/NA*)|May 19, 2021 16:00 GMT / 08:00 PST|[Register](https://aka.ms/Join-MIGatIgnite-EMEA/NA)|
-|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*APAC*)|May 19, 2021 16:00 AEDT|[Register](https://aka.ms/Join-MIGatIgnite-APAC)]|
+|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*APAC*)|May 19, 2021 16:00 AEDT|[Register](https://aka.ms/Join-MIGatIgnite-APAC)|
 
 [Past webinars...](webinars)
 
