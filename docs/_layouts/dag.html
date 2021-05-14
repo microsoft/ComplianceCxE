@@ -1,6 +1,6 @@
 ---
 layout: default
----
+---"{{ "/images/cxe.png" | relative_url }}"
 
 <div class="home">
   {%- if page.intro -%}
@@ -15,7 +15,7 @@ layout: default
   {{ content }}
 
   <div style="display: inline-block; text-align: right; width: 100%">
-    <a href="/dag#dags-by-feature"><- Return to DAG Topics</a>
+    <a href="{{ "/dag#dags-by-feature" | relative_url }}"><- Return to DAG Topics</a>
     </div>
 
   {% if site.paginate %}
