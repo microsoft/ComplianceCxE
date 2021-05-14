@@ -13,6 +13,7 @@ We built this page to help you easily find all relevant content and resources re
 * [CxE Deployment Acceleration Guides (DAGs)](dag)
 * [Official M365 Compliance Documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
 * [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+* [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
 
 ## Social Media and Forums
 
@@ -23,13 +24,18 @@ We built this page to help you easily find all relevant content and resources re
 
 The Compliance CxE team regularly hosts webinars to present what's changing and new with our products.  Every webinar is **always** recorded and published [here](webinars) along with the PowerPoint Decks and Q&A.
 
-|Webinar Topic|Date & Time|Calendar|Attendee Link|
+|Webinar Topic|Date & Time|Registration Link|
 |---|---|---|---|
-|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*EMEA/NA*)|May 19, 2021 16:00 GMT / 08:00 PST|[Download ICS](https://aka.ms/GetInvite-MIGatIgnite-EMEA/NA)|[Click to Join](https://aka.ms/Join-MIGatIgnite-EMEA/NA)|
-|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*APAC*)|May 19, 2021 16:00 AEDT|[Download ICS](https://aka.ms/GetInvite-MIGatIgnite-APAC)|[Click to Join](https://aka.ms/Join-MIGatIgnite-APAC)|
+|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*EMEA/NA*)|May 19, 2021 16:00 GMT / 08:00 PST|[Register](https://aka.ms/Join-MIGatIgnite-EMEA/NA)|
+|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt. (*APAC*)|May 19, 2021 16:00 AEDT|[Register](https://aka.ms/Join-MIGatIgnite-APAC)]|
 
 [Past webinars...](webinars)
 
-## Resources
+## Learn more about
 
-* [Create a Lab Tenant](index)
+* [eDiscovery in Microsoft 365](index)
+* [Microsoft Information Governance in Microsoft 365](index)
+* [Microsoft Information Protection in Microsoft 365](index)
+* [Endpoint Data Loss Prevention in Microsoft 365](index)
+* [Insider Risk Management in Microsoft 365](index)
+* [Compliance Manager in Microsoft 365](index)
