@@ -6,7 +6,7 @@ intro: Deployment Acceleration Guides
 
 The deployment acceleration guides (DAGs) are written and updated by the global Compliance CxE team and are a resource designed to help with the following:
 
-* [**One Compliance Story**](dag-resources#one-compliance-story) covering how each solution complements each other
+* [**One Compliance Story**](dag\dag-resources#one-compliance-story) covering how each solution complements each other
 * **Best Practices** based on the CxE team's experience with customer roadblocks
 * **Considerations** to take and research before starting your deployment
 * **Help Resources** links to additional readings and topics to gain a deeper understanding of the solution
@@ -30,10 +30,10 @@ While these tips are meant to help guide you on your deployment journey, please 
 
 ## DAGs By Feature
 
-* [Compliance Manager](cm)
-* [Microsoft Compliance Configuration Analyzer (MCCA)](mcca)
-* [Advanced eDiscovery and Advanced Audit](aed-audit)
-* [Insider Risk Management and Commmunication Compliance](ir-cc)
-* [Microsoft Information Governance and Records Management](mig-rm)
-* [Microsoft Information Protection and Data Loss Prevention](mip-dlp)
+* [Compliance Manager](dag\cm)
+* [Microsoft Compliance Configuration Analyzer (MCCA)](dag\mcca)
+* [Advanced eDiscovery and Advanced Audit](dag\aed-audit)
+* [Insider Risk Management and Commmunication Compliance](dag\ir-cc)
+* [Microsoft Information Governance and Records Management](dag\mig-rm)
+* [Microsoft Information Protection and Data Loss Prevention](dag\mip-dlp)
 

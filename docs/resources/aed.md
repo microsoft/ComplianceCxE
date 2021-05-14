@@ -10,10 +10,10 @@ We built this page to help you easily find all relevant content and resources re
 * [Technical Sessions](http://aka.ms/videohub/DiscoverandRespond)
 
 ## Playbooks and Guides
-* [Deployment Acceleration Guide](aed-audit)
+* [Deployment Acceleration Guide](../dag/aed-audit)
 
 ## Webinars
-* [Whats new with Advanced eDiscovery](webinars#discovery--response)
+* [Whats new with Advanced eDiscovery](../webinars#discovery--response)
 
 ## Blogs
 * [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)

@@ -1,5 +1,5 @@
 ---
-layout: dag
+layout: home
 title: CM DAG
 intro: Compliance Manager DAG
 ---
@@ -8,7 +8,7 @@ intro: Compliance Manager DAG
 
 Compliance Manger is an end to end information compliance management solution in the [Microsoft 365 compliance center](https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide) that helps you understand your organization's compliance posture. Compliance Manager uses the inventory of data protection risk allowing you to manage the complexities of controls, adhering to regulations and certifications long with reporting needed for auditors.
 
-## Topics in this DAG
+## Table of Contents
 
 * [Overview](#overview)
 * [Best Practices](#best-practices)
@@ -22,11 +22,8 @@ Using Compliance Manager allows your organization to simplify compliance and sta
 With Compliance Manager you can:
 
 * You can get and run Pre-built assessments for common industry and regional standards and regulations, or custom assessments to meet your unique compliance needs.
-
 * Compliance Manager provides you built in workflow capabilities to help you efficiently complete your risk assessments through a single tool.
-
 * Issues flagged provide you detailed step-by-step guidance on suggested improvement actions to help you comply with the standards and regulations that are most relevant for your organization. 
-
 * Compliance Manager Provides you an overall risk-based compliance score to help you understand your compliance posture by measuring your progress in completing improvement actions.
 
 ## Best Practices
@@ -54,5 +51,4 @@ With Compliance Manager you can:
 * When you open Compliance Manager for the first time you will see a baseline score for your organization. For further details on your score, review how your compliance score is calculated.
 
 * Review the FAQ for Compliance Manager answer a question you might have about using Compliance Score in the past and how it is part of Compliance Manager solution.
-
 
