@@ -13,7 +13,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Deployment Acceleration Guide](aed-audit)
 
 ## Webinars
-* [Whats new with Advanced eDiscovery](webinars#advanced-ediscovery)
+* [Whats new with Advanced eDiscovery](webinars#discovery--response)
 
 ## Blogs
 * [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)

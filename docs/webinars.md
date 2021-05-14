@@ -28,12 +28,13 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Webinar Topic|Date|Recording|Resources|
 |---|---|---|---|
+|**MIG**: New Announcements and Updates|Oct 26, 2020|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
 
 ## Microsoft Information Protection
 
 |Webinar Topic|Date|Recording|Resources|
 |---|---|---|---|
-|**MIP**: What's New from Ignite regarding Microsoft Information Protection|May 4, 2021|*Coming Soon*|*Coming Soon*|
+|**MIP**: What's New from Ignite regarding Microsoft Information Protection|May 4, 2021|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
 
 ## Data Loss Prevention
 
