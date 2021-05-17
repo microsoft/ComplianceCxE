@@ -31,7 +31,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 [Past webinars...](webinars)
 
-## Learn more about
+## Learn more about...
 
 * [eDiscovery in Microsoft 365](resources\aed)
 * [Microsoft Information Governance in Microsoft 365](resources\mig)

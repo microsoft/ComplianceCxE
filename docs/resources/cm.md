@@ -1,7 +1,7 @@
 ---
 layout: home
 title: CM Resources
-intro: Compliance Manager in Microsoft 365 Resource Page
+intro: Compliance Manager Resources
 ---
 
 We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
