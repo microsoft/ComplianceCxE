@@ -105,6 +105,13 @@ blockquote {
 blockquote > :last-child {
     margin-bottom: 0;
 }
+blockquote.note {
+    margin: 10px 0;
+    background-color: #bbcef3;
+    padding: 10px;
+    display: block;
+    padding-left: 32px;
+}
 pre,
 code {
     font-size: 15px;
