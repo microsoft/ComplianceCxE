@@ -4,7 +4,7 @@ title: OSS
 intro: M365 Compliance CxE One-Stop-Shop
 ---
 
-Customer Experience Engineering (CxE) is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
+**Customer Experience Engineering (CxE)** is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
 
 We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
 
