@@ -102,15 +102,15 @@ blockquote {
     letter-spacing: -1px;
     font-style: italic;
 }
-blockquote > :last-child {
-    margin-bottom: 0;
-}
-blockquote.note {
+.note {
     margin: 10px 0;
     background-color: #bbcef3;
     padding: 10px;
     display: block;
     padding-left: 32px;
+}
+blockquote > :last-child {
+    margin-bottom: 0;
 }
 pre,
 code {
