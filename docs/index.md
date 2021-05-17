@@ -34,8 +34,8 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 ## Learn more about
 
 * [eDiscovery in Microsoft 365](resources\aed)
-* [Microsoft Information Governance in Microsoft 365](index)
-* [Microsoft Information Protection in Microsoft 365](index)
-* [Endpoint Data Loss Prevention in Microsoft 365](index)
-* [Insider Risk Management in Microsoft 365](index)
-* [Compliance Manager in Microsoft 365](index)
+* [Microsoft Information Governance in Microsoft 365](resources\mig)
+* [Microsoft Information Protection in Microsoft 365](resources\mip)
+* [Endpoint Data Loss Prevention in Microsoft 365](resources\dlp)
+* [Insider Risk Management in Microsoft 365](resources\ir)
+* [Compliance Manager in Microsoft 365](resources\cm)
