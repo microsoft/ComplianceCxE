@@ -97,17 +97,11 @@ a:hover {
 blockquote {
     color: #828282;
     border-left: 4px solid #e8e8e8;
+    background-color: #8ea8ca;
     padding-left: 15px;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
-}
-.note {
-    margin: 10px 0;
-    background-color: #bbcef3;
-    padding: 10px;
-    display: block;
-    padding-left: 32px;
 }
 blockquote > :last-child {
     margin-bottom: 0;
