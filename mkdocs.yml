@@ -33,6 +33,7 @@ nav:
     #  - Submit Feedback: https://github.com/microsoft/ComplianceCxE/
 theme:
   name: material
+  language: en
   logo: img\scm-shield.png
   favicon: img\scm-shield.png
   features:
@@ -63,3 +64,5 @@ extra_javascript:
 markdown_extensions:
   - toc:
       permalink: ⚓︎
+plugins:
+  - search

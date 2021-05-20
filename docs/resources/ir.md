@@ -17,12 +17,14 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Insider Risk Management Investigation and Escalation](https://www.youtube.com/watch?v=UONUSmkRC8s&list=PL3ZTgFEc7LytlC9XgsaYd2TzlvJH6xwdA&index=6)
 
-## Playbooks and Guides
+## Playbooks, Guides and Blogs
 * [Deployment Acceleration Guide](../../dag/ir-cc)
 
 * [Insider Risk interactive guide](https://insider-risk-management.azureedge.net/)
 
 * [Implement policies for Insider Risk Management and Communication Compliance](https://www.microsoft.com/en-us/microsoft-365/business/compliance-insider-risk-management)
+
+* [Insider Risk Blog](http://aka.ms/InsiderRiskBlog)
 
 ## Webinars
 * [Insider Risk Management and Communication Compliance (IRCC) Webinars](../webinars#ircc)

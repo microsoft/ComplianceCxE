@@ -25,8 +25,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Oct 01, 2020|**CM**: Compliance Manager Overview|[Video](https://aka.ms/MIPC/Video-Webinar-ComplianceManager)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceManagerWebinar)|
 |Apr. 15, 2020|**CM**: Compliance score how-to|[Video](https://aka.ms/MIPC/Video-ComplianceScoreWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceScoreWebinar)|
 
-## Insider Risk Management/Communication Compliance {#ircc}
-
+## Insider Risk Management/Communication Compliance
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
 |March 24, 2021|**IIRC**: What's New from Ignite regarding Insider Risk Management|[YouTube](https://www.youtube.com/watch?v=4Q7q1ELcI48&feature=youtu.be) |[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-insider-risk-management/ba-p/2259992)|
