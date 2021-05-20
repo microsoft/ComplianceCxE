@@ -19,12 +19,12 @@ nav:
       - Microsoft Information Governance and Records Management: dag/mig-rm.md
       - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
       - Resources: dag/dag-resources.md
-    #- Playbooks:
-    #  - Exchange ETR to DLP Playbook: etr2dlp.md
-    #  - Teams DLP Playbook: teamsdlp.md
-    #- End User Training:
-    #  - Sensitivity Labels: enduser\sensitivity.md
-    #  - Retention Labels: enduser\retention.md
+    - Playbooks:
+      - Exchange ETR to DLP Playbook: playbooks/etr2dlp.md
+      - Teams DLP Playbook: playbooks/teamsdlp.md
+    - End User Training:
+      - Sensitivity Labels: enduser\sensitivity.md
+      - Retention Labels: enduser\retention.md
     - Webinars: webinars.md
     - Previews: previews.md
     #- Contribute:
