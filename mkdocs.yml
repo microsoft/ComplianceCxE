@@ -1,0 +1,58 @@
+site_name: M365 Compliance Customer Experience Engineering (CxE)
+nav:
+    - OSS: index.md
+    - Resources:
+      - Advanced eDiscovery: resources/aed.md
+      - Microsoft Information Governance (MIG): resources/mig.md
+      - Microsoft Information Protection (MIP): resources/mip.md
+      - Data Loss Prevention (DLP): resources/dlp.md
+      - Insider Risk Management (IR): resources/ir.md
+      - Compliance Manager (CM): resources/cm.md
+    #- Notes from the Field:
+    #  - Randall Blog post 1: blog1.md
+    - Deployment Acceleration Guides (DAGs):
+      - Intro: dag.md
+      - Compliance Manager: dag/cm.md
+      - Microsoft Compliance Configuration Analyzer (MCCA): dag/mcca.md
+      - Adanced eDiscovery and Advanced Audit: dag/aed-audit.md
+      - Insider Risk Management and Communication Compliance: dag/ir-cc.md
+      - Microsoft Information Governance and Records Management: dag/mig-rm.md
+      - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
+      - Resources: dag/dag-resources.md
+    #- Playbooks:
+    #  - Exchange ETR to DLP Playbook: etr2dlp.md
+    #  - Teams DLP Playbook: teamsdlp.md
+    #- End User Training:
+    #  - Sensitivity Labels: enduser\sensitivity.md
+    #  - Retention Labels: enduser\retention.md
+    - Webinars: webinars.md
+    - Previews: previews.md
+    #- Contribute:
+    #  - How to Contribute: how-to-contribute.md
+    #  - Edit this page: https://github.com/microsoft/ComplianceCxE/
+    #  - Submit Feedback: https://github.com/microsoft/ComplianceCxE/
+theme:
+  name: material
+  logo: img\scm-shield.png
+  favicon: img\scm-shield.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/microsoft/ComplianceCxE/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/MIPNews
+    - icon: fontawesome/brands/yammer
+      link: https://aka.ms/MIPC/AskMIPTeam
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - scripts/extlinks.js
