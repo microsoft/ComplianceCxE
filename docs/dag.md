@@ -31,10 +31,10 @@ While these tips are meant to help guide you on your deployment journey, please 
 
 ## DAGs By Feature
 
-* [Compliance Manager](dag\cm)
-* [Microsoft Compliance Configuration Analyzer (MCCA)](dag\mcca)
-* [Advanced eDiscovery and Advanced Audit](dag\aed-audit)
-* [Insider Risk Management and Commmunication Compliance](dag\ir-cc)
-* [Microsoft Information Governance and Records Management](dag\mig-rm)
-* [Microsoft Information Protection and Data Loss Prevention](dag\mip-dlp)
+* [Compliance Manager](../dag/cm)
+* [Microsoft Compliance Configuration Analyzer (MCCA)](../dag/mcca)
+* [Advanced eDiscovery and Advanced Audit](../dag/aed-audit)
+* [Insider Risk Management and Commmunication Compliance](../dag/ir-cc)
+* [Microsoft Information Governance and Records Management](../dag/mig-rm)
+* [Microsoft Information Protection and Data Loss Prevention](../dag/mip-dlp)
 
