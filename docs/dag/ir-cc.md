@@ -32,7 +32,7 @@ See Microsoft 365 productivity illustrations for guidance on implementation of a
 
 Following the above approach will lead to successful adoption and deployment of each solution while protecting your intellectual property, stopping fraud or insider trading, plugging the sensitive data leaks, along with making the workplace safe.
 
-# Communication Compliance
+## Communication Compliance
 
 Communication compliance is part of the new insider risk solution in Microsoft 365 that helps minimize communication risks by helping you detect, capture, and take remediation actions for inappropriate messages in your organization. Pre-defined and custom policies allow you to scan internal and external communications for policy matches so they can be examined by designated reviewers.
 
@@ -46,11 +46,11 @@ Communication compliance policies in Microsoft 365 help you overcome many modern
 
 * Regulatory enforcement & the risk of fines
 
-## Best Practices
+### Best Practices
 
 Let’s establish some of the preparation that goes into start of execution of using communication compliance to help plan your deployment.
 
-### Policy Definition
+#### Policy Definition
 
 While the usage of communication compliance is distinct to each organization and their business and regulatory requirements and the policies you define will need to be designed accordingly, the following criteria can be used to guide the initial creation of policies at most organizations.
 
@@ -100,7 +100,7 @@ While the usage of communication compliance is distinct to each organization and
 
 * After creating a new policy, expect alerts to start arriving in 24 hours, though there may be additional delay in some cases. 
 
-### Investigating Alerts
+#### Investigating Alerts
 
 The first step to investigate issues detected by your policies is to review generated alerts in the Microsoft 365 compliance center. There are several areas in the compliance center to help you to quickly investigate alerts, depending on how you prefer to view alert grouping:
 
@@ -120,13 +120,13 @@ The first step to investigate issues detected by your policies is to review gene
 
 * Policies tab: Each policy listed includes the count of alerts that need review. Selecting a policy displays all the pending alerts for matches to the policy, select a specific alert to launch the policy details page and to start remediation actions.
 
-## Considerations
+### Considerations
 
 * To make communication compliance available as a menu option in Microsoft 365 compliance center, you must be assigned the Supervisory Review Administrator role. You must create a new role group for reviewers with the Supervisory Review Administrator, Case Management, Compliance Administrator, and Review roles to investigate and remediate messages with policy matches.
 
 * For communication compliance to be able to monitor user activity, you have to [enable the Audit log in Office 365](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-configure?view=o365-worldwide).
 
-## Helpful Resources
+### Helpful Resources
 
 * For step-by-step instructions to begin setup of communication compliance, please follow guidance: [Get started with communication compliance](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-configure?view=o365-worldwide)
 
@@ -136,17 +136,17 @@ The first step to investigate issues detected by your policies is to review gene
     
     - [Manage a broad range of communication risks efficiently](https://techcommunity.microsoft.com/t5/microsoft-security-and/manage-a-broad-range-of-communication-risks-efficiently/ba-p/1675601)
 
-# Insider Risk Management
+## Insider Risk Management
 
 Internal risks are often what keeps business leaders up at night – regardless of whether negligent or malicious, identifying and being able to take action on internal risks are critical. The ability to quickly identify and manage risks from insiders (employees or contractors with corporate access) and minimize the negative impact on corporate compliance, competitive business position and brand reputation is a priority for organizations worldwide.
 
 Insider risk management is a solution in Microsoft 365 that helps minimize internal risks by enabling you to detect, investigate, and take action on risky activities in your organization using signals from user activity, human resources (HR) systems and other sources that can provide rich context to enable accurate identification of potential threats. Custom policies allow you to detect and act on malicious and inadvertent risk activities in your organization, including escalating cases to Microsoft Advanced eDiscovery if needed. Risk analysts in your organization can quickly take appropriate actions to make sure users are compliant with your organization's compliance standards.
 
-## Best Practices
+### Best Practices
 
 Let’s establish some of the preparation that goes into start of execution of using insider risk to help plan your deployment.
 
-### Prior to Deployment Plan
+#### Prior to Deployment Plan
 
 * Identify the appropriate stakeholders and personas in your organization to collaborate for remediation actions on insider risks. Some recommended personas to include in the end-to-end investigation workflow are compliance/privacy, security, HR, and legal. 
 
@@ -154,7 +154,7 @@ Let’s establish some of the preparation that goes into start of execution of u
 
 * Insider risk management uses audit logs for user insights and activities, it is a prerequisite to enable the Audit Log in Office 365.
 
-### Deployment Test Plan
+#### Deployment Test Plan
 
 * Before enabling the solution broadly in your production environment, you may consider testing the policies with a small set of production users or in a test environment while waiting for the necessary privacy and legal reviews in your organization. Bear in mind that evaluating in a test environment will require that you generate simulated user actions and other signals in order to create alerts that can be triaged and processed, so testing with a small group of users in a production environment is usually preferred.
 
@@ -166,7 +166,7 @@ Let’s establish some of the preparation that goes into start of execution of u
 
 * The Data Leak policy will leverage a DLP policy configured for High severity alerts to alert you of any user activity related to a data leak of sensitive information.
 
-### Production Deployment
+#### Production Deployment
 
 * Use the anonymization feature in settings to pseudonymize display names for risky users to maintain privacy and prevent bias when reviewing alerts and taking appropriate actions within the tool. 
 
@@ -178,13 +178,13 @@ Let’s establish some of the preparation that goes into start of execution of u
 
 While if you implement all the recommendations above you are set for a successful deployment of IRM, the process to implement is equally important. We highly recommend a “Crawl-Walk-Run” approach, in which the technology is introduced in stages, focusing on things that cause minimal disruption. You can also introduce these changes in waves across your organization, focusing on limited sets of end users first and expanding to broader audiences. This will allow you to deploy quickly without causing disruption, and help you get a baseline of user behavior before introducing tight restrictions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. 
 
-## Considerations
+### Considerations
 
 * Insider risk management focuses on the user instead of the individual actions and will raise alerts for users that its analysis indicates represent a risk to the organization. The risks are analyzed based on well-known patterns of behavior that are frequently observed in many organizations, such as employees taking sensitive data with them when they leave the company. This enables the solution to detect most instances of the risks being monitored while producing little or no noise.
 
 * You may need to consider the regional privacy laws to monitor insider risk activities within your organization. We recommend privacy reviews with privacy and/or legal stakeholders to ensure you are complying with company policies and privacy standards.
 
-## Helpful Resources
+### Helpful Resources
 
 * To get started with insider risk management, please follow the step-by-step instructions [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/insider-risk-management-configure?view=o365-worldwide).
 
@@ -196,15 +196,15 @@ While if you implement all the recommendations above you are set for a successfu
     
     - [Protecting against insider risks in an uncertain environment](https://techcommunity.microsoft.com/t5/microsoft-security-and/protecting-against-insider-risks-in-an-uncertain-environment/ba-p/1528055)
 
-# Appendix
+## Appendix
 
 This section contains links to the information regarding license requirements and provides additional links to additional information related to Microsoft Information Protection & Compliance.
 
-## License Requirements
+### License Requirements
 
 Below contains the necessary licenses for specific solutions outlined in the Deployment Acceleration Guide. While this information is current as of the writing of this document, refer to [Microsoft 365 Licensing Guidance for Security & Compliance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#office-365-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business) for the latest information as it may change.
 
-### Communication Compliance (CC)
+#### Communication Compliance (CC)
 
 Before you get started with communication compliance, you should confirm your [Microsoft 365 subscription](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and any add-ons. To access and use communication compliance, your organization must have one of the following subscriptions or add-ons:
 
@@ -220,7 +220,7 @@ Before you get started with communication compliance, you should confirm your [M
 * Office 365 Enterprise E5 subscription 
 * Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)
 
-### Insider Risk Management (IRM)
+#### Insider Risk Management (IRM)
 
 Before you get started with insider risk management policies, you should confirm your [Microsoft 365 subscription](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and any add-ons. To access and use insider risk management policies, your organization must have one of the following subscriptions or add-ons:
 

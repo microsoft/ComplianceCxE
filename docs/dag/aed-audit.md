@@ -35,11 +35,11 @@ See [Microsoft 365 productivity illustrations](https://docs.microsoft.com/en-us/
 **Run Stage** - The last stage is about optimizing the solution for Microsoft 365. In this phase you will set up an automated scalable approach for each solution. 
 Following the above approach will lead to successful adoption and deployment of each solution while providing workflows that respond to needs of investigations in an efficient, repeatable, and defensible manner.
 
-# Advanced eDiscovery
+## Advanced eDiscovery
 
 The Advanced eDiscovery solution provides customers with the ability to identify, preserve, collect, process, analyze, review and product content that's responsive to your organization's internal and external investigations. Discovering and managing data is challenging. To help solve these challenges, we provide customers with tools that enable them to do more in-place eDiscovery in Microsoft 365, thereby reducing risks associated with either creating multiple copies or exporting content outside of your security and compliance boundaries. Using Advanced eDiscovery, you can reduce the content in-place and only export matter relevant content. 
 
-## Best Practices
+### Best Practices
 
 To help frame the Advanced eDiscovery solution, it is important to note that our capabilities align with the eDiscovery Reference Model (EDRM) workflow as shown in figure 1.
 
@@ -47,13 +47,13 @@ To help frame the Advanced eDiscovery solution, it is important to note that our
 
 Within Advanced eDiscovery, we have enhanced identification, preservation, and collection from core eDiscovery with things like custodian management and advanced indexing. On top of this, to further cull and reduce data intelligently, in Advanced eDiscovery, provides capabilities to process, review and analyze your data so that what you export is minimized. See figure 2 below for a suggested linear workflow.
 
-### Workflows
+#### Workflows
 
 ![Figure 2: Linear Advanced eDiscovery Workflow](images\aed-fig2.png)
 
 In the suggested workflows below you have the ability to hit the ground running in implementing Advanced eDiscovery in your tenant.
 
-### Basic Workflow
+#### Basic Workflow
 
 * [Create a case](#case-management) in Advanced eDiscovery.
 * Identify your custodial and non-custodial source locations and [add to case](#source-location-management) for advanced indexing. 
@@ -62,7 +62,7 @@ In the suggested workflows below you have the ability to hit the ground running 
 * Further [reduce content](#review) in your review set using the Analytics to find near duplicates and thread messages
 * [Export](#production) out of AeD 
 
-### Advanced Workflow
+#### Advanced Workflow
 
 * [Create a case](#case-management) in Advanced eDiscovery.
 * Identify your custodial and non-custodial source locations and [add to case](#source-location-management) for advanced indexing. 
@@ -75,13 +75,13 @@ In the suggested workflows below you have the ability to hit the ground running 
 * Annotate and Redact documents
 * [Export](#production) out only case relevant content 
 
-### Next Steps Workflow
+#### Next Steps Workflow
 
 * Set up [attorney-client privilege](#attorney-client-privledge)	
 * [Custodian Audit Activity](#custodian-audit-activity)
 * [Themes](#themes)
 
-## Case Management
+### Case Management
 
 When navigating to the compliance center, you will see an overview of all cases in Advanced eDiscovery. Think of a case as the container for your legal matter. The case will include all searches, holds, hold notifications, reviews, and exports. Note that the name of your case cannot be changed later, careful thought should be used in creating a naming convention that allows all in your organization to follow and understand. If connecting to a matter management tool, please ensure that you use the same naming convention. 
 
@@ -95,7 +95,7 @@ When creating a new case, you have the opportunity to adjust your analytics sett
 
 * OCR processing will be run on image files when sources are added to a case during the advanced indexing job. This means that text in image files that matches the search criteria will be returned in a collection search.
 
-## Source Location Management
+### Source Location Management
 
 A user is so much more than their mailbox and their OneDrive site. They are able to collaborate in Teams, Yammer and Sharepoint. They use [third party](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) tools like Bloomberg, Facebook and more. When using Advanced eDiscovery, you can associate other data locations to a custodian beyond their mailbox and OneDrive site alone. 
 
@@ -119,13 +119,13 @@ You may have additional data locations located within Microsoft 365 that do not 
 
 Not all documents that you need to analyze in Advanced eDiscovery are located within Microsoft 365. You can also upload items that are not located in Microsoft 365 later in the workflow directly into a review set. This would be content like on-premises exchange data or local files. Keep in mind that custodians must be added to the case before you can upload and associate non-Microsoft 365 data to them. Non-Microsoft 365 data must be a file type that is supported by Advanced eDiscovery. For more information, see [Supported file types in Advanced eDiscovery](https://docs.microsoft.com/en-us/microsoft-365/compliance/supported-filetypes-ediscovery20?view=o365-worldwide).
 
-## Processing
+### Processing
 
 Once a source location has been added to a case, any content that is partially indexed will be processed. Content can be partially indexed for a number of reasons including the existence of images, unsupported file types or when indexing file size limits are encountered. All items (including the content and metadata) are reindexed so that all data in the review set is fully searchable during the review of the case data. Reindexing the data results in thorough and fast searches when you search the data in the review set during the case investigation.
 
 After the indexing job is complete, you can see a report of the effectiveness of the job. The graph will give you the number of items that were added to the hybrid index where Advanced eDiscovery stores the reprocessed content. You will also have the opportunity to [remediate any errors](https://docs.microsoft.com/en-us/microsoft-365/compliance/processing-data-for-case?view=o365-worldwide) including decryption of content that was encrypted using third party encryption tools. 
 
-## Preservation
+### Preservation
 
 Using the Advanced eDiscovery hold capabilities, you can place a hold on custodial data including their collaborative data sources. When you place content locations on hold, content is held until you release the custodian, remove a specific data location, or delete the hold policy entirely.
 
@@ -135,7 +135,7 @@ As mentioned in the Helpful Resources section below, Channel conversations that 
 
 If you the need to place a Microsoft 365 Group or Microsoft Team on hold for a specific custodian, consider mapping the group site and group mailbox to the custodian. If the Microsoft 365 Group or Microsoft Team is not attributable to a single custodian, consider adding the source to a non-custodial hold. 
 
-### Hold Notifications
+#### Hold Notifications
 
 Once a custodian is added to a case in Advanced eDiscovery, your legal team can create and customize their legal hold notification workflow. The custodian communications tool lets legal teams configure the following notices and workflows:
 
@@ -153,7 +153,7 @@ Once a custodian is added to a case in Advanced eDiscovery, your legal team can 
 
 After you've defined the contents of the hold notice, you can set up the workflows around [sending and managing the notification process](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-hold-notification?view=o365-worldwide). Notifications are email messages that are sent to notify and follow up with custodians. Every custodian added to the communication will receive the same notification. To set up and send a hold notice, you must include Issuance, Re-Issuance, and Release notifications.
 
-## Collection
+### Collection
 
 Using Searches in Advanced eDiscovery, you can collect case data from your Microsoft 365 data source locations. This includes the source content that was previously processed in the above step or any additional content source locations. When creating a search, you will define the source location as well as your query. Consider reducing the amount of data you collect by using the [available query conditions](https://docs.microsoft.com/en-us/microsoft-365/compliance/keyword-queries-and-search-conditions?view=o365-worldwide). 
 
@@ -165,33 +165,33 @@ Once your search is complete, you will need to add the results to a review set. 
 
 * Enable Retrieval For Modern Attachments: With modern attachments, you can check a box to auto collect all cloud attachments to your users Teams, Yammer and Exchange conversations. This is familiar to your current process for reviewing regular attachments as families or email sets. If there are downstream processes that rely on these relationships, we ensure that we are able to preserve these relationships in the load file
 
-## Analysis
+### Analysis
 
 Using the analytics and machine learning capabilities in Advanced eDiscovery, you can reduce the amount of data to review. 
 
-### Analyze
+#### Analyze
 
 The first step you will take after your search results are added to your review set will be to run the [analytics job](https://docs.microsoft.com/en-us/microsoft-365/compliance/analyzing-data-in-review-set?view=o365-worldwide#analytics-report).  Analyze allows for the identification and grouping of exact and near-duplicate files. It also identifies and organizes emails into hierarchically structured groups of [email Threads](https://docs.microsoft.com/en-us/microsoft-365/compliance/email-threading-in-advanced-ediscovery?view=o365-worldwide), based on the progressive inclusiveness of the emails. Sets of [near duplicates (ND)](https://docs.microsoft.com/en-us/microsoft-365/compliance/near-duplicate-detection-in-advanced-ediscovery?view=o365-worldwide) documents are grouped together in an ND Set. For a document to join an ND Set, there must be at least one document in the ND Set with a level of resemblance exceeding the similarity. 
 
-### Themes
+#### Themes
 
 Themes is a content-analytics application that identifies themes and thematic relationships across file collections. The application to identify interdependencies between themes allows users to browse associatively across the collection, navigating intuitively from theme to related theme. By generating meaningful labels for each thematic group, Themes provides an immediate snapshot of a file collection. In early case assessment and investigations, Themes enables litigators and analysts to intuitively acquire an informed and rapid overview of the data set. 
 
 Keep in mind that increasing the “Number of themes” can affect the ability of a theme to generalize. The higher the number of themes, the more granular they are. For example, if a set of 50 themes produces themes such as “Basketball, Spurs, Clippers, Lakers”, a set of 300 themes may include separate themes such as “Spurs”, “Clippers”, “Lakers”. If the user had no awareness of the theme “Basketball” and uses this feature for Early Case Assessment (ECA), seeing the theme “Basketball” could be useful. If the clustering is too granular (too many themes), the user may never see the word “Basketball” and may not know that Spurs and Clippers are good Basketball themes to review rather than items that go on boots and are used for hair. 
 
-### Attorney-Client Privledge
+#### Attorney-Client Privledge
 
 When [attorney-client privilege detection](https://docs.microsoft.com/en-us/microsoft-365/compliance/attorney-privilege-detection?view=o365-worldwide) is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you analyze the data in the review set. The model uses machine learning to determine the likelihood that a document contains content that is legal in nature. When setting up attorney-client privilege detection, you will need to submit a list of attorneys for your organization. The model will compare the participants of the document with the attorney list to determine if any attorneys are participants.
 
-### Relevance
+#### Relevance
 
 The relevance module identifies and ranks files by relevance, which assists with early case assessment, document culling and review. Once the trained sample of files are reviewed and tagged by a human expert as Relevant or Not Relevant, the model will rank the relevance of all files in your case. There will be more information on the Relevance module in next version of this document. 
 
-## Review
+### Review
 
 The review portion of the eDiscovery process can be the most time consuming and costly step. Using Advanced eDiscovery, you can cull the data in order to only produce the relevant data. A review set is simply a static set of documents that you can analyze, query, tag, and export. 
 
-### Review set
+#### Review set
 
 Advanced eDiscovery allows you to further query and filter data within a review set so that you can focus on a subset of documents. You can build a query by using a combination of keywords, properties, and conditions in the Keywords condition. You can also group conditions as a block (called a condition group) to build a more complex query. For a list and description of metadata properties that you can search, see [Document metadata fields in Advanced eDiscovery](https://docs.microsoft.com/en-us/microsoft-365/compliance/document-metadata-fields-in-advanced-ediscovery?view=o365-worldwide).
 
@@ -205,7 +205,7 @@ Once you are ready to review the case data, Advanced eDiscovery displays content
 
 During review, you may want to further [tag documents](https://docs.microsoft.com/en-us/microsoft-365/compliance/tagging-documents?view=o365-worldwide) based on criteria like responsive vs non-responsive. Tags are customizable to meet the needs of your review process. You can also use the annotation tool to annotate and redact content in documents. Content with redactions and annotations will be exported in PDF form. 
 
-### Custodian Audit Activity
+#### Custodian Audit Activity
 
 Need to find if a user viewed a specific document or purged an item from their mailbox? Advanced eDiscovery is now integrated with the existing audit log search tool in the M365 compliance center. Using this embedded experience, you can use the Advanced eDiscovery custodian management tool to facilitate your investigation by easily accessing and searching the activity for custodians within your case.
 
@@ -219,7 +219,7 @@ This can help answer questions during a legal investigation like:
 
 While we cover Advanced Audit in more depth below, there is great benefit in understanding how a custodian interacts with data in the context of a legal investigation. 
 
-## Production
+### Production
 
 Once your review is complete, you can export content from your Advanced eDiscovery case. You will need to consider where the data goes after exported out of Microsoft 365 to determine the export options that fit your needs. 
 
@@ -235,7 +235,7 @@ Once export is complete, you will need to use AzCopy to download the results.
 
 While if you implement all the recommendations above you are set for a successful deployment of AeD, the process to implement is equally important. We highly recommend a “Crawl-Walk-Run” approach, in which the technology is introduced in stages, focusing on steps that allow you to learn the end-to-end process with minimal disruptions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. 
 
-## Considerations
+### Considerations
 
 * The M365 compliance center provides two out-of-box role groups, eDiscovery Manager and eDiscovery Administrator, that include the required roles to complete eDiscovery tasks. An eDiscovery Manager will only have access to cases that they create or are assigned to. An eDiscovery Administrator can access all eDiscovery cases. You can create and define custom role groups in order to manage a subset of eDiscovery tasks. [Assign eDiscovery permissions in the Security & Compliance Center - Microsoft 365 Compliance](https://docs.microsoft.com/en-us/microsoft-365/compliance/assign-ediscovery-permissions?view=o365-worldwide)
 
@@ -257,7 +257,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 * The goal of the APIs is to reduce some of the risk with repetitive processes that can be error prone. At the current time, four out of the eight eDiscovery APIs are available in Beta. The APIs are set up to deliver on 2 scenarios. Automating common processes and task by taking jobs that are repeatable and creating an application. Consider things like kicking off an email once the review set creation job is complete or automatically searching all Teams that a custodian is currently a member of. Integration with existing systems, whether they be custom or a common industry tool. 
 
-## Helpful Resources
+### Helpful Resources
 
 * Understanding how and what types of content is stored in a mailbox is key to a successful eDiscovery posture. An exchange mailbox stores so much more than just email messages. Your calendar items, tasks, Skype messages, Teams messages, Voicemails, Forms, Sway, To-Do, Yammer conversations and so much more are stored in either user or group mailboxes. 
 
@@ -279,7 +279,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 * At the current time, 4/8 of the [eDiscovery APIs in Microsoft Graph](https://docs.microsoft.com/en-us/graph/api/resources/ediscoveryapioverview?view=graph-rest-beta) are available in beta. The APIs can be used to automate or customize your workflow to reduce redundant tasks. For instance, you can create a PowerBI Dashboard that will give you real time case statistics or custodian reports. 
 
-## One compliance story with Microsoft 365 Advanced eDiscovery
+### One compliance story with Microsoft 365 Advanced eDiscovery
 
 * [Insider risk management](ir) is a compliance solution in Microsoft 365 that helps minimize internal risks by enabling you to detect, investigate, and act on malicious and inadvertent activities in your organization. Insider risk policies allow you to define the types of risks to identify and detect in your organization, including acting on cases and escalating cases to Microsoft Advanced eDiscovery if needed. The content identified for escalation from IRM is automatically added to a review set in a case within Advanced eDiscovery. For the IRM or CC admin to have visibility to the case in Advanced eDiscovery, it is essential for them to be a member of the eDiscovery Manager role group in the Security and Compliance center. 
 
@@ -289,7 +289,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 * Microsoft eDiscovery tools support items encrypted with Microsoft encryption technologies. These technologies include Office Message Encryption, Azure Rights Management, and [Microsoft Information Protection](mig) (specifically sensitivity labels). If a file that is encrypted with a Microsoft encryption technology is attached to an email message or located on a SharePoint or OneDrive account, those encrypted items are decrypted when the search results are prepared for preview, added to a review set in Advanced eDiscovery, and exported. This allows eDiscovery managers to view the content of encrypted email attachments and site documents when previewing search results, and review them after they have been added to a review set in Advanced eDiscovery.
 
-# Advanced Audit
+## Advanced Audit
 
 Advanced Audit aims to expand on the capabilities of the Microsoft 365 unified auditing capabilities by offering additional features.
 
@@ -303,7 +303,7 @@ Advanced Audit aims to expand on the capabilities of the Microsoft 365 unified a
 
 When you are conducting an investigation, it is not just about the content. You may need to investigate an individual user’s behavior and activity more deeply. These activities can be reviewed through the unified audit log. 
 
-## Best Practices
+### Best Practices
 
 While the advanced audit features are going to be key for many of our customers to address their compliance requirements, it is also important for all customers to start with a basic understanding of the unified audit log.
 
@@ -331,7 +331,7 @@ Once you have the basics down, it is time to plan how you will implement the adv
 
 * If you have a need to automate some of your audit search activities or need to perform very large searches, we recommend having resources that are comfortable using PowerShell cmdlets in Exchange Online and M365 compliance center.
 
-## Considerations
+### Considerations
 
 * To manage audit log retention policies, you will need to be assigned the Organization Configuration role in the M365 compliance center.
 
@@ -345,7 +345,7 @@ Once you have the basics down, it is time to plan how you will implement the adv
 
 * While not directly related to Advanced Audit, it is important to note that audit logging for Power BI isn't enabled by default. To search for Power BI activities in the audit log, you must enable auditing in the Power BI admin portal.
 
-## Helpful Resources
+### Helpful Resources
 
 * A list of the additional events included with Advanced Audit as well as an explanation of each can be found [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide#access-to-crucial-events-for-investigations).
 
@@ -359,11 +359,11 @@ Once you have the basics down, it is time to plan how you will implement the adv
 
 * Follow the steps outlined [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/enable-mailbox-auditing?view=o365-worldwide#more-information) to enable mailbox audit logging for user without an E5 licenses.
 
-# Appendix - Additional Resources
+## Appendix - Additional Resources
 
 This section contains links to the information regarding license requirements and provides additional links to additional information related to Advanced eDiscovery.
 
-## Advanced eDiscovery License Requirements
+### Advanced eDiscovery License Requirements
 
 Before you get started with Advanced eDiscovery, you should confirm your Microsoft 365 subscriptions and any add-ons. To access and use Advanced eDiscovery, your organization must have one of the following subscriptions or add-ons:
 
@@ -379,7 +379,7 @@ Before you get started with Advanced eDiscovery, you should confirm your Microso
 * Office 365 Enterprise E5 subscription 
 * Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)
 
-## Advanced Audit License Requirements
+### Advanced Audit License Requirements
 
 Before you get started with Advanced Audit, you should confirm your Microsoft 365 subscription and any add-ons. To access and use Advanced Audit, your organization must have one of the following subscriptions or add-ons:
 

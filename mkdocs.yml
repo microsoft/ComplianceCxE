@@ -1,7 +1,7 @@
 site_name: S-C-M Customer Adoption Team (CAT)
 nav:
-    - OSS: index.md
-    - Resource Pages:
+    - OSS:
+      - One Stop Shop: index.md
       - Advanced eDiscovery: resources/aed.md
       - Microsoft Information Governance (MIG): resources/mig.md
       - Microsoft Information Protection (MIP): resources/mip.md
@@ -10,7 +10,7 @@ nav:
       - Compliance Manager (CM): resources/cm.md
     #- Notes from the Field:
     #  - Randall Blog post 1: blog1.md
-    - Deployment Acceleration Guides (DAGs):
+    - DAGs:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
       - Microsoft Compliance Configuration Analyzer (MCCA): dag/mcca.md
@@ -38,6 +38,7 @@ theme:
   features:
     - navigation.expand
     - navigation.top
+    - navigation.tabs
   palette:
     - scheme: default
       toggle:

@@ -37,6 +37,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|May 19, 2021|**MIG**: What's New from Ignite regarding Information Governance & Records Mgmt.|*Coming Soon*|*Coming Soon*|
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
 |May 26, 2020|**MIG**: Records Management|[Video](https://aka.ms/MIPC/Video-RecordsManagementWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-RecordsManagementWebinar)|
 

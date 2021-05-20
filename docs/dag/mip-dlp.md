@@ -36,7 +36,7 @@ See Microsoft 365 productivity illustrations for guidance on implementation of a
 
 Following the above approach will lead to successful adoption and deployment of each solution while protecting your intellectual property, stopping fraud or insider trading, plugging the sensitive data leaks, along with making the workplace safe.
 
-# Microsoft Information Protection
+## Microsoft Information Protection
 
 Implement Microsoft Information Protection (MIP) to help you discover, classify, and protect sensitive information wherever it lives or travels.
 
@@ -74,7 +74,7 @@ With MIP and a Sensitivity labels policy you can:
 
 * With encryption you can control who can consume content (for example: only company employees + approved partners) and what permissions he or she has (for example: Read but Do Not Print or Edit).
 
-## Best Practices
+### Best Practices
 
 Defining the right label taxonomy and protection policies is the most critical step in a Microsoft Information Protection deployment. Labels will be the interface for users to understand content sensitivity, how it matches company policies, and will be the primary input for users to flag content that needs to be protected. 
 
@@ -82,7 +82,7 @@ A good label taxonomy needs to meet business and/or regulatory needs, be intuiti
 
 With these requirements in mind, the following best practices have proven to make deployment of information protection policies in many organizations easier, faster, and more successful.
 
-### Prior to Deployment Plan
+#### Prior to Deployment Plan
 
 * Discover your sensitive information in your existing repositories. This is the first step we recommend as part of our best practice approach to detect the data you own and be ready to configure it as part of your sensitivity label configurations as well as data loss prevention policies later in this guide.
     
@@ -140,7 +140,7 @@ With these requirements in mind, the following best practices have proven to mak
 
 * Involve different teams in the review of your proposed label taxonomy, including compliance, legal, public relations, end user education, etc. Defining labels is not an IT security task alone, and their early feedback will help you define a label taxonomy that will work for a long time and not need to be revised after deployment when those teams observe the labels you defined do not meet their needs or address their scenarios.
 
-### Deployment Test Plan 
+#### Deployment Test Plan 
 
 * For the labeling client experience, consider your deployment methodology for Windows:
     
@@ -164,7 +164,7 @@ With these requirements in mind, the following best practices have proven to mak
 
 * Establish end user training and education. Measure their understanding of the organization information protection policies. Use “knowledge measure questions” if you can.
 
-### Production Deployment
+#### Production Deployment
 
 * Leverage the existing formal feedback mechanism from your end user-base to ensure that your label taxonomy remains effective and relevant to the organization. Making sure that established clear timelines for formal review and revision if necessary are followed.
 
@@ -176,7 +176,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 You can also introduce these changes in waves across your organization, focusing on limited sets of end users first and expanding to broader audiences. This will allow you to deploy quickly without causing disruption, and help you get a baseline of user behavior before introducing tight restrictions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. 
 
-## Considerations
+### Considerations
 
 Let us start with classifying and protecting our unstructured data assets in documents and emails. Using the guidance above we can start with a classification taxonomy that makes sense to the business. This will allow us to take strides in protecting our data in place. Leveraging the work, we have completed in defining our tenant specific Sensitive Information Types (SITs) will allow us to marry these SITs against different classification categories to ensure protection gets baked into these assets at creation time, thus providing an additional layer of defense over and above that already afforded to us through our efforts up until now.
 
@@ -238,7 +238,7 @@ With these limitations in mind, Microsoft Cloud App Security (MCAS) can be used 
 
 To protect and label structured data you should consider a solution like Azure Purview which among other things can allow you to Classify data using built-in and custom classifiers and Microsoft Information Protection sensitivity labels which allows you to label sensitive data consistently across SQL Server, Azure, Microsoft 365, and Power BI. To understand more about Azure Purview, check out this [link](https://docs.microsoft.com/en-us/azure/purview/create-sensitivity-label). 
 
-### MIP Client Considerations
+#### MIP Client Considerations
 
 When it comes to windows client you have two options, either a built-in client or a unified label client.
 Strategically, organizations should use the built-in client as it supports cross platform with a consistent experience. The built-in client does not need an add-in to deploy, or the need to be manage or keep up to date while providing a deeper integration with office products which includes performance improvement.
@@ -248,14 +248,14 @@ To determine which features exist in the built-in client and which in the unifie
 
 When it comes to MAC clients you can use the built-in client for office and Edge for viewing PDFs.
 
-## Helpful Resources
+### Helpful Resources
 
 * [Using Sensitivity Labels in M365 – How to Protect NDA Data from Leaking](https://techcommunity.microsoft.com/t5/microsoft-security-and/using-sensitivity-labels-in-m365-how-to-protect-nda-data-from/ba-p/1873986)
 * [End User Training for Sensitivity Labels in M365 – How to Accelerate Your Adoption](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-user-training-for-sensitivity-labels-in-m365-how-to/ba-p/1750880)
 * [Secure external collaboration using sensitivity labels](https://techcommunity.microsoft.com/t5/microsoft-security-and/secure-external-collaboration-using-sensitivity-labels/ba-p/1680498)
 * [Using Azure PIM for the AIP Super User feature management](https://techcommunity.microsoft.com/t5/microsoft-security-and/using-azure-pim-for-the-aip-super-user-feature-management/ba-p/1587690)
 
-# Data Loss Prevention
+## Data Loss Prevention
 
 To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its inadvertent disclosure. Sensitive information can include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the M365 SCC, you can identify, monitor, and automatically protect sensitive information across multiple Microsoft 365 workloads.
 
@@ -275,9 +275,9 @@ You create and manage DLP policies on the Data Loss Prevention page in the Micro
 
 Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide#what-a-dlp-policy-contains).
 
-## Best Practices
+### Best Practices
 
-### Prior to Deployment Plan
+#### Prior to Deployment Plan
 
 * Identify the appropriate stakeholders and personas in your organization to collaborate for the design of DLP policies and workloads to be monitored. Some recommended personas to include compliance/privacy, security, human resources, and legal. 
 
@@ -295,7 +295,7 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
 
 * Using the presence of [Sensitivity labels as a condition](https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-sensitivity-label-as-condition?view=o365-worldwide) in your DLP policy should be closely considered as a standard in your organization.   A sensitivity label is more likely to represent security sensitive information than a simple pattern match from a SIT, especially if you are using manual or recommended labeling, as the data is likely to have been deliberately classified by and end user as a match for certain sensitive information.   Additionally, labels applied automatically via a trainable classifier are far more likely to be accurately classified than from pattern matching.
 
-### Deployment Test Plan
+#### Deployment Test Plan
 
 * Always create DLP policies initially in test mode as this gives you an opportunity to determine not only if the policy is alerting correctly via email (nothing will flow through to the DLP reports in audit mode by design) but this will also allow you to determine if the thresholds you have configured for each rule are appropriate. For example, suppose you have configured your rule to trigger when more than 5 credit card numbers have detected. During testing you realize that it would be more appropriate to trigger the rule on 1 credit card number, so you edit the rule to make this change and then enable the policy to allow for the population of alerts in the reports.
 
@@ -315,7 +315,7 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
 
 * Ensure you have a well-documented and functional test plan, with clear tasks and outcomes.
 
-### Production Deployment
+#### Production Deployment
 
 * DLP reports should be scheduled and emailed to appropriate stakeholders based on the report types (schedules and recipients can be defined directly from the report itself in the Security and Compliance report viewer at [https://protection.office.com](https://protection.office.com/)).  Note currently you cannot schedule the following reports in the new Compliance portal (you can still do this in the older security and compliance center):
     
@@ -331,7 +331,7 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
 
 * Ideally Onboarding devices to Endpoint DLP should be done automatically within a Mobile Device Management (MDM) when possible, such as Microsoft Intune or System Center Configuration Manager.  If Microsoft Defender for Endpoint is already deployed in the organization, there is nothing further to do for this onboarding to occur. Otherwise, you can onboard devices with a script, Group Policy or VDI onboarding scripts. More details can be found [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide#onboarding-devices-into-device-management). 
 
-## Considerations
+### Considerations
 
 While DLP might be a very important part of your compliance configuration you may want to consider reviewing the assessments that are available in from Compliance Manager, there is a significant chance that some control objectives require you to establish not only data loss prevention strategies, but also procedures to follow if information spillage does occur in the organization. Figure 1 below shows the improvement actions within a given tenant for an example compliance assessment.
 
@@ -351,7 +351,7 @@ It is important to take these into consideration not only when planning your DLP
 
 * All DLP reports can show data from the most recent four-month period. The most recent data can take up to 24 hours to appear in the reports.
 
-## Helpful Resources
+### Helpful Resources
 
 * When testing SITs and Endpoint DLP actions, it can be useful to have a library of links to assist in this testing:
     

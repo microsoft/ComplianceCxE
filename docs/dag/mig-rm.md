@@ -36,11 +36,11 @@ See [Microsoft 365 productivity illustrations](https://docs.microsoft.com/en-us/
 
 Following the above approach will lead to successful adoption and deployment of each solution while governing your data by deciding what to keep, what to delete, what is a regulatory requirement, and using a workflow to manage the lifecycle.
 
-# Microsoft Information Governance and Records Management
+## Microsoft Information Governance and Records Management
 
 Microsoft Information Governance (MIG) provides capabilities to manage the lifecycle of your content and govern your data for compliance or regulatory requirements. Records management (RM) manages high-value content for legal, business, or regulatory obligations, and adds advanced capabilities such as disposition review and file plans. Some organizations may have simple retention and deletion requirements were applying broad policies using the MIG features will meet your needs. Other organizations may have strict recordkeeping requirements including a formal file plan, disposition, or retention trigged by events which can be accomplished using the RM features.
 
-## Best Practices
+### Best Practices
 
 The information governance needs from one organization to the next can differ greatly. While one organization has one simple retention policy that emails must be kept for 3 years, another can exist in a highly regulated industry and therefore have multiple requirements they need to meet based on different types of data. The approach below aims to provide guidance on how to approach deployment of the features available through information governance and records management, whether you have those basic needs or the more complex capabilities we offer.
 
@@ -66,7 +66,7 @@ Make sure that you understand the functions available in MIG and RM and what you
 
 Now that we have touched on the preparation for deployment, below we outline the deployment and configurations when creating retention policies, creating and publishing retention labels, as well as creating labels through the file plan in records management to require stricter controls and reviews.
 
-## Retention Policies
+### Retention Policies
 
 Retention policies are best suited when targeting a location or container of information. Those locations can be one of the following in the list below, however Teams and Yammer locations need their own policies and cannot be combined with the other locations.
 
@@ -91,20 +91,20 @@ It is a good idea to start with the basic scenarios before moving on to the more
 
 * The last step is to review your settings and create the policy. Once your policy is created after service completes the mechanisms policy engine in the various environments (Exchange Online, SharePoint Online, OneDrive, Yammer, Teams, etc..) it will take affect without any additional steps. Our experience is this completes in 7 days or sooner.
 
-### Start Simple
+#### Start Simple
 
 Deployment of a basic policy that sets the same retention settings to apply to the entire location(s).
 This approach is very straightforward.
 
 * After the steps to name your policy and set retention settings above, you will choose the locations you want this policy to apply to. A basic policy will usually target an entire location and does not have inclusions or exclusions set. You will ensure that the location is toggle On and set to All. Remember that Teams and Yammer cannot be combined with the other locations.
 
-### Next Steps
+#### Next Steps
 
 Next, we cover deploying a policy that has inclusions or exclusions based on a need to apply different retention periods to content in the same location types such as different mailbox users, or SharePoint sites as an example.
 
 * Choose the locations you want this policy to apply to. In this scenario you will ensure the status of the location is toggled On and then use the links to select specific recipients, sites, etc. to include or exclude in this policy. You will be required to know and enter the full path for SharePoint or OneDrive locations. Refer to the [considerations section](#considerations) for policy limitations in this scenario.
 
-### Advanced
+#### Advanced
 
 An advanced retention policy configuration is more suited for those that have a need to apply it based on what is in the content to target specific documents, such as sensitive information. 
 
@@ -112,7 +112,7 @@ An advanced retention policy configuration is more suited for those that have a 
 
 * The choice to use the advanced settings above is going to limit the locations that you have as options to Exchange, SharePoint, and OneDrive. It will also default the Exchange location to include All. This cannot be changed.
 
-### Retention, Record, and Regulatory labels and policies
+#### Retention, Record, and Regulatory labels and policies
 
 When you have a need to retain and delete content at the item level, use a retention label. Retention labels also provide some other capabilities that retention policies do not.
 
@@ -127,7 +127,7 @@ When you have a need to retain and delete content at the item level, use a reten
 
 As you can see retention labels provide greater flexibility for when the retention period starts, what happens when the retention period ends, how that label is applied, and what can be done with the content once it has been labeled. These options allow for both a basic deployment strategy and a more advanced one. Many of the more advanced options also require the use of the File Plan feature in RM to create the labels. We will start with the label and policy creation from within the MIG solution, and then move to those that require using RM and the File Plan feature to create the more advanced labels and policies.
 
-## Information Governance
+### Information Governance
 
 Creating labels and policies in Information Governance will require that you log into the compliance center with an account that has the necessary Retention Management permissions which we discussed in the considerations section earlier. 
 
@@ -150,13 +150,13 @@ Policy name and review steps:
 
 * It can take up to 1 day for labels to appear and only for those mailboxes that have 10MB of data or more as noted above in the considerations.
 
-### Start Simple
+#### Start Simple
 
 In the basic example we will be publishing our label to all users and locations for them to apply manually.
 
 * This publishing policy is very straightforward. Simply choose the default to publish this policy to all locations in the Choose Locations page within the Publish to users and groups step.
 
-### Next Steps
+#### Next Steps
 
 You may also have a need to create a label that needs to be published to a specific set of users or locations due to a department’s unique requirements. When we create the policy to publish the label, we will be specifying inclusions or exclusions.
 
@@ -170,7 +170,7 @@ During preparation you identify that you have a need to proactively address cont
 
 * You can also choose whether you want this policy to apply to All locations or specific locations. Using specific inclusions or exclusions here will also have the same policy limitation considerations mentioned above.
 
-### Advanced
+#### Advanced
 
 If your organization has a mature information architecture in SharePoint online, you may want to leverage that data to use the condition Apply Label To Content That Contains Specific Words Or Phrases, Or Properties.
 
@@ -188,7 +188,7 @@ During your planning for deployment of not only the MIG or RM solutions, but als
 
 * Trainable classifiers can label new and modified items and existing items from the last six months.
 
-## Records Management
+### Records Management
 
 Some may consider the concept of records management intimidating. The thought of having to categorize all your data and get agreement from the business on how long each category of information needs to be retained or how soon it needs to go can be daunting. We believe that both those already well down the path of the records management journey and those just getting started can take advantage of the features we offer in our solution. 
 
@@ -196,7 +196,7 @@ Unlike the information governance examples above where the progression of basic 
 
 When following the guidance below make sure that you log into the compliance center with an account that has the necessary Records Management permissions which we discussed in the considerations section earlier. 
 
-### Start Simple (File Plan)
+#### Start Simple (File Plan)
 
 During planning you should determine if you have an existing retention schedule. Even if you do not have an existing retention schedule or a file plan, you can start to build one by creating your labels from within File Plan. The creation of the label using File Plan is similar to the steps from Information Governance. However, using File Plan provides the ability to add descriptors to your label.
 
@@ -204,7 +204,7 @@ During planning you should determine if you have an existing retention schedule.
 
 * You can pick from a list of values or create your own. If you create your own make sure the spelling and format is correct as you will not be able to modify or remove it once you save your changes.
 
-### Next Steps (File Plan)
+#### Next Steps (File Plan)
 
 You can also use the File Plan import option or the Export mentioned above to create your labels from the .csv file. This could be an empty template before any labels are created, or after some initial labels have been created to provide examples. 
 
@@ -214,7 +214,7 @@ You can also use the File Plan import option or the Export mentioned above to cr
 
 * This method can also be used to bulk-modify existing labels.
 
-### Advanced (File Plan)
+#### Advanced (File Plan)
 
 Your organization may already have retention schedule in place which includes a formal file plan. If so, the File Plan import can be used to download a blank template to import that plan and create your labels.
 
@@ -228,7 +228,7 @@ When creating your labels from File Plan you will notice there are some differen
 
 * For label creation instructions please follow the steps [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-apply-retention-labels?view=o365-worldwide).
 
-### Start Simple (Label Deployment)
+#### Start Simple (Label Deployment)
 
 We mentioned above with records management, the power is in the label, one example of that is the option to require disposition when creating your label. You may identify certain information that may have a similar duration of retention as other material, but you need someone to formally review those items before they are removed. This is where disposition comes into play. We are covering this under records management because that solution contains the Disposition tab where the reviewers will go to evaluate the content that has reached its retention end date. Disposition can be required by selecting Trigger A Disposition Review under the At The End Of The Retention Period section.
 
@@ -240,7 +240,7 @@ We mentioned above with records management, the power is in the label, one examp
 
 * If you have a need for the owners of the content to participate in the disposition process you can export the list of items needing review to a .csv file.
 
-### Next Steps (Label Deployment)
+#### Next Steps (Label Deployment)
 
 Disposition of content is a common requirement when declaring an item as a record. If your organization has identified certain types of information that are considered a record, you can apply the additional protections by choosing Mark Items As A Record during label creation.
 
@@ -256,7 +256,7 @@ Disposition of content is a common requirement when declaring an item as a recor
 
 * If an item was marked as a record and required disposition you will be able to provide a proof of records deletion.
 
-### Advanced (Label Deployment)
+#### Advanced (Label Deployment)
 
 A common scenario we see is that organizations have a need to consider certain artifacts a record, but only after a certain event occurs such as the end of a customer engagement. Other organizations do not necessarily have the record requirement but have a need to keep certain information for a specific amount of time only after an event, like when an employee leaves the company. This can be accomplished by selecting one of the built-in event types or creating your own under the *Start The Retention Period Based On* option.
 
@@ -286,7 +286,7 @@ You can also introduce these changes in waves across your organization, focusing
 
 Now that we have covered the different basic to advanced deployment scenarios and best practices, take a minute to make sure you read the rest of this guide to understand how retention and records management integrate with the other compliance solutions and how they complement each other. We also provide you with some important considerations to keep in mind when it comes to your environment and how they may affect your deployment. There are some helpful resources as well thatwill point you to other articles, blog posts, or videos that provide important context or supplement the documentation for MIG and RM. 
 
-## Considerations
+### Considerations
 
 * To manage retention policies and labels, you will need to be added to the Compliance Administrator role group or for more targeted permissions, a new or existing role group can be assigned the Retention Management role. You can also grant read-only rights through the View-Only Retention Management role which can be added to a new or existing role group.
 
@@ -318,7 +318,7 @@ Now that we have covered the different basic to advanced deployment scenarios an
 
 * Data Connectors can allow for the archival of third-party data which is stored in a users’ Exchange Online mailbox and can have retention and records management applied to that data. (more here)
 
-## Helpful Resources
+### Helpful Resources
 
 * This [list of retention policy and retention label capabilities](https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide#compare-capabilities-for-retention-policies-and-retention-labels) can help you determine whether to use a retention policy or retention label to meet your requirements.
 
