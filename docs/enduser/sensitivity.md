@@ -12,26 +12,26 @@ In summary, this training will help to:
 
 |Link|Type|Topic|
 |---|---|---|
-|[Download]()|.msg| Awareness Data labels and what is sensitive information|
-|[Download]()|.msg| Please help drive adoption of labeling sensitive data|
-|[Download]()|.msg| Take action! Start using Microsoft Information Protection |
+|[Download](sensitivity/Awareness-Data-labels-and-what-is-sensitive-information.msg)|.msg| Awareness Data labels and what is sensitive information|
+|[Download](sensitivity/Please-help-drive-adoption-of-labeling-sensitive-data.msg)|.msg| Please help drive adoption of labeling sensitive data|
+|[Download](sensitivity/Take-action-Start-using-Microsoft-Information-Protection.msg)|.msg| Take action! Start using Microsoft Information Protection |
 
 ## Cubicle posters
 
 |Link|Type|Topic|
 |---|---|---|
-|[Download]()|.pptx| Munson’s Pickles and Preserves Farm Data_Class_Campaign_DigitalSignage|
-|[Download]()|.pptx| Munson’s Pickles and Preserves Farm Gamification Quiz Posters|
-|[Download]()|.pptx| Munson's Pickles and Preserves Farm Know your labels|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Data_Class_Campaign_DigitalSignage.pptx)|.pptx| Munson’s Pickles and Preserves Farm Data_Class_Campaign_DigitalSignage|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Gamification-Quiz-Posters.pptx)|.pptx| Munson’s Pickles and Preserves Farm Gamification Quiz Posters|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Know-your-labels.pptx)|.pptx| Munson's Pickles and Preserves Farm Know your labels|
 
 ## Training materials
 
 |Link|Type|Topic|
 |---|---|---|
-|[Download]()|.docx| Munson's Pickles and Preserves Farm Data Labels & Examples|
-|[Download]()|.docx| Munson's Pickles and Preserves Farm-Getting started with data labels|
-|[Download]()|.docx| Munson's Pickles and Preserves Farm-Help and Support Resources data labels|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Data-Labels-Examples.docx)|.docx| Munson's Pickles and Preserves Farm Data Labels & Examples|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Getting-started-with-data-labels.docm)|.docm| Munson's Pickles and Preserves Farm-Getting started with data labels|
+|[Download](sensitivity/Munson-Pickles-and-Preserves-Farm-Help-and-Support-Resources-data-labels.docm)|.docm| Munson's Pickles and Preserves Farm-Help and Support Resources data labels|
 
 ## All files download
 
-Sensitivity Labeling End User Training documentation from [here](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-user-training-for-sensitivity-labels-in-m365-how-to/ba-p/1750880)
+Sensitivity Labeling End User Training documentation from [here](sensitivity\End-User-Adoption-Training_Sensitivity-Labels.zip)
