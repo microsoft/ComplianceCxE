@@ -19,7 +19,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
 
-## Social Media and Forums
+## Social Media an d Forums
 
 * [MIP Yammer Channel](https://aka.ms/MIPC/AskMIPTeam)
 * [MIPNews Twitter](https://twitter.com/MIPNews)
