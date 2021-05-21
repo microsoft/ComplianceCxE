@@ -6,16 +6,11 @@ intro: How to Contribute
 
 The Compliance CxE team encourages collaboration of our content.  This article describes how you can contribute.
 
-## In this document
-
-* [Submitting an Issue](#submitting-an-issue)
-* [Quick Editing a Page](#quick-editing-a-page)
-
-### Submitting an Issue
+## Submitting an Issue
 
 Notice something incorrect? Have a comment? Submit an issue or make a comment.
 
-1. Select the 'Submit Issue'  link at the top right of the page.
+1. Select the 'Submit Feedback as an Issue'  icon at the top right of the page.
 
     ![](img\submitissue.png)
 
@@ -25,7 +20,7 @@ Notice something incorrect? Have a comment? Submit an issue or make a comment.
 
     ![](img\submitissue-github.png)
 
-### Quick Editing a Page
+## Quick Editing a Page
 
 Want to just make quick changes yourself?
 

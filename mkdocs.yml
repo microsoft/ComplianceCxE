@@ -1,4 +1,7 @@
 site_name: S-C-M Customer Adoption Team (CAT)
+repo_url: https://github.com/microsoft/ComplianceCxE
+repo_name: microsoft/ComplianceCxE
+edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
 nav:
     - OSS:
       - One Stop Shop: index.md
@@ -34,6 +37,9 @@ nav:
 theme:
   name: material
   language: en
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: overrides
   logo: img\scm-shield.png
   favicon: img\scm-shield.png
   features:

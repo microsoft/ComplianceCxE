@@ -14,5 +14,17 @@
     --md-accent-bg-color--light:         #005496; 
 }
 [data-md-color-scheme="slate"] {
-    --md-hue: 222;  /*[0, 360] */
+
+    --md-default-bg-color:             hsla(0, 0%, 20%, 1);
+    --md-default-bg-color--light:      hsla(0, 0%, 20%, 0.54);
+    --md-default-bg-color--lighter:    hsla(0, 0%, 20%, 0.26);
+    --md-default-bg-color--lightest:   hsla(0, 0%, 20%, 0.07);
+
+    --md-code-bg-color:                hsla(0, 0%, 20%, 1);
+
+    --md-footer-bg-color:              hsla(0, 0%, 10%, 0.87);
+    --md-footer-bg-color--dark:        hsla(0, 0%, 4%, 1);
+
+    --md-typeset-a-color:              #0066CC;
+    
   }
