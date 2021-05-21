@@ -1,4 +1,4 @@
-site_name: S-C-M Customer Adoption Team (CAT)
+site_name: Compliance Customer Experience Engineering (CxE)
 repo_url: https://github.com/microsoft/ComplianceCxE
 repo_name: microsoft/ComplianceCxE
 edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
@@ -18,8 +18,8 @@ nav:
       - Insider Risk: notes/ir.md
       - Communication Compliance: notes/cc.md
       - Information Governance: 
-        - Multi-stage: notes/mig/may/ms.md
-        - Adaptive Scopes: notes/mig/aug/adpscp.md
+        - Multi-stage: notes/mig/ms.md
+        - Adaptive Scopes: notes/mig/adpscp.md
       - Records Management: notes/rm.md
       - Information Protection: notes/mip.md
       - Data Loss Prevention: notes/dlp.md
