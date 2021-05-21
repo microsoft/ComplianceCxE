@@ -1,6 +1,6 @@
 # M365 Compliance One-Stop-Shop (OSS)
 
-**Customer Acceleration Team (CAT)** is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
+The **Customer Acceleration Team (CAT)** is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
 
 We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
 
@@ -10,6 +10,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Official M365 Compliance Documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
 * [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
+* [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
 
 ## Social Media and Forums
 
