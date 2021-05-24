@@ -23,10 +23,14 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks| June 6, 2021 |  |
-|**MIG:** Deep Dive on adaptive scopes | August 10, 2021 | |
-|**CC:** Compliance Manager updates | August 24, 2021 | |
-|**MIP:** Advanced classification and auto lableing | JUly 13, 2021 | |
+|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks *(APAC)* | June 6, 2021 | *Link Coming Soon* |
+|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks *(US/EMEA)* | June 6, 2021 | *Link Coming Soon* |
+|**MIG:** Deep Dive on adaptive scopes *(APAC)* | August 10, 2021 | *Link Coming Soon* |
+|**MIG:** Deep Dive on adaptive scopes *(US/EMEA)* | August 10, 2021 | *Link Coming Soon* |
+|**CC:** Compliance Manager updates *(APAC)* | August 24, 2021 | *Link Coming Soon* |
+|**CC:** Compliance Manager updates *(US/EMEA)* | August 24, 2021 | *Link Coming Soon* |
+|**MIP:** Advanced classification and auto lableing *(APAC)* | July 13, 2021 | *Link Coming Soon* |
+|**MIP:** Advanced classification and auto lableing *(US/EMEA)* | July 13, 2021 | *Link Coming Soon* |
 
 [Past webinars...](webinars)
 
