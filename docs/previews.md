@@ -8,7 +8,7 @@ intro: Private Preview Programs
 
 We are excited to on-board you to the Compliance preview program.
 
-<span style="color:blue">Steps for joining a preview program</span>
+## Steps for joining a preview program
 
 1. A private Teams channel is the main communication for all preview programs. Request access to this channel via [MIP&C Previews](https://teams.microsoft.com/l/team/19%3a3b5965b181b24ec5af2dd036c5187ed2%40thread.tacv2/conversations?groupId=0ba02037-44ce-4103-848b-69de5d3a74f4&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47).
 
