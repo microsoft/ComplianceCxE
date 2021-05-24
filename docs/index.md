@@ -23,7 +23,10 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|*New series coming soon!*|  |  |
+|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks| June 6, 2021 |  |
+|**MIG:** Deep Dive on adaptive scopes | August 10, 2021 | |
+|**CC:** Compliance Manager updates | August 24, 2021 | |
+|**MIP:** Advanced classification and auto lableing | JUly 13, 2021 | |
 
 [Past webinars...](webinars)
 

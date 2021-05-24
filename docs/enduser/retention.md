@@ -36,3 +36,4 @@ In summary, this training will help to:
 ## All files download
 
 Download the full Retention Labeling End User Training documentation from [here](retention\End-User-Adoption-Training_Retention-Labels.zip)
+
