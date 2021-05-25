@@ -23,14 +23,18 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks *(APAC)* | June 6, 2021 <br />13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
-|**CC:** Reducing Code of Conduct and Regulatory Compliance Violation Risks *(US/EMEA)* | June 6, 2021 <br />16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
-|**MIG:** Deep Dive on adaptive scopes *(APAC)* | August 10, 2021 <br />13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
-|**MIG:** Deep Dive on adaptive scopes *(US/EMEA)* | August 10, 2021  <br />16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
-|**CC:** Compliance Manager updates *(APAC)* | August 24, 2021 <br />13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45706) |
-|**CC:** Compliance Manager updates *(US/EMEA)* | August 24, 2021  <br />16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
-|**MIP:** Advanced classification and auto lableing *(APAC)* <br />13:00 AEDT | July 13, 2021 | [Register](https://mipc.eventbuilder.com/event/45702) |
-|**MIP:** Advanced classification and auto lableing *(US/EMEA)* | July 13, 2021 <br />16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
+|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 6, 2021** |  |
+|  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
+|*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
+|***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
+|*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
+|***CC*: Compliance Manager updates** | **August 24, 2021** |  |
+| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45706) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
+|***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
+| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
 
 [Past webinars...](webinars)
 
