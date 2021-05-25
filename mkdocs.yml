@@ -11,18 +11,18 @@ nav:
       - Data Loss Prevention (DLP): resources/dlp.md
       - Insider Risk Management (IR): resources/ir.md
       - Compliance Manager (CM): resources/cm.md
-    #- Notes from the Field:
-      #- Compliance Manager: notes/cm.md
-      #- Advanced eDiscovery: notes/aed.md
-      #- Advanced Audit: notes/audit.md
-      #- Insider Risk: notes/ir.md
-      #- Communication Compliance: notes/cc.md
-      #- Information Governance: 
-        #- Multi-stage: notes/mig/ms.md
-        #- Adaptive Scopes: notes/mig/adpscp.md
-      #- Records Management: notes/rm.md
-      #- Information Protection: notes/mip.md
-      #- Data Loss Prevention: notes/dlp.md
+    - Notes from the Field:
+      - Compliance Manager: notes/cm.md
+      - Advanced eDiscovery: notes/aed.md
+      - Advanced Audit: notes/audit.md
+      - Insider Risk: notes/ir.md
+      - Communication Compliance: notes/cc.md
+      - Information Governance: 
+        - Multi-stage: notes/mig/ms.md
+        - Adaptive Scopes: notes/mig/adpscp.md
+      - Records Management: notes/rm.md
+      - Information Protection: notes/mip.md
+      - Data Loss Prevention: notes/dlp.md
     - DAGs:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
