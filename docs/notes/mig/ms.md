@@ -1,28 +1,36 @@
 # Now in public preview
 
-In the past, when content reached the end of the period of retention people would receive an email notification to take action. The Records Manager or Disposition Reviewer then would use the Disposition tab in Records Management to review the labels acting upon items to then dispose or permanently delete, extend the retention period or apply another label. For a detailed overview of the disposition process, refer to the Microsoft document [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide).
+In the past, when content reached the end of the period of retention people would receive an email notification to take action. The Records Manager or Disposition Reviewer then would use the Disposition tab in Records Management to review the labels acting upon items to then dispose or permanently delete, extend the retention period or apply another label. 
 
-![](IMG\imageName.png)
-Figure 1: Label creation with disposition trigger.	
+For a detailed overview of the disposition process, refer to the Microsoft document [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide).
 
-![](IMG\imageName.png)
+<figure>
+    <img src="\img\ms1.png"/> 
+    <figcaption>Figure 1: Label creation with disposition trigger.</figcaption>
+</figure>
+
+![](..\img\ms2.png)
 Figure 2: Adding user or mail enabled security group.
 
 This process left a gap for large complex companies needing to streamline the disposition process since all the appropriate people would need to give approval before any action could be taken. One can imagine this could be a simple internal process or an extremely complex workflow. We heard this feedback loud and clear that people should only see what items they are assigned to and are ready for disposition but not all items needing disposition. 
+
 We are excited to share the new capabilities in MIG:
-•	Multiple stage and reviewers
-•	Support for multi-geo
-•	Email customization and templates
-•	Reviewer experience (in line view, taking actions)
-•	Adding reviewers to a stage
-•	History and details tab
 
-We will discuss one such use case scenario here that leverages these new features. For a detailed explanation or instructions for implementing the new features click this  [link](https://techcommunity.microsoft.com/t5/security-compliance-identity/end-user-training-for-retention-labels-in-m365-how-to-accelerate/ba-p/1750861).
+*	Multiple stage and reviewers
+*	Support for multi-geo
+*	Email customization and templates
+*	Reviewer experience (in line view, taking actions)
+*	Adding reviewers to a stage
+*	History and details tab
 
-Scenario 
+We will discuss one such use case scenario here that leverages these new features. For a detailed explanation or instructions for implementing the new features of multi-stage click this  [link](https://techcommunity.microsoft.com/t5/security-compliance-identity/end-user-training-for-retention-labels-in-m365-how-to-accelerate/ba-p/1750861).
+
+**Scenario** 
+
 The example below is more a general example that can be applied to all industries as regulations or company policy may not be the same in all parts of the world.
+
 A global company that conducts business in Europe and is headquartered in California. 
-Company needs to define stages of disposition to accommodate specific people or departments in Germany who are tasked with a review of records that are expired complying with BaFin and CPRA regulations. These records consist of contracts in the region of the world the company conducts business. The record manager of the company needs to assign a process for taking actions for expired records and ensure the process is followed as defined by the company’s retention schedule. Some departments have a regional lead that oversees all the contract specialists in each country who might all have input into if record needs to be disposed. These subject matter experts for record types will need to approve items for disposition that are assigned to them and the ability to view the context of the record. The company needs both the contract specialist or regional lead and records manager to approve all records needing disposition review but only see the relevant items they are assigned. Contract specialists need email notifications daily with the correct instructions and approval guidance possibly in multiple languages to accommodate global workforce. The records manager needs email notification instructions and business guidance that differ from the contract’s specialist or regional lead. Records manager needs a unified disposition process across all the locations and reporting for proof disposed items are not discoverable. Lastly, if business structure or change management dictate, require the ability to update any stage of the disposition process while adhering to the companies defined retention schedule.
+The company needs to define a process of disposition to accommodate specific people or departments in Germany who are tasked with a review of records that are expired complying with **BaFin**, **GDPR** and **CPRA** regulations. These records consist of contracts in the region of the world the company conducts business. The record manager of the company needs to assign a process for taking actions for expired records and ensure the process is followed as defined by the company’s retention schedule. Some departments have a regional lead that oversees all the contract specialists in each country who might all have input into if record needs to be disposed. These subject matter experts for record types will need to approve items for disposition that are assigned to them and the ability to view the context of the record. The company needs both the contract specialist or regional lead and records manager to approve all records needing disposition review but only see the relevant items they are assigned. Contract specialists need email notifications daily with the correct instructions and approval guidance possibly in multiple languages to accommodate global workforce. The records manager needs email notification instructions and business guidance that differ from the contract’s specialist or regional lead. Records manager needs a unified disposition process across all the locations and reporting for proof disposed items are not discoverable. Lastly, if business structure or change management dictate, require the ability to update any stage of the disposition process while adhering to the companies defined retention schedule.
 
 Relating to the requirements above, there are three users in our tenant mapping to each role.
 -Randall Testuser – Contract’s Specialist in Europe (Germany)
@@ -105,3 +113,8 @@ Figure 16:
 ![](IMG\imageName.png)
 Figure 17:
 
+On behalf of the MIG PM team, we would like to recognize the contributions of the following persons to this post:
+
+Joanne Klein - Microsoft MVP
+
+Brendon Lee - Extended Compliance CXE
