@@ -38,14 +38,21 @@ intro: DAG Resources
 
 Ready to become the hero of your organization? Learn more about deploying Microsoft Information Protection & Compliance features with the resources below:
 
-* [Get started today!](https://aka.ms/MIPC/GettingStarted) 
-* Join our Preview Program: [https://aka.ms/MIPC/JoinPreviews](https://aka.ms/MIPC/JoinPreviews) & [https://aka.ms/MIPC/Previews](https://aka.ms/MIPC/Previews)
+* [Get started today!](https://aka.ms/MIPC/GettingStarted)
+* Join our Preview Program: [https://aka.ms/MIPC/JoinPreviews](https://aka.ms/MIPC/JoinPreviews)
 * [Visit all Community Resources](https://aka.ms/MIPC/CommunityResources)
-* Learn from our webinar series and YouTube video series: [https://aka.ms/MIPC/Webinars](https://aka.ms/MIPC/Webinars) & [http://aka.ms/MIPC/YouTube](http://aka.ms/MIPC/YouTube)
-* Read up on our latest blog posts – [https://aka.ms/MIPblog](https://aka.ms/MIPblog) & [https://aka.ms/CompBlog](https://aka.ms/CompBlog) 
-* Train End Users for adoption of labels – [http://aka.ms/MIPC/Blog-EnduserTraining_Sensitivity](http://aka.ms/MIPC/Blog-EnduserTraining_Sensitivity) & [http//aka.ms/MIPC/Blog-EndUserTraining_Retention](http//aka.ms/MIPC/Blog-EndUserTraining_Retention) 
+* Learn from our webinar series and YouTube video series: 
+    - [Webinars](../../webinars/)
+    - [YouTube](http://aka.ms/MIPC/YouTube)
+* Read up on our latest blog posts:
+    - [MIP Blogs](https://aka.ms/MIPblog)
+    - [Compliance Blogs](https://aka.ms/CompBlog) 
+* Train End Users for adoption of labels: 
+    - [Sensitivity Labels](../../enduser/sensitivity/)
+    - [Retention Labels](../../enduser/retention/) 
 * [Ask us on Yammer](https://aka.ms/MIPC/AskMIPTeam)
 * Follow us on [Twitter](https://twitter.com/MIPnews) using the tag #MicrosoftIP  
 * Email us – [mipsccxe@microsoft.com](mailto:mipsccxe@microsoft.com)
 
-> **NOTE:** We encourage contacting the CxE team with any suggestions directly related to products, webinars, blogs, or ideas for additional training. All support issues should be directed through the appropriate channels of support or community forums.
+!!! note
+    We encourage contacting the CxE team with any suggestions directly related to products, webinars, blogs, or ideas for additional training. All support issues should be directed through the appropriate channels of support or community forums.

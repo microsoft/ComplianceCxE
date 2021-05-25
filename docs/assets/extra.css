@@ -28,3 +28,16 @@
     --md-typeset-a-color:              #0066CC;
     
   }
+  .md-content {
+      text-align: justify;
+  }
+  figure {
+    padding: 4px;
+    margin: auto;
+  }
+  figcaption {
+    font-style: italic;
+    font-size: small;
+    padding: 2px;
+    text-align: center;
+  }
