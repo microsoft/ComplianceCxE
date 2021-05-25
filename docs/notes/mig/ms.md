@@ -5,12 +5,14 @@ In the past, when content reached the end of the period of retention people woul
 For a detailed overview of the disposition process, refer to the Microsoft document [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide).
 
 <figure>
-    <img src="\img\ms1.png"/> 
-    <figcaption>Figure 1: Label creation with disposition trigger.</figcaption>
+  <img src="..\img\ms1.png"/>
+  <figcaption>Figure 1: Label creation with disposition trigger.</figcaption>
 </figure>
 
-![](..\img\ms2.png)
-Figure 2: Adding user or mail enabled security group.
+<figure>
+  <img src="..\img\ms2.png"/>
+  <figcaption>Figure 2: Adding user or mail enabled security group.</figcaption>
+</figure>
 
 This process left a gap for large complex companies needing to streamline the disposition process since all the appropriate people would need to give approval before any action could be taken. One can imagine this could be a simple internal process or an extremely complex workflow. We heard this feedback loud and clear that people should only see what items they are assigned to and are ready for disposition but not all items needing disposition. 
 
