@@ -13,7 +13,7 @@ We built this page to help you easily find all relevant content and resources re
 * Ready to deploy? Start with guidance from [CxE Deployment Acceleration Guides (DAGs)](dag)
 * Review the license requirements for features [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * Always use a development tenant for Proof of Concept and testing [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
-* Looing for imformation on Microsoft Security? [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
+* Looing for information on Microsoft Security? [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
 
 ## Social Media and Forums
 
@@ -29,15 +29,15 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 6, 2021** |  |
 |  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
 |*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
+|***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
+| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
 |***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
 |*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
 | *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
 |***CC*: Compliance Manager updates** | **August 24, 2021** |  |
 | *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45706) |
 | *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
-|***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
-| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
-| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
 
 [Past webinars...](webinars)
 

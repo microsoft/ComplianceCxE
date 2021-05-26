@@ -11,6 +11,7 @@ nav:
       - Data Loss Prevention (DLP): resources/dlp.md
       - Insider Risk Management (IR): resources/ir.md
       - Compliance Manager (CM): resources/cm.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Notes from the Field:
       #- Compliance Manager: notes/cm.md
       #- Advanced eDiscovery: notes/aed.md
@@ -24,6 +25,7 @@ nav:
         - Introducing Adaptive Scopes - Private Preview: notes/mig/adpscp.md
       #- Information Protection: notes/mip.md
       #- Data Loss Prevention: notes/dlp.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - DAGs:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
@@ -33,6 +35,7 @@ nav:
       - Microsoft Information Governance and Records Management: dag/mig-rm.md
       - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
       - Resources: dag/dag-resources.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     #- PowerShell: 
       #- Compliance Manager: powershell/cm.md
       #- Advanced eDiscovery: powershell/aed.md
@@ -43,14 +46,21 @@ nav:
       #- Records Management: powershell/rm.md
       #- Information Protection: powershell/mip.md
       #- Data Loss Prevention: powershell/dlp.md
+      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks:
       - Exchange ETR to DLP Playbook: playbooks/etr2dlp.md
       - Teams DLP Playbook: playbooks/teamsdlp.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - End User Training:
       - Sensitivity Labels: enduser\sensitivity.md
       - Retention Labels: enduser\retention.md
-    - Webinars: webinars.md
-    - Previews: previews.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Webinars:
+      - Past Webinars: webinars.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Previews:
+      - Join Private Previews: previews.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
 theme:
   name: material
   language: en
@@ -88,7 +98,5 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
 plugins:
   - search

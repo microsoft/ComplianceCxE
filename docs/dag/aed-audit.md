@@ -43,13 +43,19 @@ The Advanced eDiscovery solution provides customers with the ability to identify
 
 To help frame the Advanced eDiscovery solution, it is important to note that our capabilities align with the eDiscovery Reference Model (EDRM) workflow as shown in figure 1.
 
-![Figure 1: Microsoft eDiscovery solutions aligned with eDiscovery Reference Model (EDRM)](images\aed-fig1.png)
+<figure>
+    <img src="..\images\aed-fig1.png"/>
+    <figcaption>Figure 1: Microsoft eDiscovery solutions aligned with eDiscovery Reference Model (EDRM)</figcaption>
+</figure>
 
 Within Advanced eDiscovery, we have enhanced identification, preservation, and collection from core eDiscovery with things like custodian management and advanced indexing. On top of this, to further cull and reduce data intelligently, in Advanced eDiscovery, provides capabilities to process, review and analyze your data so that what you export is minimized. See figure 2 below for a suggested linear workflow.
 
 #### Workflows
 
-![Figure 2: Linear Advanced eDiscovery Workflow](images\aed-fig2.png)
+<figure>
+    <img src="..\images\aed-fig2.png"/>
+    <figcaption>Figure 2: Linear Advanced eDiscovery Workflow</figcaption>
+</figure>
 
 In the suggested workflows below you have the ability to hit the ground running in implementing Advanced eDiscovery in your tenant.
 

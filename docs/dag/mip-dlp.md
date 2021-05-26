@@ -305,9 +305,15 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
 
 * When creating DLP policies, consider separate policies per workload. For example, you might have a policy named “PCI-DSS-ExchangeOnline” and one named “PCI-DSS-SharePointOnline”.   The reason for this is that when combining workloads, the DLP rules interface will only show conditions common to each workload chosen, which can lead to many options missing when incompatibilities occur. Consider a case where a policy is choosing Exchange Online and SharePoint Online as workloads. The below figures show the DLP Rules Wizard conditions when the policy chooses Exchange Online in isolation versus in conjunction with SharePoint Online.
 
-![Figure 2: Policy Wizard with single workload for Exchange Online](images\dlp-fig2.png)
+<figure>
+    <img src="..\images\dlp-fig2.png"/>
+    <figcaption>Figure 2: Policy Wizard with single workload for Exchange Online</figcaption>
+</figure>
 
-![Figure 3: Policy Wizard with multiple workloads](images\dlp-fig3.png)
+<figure>
+    <img src="..\images\dlp-fig3.png"/>
+    <figcaption>Figure 3: Policy Wizard with multiple workloads</figcaption>
+</figure>
 
 * When adding files to SharePoint Online and OneDrive for Business, there is an expected lag time between when the file is added and indexing occurs, a necessary process that must complete before DLP policies can be enforced. For more on how this works use this [link](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide#how-it-works). This leads to an opportunity for data leakage while waiting for this process to occur. Consider configuring SharePoint [sensitive by default](https://docs.microsoft.com/en-us/sharepoint/sensitive-by-default) functionality to ensure this does not become an issue.
 
@@ -335,7 +341,10 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
 
 While DLP might be a very important part of your compliance configuration you may want to consider reviewing the assessments that are available in from Compliance Manager, there is a significant chance that some control objectives require you to establish not only data loss prevention strategies, but also procedures to follow if information spillage does occur in the organization. Figure 1 below shows the improvement actions within a given tenant for an example compliance assessment.
 
-![Figure 1: Improvement actions showing potential DLP requirements](images\dlp-fig1.png)
+<figure>
+    <img src="..\images\dlp-fig1.png"/>
+    <figcaption>Figure 1: Improvement actions showing potential DLP requirement</figcaption>
+</figure>
 
 It is important to take these into consideration not only when planning your DLP strategy, but also updating these improvement actions upon completion of deployment will feed into an overall audit package to be provided to auditors when necessary for these regulatory compliance reporting periods.
 

@@ -8,7 +8,10 @@ intro: Microsoft Compliance Configuration Analyzer (MCCA) DAG
 
 Where does one start today with regards to being compliant with various standards and assessments? There are often multiple steps you need to take to safeguard your compliance posture. Often, you want to know if there is a starting point or recommended best practices as you get started on your journey of managing compliance requirements. Questions you may ask yourself are: ‘How do I diagnose my compliance posture or ensure that I have the right configurations in place to protect my environment completely. These are largely manual processes which tend to be time consuming & allow for human error. Furthermore, with the evolving compliance landscape the risk of blind spots also increases along with compliance requirements needing to be changed or updated; the latest information will be included with MCCA tool without the need to update manually.
 
-![Figure 1: Actionable Status Report](images\mcca-fig1.jpg)
+<figure>
+    <img src="..\images\mcca-fig1.jpg"/>
+    <figcaption>Figure 1: Actionable Status Report</figcaption>
+</figure>
 
 Microsoft Compliance Configuration Analyzer (MCCA) is a diagnostic tool (seen in Figure 1 above) which generates a report to help M365 customers understand their current consumption of E5 compliance offerings. It surfaces improvement areas in a tenant’s compliance configurations in achieving data protection guidelines and recommends best practices to follow. This tool can help you quickly see which improvement actions in Compliance Manger apply to your current Microsoft 365 environment.
 
