@@ -5,7 +5,7 @@ intro: Deployment Acceleration Guides
 ---
 # Deployment Acceleration Guides
 
-The deployment acceleration guides (DAGs) are written and updated by the global Compliance CxE team and are a resource designed to help with the following:
+The deployment acceleration guides (DAGs) are written and updated continually by the global Compliance CxE team and are a resource designed to help with the following:
 
 * [**One Compliance Story**](/dag/dag-resources#one-compliance-story) covering how each solution complements each other
 * **Best Practices** based on the CxE team's experience with customer roadblocks

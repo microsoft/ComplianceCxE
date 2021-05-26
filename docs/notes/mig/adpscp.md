@@ -1,4 +1,3 @@
-# Adaptive scopes private preview is live!
 
 Now available for testing in both Information Governance and Records Management solutions
 The long awaited feature is here. 

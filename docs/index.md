@@ -2,15 +2,18 @@
 
 The **Customer Acceleration Team (CAT)** is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
 
-We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
+We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis. Also, do submit your feedback and contributions to the site via the appropiate links.
 
-## General Information
+!!! example "Tip"
+    Leverage the [Notes from the Field](notes/mig/ms) tab to see posts from our team covering high value senarios relating to business use cases. 
 
-* [CxE Deployment Acceleration Guides (DAGs)](dag)
-* [Official M365 Compliance Documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
-* [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
-* [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
-* [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
+## General Information on Getting Started
+
+* Visit the docs site to review [Microsoft 365 Compliance docuementation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
+* Ready to deploy? Start with guidance from [CxE Deployment Acceleration Guides (DAGs)](dag)
+* Review the license requirements for features [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+* Always use a development tenant for Proof of Concept and testing [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
+* Looing for imformation on Microsoft Security? [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
 
 ## Social Media and Forums
 
