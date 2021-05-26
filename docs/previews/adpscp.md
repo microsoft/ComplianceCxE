@@ -20,7 +20,7 @@ Today, we are  announcing the private preview for adaptive policy scopes. This n
 * **Scope reporting** – Similar to policy reporting, can also view a report of all the changes that happen to user, site and group scopes.
 
 
-Not registered? Slots are available! Review the steps to join our Private Preview ring [here](https://aka.ms/MIPC/JoinPreviews), then fill out this form to nominate your test tenant at [https://aka.ms/MIPC/AdaptiveScopes-Preview](https://aka.ms/MIPC/AdaptiveScopes-Preview)
+Not registered? Slots are available! Review the steps to join our Private Preview ring [here](../../previews), then fill out this form to nominate your test tenant at [https://aka.ms/MIPC/AdaptiveScopes-Preview](https://aka.ms/MIPC/AdaptiveScopes-Preview)
 
 
 Looking forward to hearing from you.

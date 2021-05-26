@@ -5,8 +5,8 @@ edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
 nav:
     - OSS: 
       - One Stop Shop: index.md
-      - Advanced eDiscovery: resources/aed.md
-      - Microsoft Information Governance (MIG): resources/mig.md
+      - Advanced eDiscovery (AeD): resources/aed.md
+      - Microsoft Information Governance (MIG/RM): resources/mig.md
       - Microsoft Information Protection (MIP): resources/mip.md
       - Data Loss Prevention (DLP): resources/dlp.md
       - Insider Risk Management (IR): resources/ir.md
@@ -18,11 +18,9 @@ nav:
       #- Advanced Audit: notes/audit.md
       #- Insider Risk: notes/ir.md
       #- Communication Compliance: notes/cc.md
-      - Information Governance: 
-        - Introducing Adaptive Scopes - Private Preview: notes/mig/adpscp.md
+      #- Information Governance: 
       - Records Management: 
         - Annoucing Multi-stage Public Preview: notes/mig/ms.md
-        - Introducing Adaptive Scopes - Private Preview: notes/mig/adpscp.md
       #- Information Protection: notes/mip.md
       #- Data Loss Prevention: notes/dlp.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
@@ -60,6 +58,8 @@ nav:
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
+      - MIG/RM:
+        - Introducing Adaptive Scopes - Private Preview: previews/adpscp.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
 theme:
   name: material
