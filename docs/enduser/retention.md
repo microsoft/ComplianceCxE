@@ -1,4 +1,6 @@
 
+# End User Training for Retention Labels
+
 The following training is provided to help educate end users during the adoption of retention labels. Please note that '*Munson's Pickles and Preserves Farm*' is a fictitious company name and angle brackets "**<>**" with <span style="color:red">RED</span> text enable the training to be updated for deployment, adoption and education for each industry or regulatory compliance.
 
 In summary, this training will help to:
