@@ -28,9 +28,11 @@
     --md-typeset-a-color:              #0066CC;
     
   }
+@media screen and (min-width: 48em){
   .md-content {
       text-align: justify;
   }
+}
   figure {
     padding: 4px;
     margin: auto;
