@@ -7,7 +7,7 @@ title: Notes from the field
     Please contribute suggestions or additional scenarios.
 
 ## Overview    
-In the past, when content reached the end of the period of retention people would receive an email notification to take action. The 'Records Manager' or 'Disposition Reviewer' then would use the Disposition tab in Records Management to review the labels acting upon items to then dispose or permanently delete, extend the retention period or apply another label. 
+With our previous disposition solution, when reached the end of a period of retention select individuals would receive an email notification to take an action. The 'Records Manager' or 'Disposition Reviewer' then would use the Disposition tab in Records Management to review the labels acting upon items to then dispose or permanently delete, extend the retention period or apply another label. 
 
 For a detailed overview of the disposition process, refer to the Microsoft document [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide).
 
@@ -16,7 +16,7 @@ For a detailed overview of the disposition process, refer to the Microsoft docum
     <figcaption>Figure 1: Label creation with disposition trigger.</figcaption>
 </figure>
 
-*Figure 1* above depicts a label action triggering a dispsotion review. *Figure 2* below illustrates adding a single user or mail enabled group as disposition reviewer.
+*Figure 1* above depicts a label action triggering a disposition review. *Figure 2* below illustrates adding a single user or mail enabled group as disposition reviewer.
 
 <figure>
     <img src="../../img/ms2.png"/> 
@@ -24,10 +24,10 @@ For a detailed overview of the disposition process, refer to the Microsoft docum
 </figure>
 
 
-This process left a gap for large complex companies needing to streamline the disposition process since all the appropriate people would need to give approval before any action could be taken. One can imagine this could be a simple internal process or an extremely complex workflow. This led to the recrods manager or approver seeing all items needing disposition.
+This process left a gap for large complex organizations needing to streamline the disposition process where all appropriate people would need to give approval before any action could be taken. One can imagine this could be a simple internal process or an extremely complex workflow. This flow led to the records manager or approver seeing all items needing disposition.
 
-## Multi-stage Features
-We heard this feedback from our customers that people should only see what items they are assigned to and are ready for disposition but not all items needing disposition. With this in mind, we developed multi-stage disposition.
+## Multi-Stage Features
+We heard this feedback from our customers that people should only see the items that they are assigned to and that are ready for disposition but not all items needing disposition. With this in mind, we developed multi-stage disposition.
 
 We are excited to share the new capabilities in Records Management:
 
@@ -45,15 +45,16 @@ We will discuss one such use case scenario here that leverages these new feature
 
 ## Scenario 
 
-The example below is more a general example that can be applied to all industries as regulations or company policy may not be the same in all parts of the world.
+!!! note
+    The example below is more a general example that can be applied to all industries as regulations or company policy may not be the same in all parts of the world.
 
-A global company that conducts business in Europe and is headquartered in California. The company needs to define a process of disposition to accommodate specific people or departments in Germany who are tasked with a review of records that are expired complying with **BaFin**, **GDPR** and **CPRA** regulations. These records consist of contracts in the region of the world the company conducts business. 
+A global company that conducts business in Europe and is headquartered in California. The goal is to define a process of disposition to accommodate specific people or departments in Germany who are tasked with a review of exipired recrods complying with **BaFin**, **GDPR** and **CPRA** regulations. These records consist of contracts in the region of the world the company conducts business. 
 
-The record manager of the company needs to create a process for taking actions for expired records and ensure the process is followed as defined by the company’s retention schedule. Some departments have a regional lead that oversees all the contract specialists in each country who might all have input into if record needs to be disposed. These subject matter experts for record types will need to approve items for disposition that are assigned to them and the ability to view the context of the record. 
+The record manager of the company needs to create a process for taking actions for expired records and ensure the process is followed as defined by the company’s retention schedule. Some departments have a regional lead that oversees all the contract specialists in each country who might all have input into if record needs to be disposed. These subject matter experts for record types will need to approve items for disposition that are assigned to them and have the ability to view the context of the record. 
 
-The company needs both the contract specialist or regional lead and records manager to approve all records needing disposition review but only see the relevant items they are realted to their job function. Contract specialists need email notifications daily with the correct instructions and approval guidance in multiple languages to accommodate global workforce. 
+The company needs both the contract specialist or regional lead and records manager to approve all records requiring disposition review but only see the relevant items they are related to their job function. Contract specialists need email notifications daily with the correct instructions and approval guidance in multiple languages to accommodate global workforce. 
 
-The records manager needs email notification instructions and business guidance that differ from the contract’s specialist or regional lead. The records manager needs a unified disposition process across all the locations of the world and reporting for proof disposed items are not discoverable. Lastly, if business structure or change management dictate, require the ability to update the disposition process while adhering to the companies defined retention schedule.
+The records manager needs email notification instructions and business guidance that differ from the contract’s specialist or regional lead. The records manager needs a unified disposition process across all the locations of the world and reporting for proof that disposed items are not discoverable. Lastly, if business structure or change management dictate, they require the ability to update the disposition process while adhering to the company's defined retention schedule.
 
 We will use the below workflow to map the business use case to the solution.
 
@@ -92,9 +93,9 @@ Randall works in Germany as shown in *Figure 4*.
 
 
 ## Label Creation
-We start by creating a new retention label with the record option in the File Plan tab called *Multi-Stage Multi-Geo Label*, with a 1 day retain,  and triggering a dispostion at the end of this time period. 
+We start by creating a new retention label with the record option enabled via the File Plan tab within the Records Management section of Microsoft 365 Compliance Center. The label is called *Multi-Stage Multi-Geo Label*, and has a 1 day retention setting, dispostion (deletion) after the retention period has expired, and requiring a disposition review.
 
-The label below shows three stages and three reviwers: 
+The label below shows three stages and three reviewers: 
 
 - Stage 1 called: <span style="color:blue">Germany SOW</span> 
 - Stage 2 called: <span style="color:blue">Europe SOW Approval</span>  
@@ -109,14 +110,14 @@ The label below shows three stages and three reviwers:
     The label shows a setting of 1 day but should be set to the requirement of your organization or regulation. The label name could be *Contracts* as an example here or any other nomenclature that resonates within your business.
 
 ## Label Policy
-Our next step is to create a retention policy called *Multi-Stage Multi-Geo Policy* publishing label *Multi-Stage Multi-Geo Label*. The published label covers one exchange mailbox, one Sharepoint site and two user OneDrive locations.
+Our next step is to create a retention label policy called *Multi-Stage Multi-Geo Policy* publishing label *Multi-Stage Multi-Geo Label*. The published label covers one exchange mailbox, one SharePoint site and two user OneDrive locations.
 
 <figure>
     <img src="../../img/ms6.png"/> 
     <figcaption>Figure 6: Auto-applied label settings.</figcaption>
 </figure>
 
-We configured the policy to **Randall Testuser’s** email, a SharePoint site used by **Randall Testuser** in Germany for SOWs, and include both **Randall Testuser’s** + **MIG Admin’s** OneDrive locations.
+We configured the policy to apply to **Randall Testuser’s** email, a SharePoint site used by **Randall Testuser** in Germany for SOWs, and to include both **Randall Testuser’s** + **MIG Admin’s** OneDrive locations.
 
 ## Email Notifications
 
@@ -129,7 +130,7 @@ Notice the first line is in German (**Please verify all SOWs conform to BaFIN re
     <figcaption>Figure 7: Customize message for email notification.</figcaption>
 </figure>
 
-Once an item is up for dispostion, the persons or security group added to the first stage are sent one mail per day per label similar to the email shown below. 
+Once an item is up for disposition, the persons or security group added to the first stage are sent one mail per day per label similar to the email shown below. 
 
 <figure>
     <img src="../../img/ms8.png"/> 
@@ -138,7 +139,7 @@ Once an item is up for dispostion, the persons or security group added to the fi
 
 ## Stage 1 Disposition
 
-Now we are moving to the Microsoft Compliance Center (MCC) to review items for disposition for **Randall Testuser** notified above in email. We see the items ready for dispostion that are assigned to **Randall Testuser** as the approved or assigned *dispostion reviewer* for the first stage name called <span style="color:blue">Germany SOW</span>. The reviewer can now see items for all multi-geo locations for the respective label.
+Next, we navigate to the Microsoft 365 Compliance Center (MCC) to review items for disposition for **Randall Testuser** notified above in email. We see the items ready for disposition that are assigned to **Randall Testuser** as the approver or assigned *disposition reviewer* for the first stage named <span style="color:blue">Germany SOW</span>. The reviewer can now see items for all multi-geo locations for the respective label.
 
 <figure>
     <img src="../../img/ms9-1.png"/> 
@@ -152,7 +153,7 @@ Compared to the view of record manager role, one can see that **Randall Testuser
     <figcaption>Figure 10: Stage 1 and Stage 2 disposition view.</figcaption>
 </figure>
 
-**Randall Testuser** will follow guidance to **Approve** the dispostion or **Relabel** or **Extend** or **Add** additional Reviewers to each item. Once approving an item for dispostion, it will flow the second stage.
+**Randall Testuser** will follow guidance to **Approve** the disposition,  **Relabel**, **Extend** or **Add** additional Reviewers to each item. Once approving an item for disposition, it will flow the second stage.
 
 <figure>
     <img src="../../img/ms11.png"/> 
@@ -167,7 +168,7 @@ As **Randall Testuser** clicks on an item, he can quickly see the context to mak
 </figure>
 
 ## Stage 2 Disposition
-Once clicking Approve it move to stage 2 called <span style="color:blue">Europe SOW Approval</span> and **Joanna Hackett** is notified via email to then review items for disposition in the second stage.
+Once clicking **Approve** the item then moves to stage 2 called <span style="color:blue">Europe SOW Approval</span> and **Joanna Hackett** is notified via email to then review items for disposition in the second stage.
 
 <figure>
     <img src="../../img/ms13-1.png"/> 
@@ -182,15 +183,15 @@ Once clicking Approve it move to stage 2 called <span style="color:blue">Europe 
 </figure>
 
 ## Stage 3 Disposition
-Lastly the item follows the flow to the final stage for **MIG Admin** our records administrator to approve the dispostion. <span style="color:red">Before doing so, an email was sent out by legal stating all contracts from Germany need to be immutable with a 55 year retention hold</span> per new regulation guidance that came out in the last week. **MIG Admin** then adds **Nancy Liang** from legal to the review process.
-### Adding additional reviwers
+Lastly the item follows the flow to the final stage for **MIG Admin** our records administrator to approve the disposition. <span style="color:red">Before doing so, an email was sent out by legal stating all contracts from Germany need to be immutable with a 55 year retention hold</span> per new regulation guidance that came out in the last week. **MIG Admin** then adds **Nancy Liang** from legal to the review process.
+### Adding additional reviewers
 <figure>
     <img src="../../img/ms15.png"/> 
     <figcaption>Figure 15: Adding legal reviwer and comments.</figcaption>
 </figure>
 
 ### Relabeling
-**Nancy Liang** follows the same steps after receiving email to review the item for disposition. She will then **Relabel** the item as a regulatory record *Multi-Stage Multi-Geo Regulatory Label* that has a retention record of 55 years.
+**Nancy Liang** follows the same steps after receiving an email to review the item for disposition. She will then **Relabel** the item as a regulatory record *Multi-Stage Multi-Geo Regulatory Label* that has a retention record of 55 years.
 
 <figure>
     <img src="../../img/ms16.png"/> 
