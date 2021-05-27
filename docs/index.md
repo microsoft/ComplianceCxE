@@ -9,7 +9,7 @@ We built this page to help you easily find all relevant content and resources re
 
 ## General Information on Getting Started
 
-* Visit the docs site to review [Microsoft 365 Compliance docuementation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
+* Visit the docs site to review [Microsoft 365 Compliance documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
 * Ready to deploy? Start with guidance from [CxE Deployment Acceleration Guides (DAGs)](dag)
 * Review the license requirements for features [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * Always use a development tenant for Proof of Concept and testing [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
