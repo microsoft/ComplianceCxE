@@ -4,7 +4,7 @@ title: Webinars
 intro: Past Webinars
 ---
 
-The Compliance CxE team regularly hosts webinars to present what's changing and new within the Compliance solutions.  Every webinar is **always** recorded and published here along with the PowerPoint Decks and Q&A.  For upcoming webinars, [refer to the OSS](/#upcoming-webinars).
+The Compliance CxE team regularly hosts webinars to present what's changing and new within the Compliance solutions.  Every webinar is **always** recorded and published here along with the PowerPoint Decks and Q&A.  For upcoming webinars, [refer to the OSS](../#upcoming-webinars).
 
 ## Discovery & Response
 
