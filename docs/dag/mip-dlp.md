@@ -368,7 +368,7 @@ It is important to take these into consideration not only when planning your DLP
     
     - [https://dlptest.com](https://dlptest.com) – provides several testing options as well as samples for common restricted items such as credit card numbers, SSN, etc.
     
-    - [https://dlptest.com](https://dlptest.com) - Provides you with data that can be used to generate SSN, credit card numbers etc.
+    - [https://fauxid.com/](https://fauxid.com/) - Provides you with data that can be used to generate SSN, credit card numbers etc.
 
 * [Migrating from Exchange Transport Rules to Unified DLP - The complete playbook](https://techcommunity.microsoft.com/t5/microsoft-security-and/migrating-from-exchange-transport-rules-to-unified-dlp-the/ba-p/1749723)
 

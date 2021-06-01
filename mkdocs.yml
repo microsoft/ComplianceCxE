@@ -5,12 +5,13 @@ edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
 nav:
     - OSS: 
       - One Stop Shop: index.md
+      - Advanced Audit: resources/audit.md
       - Advanced eDiscovery (AeD): resources/aed.md
-      - Microsoft Information Governance (MIG/RM): resources/mig.md
-      - Microsoft Information Protection (MIP): resources/mip.md
+      - Compliance Manager (CM): resources/cm.md
       - Data Loss Prevention (DLP): resources/dlp.md
       - Insider Risk Management (IR): resources/ir.md
-      - Compliance Manager (CM): resources/cm.md
+      - Microsoft Information Governance (MIG/RM): resources/mig.md
+      - Microsoft Information Protection (MIP): resources/mip.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Notes from the Field:
       #- Compliance Manager: notes/cm.md
