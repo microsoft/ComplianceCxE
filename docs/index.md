@@ -26,7 +26,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 6, 2021** |  |
+|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 15, 2021** |  |
 |  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
 |*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
 |***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
