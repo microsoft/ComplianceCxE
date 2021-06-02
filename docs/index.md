@@ -22,24 +22,10 @@ We built this page to help you easily find all relevant content and resources re
 
 ## Upcoming Webinars
 
-The Compliance CxE team regularly hosts webinars to present what's changing and new with our products.  Every webinar is **always** recorded and published [here](webinars) along with the PowerPoint Decks and Q&A.
+The Compliance CxE team regularly hosts webinars to present what's changing and new with our products.  Check out the [Webinars page](webinars) for upcoming webinars. 
 
-| Webinar Topic | Date & Time | Registration Link | 
-| --- | --- | --- |
-|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 15, 2021** |  |
-|  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
-|*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
-|***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
-| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
-| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
-|***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
-|*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
-| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
-|***CC*: Compliance Manager updates** | **August 24, 2021** |  |
-| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45706) |
-| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
-
-[Past webinars...](webinars)
+!!! note
+    Every webinar is **always** recorded and published [here](webinars/#past-webinars) along with the PowerPoint Decks and Q&A.
 
 ## Learn more about...
 

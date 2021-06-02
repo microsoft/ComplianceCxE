@@ -1,12 +1,33 @@
 ---
 layout: home
 title: Webinars
-intro: Past Webinars
+intro: Webinars
 ---
 
-The Compliance CxE team regularly hosts webinars to present what's changing and new within the Compliance solutions.  Every webinar is **always** recorded and published here along with the PowerPoint Decks and Q&A.  For upcoming webinars, [refer to the OSS](../#upcoming-webinars).
 
-## Discovery & Response
+
+The Compliance CxE team regularly hosts webinars to present what's changing and new within the Compliance solutions.  Every webinar is **always** recorded and published here under [Past Webinars](#past-webinars) along with the PowerPoint Decks and Q&A.
+
+## Upcoming Webinars
+
+| Webinar Topic | Date & Time | Registration Link | 
+| --- | --- | --- |
+|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 15, 2021** |  |
+|  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
+|*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
+|***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
+| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
+|***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
+|*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
+|***CC*: Compliance Manager updates** | **August 24, 2021** |  |
+| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45706) |
+| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
+
+## Past Webinars
+
+### Discovery & Response
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
@@ -17,7 +38,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 
 
-## Compliance Manager
+### Compliance Manager
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
@@ -25,14 +46,14 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Oct 01, 2020|**CM**: Compliance Manager Overview|[Video](https://aka.ms/MIPC/Video-Webinar-ComplianceManager)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceManagerWebinar)|
 |Apr. 15, 2020|**CM**: Compliance score how-to|[Video](https://aka.ms/MIPC/Video-ComplianceScoreWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceScoreWebinar)|
 
-## Insider Risk Management/Communication Compliance
+### Insider Risk Management/Communication Compliance
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
 |March 24, 2021|**IIRC**: What's New from Ignite regarding Insider Risk Management|[YouTube](https://www.youtube.com/watch?v=4Q7q1ELcI48&feature=youtu.be) |[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-insider-risk-management/ba-p/2259992)|
 |Oct 29, 2020|**IRCC**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-IRCCWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-insider-risk-management-amp-communication-compliance/ba-p/1877730)|
 |Mar. 10, 2020|**IRCC**: Insider Risk Management & Communications Compliance|[Video](https://aka.ms/MIPC/Video-IRMCCWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-IRMCCWebinar)|
 
-## Microsoft Information Governance
+### Microsoft Information Governance
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
@@ -40,7 +61,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
 |May 26, 2020|**MIG**: Records Management|[Video](https://aka.ms/MIPC/Video-RecordsManagementWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-RecordsManagementWebinar)|
 
-## Microsoft Information Protection
+### Microsoft Information Protection
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
@@ -59,7 +80,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Jan. 22, 2020|**MIP**: Introduction to SharePoint & OneDrive Auto-labeling|[Video](https://aka.ms/SPOAutoLabelWebinar-Recording)|N/A|
 |Jan. 15, 2020|**MIP**: Moving to unified labeling|[YouTube](https://aka.ms/MIPC/Video-ULWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ULWebinar)|
 
-## Data Loss Prevention
+### Data Loss Prevention
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
@@ -68,7 +89,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Nov 04, 2020|**DLP**: On-Premises DLP|[Video](https://aka.ms/MIPC/Video-OnPremisesDLP)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-on-premises-dlp-webinar/ba-p/1878047#M4545)|
 |Sep 9, 2020|**DLP**: Microsoft Endpoint DLP|[Video](https://aka.ms/MIPC/Video-EPDLPWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-EndpointDLPWebinar)|
 
-## Other
+### Other
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
