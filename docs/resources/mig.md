@@ -21,4 +21,4 @@ We built this page to help you easily find all relevant content and resources re
 * [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)
 
 ## Downloads
-* [Information Governance and Records Management permissions by feature/persona/role](../files/permissions.xlsx)
+* [Information Governance and Records Management permissions by feature/persona/role](files/Permissions.xlsx)
