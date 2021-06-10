@@ -57,6 +57,10 @@ nav:
     - Webinars:
       - Webinars: webinars.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Scenario Based Demos:
+      - About the Series: sbd\sbd-intro.md
+      - Episode 1: sbd\sbd-ep1.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
       - MIG/RM:

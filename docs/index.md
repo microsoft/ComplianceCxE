@@ -4,8 +4,8 @@ The **Customer Acceleration Team (CAT)** is a World Wide team, our charter is he
 
 We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis. Also, do submit your feedback and contributions to the site via the appropiate links.
 
-!!! example "Tip"
-    Leverage the [Notes from the Field](notes/mig/ms) tab to see posts from our team covering high value senarios relating to business use cases. 
+!!! important
+    Check out the our latest video series - the [Scenario Based Demo](sbd/sbd-intro) where we explore a fictitious company and the process they must go through to fully adopt and deploy Microsoft 365 compliance technologies!
 
 ## General Information on Getting Started
 
