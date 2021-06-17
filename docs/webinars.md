@@ -12,9 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***CC*: Reducing Code of Conduct and Regulatory Compliance Violation Risks** | **June 15, 2021** |  |
-|  *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45696) |
-|*US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45690) |
 |***MIP*: Advanced classification and auto lableing** | **July 13, 2021** |  |
 | *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
 | *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
@@ -49,6 +46,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 ### Insider Risk Management/Communication Compliance
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|June 15, 2021|**CC**: Reducing Code of Conduct and Regulatory Compliance Violation Risks|[Video](https://mipc.eventbuilder.com/event/45690) |Coming Soon |
 |March 24, 2021|**IIRC**: What's New from Ignite regarding Insider Risk Management|[YouTube](https://www.youtube.com/watch?v=4Q7q1ELcI48&feature=youtu.be) |[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-insider-risk-management/ba-p/2259992)|
 |Oct 29, 2020|**IRCC**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-IRCCWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-insider-risk-management-amp-communication-compliance/ba-p/1877730)|
 |Mar. 10, 2020|**IRCC**: Insider Risk Management & Communications Compliance|[Video](https://aka.ms/MIPC/Video-IRMCCWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-IRMCCWebinar)|
