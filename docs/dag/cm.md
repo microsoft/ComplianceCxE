@@ -8,7 +8,7 @@ intro: Compliance Manager DAG
 
 We can all agree that protecting customer's data is of critical importance, but with an average of 222 updates per day from 1000 regulatory bodies, the task of safeguarding your organization’s compliance posture in such a rapidly evolving landscape can feel insurmountable at times. 
 
-Compliance Manger is an end to end information compliance management solution in the [Microsoft 365 compliance center](https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide) that helps you understand your organization's compliance posture. Compliance Manager uses the inventory of data protection risk allowing you to manage the complexities of controls, adhering to regulations and certifications long with reporting needed for auditors.
+Compliance Manager is an end to end information compliance management solution in the [Microsoft 365 compliance center](https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide) that helps you understand your organization's compliance posture. Compliance Manager uses the inventory of data protection risk allowing you to manage the complexities of controls, adhering to regulations and certifications long with reporting needed for auditors.
 ## Your Deployment Plan
 
 The objective is to create a deployment plan that follows the progression of crawl-walk-run methodology while highlighting the user and administrator experience at each stage. Your focus should be on the end user result and the security controls you achieve with each implemented stage. Solutions or tools covered in this guide for deployment consideration are:
