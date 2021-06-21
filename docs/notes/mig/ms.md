@@ -12,14 +12,14 @@ With our previous disposition solution, when reached the end of a period of rete
 For a detailed overview of the disposition process, refer to the Microsoft document [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide).
 
 <figure>
-    <img src="../img/ms1.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms1.png"/> 
     <figcaption>Figure 1: Label creation with disposition trigger.</figcaption>
 </figure>
 
 *Figure 1* above depicts a label action triggering a disposition review. *Figure 2* below illustrates adding a single user or mail enabled group as disposition reviewer.
 
 <figure>
-    <img src="../img/ms2.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms2.png"/> 
     <figcaption>Figure 2: Adding user or mail enabled security group.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ We will use the below workflow to map the business use case to the solution.
 ## Workflow
 
 <figure>
-    <img src="../img/image1.PNG"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/image1.PNG"/> 
     <figcaption>Image 1: Label workflow with multi-stage disposition</figcaption>
 </figure>
 
@@ -77,14 +77,14 @@ Relating to the requirements above, there are three users in our tenant mapping 
 As you can see from the *Figure 3* below both **Joanna Hackett** and **MIG Admin** are located in the United States (California). 
 
 <figure>
-    <img src="../img/ms3.png" align="left"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms3.png" align="left"/> 
     <figcaption>Figure 3: User with PDL in Germany</figcaption>
 </figure>
 
 Randall works in Germany as shown in *Figure 4*.
 
 <figure>
-    <img src="../img/ms4.png" align="left"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms4.png" align="left"/> 
     <figcaption>Figure 4: User with PDL in USA</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ The label below shows three stages and three reviewers:
 - Stage 3 called: <span style="color:blue">Records Manager SOW Approval</span> 
 
 <figure>
-    <img src="../img/ms5.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms5.png"/> 
     <figcaption>Figure 5: Settings of Multi-Stage Multi-Geo retention label.</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ The label below shows three stages and three reviewers:
 Our next step is to create a retention label policy called *Multi-Stage Multi-Geo Policy* publishing label *Multi-Stage Multi-Geo Label*. The published label covers one exchange mailbox, one SharePoint site and two user OneDrive locations.
 
 <figure>
-    <img src="../img/ms6.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms6.png"/> 
     <figcaption>Figure 6: Auto-applied label settings.</figcaption>
 </figure>
 
@@ -126,14 +126,14 @@ Next we move to configuring the email notifications once items are ready for dis
 Notice the first line is in German (**Please verify all SOWs conform to BaFIN regulations.**) and the second line is in English.
 
 <figure>
-    <img src="../img/ms7.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms7.png"/> 
     <figcaption>Figure 7: Customize message for email notification.</figcaption>
 </figure>
 
 Once an item is up for disposition, the persons or security group added to the first stage are sent one mail per day per label similar to the email shown below. 
 
 <figure>
-    <img src="../img/ms8.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms8.png"/> 
     <figcaption>Figure 8: Email notification from O365 Security & Compliance Center.</figcaption>
 </figure>
 
@@ -142,28 +142,28 @@ Once an item is up for disposition, the persons or security group added to the f
 Next, we navigate to the Microsoft 365 Compliance Center (MCC) to review items for disposition for **Randall Testuser** notified above in email. We see the items ready for disposition that are assigned to **Randall Testuser** as the approver or assigned *disposition reviewer* for the first stage named <span style="color:blue">Germany SOW</span>. The reviewer can now see items for all multi-geo locations for the respective label.
 
 <figure>
-    <img src="../img/ms9-1.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms9-1.png"/> 
     <figcaption>Figure 9: Stage 1 disposition view.</figcaption>
 </figure>
 
 Compared to the view of record manager role, one can see that **Randall Testuser** has <span style="color:red">17</span> items under the *Multi-Stage Multi-Geo Label* (shown in Figure 9) and **MIG Admin** shows <span style="color:red">18</span> items including one item in the second stage called <span style="color:blue">Europe SOW Approval</span> (shown in Figure 10).
 
 <figure>
-    <img src="../img/ms10-1.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms10-1.png"/> 
     <figcaption>Figure 10: Stage 1 and Stage 2 disposition view.</figcaption>
 </figure>
 
 **Randall Testuser** will follow guidance to **Approve** the disposition,  **Relabel**, **Extend** or **Add** additional Reviewers to each item. Once approving an item for disposition, it will flow the second stage.
 
 <figure>
-    <img src="../img/ms11.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms11.png"/> 
     <figcaption>Figure 11: Item view actions available.</figcaption>
 </figure>
 
 As **Randall Testuser** clicks on an item, he can quickly see the context to make an informed decision.
 
 <figure>
-    <img src="../img/ms12.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms12.png"/> 
     <figcaption>Figure 12: Context view of item.</figcaption>
 </figure>
 
@@ -171,14 +171,14 @@ As **Randall Testuser** clicks on an item, he can quickly see the context to mak
 Once clicking **Approve** the item then moves to stage 2 called <span style="color:blue">Europe SOW Approval</span> and **Joanna Hackett** is notified via email to then review items for disposition in the second stage.
 
 <figure>
-    <img src="../img/ms13-1.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms13-1.png"/> 
     <figcaption>Figure 13: Stage 2 view of item.</figcaption>
 </figure>
 
 **Joanna Hackett** approves items and adds her comments for the disposition action as seen in *Figure 14* history pane.
 
 <figure>
-    <img src="../img/ms14.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms14.png"/> 
     <figcaption>Figure 14: History of actions and comments.</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ Once clicking **Approve** the item then moves to stage 2 called <span style="col
 Lastly the item follows the flow to the final stage for **MIG Admin** our records administrator to approve the disposition. <span style="color:red">Before doing so, an email was sent out by legal stating all contracts from Germany need to be immutable with a 55 year retention hold</span> per new regulation guidance that came out in the last week. **MIG Admin** then adds **Nancy Liang** from legal to the review process.
 ### Adding additional reviewers
 <figure>
-    <img src="../img/ms15.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms15.png"/> 
     <figcaption>Figure 15: Adding legal reviewer and comments.</figcaption>
 </figure>
 
@@ -194,14 +194,14 @@ Lastly the item follows the flow to the final stage for **MIG Admin** our record
 **Nancy Liang** follows the same steps after receiving an email to review the item for disposition. She will then **Relabel** the item as a regulatory record *Multi-Stage Multi-Geo Regulatory Label* that has a retention record of 55 years.
 
 <figure>
-    <img src="../img/ms16.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms16.png"/> 
     <figcaption>Figure 16: Regulatory label summary with retention duration</figcaption>
 </figure>
 
 *Figure 16* shows the settings of the regulatory label and *Figure 17* shows the relabeling with comments.
 
 <figure>
-    <img src="../img/ms17.png"/> 
+    <img src="https://microsoft.github.io/ComplianceCxE/notes/img/ms17.png"/> 
     <figcaption>Figure 17: Relabel action and comments</figcaption>
 </figure>
 
