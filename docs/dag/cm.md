@@ -302,10 +302,7 @@ Now that you know how to configure groups, it’s time to get started by picking
 
 Below is an example of the assessments page. It lists the assessments you select to track for your organization and your compliance score denominator is determined by all your tracked assessments. Thus, the more assessments you add, the more improvement actions you see on your improvement actions page, and the higher your score denominator is. 
 
-<figure>
-    <img src="..\images\cm-fig1.png"/>
-    <figcaption>Figure 1: Compliance Manager Assessments Page</figcaption>
-   </figure>
+![](images\cm-fig1.png)
 
 **Setting up an assessment**
 
@@ -410,11 +407,8 @@ Actions are assigned a score value based on whether they’re mandatory or discr
 
 Each action has an assigned value in Compliance Manager based on the risk it represents: 
 
-<figure>
-    <img src="..\images\cm-fig2.png"/>
-    <figcaption>Figure 1: Compliance Score Calculation</figcaption>
-   </figure>
-
+![](images\cm-fig2.png)
+    
 ###  Run: Customize and Expand Assessments  
 Now that you have a strong foundation in Compliance Manager and you have worked with an out of box assessment template, we’ll look at how you can build on this to create your own assessments, expand on the prebuilt assessments, or use Compliance Manager to assess 3rd party platforms or applications. This can really drive home the value of having a centrally managed location to track all your compliance management needs. We see customers using a mix of out of box assessment and adding their own custom assessments or expanding on the out of box assessments to meet their company’s needs. This allows for a lot of flexibility.  
 
@@ -453,20 +447,17 @@ When you start with the Excel spreadsheet you will notice it contains four (4) t
 
 In the below example we have created a sample Excel spreadsheet that covers compliance of Oracle, Windows AD and JBOSS Server:   
 
-<figure>
-    <img src="..\images\cm-fig3.png"/>
-   </figure>
+![](images\cm-fig3.png)
 
 #### **Template tab (required)** 
 The **Template** tab is required. The information in this tab provides metadata about the template. There are four (4) required columns. The columns must retain the order on the Excel sheet as listed below. You can add your own column after the four (4) columns to provide your own dimensions. If you do this, be sure to add them to the Dimensions tab using the instructions below. 
+
 * **title**: This is the title for your template which must be unique. It can't share a name with another template you have in Compliance Manager, including your own templates or an out of the box template. 
 * **product**: This is a required dimension. List the product associated with the template. 
 * **certification**: This is the regulation you're using for the template. 
 * **inScopeServices**: These are the services within the product that this assessment addresses (for example, if you listed Office 365 as the product, Microsoft Teams could be an in-scope service). You can list multiple services separated by two (2) semi-colons.     
 
-<figure>
-    <img src="..\images\cm-fig4.png"/>
-   </figure>
+![Sample JBOSS Template Import File](images\cm-fig4.png)
 
 #### **ControlFamily tab (Required)** 
 The **ControlFamily** tab is required. The required columns in this tab, which must follow the order provided in the sample spreadsheet, are: 
@@ -479,6 +470,7 @@ The **ControlFamily** tab is required. The required columns in this tab, whi
 
 #### **Actions tab (Required)** 
 The **Actions** tab is required. It designates improvement actions managed by your organization and not those of Microsoft, which already exist in Compliance Manager. The required columns for this tab, which must follow the order provided in the sample spreadsheet, are: 
+
 * **actionTitle**: This is the title for your action and is a required field. The title you provide must be unique. 
     **Important note:** 
     if you reference an action that you own which already exists (such as in another template) and you modify any of its elements in the subsequent columns, those changes will propagate to the same action in other templates. 
@@ -490,9 +482,7 @@ The **Actions** tab is required. It designates improvement actions managed b
     * **ActionDescription**: Provide a description of the action, which will be shown under “How to Implement” for the action’s page in Compliance Manager. 
     * **(Optional) Dimension fields** – use syntax dimension-yourdimensionkey. Add any additional dimensions you wish to use to describe this action – if you are using a new DimensionKey or DimensionValue, you need to provide it in the Dimensions Tab, described in the next section below. 
 
-<figure>
-    <img src="..\images\cm-fig5.png"/>
-   </figure>
+ ![](images\cm-fig5.png)
 
 #### **Dimensions tab (Optional)**
 
@@ -528,10 +518,10 @@ Compliance manager official Documentation - [Microsoft Compliance Manager - Micr
 Microsoft Compliance Manager One stop shop - [Microsoft Compliance Manager One Stop Shop Resource Page - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/security-compliance-identity/microsoft-compliance-manager-one-stop-shop-resource-page/ba-p/2262533) 
  
 **Microsoft 365 Roadmap Website**- has public details about when new features are in development and when the features are targeted to launch or are available. To see details about a particular product, filter the check boxes to select what product/s you are interested in. 
-https://www.microsoft.com/en-us/microsoft-365/roadmap  
+[https://www.microsoft.com/en-us/microsoft-365/roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap)  
 
 Microsoft 365 Compliance Documentation 
-https://docs.microsoft.com/en-us/microsoft-365/compliance/ 
+[https://docs.microsoft.com/en-us/microsoft-365/compliance/](https://docs.microsoft.com/en-us/microsoft-365/compliance/) 
  
 Review the [FAQ](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-faq?view=o365-worldwide) for Compliance Manager to answer a question you might have about using Compliance Score in the past and how it is part of Compliance Manager solution. 
 
@@ -539,16 +529,24 @@ Review the [FAQ](https://docs.microsoft.com/en-us/microsoft-365/compliance/compl
 
 Ready to become the hero of your organization? Learn more about deploying Microsoft Information Protection & Compliance features with the resources below: 
 
-* Join our Preview Program:
-https://aka.ms/MIPC/JoinPreviews & https://aka.ms/MIPC/Previews 
-* Visit all Community Resources – https://aka.ms/MIPC/CommunityResources  
-* Learn from our webinar series and YouTube video series   
-https://aka.ms/MIPC/Webinars & http://aka.ms/MIPC/YouTube 
-* Read up on our latest blog posts – https://aka.ms/MIPblog & https://aka.ms/CompBlog  
-* Train End Users for adoption of labels – http://aka.ms/MIPC/Blog-EndUserTraining_Retention
-* Ask us on Yammer – https://aka.ms/MIPC/AskMIPTeam  
-* Follow us on Twitter https://twitter.com/MIPnews using the tag #MicrosoftIP   
-* Email us –  mipsccxe@microsoft.com 
+* Join our Preview Program
+[https://aka.ms/MIPC/JoinPreviews](https://aka.ms/MIPC/JoinPreviews) and
+[https://aka.ms/MIPC/Previews](https://aka.ms/MIPC/Previews) 
+* Visit all Community Resources
+[https://aka.ms/MIPC/CommunityResources](https://aka.ms/MIPC/CommunityResources)  
+* Learn from our webinar series and YouTube video series
+[https://aka.ms/MIPC/Webinars](https://aka.ms/MIPC/Webinars) and 
+[http://aka.ms/MIPC/YouTube](http://aka.ms/MIPC/YouTube) 
+* Read our latest blog posts 
+[https://aka.ms/MIPblog](https://aka.ms/MIPblog) and 
+[https://aka.ms/CompBlog](https://aka.ms/CompBlog)  
+* Train End Users for adoption of labels
+[http://aka.ms/MIPC/Blog-EndUserTraining_Retention](http://aka.ms/MIPC/Blog-EndUserTraining_Retention)
+* Ask us on Yammer 
+[https://aka.ms/MIPC/AskMIPTeam](https://aka.ms/MIPC/AskMIPTeam)  
+* Follow us on Twitter
+[https://twitter.com/MIPnews](https://twitter.com/MIPnews) using the tag #MicrosoftIP   
+* Email us –  [mipsccxe@microsoft.com](mailto:mipsccxe@microsoft.com)
 
 
 ## Appendix
