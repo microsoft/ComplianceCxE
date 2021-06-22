@@ -46,7 +46,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 ### Insider Risk Management/Communication Compliance
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|June 15, 2021|**CC**: Reducing Code of Conduct and Regulatory Compliance Violation Risks|[Video](https://mipc.eventbuilder.com/event/45690) |Coming Soon |
+|June 15, 2021|**CC**: Reducing Code of Conduct and Regulatory Compliance Violation Risks|[Video](https://mipc.eventbuilder.com/event/45690) |[Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/Eeb6R4lf4UVMqJah1CKN1z0BGmkbKnWS_isOMu2gCERzjQ?e=0TdFoE) / [FAQ](https://m365x314771.sharepoint.com/:b:/s/MIPComplianceResources/EfaYJKbOHklPr9_BqBpJRd8Bn57ZEUzAUqnI8Dn6d3fB5g?e=yZxRVZ) |
 |March 24, 2021|**IIRC**: What's New from Ignite regarding Insider Risk Management|[YouTube](https://www.youtube.com/watch?v=4Q7q1ELcI48&feature=youtu.be) |[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-insider-risk-management/ba-p/2259992)|
 |Oct 29, 2020|**IRCC**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-IRCCWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-insider-risk-management-amp-communication-compliance/ba-p/1877730)|
 |Mar. 10, 2020|**IRCC**: Insider Risk Management & Communications Compliance|[Video](https://aka.ms/MIPC/Video-IRMCCWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-IRMCCWebinar)|
