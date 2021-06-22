@@ -1,9 +1,3 @@
----
-layout: dag
-title: MIP/DLP DAG
-intro: Knowing & protecting your data while preventing data loss
----
-
 *Last updated: 05/10/2021*
 
 With information protection and sensitivity labels, you can intelligently classify and help protect your sensitive content, while making sure that your organization's productivity and ability to collaborate is not hindered. 
@@ -371,6 +365,8 @@ It is important to take these into consideration not only when planning your DLP
     - [https://fauxid.com/](https://fauxid.com/) - Provides you with data that can be used to generate SSN, credit card numbers etc.
 
 * [Migrating from Exchange Transport Rules to Unified DLP - The complete playbook](https://techcommunity.microsoft.com/t5/microsoft-security-and/migrating-from-exchange-transport-rules-to-unified-dlp-the/ba-p/1749723)
+
+* [Train End Users for adoption of sensitivity labels](../../enduser/sensitivity/)
 
 
 

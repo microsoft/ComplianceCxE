@@ -1,9 +1,3 @@
----
-layout: dag
-title: CM DAG
-intro: Compliance Manager DAG
----
-
 *Last updated: 06/21/2021*
 
 We can all agree that protecting customer's data is of critical importance, but with an average of 222 updates per day from 1000 regulatory bodies, the task of safeguarding your organization’s compliance posture in such a rapidly evolving landscape can feel insurmountable at times. 
@@ -17,9 +11,9 @@ The objective is to create a deployment plan that follows the progression of cra
 
 •	[Microsoft Compliance Configuration Analyzer (MCCA)](../mcca/)
 
-•	[Communication Compliance](#communication-compliance)
+•	[Communication Compliance](../ir-cc/#communication-compliance)
 
-•	[Insider Risk Management](#insider-risk-management)
+•	[Insider Risk Management](../ir-cc/#insider-risk-management)
 
 The DAG is not inclusive of all requirements or architectures needed for successful implementation of Microsoft 365 but rather a focus on security and compliance as it relates to solutions included as part of Microsoft information Protection & Compliance licenses.
 
@@ -117,9 +111,8 @@ Compliance Manager is enabled in your tenant but only individuals with the right
 
 This document offers guidance and steps that customer compliance executive and IT teams can utilize to adopt the service. This document is divided into three sections offering an overview approach for service adoption using General Data Protection Regulation (GDPR) as the assessment of choice. The sections are designed to represent the recommended deployment approach crawl-walk-run for Microsoft 365 Compliance Manager. 
 
-**Important Note:**  
-
-* GDPR assessment has been chosen as the assessment of choice to demonstrate the walk approach; however, you can choose any other regulatory assessment that is relevant to your organization.   
+!!! note
+    GDPR assessment has been chosen as the assessment of choice to demonstrate the walk approach; however, you can choose any other regulatory assessment that is relevant to your organization.   
 
 ### Crawl: Core Service
 
@@ -263,7 +256,7 @@ Before you create or modify assessments, it’s important to understand how grou
 
 An example of this might be:
 
- - Assesments 2020
+ - Assessments 2020
     - FFIEC IS
     - GDPR
 
@@ -513,25 +506,25 @@ If you need to modify a template you’ve already created, such as to add contro
 
 ## Helpful Resources
 
-Compliance manager official Documentation - [Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide) 
+* Compliance manager official Documentation - [Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide) 
  
-Microsoft Compliance Manager One stop shop - [Microsoft Compliance Manager One Stop Shop Resource Page - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/security-compliance-identity/microsoft-compliance-manager-one-stop-shop-resource-page/ba-p/2262533) 
+* Microsoft Compliance Manager One stop shop - [Microsoft Compliance Manager One Stop Shop Resource Page](../../resources/cm/) 
  
-**Microsoft 365 Roadmap Website**- has public details about when new features are in development and when the features are targeted to launch or are available. To see details about a particular product, filter the check boxes to select what product/s you are interested in. 
+* **Microsoft 365 Roadmap Website**- has public details about when new features are in development and when the features are targeted to launch or are available. To see details about a particular product, filter the check boxes to select what product/s you are interested in. 
 [https://www.microsoft.com/en-us/microsoft-365/roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap)  
 
-Microsoft 365 Compliance Documentation 
+* Microsoft 365 Compliance Documentation 
 [https://docs.microsoft.com/en-us/microsoft-365/compliance/](https://docs.microsoft.com/en-us/microsoft-365/compliance/) 
  
-Review the [FAQ](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-faq?view=o365-worldwide) for Compliance Manager to answer a question you might have about using Compliance Score in the past and how it is part of Compliance Manager solution. 
+    Review the [FAQ](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-faq?view=o365-worldwide) for Compliance Manager to answer a question you might have about using Compliance Score in the past and how it is part of Compliance Manager solution. 
 
-#### **Knowledgebase from Customer Experience Engineering Team** 
+### Knowledgebase from Customer Experience Engineering Team
 
 Ready to become the hero of your organization? Learn more about deploying Microsoft Information Protection & Compliance features with the resources below: 
 
 * Join our Preview Program
-[https://aka.ms/MIPC/JoinPreviews](https://aka.ms/MIPC/JoinPreviews) and
-[https://aka.ms/MIPC/Previews](https://aka.ms/MIPC/Previews) 
+    - [https://aka.ms/MIPC/JoinPreviews](https://aka.ms/MIPC/JoinPreviews)
+    - [https://aka.ms/MIPC/Previews](https://aka.ms/MIPC/Previews) 
 * Visit all Community Resources
 [https://aka.ms/MIPC/CommunityResources](https://aka.ms/MIPC/CommunityResources)  
 * Learn from our webinar series and YouTube video series
@@ -540,11 +533,12 @@ Ready to become the hero of your organization? Learn more about deploying Micros
 * Read our latest blog posts 
 [https://aka.ms/MIPblog](https://aka.ms/MIPblog) and 
 [https://aka.ms/CompBlog](https://aka.ms/CompBlog)  
-* Train End Users for adoption of labels
-[http://aka.ms/MIPC/Blog-EndUserTraining_Retention](http://aka.ms/MIPC/Blog-EndUserTraining_Retention)
-* Ask us on Yammer 
+* Train End Users for adoption of labels: 
+    - [Sensitivity Labels](../../enduser/sensitivity/)
+    - [Retention Labels](../../enduser/retention/) 
+* Ask us on :fontawesome-brands-yammer:{ style="color: #999" } Yammer 
 [https://aka.ms/MIPC/AskMIPTeam](https://aka.ms/MIPC/AskMIPTeam)  
-* Follow us on Twitter
+* Follow us on :fontawesome-brands-twitter:{ style="color: #1DA1F2" } Twitter
 [https://twitter.com/MIPnews](https://twitter.com/MIPnews) using the tag #MicrosoftIP   
 * Email us –  [mipsccxe@microsoft.com](mailto:mipsccxe@microsoft.com)
 
@@ -566,5 +560,6 @@ We do offer a trial SKU for Premium templates so you can try up to 25 out for 30
 
 If you do not have the required license, you can add trial SKUs to try out the E5 or Premium assessments. To add premium assessments, you will want to add the **Compliance Manager Premium Assessment Add-On Trial** from your license, this will give you the opportunity to try out up to 25 premium assessments.  
 
-*Note: Please [email the CxE team](mailto:mipsccxe@microsoft.com) with any suggestions related to products, webinars, blogs, or ideas for additional training. All support issues should be directed through the appropriate channels of support or community forums. 
+!!! note
+    Please [email the CxE team](mailto:mipsccxe@microsoft.com) with any suggestions related to products, webinars, blogs, or ideas for additional training. All support issues should be directed through the appropriate channels of support or community forums. 
 
