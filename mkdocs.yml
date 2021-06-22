@@ -1,4 +1,5 @@
 site_name: Compliance Customer Experience Engineering (CxE)
+site_url: https://microsoft.github.io/ComplianceCxE
 repo_url: https://github.com/microsoft/ComplianceCxE
 repo_name: microsoft/ComplianceCxE
 edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
@@ -60,6 +61,7 @@ nav:
     - Scenario Based Demos:
       - About the Series: sbd\sbd-intro.md
       - Episode 1: sbd\sbd-ep1.md
+      - Episode 2: sbd\sbd-ep2.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
@@ -103,5 +105,9 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
   - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
 plugins:
   - search

@@ -1,9 +1,3 @@
----
-layout: dag
-title: IR/CC DAG
-intro: Managing Insider Risk
----
-
 *Last updated: 05/10/2021*
 
 In today’s climate one of the top concerns for security and compliance are the data leakage from insider risks. Studies point to insider risk from specific user events and activities; protecting your organization may seem impossible if one does not have insight or a way to identify the risk but worse if you cannot mitigate the risk you do not know about. With this in mind, let’s get started with Microsoft 365 [Insider Risk Management (IRM)](#insider-risk-management) and [Communication Compliance (CC)](#communication-compliance) solutions.

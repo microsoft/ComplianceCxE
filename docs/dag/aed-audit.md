@@ -1,9 +1,3 @@
----
-layout: dag
-title: AeD/Audit DAG
-intro: Discover and Respond
----
-
 *Last updated: 05/11/2021*
 
 How can [Advanced eDiscovery](#advanced-ediscovery) and [Advanced Audit](#advanced-audit) support your organization in responding to legal, regulatory, and compliance obligations? It starts with discovering the data that is relevant without the need to export this data out of Microsoft 365. The ability to natively search for data in Teams, Yammer, SharePoint Online, OneDrive for Business, Exchange Online leveraging conversations reconstruction, along with support other file types using 3rd party connectors, enhances your collection prowess.
@@ -103,7 +97,7 @@ When creating a new case, you have the opportunity to adjust your analytics sett
 
 ### Source Location Management
 
-A user is so much more than their mailbox and their OneDrive site. They are able to collaborate in Teams, Yammer and Sharepoint. They use [third party](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) tools like Bloomberg, Facebook and more. When using Advanced eDiscovery, you can associate other data locations to a custodian beyond their mailbox and OneDrive site alone. 
+A user is so much more than their mailbox and their OneDrive site. They are able to collaborate in Teams, Yammer and SharePoint. They use [third party](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) tools like Bloomberg, Facebook and more. When using Advanced eDiscovery, you can associate other data locations to a custodian beyond their mailbox and OneDrive site alone. 
 
 Once your legal team has identified a custodian, you can use the Data Sources tab in Advanced eDiscovery to manage the following:
 
@@ -115,7 +109,7 @@ Once your legal team has identified a custodian, you can use the Data Sources ta
 
 * Any Yammer networks (in native mode)
 
-* Sharepoint sites a custodian may have accessed or contributed to 
+* SharePoint sites a custodian may have accessed or contributed to 
 
 Custodians and source locations can be added on-by-one in the user interface using the picker or they can be added in bulk using the Import Custodian feature. If your legal team has given you a list of custodians, consider using the [custodian template](https://scc.azureedge.net/ediscovery/static/resources/ImportCustodian.csv) to import your custodial locations. For tips on how to populate the .csv, please follow our guidance found [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/bulk-add-custodians?view=o365-worldwide#custodian-csv-file). 
 
@@ -127,7 +121,7 @@ Not all documents that you need to analyze in Advanced eDiscovery are located wi
 
 ### Processing
 
-Once a source location has been added to a case, any content that is partially indexed will be processed. Content can be partially indexed for a number of reasons including the existence of images, unsupported file types or when indexing file size limits are encountered. All items (including the content and metadata) are reindexed so that all data in the review set is fully searchable during the review of the case data. Reindexing the data results in thorough and fast searches when you search the data in the review set during the case investigation.
+Once a source location has been added to a case, any content that is partially indexed will be processed. Content can be partially indexed for a number of reasons including the existence of images, unsupported file types or when indexing file size limits are encountered. All items (including the content and metadata) are re-indexed so that all data in the review set is fully searchable during the review of the case data. Re-indexing the data results in thorough and fast searches when you search the data in the review set during the case investigation.
 
 After the indexing job is complete, you can see a report of the effectiveness of the job. The graph will give you the number of items that were added to the hybrid index where Advanced eDiscovery stores the reprocessed content. You will also have the opportunity to [remediate any errors](https://docs.microsoft.com/en-us/microsoft-365/compliance/processing-data-for-case?view=o365-worldwide) including decryption of content that was encrypted using third party encryption tools. 
 
@@ -185,7 +179,7 @@ Themes is a content-analytics application that identifies themes and thematic re
 
 Keep in mind that increasing the “Number of themes” can affect the ability of a theme to generalize. The higher the number of themes, the more granular they are. For example, if a set of 50 themes produces themes such as “Basketball, Spurs, Clippers, Lakers”, a set of 300 themes may include separate themes such as “Spurs”, “Clippers”, “Lakers”. If the user had no awareness of the theme “Basketball” and uses this feature for Early Case Assessment (ECA), seeing the theme “Basketball” could be useful. If the clustering is too granular (too many themes), the user may never see the word “Basketball” and may not know that Spurs and Clippers are good Basketball themes to review rather than items that go on boots and are used for hair. 
 
-#### Attorney-Client Privledge
+#### Attorney-Client Privilege
 
 When [attorney-client privilege detection](https://docs.microsoft.com/en-us/microsoft-365/compliance/attorney-privilege-detection?view=o365-worldwide) is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you analyze the data in the review set. The model uses machine learning to determine the likelihood that a document contains content that is legal in nature. When setting up attorney-client privilege detection, you will need to submit a list of attorneys for your organization. The model will compare the participants of the document with the attorney list to determine if any attorneys are participants.
 
@@ -267,11 +261,11 @@ While if you implement all the recommendations above you are set for a successfu
 
 * Understanding how and what types of content is stored in a mailbox is key to a successful eDiscovery posture. An exchange mailbox stores so much more than just email messages. Your calendar items, tasks, Skype messages, Teams messages, Voicemails, Forms, Sway, To-Do, Yammer conversations and so much more are stored in either user or group mailboxes. 
 
-* An understanding of where content is stored in Sharepoint based on the type of hold can be key during an investigation. Consider reading this [blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228) that covers the lifecycle of an item in Sharepoint. 
+* An understanding of where content is stored in SharePoint based on the type of hold can be key during an investigation. Consider reading this [blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228) that covers the lifecycle of an item in SharePoint. 
 
 * Teams 1:1 and 1:N chats are stored in the user mailbox. Teams conversations are stored in the Team Group mailbox. 
 
-* Items that are uploaded to chats are stored in the user OneDrive location. Items that are uploaded to conversations are stored in the Team Sharepoint site. 
+* Items that are uploaded to chats are stored in the user OneDrive location. Items that are uploaded to conversations are stored in the Team SharePoint site. 
 
 * eDiscovery of messages and files in [private channels](https://docs.microsoft.com/en-us/microsoftteams/private-channels) works differently than in standard channels. To learn more, see [eDiscovery of private channels](https://docs.microsoft.com/en-us/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels).
 
@@ -279,7 +273,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 * You can add inactive mailboxes, Microsoft Teams, Yammer Groups, Office 365 Groups, and distribution groups to the list of mailboxes to search. Dynamic distribution groups are not supported. If you add Microsoft Teams, Yammer Groups, or Office 365 Groups, the group or team mailbox is searched; the mailboxes of the group members are not searched.
 
-* Cloud links or modern attachments are items attached to messages in either Teams or Exchange. Cloud links differ from legacy attachments in that a copy of the item is not stored along with the message. Cloud attachments are a pointer to the location (in either OneDrive or Sharepoint) that the item is stored. 
+* Cloud links or modern attachments are items attached to messages in either Teams or Exchange. Cloud links differ from legacy attachments in that a copy of the item is not stored along with the message. Cloud attachments are a pointer to the location (in either OneDrive or SharePoint) that the item is stored. 
 
 * Contextual conversation review enables you to review a single message that matches your query within the context of the conversation. 
 
@@ -400,4 +394,3 @@ Before you get started with Advanced Audit, you should confirm your Microsoft 36
 * Microsoft 365 G5 subscription + the Microsoft 365 G5 Discovery & Audit add-on
 * Office 365 Enterprise E5 subscription 
 * Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)
-* 

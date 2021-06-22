@@ -1,9 +1,3 @@
----
-layout: dag
-title: MIG/RM DAG
-intro: Govern Your Data
----
-
 *Last updated: 05/10/2021*
 
 What is information governance and why should you worry about governing your data?  The technical definition that you can find on the web is usually one that a records manager or compliance risk officer may read and say sure, but for some of us we still leave wanting a level 100 explanation. At a basic level, the goal is to balance the risk holding onto information presents with the value the information provides to the organization. You also need to consider which decisions are within your control as a company and which are driven by regulatory or industry requirements. It is important to remember that this is a strategy across all your information.  That strategy should define who has the authority to make information related decisions. These individuals will be heavily involved in your retention policy, label taxonomy and file plan discussions.  It also needs to account for how you will handle change management for your policies governing information as well as communication of your plan and training your users.  Your information governance strategy should also establish the “what”, the requirements or how long, before actions need to be taken to retain or delete information, the “how”, by the technologies that will be used. In our case, the retention polices, and labels deployed through [Microsoft Information Governance](#microsoft-information-governance) and [Records Management](#records-management). 
@@ -176,7 +170,7 @@ If your organization has a mature information architecture in SharePoint online,
 
 * The query-based auto-apply policies use the same search index as eDiscovery content search which means you can use any of the pre-defined SharePoint online managed properties as your criteria which are documented in the [helpful resources](#helpful-resources) section.
 
-* You may want to start with out of the box properties first such as filetype or modifiedby before targeting your custom properties that have been mapped to a managed property.
+* You may want to start with out of the box properties first such as filetype or modified by before targeting your custom properties that have been mapped to a managed property.
 
 * Once you have your criteria take care to enter it into the Keyword Query Editor correctly as it will not tell you if your query has bad syntax or is invalid. We also recommend always including the (AND, OR) operators to ensure that your query is interpreted correctly if you are combing more than one condition.
 
@@ -284,7 +278,7 @@ While if you implement all the recommendations above you are set for a successfu
 
 You can also introduce these changes in waves across your organization, focusing on limited sets of end users first and expanding to broader audiences. This will allow you to deploy quickly without causing disruption, and help you get a baseline of user behavior before introducing tight restrictions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. 
 
-Now that we have covered the different basic to advanced deployment scenarios and best practices, take a minute to make sure you read the rest of this guide to understand how retention and records management integrate with the other compliance solutions and how they complement each other. We also provide you with some important considerations to keep in mind when it comes to your environment and how they may affect your deployment. There are some helpful resources as well thatwill point you to other articles, blog posts, or videos that provide important context or supplement the documentation for MIG and RM. 
+Now that we have covered the different basic to advanced deployment scenarios and best practices, take a minute to make sure you read the rest of this guide to understand how retention and records management integrate with the other compliance solutions and how they complement each other. We also provide you with some important considerations to keep in mind when it comes to your environment and how they may affect your deployment. There are some helpful resources as well that will point you to other articles, blog posts, or videos that provide important context or supplement the documentation for MIG and RM. 
 
 ### Considerations
 
@@ -342,5 +336,5 @@ Now that we have covered the different basic to advanced deployment scenarios an
 
 * For a deeper understanding of the new Regulatory Record label for records management you can check out this [video](https://techcommunity.microsoft.com/t5/video-hub/manage-regulatory-records-in-a-defensible-and-immutable-way-with/m-p/1688007).
 
-* While this guide focuses on the administrator activities for deployment, it is important to also train your end users to drive adoption. Use [End User Training for Retention Labels in M365](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-user-training-for-retention-labels-in-m365-how-to-accelerate/ba-p/1750861) as a good starting point.
+* While this guide focuses on the administrator activities for deployment, it is important to also train your end users to drive adoption. Use [End User Training for Retention Labels in M365](../../enduser/retention/) as a good starting point.
 

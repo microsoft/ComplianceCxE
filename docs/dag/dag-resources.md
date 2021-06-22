@@ -1,9 +1,3 @@
----
-layout: dag
-title: DAG Resources
-intro: DAG Resources
----
-
 *Last updated: 05/10/2021*
 
 ## One Compliance Story
@@ -50,8 +44,8 @@ Ready to become the hero of your organization? Learn more about deploying Micros
 * Train End Users for adoption of labels: 
     - [Sensitivity Labels](../../enduser/sensitivity/)
     - [Retention Labels](../../enduser/retention/) 
-* [Ask us on Yammer](https://aka.ms/MIPC/AskMIPTeam)
-* Follow us on [Twitter](https://twitter.com/MIPnews) using the tag #MicrosoftIP  
+* [Ask us on :fontawesome-brands-yammer:{ style="color: #999" } Yammer](https://aka.ms/MIPC/AskMIPTeam)
+* Follow us on :fontawesome-brands-twitter:{ style="color: #1DA1F2" } [Twitter](https://twitter.com/MIPnews) using the tag #MicrosoftIP  
 * Email us – [mipsccxe@microsoft.com](mailto:mipsccxe@microsoft.com)
 
 !!! note

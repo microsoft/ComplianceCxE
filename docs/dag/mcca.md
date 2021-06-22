@@ -1,9 +1,3 @@
----
-layout: dag
-title: MCCA DAG
-intro: Microsoft Compliance Configuration Analyzer (MCCA) DAG
----
-
 *Last updated: 05/07/2021*
 
 Where does one start today with regards to being compliant with various standards and assessments? There are often multiple steps you need to take to safeguard your compliance posture. Often, you want to know if there is a starting point or recommended best practices as you get started on your journey of managing compliance requirements. Questions you may ask yourself are: ‘How do I diagnose my compliance posture or ensure that I have the right configurations in place to protect my environment completely. These are largely manual processes which tend to be time consuming & allow for human error. Furthermore, with the evolving compliance landscape the risk of blind spots also increases along with compliance requirements needing to be changed or updated; the latest information will be included with MCCA tool without the need to update manually.
@@ -48,7 +42,7 @@ With MCCA you can:
 
 ## Considerations
 
-* The MCCA report can be generated in its entirety by users with Global Admin or Global Reader privileges. Other roles within the organisation may not be able to run the tool or they may be able to run the tool with limited information in the final report.
+* The MCCA report can be generated in its entirety by users with Global Admin or Global Reader privileges. Other roles within the organization may not be able to run the tool or they may be able to run the tool with limited information in the final report.
 
 ## Helpful Resources
 
