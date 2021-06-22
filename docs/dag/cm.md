@@ -373,13 +373,17 @@ Learn more about  [Secure Score and how it works](https://docs.microsoft.com/e
 **Action types and points**
 
 Compliance Manager tracks two types of actions: 
+
 1. **Your improvement actions**: actions that your organization manages. 
 1. **Microsoft actions**: actions that Microsoft manages. 
-Both types of actions have points that count toward your overall score when completed. 
+Both types of actions have points that count toward your overall score when completed.
+
 **Technical and non-technical actions** 
 
 Actions are grouped by whether they are technical or non-technical in nature. The scoring impact of each action differs by type. 
+
 * **Technical actions** are implemented by interacting with the technology of a solution (for example, changing a configuration). The points for technical actions are granted once per action, regardless of how many groups it belongs to. 
+
 * **Non-technical actions** are managed by your organization and implemented in ways other than working with the technology of a solution. There are two types of non-technical actions: **documentation** and **operational**. The points for these actions are applied to your compliance score at a group level. This means that if an action exists in multiple groups, you will receive the action's point value each time you implement it within a group. 
 
 **Example of how technical and non-technical actions are scored**
@@ -444,10 +448,6 @@ When you start with the Excel spreadsheet you will notice it contains four (4) t
 * ControlFamily (required) 
 * Actions (required) 
 * Dimensions (optional) 
-
-In the below example we have created a sample Excel spreadsheet that covers compliance of Oracle, Windows AD and JBOSS Server:   
-
-![](images\cm-fig3.png)
 
 #### **Template tab (required)** 
 The **Template** tab is required. The information in this tab provides metadata about the template. There are four (4) required columns. The columns must retain the order on the Excel sheet as listed below. You can add your own column after the four (4) columns to provide your own dimensions. If you do this, be sure to add them to the Dimensions tab using the instructions below. 
