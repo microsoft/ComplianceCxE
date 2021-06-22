@@ -17,8 +17,8 @@ We built this page to help you easily find all relevant content and resources re
 
 ## Social Media and Forums
 
-* [MIP Yammer Channel](https://aka.ms/MIPC/AskMIPTeam)
-* [MIPNews Twitter](https://twitter.com/MIPNews)
+* :fontawesome-brands-yammer:{ style="color: #999" } [MIP Yammer Channel](https://aka.ms/MIPC/AskMIPTeam)
+* :fontawesome-brands-twitter:{ style="color: #1DA1F2" } [MIPNews Twitter](https://twitter.com/MIPNews)
 
 ## Upcoming Webinars
 
