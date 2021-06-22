@@ -2,7 +2,7 @@
 
 The **Customer Acceleration Team (CAT)** is a World Wide team, our charter is helping customers deploy M365 security and compliance products. We do this through understanding the benefits of the product, being the voice of the customer inside engineering, help prioritize bugs and features,  and lastly shape the product which benefits the customer's use cases scenarios while protecting and governing their most sensitive data.
 
-We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis. Also, do submit your feedback and contributions to the site via the appropiate links.
+We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis. Also, do submit your feedback and contributions to the site via the appropriate links.
 
 !!! important
     Check out the our latest video series - the [Scenario Based Demo](sbd/sbd-intro) where we explore a fictitious company and the process they must go through to fully adopt and deploy Microsoft 365 compliance technologies!
