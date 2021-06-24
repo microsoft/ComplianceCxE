@@ -15,6 +15,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Using Sensitivity Labels in M365 – How to Protect NDA Data from Leaking](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-sensitivity-labels-in-m365-how-to-protect-nda-data-from/ba-p/1873986)
 
+* [Data protection in Power BI](https://youtu.be/zEx0449K7F8)
+
 ## Playbooks and Guides
 * [Deployment Acceleration Guide](../../dag/mip-dlp)
 
