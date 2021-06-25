@@ -13,7 +13,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Deployment Acceleration Guide](../../dag/aed-audit)
 
 ## Webinars
-* [Discovery & Response (D&R) Webinars](../webinars#discovery--response)
+* [Discovery & Response (D&R) Webinars](../../webinars#discovery--response)
 
 ## Blogs
 * [Harnessing Advanced Audit to power your forensic investigations in 5 steps](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/harnessing-advanced-audit-to-power-your-forensic-investigations/ba-p/2175637)

@@ -21,7 +21,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Microsoft Compliance Manager](https://aka.ms/compliancemanager/techdocs)
 
 ## Webinars
-* [Compliance Manager (CM) Webinars](../webinars#compliance-manager)
+* [Compliance Manager (CM) Webinars](../../webinars#compliance-manager)
 
 ## Learning Path
 * [Reduce risk with Microsoft Compliance Manager](https://docs.microsoft.com/en-us/learn/paths/compmgmt/)

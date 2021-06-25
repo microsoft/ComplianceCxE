@@ -25,4 +25,4 @@ We built this page to help you easily find all relevant content and resources re
 * [Join Endpoint DLP preview ring](https://aka.ms/MIPC/EndpointDLP-PreviewRing)
 
 ## Webinars
-* [Data Loss Prevention (DLP) Webinars](../webinars#data-loss-prevention)
+* [Data Loss Prevention (DLP) Webinars](../../webinars#data-loss-prevention)
