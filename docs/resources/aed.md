@@ -13,7 +13,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Deployment Acceleration Guide](../../dag/aed-audit)
 
 ## Webinars
-* [Discovery & Response (D&R) Webinars](../webinars#discovery--response)
+* [Discovery & Response (D&R) Webinars](../../webinars#discovery--response)
 
 ## Blogs
 * [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)

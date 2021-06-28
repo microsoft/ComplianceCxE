@@ -15,7 +15,7 @@ We built this page to help you easily find all relevant content and resources re
 * [End User Training for Retention labels](https://techcommunity.microsoft.com/t5/security-compliance-identity/end-user-training-for-retention-labels-in-m365-how-to-accelerate/ba-p/1750861)
 
 ## Webinars
-* [Microsoft Information Governance (MIG) Webinars](../webinars#microsoft-information-governance)
+* [Microsoft Information Governance (MIG) Webinars](../../webinars#microsoft-information-governance)
 
 ## Blogs
 * [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)

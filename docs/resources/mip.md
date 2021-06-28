@@ -27,4 +27,4 @@ We built this page to help you easily find all relevant content and resources re
 * [How to re-label documents classified with a deprecated sensitivity label](https://techcommunity.microsoft.com/t5/microsoft-security-and/how-to-re-label-documents-classified-with-a-deprecated/ba-p/2218259)
 
 ## Webinars
-* [Microsoft Information Protection (MIP) Webinars](../webinars#microsoft-information-protection)
+* [Microsoft Information Protection (MIP) Webinars](../../webinars#microsoft-information-protection)
