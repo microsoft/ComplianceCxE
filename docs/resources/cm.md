@@ -9,6 +9,7 @@ We built this page to help you easily find all relevant content and resources re
 ## Videos
 * [Introduction to Compliance Manager](https://techcommunity.microsoft.com/t5/microsoft-security-and/introduction-to-compliance-manager-vblog/ba-p/2227643)
 
+
 * [Simplify Compliance and Reduce Risk with our 150+ Assessment templates or bring your own assessment](https://techcommunity.microsoft.com/t5/video-hub/simplify-compliance-and-reduce-risk-with-our-150-assessment/m-p/1687993)
 
 * [Create assessments and monitor your progress with Compliance Manager - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/video-hub/create-assessments-and-monitor-your-progress-with-compliance/m-p/1687992)
