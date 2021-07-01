@@ -549,13 +549,15 @@ Below contains the necessary licenses for specific solutions outlined in the Dep
 
 Compliance Manager is available to organizations with Office 365 and Microsoft 365 licenses. Assessment availability and management capabilities depend on your licensing agreement. [View service description details](https://go.microsoft.com/fwlink/?linkid=2132371).  
 
-Customers with Office 365 E1/A1/E3/A3/G3 and Microsoft 365 E1/A1/E3/A3/G3 licenses will be able to access the Data Protection Baseline assessment.  
+Customers with Office 365 E1/A1/E3/A3/G3 and Microsoft 365 E1/A1/E3/A3/G3 licenses will be able to access the Data Protection Baseline assessment and be able to purchase premium assessments.
 
-Customers with Office 365 E5/A5/G5 and Microsoft 365 E5/A5/G5 licenses will be able to access Data Protection Baseline, GDPR, NIST 800-53 and ISO 27001 out-of-the-box assessments. They will also be able to create custom assessment and purchase premium assessments.  
+Customers with Office 365 E5/A5/G5 and Microsoft 365 E5/A5/G5 licenses will be able to access Data Protection Baseline, GDPR, NIST 800-53 and ISO 27001 out-of-the-box assessments. They will also be able to create custom assessments. 
+
+Starting July 1, 2021, all SKUs will be able to purchase premium assessments.
 
 In addition, for G5 customers will get additional Cybersecurity Maturity Model Certification (CMMC) Levels 1 through 5 out-of-the-box assessments.  
 
-We do offer a trial SKU for Premium templates so you can try up to 25 out for 30 days. You will need a E5 SKU to add this, but you can also try out the Microsoft E5 SKU at the same time.  
+We do offer a trial SKU for Premium templates so you can try up to 25 out for 30 days. 
 
 If you do not have the required license, you can add trial SKUs to try out the E5 or Premium assessments. To add premium assessments, you will want to add the **Compliance Manager Premium Assessment Add-On Trial** from your license, this will give you the opportunity to try out up to 25 premium assessments.  
 
