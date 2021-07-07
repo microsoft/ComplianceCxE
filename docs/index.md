@@ -7,6 +7,10 @@ We built this page to help you easily find all relevant content and resources re
 !!! important
     Check out the our latest video series - the [Scenario Based Demo](sbd/sbd-intro) where we explore a fictitious company and the process they must go through to fully adopt and deploy Microsoft 365 compliance technologies!
 
+## Security vs Compliance
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9QZ4IRko0pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## General Information on Getting Started
 
 * Visit the docs site to review [Microsoft 365 Compliance documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
