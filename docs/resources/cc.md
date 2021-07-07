@@ -22,18 +22,19 @@ We built this page to help you easily find all relevant content and resources re
 ## Playbooks, Guides and Blogs
 * [Deployment Acceleration Guide](../../dag/ir-cc)
 
-* [Communication compliance in Microsoft 365](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-solution-overview?view=o365-worldwide)
+* [Communication Compliance Interactive Guide](https://aka.ms/communicationcomplianceguide)
 
-* [Implement policies for Insider Risk Management and Communication Compliance](https://www.microsoft.com/en-us/microsoft-365/business/compliance-insider-risk-management)
+* [Communication compliance in Microsoft 365](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-solution-overview?view=o365-worldwide)
 
 * [Reducing Code of Conduct and Regulatory Compliance Violation Risks](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/reducing-code-of-conduct-and-regulatory-compliance-violation/ba-p/2344661)
 
-## Webinars and Podcast
+* [Implement policies for Insider Risk Management and Communication Compliance](https://www.microsoft.com/en-us/microsoft-365/business/compliance-insider-risk-management)
+
+## Webinars
 * [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)
 
+## Podcast
 * [Uncovering Hidden Risks](https://uncoveringhiddenrisks.libsyn.com/)
 
 ## Learning Path
-* [Insider Risk Management learning path](https://aka.ms/insiderrisklp)
-
 * [Communication Compliance learning path](https://docs.microsoft.com/en-us/learn/modules/m365-compliance-insider-prepare-communication-compliance/)
