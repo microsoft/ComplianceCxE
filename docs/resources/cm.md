@@ -16,6 +16,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Extend and customize assessments to suit your needs in Compliance Manager](https://techcommunity.microsoft.com/t5/video-hub/extend-and-customize-assessments-to-suit-your-needs-in/m-p/1687991)
 
+* [Episode #3 - Scenario Based Demos - Compliance Manager](https://www.youtube.com/watch?v=XaBnjGK9pDM)
+
 ## Playbooks and Guides
 * [Deployment Acceleration Guide](../../dag/cm)
 
