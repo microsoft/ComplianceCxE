@@ -34,6 +34,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 ## Learn more about...
 
 * [Advanced Audit in Microsoft 365](resources\audit)
+* [Communication Compliance in Microsoft 365](resources\cc)
 * [Compliance Manager in Microsoft 365](resources\cm)
 * [Data Loss Prevention in Microsoft 365](resources\dlp)
 * [eDiscovery in Microsoft 365](resources\aed)
