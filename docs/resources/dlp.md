@@ -11,6 +11,14 @@ We built this page to help you easily find all relevant content and resources re
 
 * [How to configure a DLP policy](https://aka.ms/MIPC/video-configureDLPpolicy)
 
+* [Microsoft Teams DLP - Know Your Data](https://aka.ms/MIPC/teamsdlpvideo1)
+
+* [Microsoft Teams DLP - Create a Teams DLP Policy](https://aka.ms/MIPC/teamsdlpvideo2)
+
+* [Microsoft Teams DLP - End User Experience](https://aka.ms/MIPC/teamsdlpvideo3)
+
+* [Microsoft Teams DLP - Reporting](https://aka.ms/MIPC/teamsdlpvideo4)
+
 ## Playbooks and Guides
 * [Deployment Acceleration Guide](../../dag/mip-dlp)
 
