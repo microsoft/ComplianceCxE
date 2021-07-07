@@ -27,7 +27,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Insider Risk Blog](http://aka.ms/InsiderRiskBlog)
 
 ## Webinars
-* [Insider Risk Management and Communication Compliance (IRCC) Webinars](../../webinars#ircc)
+* [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)
 
 ## Learning Path
 * [Insider Risk Management learning path](https://aka.ms/insiderrisklp)
