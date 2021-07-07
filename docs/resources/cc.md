@@ -1,6 +1,6 @@
 ---
 layout: home
-title: CC Resources
+title: Communication Compliance (CC)
 intro: Communication Compliance Resources
 ---
 
