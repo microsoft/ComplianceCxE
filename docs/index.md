@@ -17,7 +17,7 @@ We built this page to help you easily find all relevant content and resources re
 * Ready to deploy? Start with guidance from [CxE Deployment Acceleration Guides (DAGs)](dag)
 * Review the license requirements for features [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * Always use a development tenant for Proof of Concept and testing [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
-* Looing for information on Microsoft Security? [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
+* Looking for information on Microsoft Security? [Microsoft Security Technical Content Library](https://www.microsoft.com/en-us/security/content-library/)
 
 ## Social Media and Forums
 
