@@ -19,6 +19,9 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Learn how to reduce communication risks within your organization](https://www.youtube.com/watch?v=vzARb1YaxGo&list=PL3ZTgFEc7LytlC9XgsaYd2TzlvJH6xwdA&index=12)
 
+## Roadmap
+* [Communication Compliance](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=communication%2Ccompliance)
+
 ## Playbooks, Guides and Blogs
 * [Deployment Acceleration Guide](../../dag/ir-cc)
 
@@ -26,9 +29,13 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Communication compliance in Microsoft 365](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-solution-overview?view=o365-worldwide)
 
-* [Reducing Code of Conduct and Regulatory Compliance Violation Risks](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/reducing-code-of-conduct-and-regulatory-compliance-violation/ba-p/2344661)
+* [Reducing Code of Conduct and Regulatory Compliance Violation Risks - Latest Updates and announcements](https://aka.ms/ccrsa2021)
 
 * [Implement policies for Insider Risk Management and Communication Compliance](https://www.microsoft.com/en-us/microsoft-365/business/compliance-insider-risk-management)
+
+* [Communication Compliance Feature updates](http://aka.ms/featureupdates)
+
+* [Ignite 2020 Announcements](http://aka.ms/ccignite2020)
 
 ## Webinars
 * [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)

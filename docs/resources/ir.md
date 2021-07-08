@@ -17,6 +17,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Insider Risk Management Investigation and Escalation](https://www.youtube.com/watch?v=UONUSmkRC8s&list=PL3ZTgFEc7LytlC9XgsaYd2TzlvJH6xwdA&index=6)
 
+* [Insider Risk Video Hub](https://aka.ms/VideoHub/InsiderRiskManagement)
+
 ## Playbooks, Guides and Blogs
 * [Deployment Acceleration Guide](../../dag/ir-cc)
 
