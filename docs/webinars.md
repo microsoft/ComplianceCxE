@@ -12,10 +12,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-***MIP*: Advanced Classification and auto labeling** | **July 13, 2021** |  |
-| *APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45702) |
-| *US/EMEA* | 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45701) |
-***MIP*: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data** | **July 20, 2021** |  |
+***MIP*: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data** | **July 20, 2021** |[Register](https://mipc.eventbuilder.com/event/47295)  |
 | *APAC* | 16:00 AEDT | [Register](https://mipc.eventbuilder.com/event/47295) |
 |***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
 |*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
@@ -65,6 +62,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| coming soon | coming soon |
 |July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| coming soon | coming soon |
 |May 4, 2021|**MIP**: What's New from Ignite regarding Microsoft Information Protection|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
 |Feb 19, 2021|**MIP**: Office Channels|[Video](https://aka.ms/MIPC/webinar-officechannels)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/office-channels-webinar/ba-p/2223780)|
