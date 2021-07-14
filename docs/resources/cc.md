@@ -37,6 +37,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Ignite 2020 Announcements](http://aka.ms/ccignite2020)
 
+* [Mitigate the Impact of Communication Risks by Accelerating Review Time](https://aka.ms/ccinspire2021)
+
 ## Webinars
 * [Reducing Code of Conduct and Regulatory Compliance Violation Risks - Video](https://mipc.eventbuilder.com/event/45690) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/Eeb6R4lf4UVMqJah1CKN1z0BGmkbKnWS_isOMu2gCERzjQ?e=0TdFoE) / [FAQ](https://m365x314771.sharepoint.com/:b:/s/MIPComplianceResources/EfaYJKbOHklPr9_BqBpJRd8Bn57ZEUzAUqnI8Dn6d3fB5g?e=yZxRVZ) 
 
