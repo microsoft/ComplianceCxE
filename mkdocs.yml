@@ -49,8 +49,8 @@ nav:
       #- Data Loss Prevention: powershell/dlp.md
       #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks:
-      - Exchange ETR to DLP Playbook: playbooks/etr2dlp.md
       - Teams DLP Playbook: playbooks/teamsdlp.md
+      - Exchange ETR to DLP Playbook: playbooks/etr2dlp.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - End User Training:
       - Sensitivity Labels: enduser\sensitivity.md
