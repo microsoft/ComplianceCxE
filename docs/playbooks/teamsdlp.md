@@ -3,14 +3,14 @@ layout: home
 title: Playbooks
 ---
 
-!!! Note
-Please use this guide as a starting point for protecting your sensitive information in Microsoft Teams communication channels via Unified DLP. All links and references should be up to date, however, if you have a question about the correctness of any information in this document, please reach out to our [yammer group]( aka.ms/askmipteam ).
+!!! Note "How to use this guide"
+    Please use this guide as a starting point for protecting your sensitive information in Microsoft Teams communication channels via Unified DLP. All links and references should be up to date, however, if you have a question about the correctness of any information in this document, please reach out to our [yammer group]( aka.ms/askmipteam ).
 
-All screenshots in this guide contain the proper configuration settings according to the best practices at the time of publication. Please ensure that your configurations mirror those used in this guide. Please refer to the Microsoft documentation online at docs for the latest updates
+    All screenshots in this guide contain the proper configuration settings according to the best practices at the time of publication. Please ensure that your configurations mirror those used in this guide. Please refer to the Microsoft documentation online at docs for the latest updates
 
-Though the name of this document is shown as a play book, it can be equally considered a deployment guide. This document will be updated as and when new features are introduced to Microsoft Teams DLP. There are few abbreviations used in the document and please refer, [Abbreviations](#abbreviations) of this document.
+    Though the name of this document is shown as a play book, it can be equally considered a deployment guide. This document will be updated as and when new features are introduced to Microsoft Teams DLP. There are few abbreviations used in the document and please refer, [Abbreviations](#abbreviations) of this document.
 
-This document covers in detail various use cases that can be achieved using Teams-DLP.
+    This document covers in detail various use cases that can be achieved using Teams-DLP.
 
 ## Introduction
 
@@ -25,10 +25,10 @@ Using this play book will help to:
 
 This playbook helps readers plan and protect sensitive information scenarios that normally exist in every organization. It also helps as a user guide to mitigate the risk of exchanging crucial data while communicating over chat or giving access to sites for guest users. 
 
-We are makign the assumption one has identified the Sensitive Information Types (SITs) that are to be protected In Teams Chat or Channel messages. 
+We are making the assumption one has identified the Sensitive Information Types (SITs) that are to be protected In Teams Chat or Channel messages. 
 
 !!! Info
-For more information on data classification click [here](aka.ms/dataclassificationwhitepaper) and the deployment accelerator guide clikc [here](../../dag), please refer to the Appendix section in the whitepaper or Sensitivity Label Taxonomy section in the [DAG](../../dag/mip-dlp). 
+    For more information on data classification click [here](aka.ms/dataclassificationwhitepaper) and the deployment accelerator guide click [here](../../dag), please refer to the Appendix section in the whitepaper or Sensitivity Label Taxonomy section in the [DAG](../../dag/mip-dlp). 
 
 
 ## Overview
@@ -68,7 +68,7 @@ The below displayed features (Content Explorer & Activity Explorer) are not avai
 Activity Explorer, provides a 360-degree view (also known as **Know your data**) of user risky activities across the tenant and helps administrators take preventive measures. The below figure shows Activity Explorer with detailed metadata of user activity where and when it has happened. 
 
 !!! Note
-(Teams-DLP- User Activity in the Activity Explorer is coming soon)
+    Teams-DLP- User Activity in the Activity Explorer is coming soon
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams4.png" align="left"/> 
@@ -83,8 +83,9 @@ Similarly, MIP has a Content Explorer which is part of the Data Classification d
 </figure>
 
 Upon further drill down, the exact file and location containing sensitive information can be viewed for further action or protection, along with data pertaining to the last modification date and user.
+
 !!! Tip
-For both features (Activity Explorer and Content Explorer), separate role-based access is required to view the files [Role Requirements](#role-requirements). These are on the at this time for Teams-DLP activities.
+    For both features (Activity Explorer and Content Explorer), separate role-based access is required to view the files [Role Requirements](#role-requirements). These are on the at this time for Teams-DLP activities.
 
 ## Licensing Requirements
 Office 365 Advanced Compliance, which is available as a standalone option and is included in Office 365 E5 and Microsoft 365 E5 Compliance. Office 365 and Microsoft 365 E3 include DLP protection for SharePoint, OneDrive, and Exchange Online. This also includes files that are shared through Teams because Teams uses SharePoint Online and OneDrive to share files. **Support for DLP protection in Teams chat and channel messages requires E5**. To learn more about licensing requirements, see [Licensing Guide](http://aka.ms/mipc/licensing).
@@ -101,10 +102,11 @@ To view the data visualization in the Data Classification module, there are two 
 
 ## Data Loss Prevention for Teams-DLP
 A DLP policy helps organizations prevent data loss. It also helps users to make better decisions when sending SITs knowingly or unknowingly. The process of creating a unified DLP policy with Teams as the workload is explained in the later sections of this document. 
-!!! Tip
-Please refer to [User Experience](#user-experience), before starting this process.
 
-Currently, Teams-DLP supports protecting data while sharing a message or a file that contains sensitive information via 1-1 chat or through channel messages. Below are some of the scenarios of an elevated level. The detailed screenshots with test results have been explained in [User Experince](#user-experience) of this document.
+!!! Tip
+    Please refer to [User Experience](#user-experience), before starting this process.
+
+Currently, Teams-DLP supports protecting data while sharing a message or a file that contains sensitive information via 1-1 chat or through channel messages. Below are some of the scenarios of an elevated level. The detailed screenshots with test results have been explained in [User Experience](#user-experience) of this document.
 
 ### Protecting Sensitive Information in Messages:
 If someone is trying to share a chat message that contains sensitive information to an external user or guest, based on the creation of DLP-Rule for the Teams workload, the message will be blocked within seconds. Both the sender and receiver see the message blocked notification.
@@ -114,22 +116,28 @@ If a user attempts to share a document that contains sensitive information with 
 
 When new files are added to SharePoint or OneDrive in Microsoft 365, it may take a few moments for them to be crawled and indexed. It takes additional time for the [Office Data Loss Prevention (DLP) policy](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-loss-prevention-policies) to scan the content and apply rules to help protect sensitive information. If external sharing is turned on, sensitive content could be shared and accessed by guests before the Office DLP rule finishes processing.
 
-You can ensure that documents are protected until DLP scans completes and marks them as safe to share by using a PowerShell cmdlet to enable a feature called **sensitive by default**:
+You can ensure that documents are protected until DLP scan completes and marks them as safe to share by using a PowerShell cmdlet to enable a feature called **sensitive by default**:
 
     Set-SPOTenant -MarkNewFilesSensitiveByDefault BlockExternalSharing
 
 * Use the cmdlet   ```BlockPerUserNotifyUserOutsideOrg```
-* **Conditions** 
+
+**Conditions** 
+
 * Content contains any of these sensitive info types: [Select all that applies]
+
 * Content is shared from Microsoft 365 with people **outside my organization**.
-* **Action**
+
+**Action**
+
 * Restrict access to the content for external users. 
+
 * Notify users with email and policy tips.
+
 * Send incident reports to the Administrator.
 
-!!! Info More Information
-
-For additional information on **sensitive by default**, refer [here](https://docs.microsoft.com/en-us/sharepoint/sensitive-by-default).
+!!! Info "More Information"
+    For additional information on **sensitive by default**, refer [here](https://docs.microsoft.com/en-us/sharepoint/sensitive-by-default).
 
 ### Protection of Teams and SharePoint sites:
 Sensitivity labels can be used to protect data not only in documents and emails, but also in Teams and SharePoint sites. During creation Teams settings can be defined such as: Private (or public), external user access and access from unmanaged devices. When you apply a sensitivity label to a supported container, the label automatically applies the classification and configured protection settings to the site or group. Referring to [using sensitivity labels in Teams, Groups or SharePoint sites](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-teams-groups-sites?view=o365-worldwide#using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites).
@@ -337,7 +345,7 @@ When trying to add the 3rd new user to the existing Teams channel, assume that t
 
 We now have 2 guest users, a federation user, a Teams-DLP rule, and a Teams channel. We are ready to test the scenarios.
 
-## User Experince
+## User Experience
 
 ### <span style="color:blue">Scenario 1: Sharing Credit card details to a Federation user via 1-1 chat.</span> 
 
@@ -359,11 +367,11 @@ The message is blocked as the DLP rule is activated and the sender is notified:
 
 <span style="color:green">Receiver Screen:</span> 
 
-The receiver gets a blank blocked message, as shown below. Please note that there will be a delay of a few seconds in blocking the message and which is normal behaviour (passive DLP).
+The receiver gets a blank blocked message, as shown below. Please note that there will be a delay of a few seconds in blocking the message and which is normal behavior (passive DLP).
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams27.png" align="left"/> 
-    <figcaption>Figure 28: Blank blocked message/figcaption>
+    <figcaption>Figure 28: Blank blocked message</figcaption>
 </figure>
 
 ### <span style="color:blue">Scenario 2: Sharing a file from SharePoint /OneDrive to Federation user.</span> 
@@ -412,7 +420,7 @@ The Receiver receives the blocked message, as shown below:
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams31.png" align="left"/> 
-    <figcaption>Figure 32: Blocked message to receiver/figcaption>
+    <figcaption>Figure 32: Blocked message to receiver</figcaption>
 </figure>
 
 ### <span style="color:blue">Scenario 5: Sharing a file via 1-1 chat with Guest User.</span> 
@@ -423,17 +431,17 @@ The Sender is trying to attach a file, which has credit card information, via 1-
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams32.png" align="left"/> 
-    <figcaption>Figure 33: Attaching a file in chat with credit card inforamtion</figcaption>
+    <figcaption>Figure 33: Attaching a file in chat with credit card information</figcaption>
 </figure>
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams33.png" align="left"/> 
-    <figcaption>Figure 34: Attaching a file in chat with credit card inforamtion<</figcaption>
+    <figcaption>Figure 34: Attaching a file in chat with credit card information<</figcaption>
 </figure>
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams34.png" align="left"/> 
-    <figcaption>Figure 35: Attaching a file in chat with credit card inforamtion<</figcaption>
+    <figcaption>Figure 35: Attaching a file in chat with credit card information<</figcaption>
 </figure>
 
 <span style="color:green">Receivers Screen:</span> 
@@ -467,12 +475,12 @@ The Sender attempts to share a credit card number via the channel chat:
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams38.png" align="left"/> 
-    <figcaption>Figure 39: Attaching a file in channel with credit card inforamtion</figcaption>
+    <figcaption>Figure 39: Attaching a file in channel with credit card information</figcaption>
 </figure>
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams39a.png" align="left"/> 
-    <figcaption>Figure 40: Attaching a file in channel with credit card inforamtion</figcaption>
+    <figcaption>Figure 40: Attaching a file in channel with credit card information</figcaption>
 </figure>
 
 <span style="color:green">Receivers Screen:</span> 
@@ -492,7 +500,7 @@ The Sender attempts to share a file that has credit card number details over the
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams40.png" align="left"/> 
-    <figcaption>Figure 42: Attaching a file in channel with credit card inforamtion</figcaption>
+    <figcaption>Figure 42: Attaching a file in channel with credit card information</figcaption>
 </figure>
 
 <span style="color:green">Receivers Screen:</span> 
@@ -522,7 +530,7 @@ After creating the DLP policies or rules on the desired workload (i.e., Teams Ch
 
 Or
 
-[DLP Report](https://compliance.microsoft.com/reports/dlppolicymatchesreport)
+[https://compliance.microsoft.com/reports/dlppolicymatchesreport](https://compliance.microsoft.com/reports/dlppolicymatchesreport)
 
 This report shows the count of DLP policy matches over time. You can filter the report by date, location, policy, or action. This report can help discover the business processes that may violate the organization’s DLP policies and understand the impact created by the action that is applied on the content. It also helps identify the list of top users and repeat users who are contributing to incidents within your organization. Highlighted in red boxes indicates key filters or features in the reports.
 
@@ -561,7 +569,7 @@ This phase deals with protecting the identified, SIT’s. This can be done eithe
 
 Keep monitoring the results and fine tune the rules. Validate the results through alerts/reports and take measures.
 
-For more details on deployment strategy, visit the [MIP-DAG](../../dag/mip-dlp)
+For more details on deployment strategy, visit the [MIP DAG](../../dag/mip-dlp/)
 
 <figure>
     <img src="../../playbooks/img/teamsdlp/teams47.png" align="left"/> 
