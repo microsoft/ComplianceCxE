@@ -4,7 +4,13 @@ Exchange is frequently a common target for retention policies, eDiscovery holds,
 
 ## Prerequisite Knowledge
 
-Before we start, we do recommend that you review the following Microsoft Docs articles which discuss retention in Microsoft 365 prior to continuing:
+Before we start, we do recommend that you review the following Microsoft 365 Docs articles prior to continuing:
+
+### Litigation Hold in Exchange Online
+
+* [How to create a Litigation Hold](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-litigation-hold?view=o365-worldwide)
+
+### Microsoft 365 Retention Policies and Labels
 
 * [Learn about retention policies and retention labels](https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide)
 
@@ -14,9 +20,14 @@ Before we start, we do recommend that you review the following Microsoft Docs ar
 
 * [Automatically apply a retention label to retain or delete content](https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-retention-labels-automatically?view=o365-worldwide)
 
-Additionally, it should be noted that Exchange has a feature commonly referred to as Retention policies, which are more accurately named [Messaging records management (MRM) policies](https://docs.microsoft.com/en-us/Exchange/policy-and-compliance/mrm/mrm?view=exchserver-2019#:~:text=MRM%20strategies%201%20Remove%20all%20messages%20after%20a,...%204%20Retain%20messages%20for%20eDiscovery%20purposes.%20).  This article does **not** discuss MRM policies – and MRM policies are **not** the same thing as M365 retention policies or labels.  
+### Microsoft 365 eDiscovery
 
-Finally, there are many different types of holds that can be placed on an object in Exchange – In-place/eDiscovery hold, Litigation hold and retention policy/label.  Each have their own benefits and use cases.  The purpose of this article is to discuss how Exchange handles deleted items when affected by retention or a hold, so will not discuss the difference between each of these types of holds.
+* [How to create an eDiscovery Hold](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-ediscovery-holds?view=o365-worldwide)
+
+
+Additionally, it should be noted that Exchange has a feature commonly referred to as Retention policies, which are more accurately named [Messaging records management (MRM) policies](https://docs.microsoft.com/en-us/Exchange/policy-and-compliance/mrm/mrm?view=exchserver-2019#:~:text=MRM%20strategies%201%20Remove%20all%20messages%20after%20a,...%204%20Retain%20messages%20for%20eDiscovery%20purposes.%20).  It is important to understand that MRM policies are **not** the same thing as Microsoft 365 retention policies or labels.  MRM policices are used to *move items* (such as to an archive), whereas Microsoft 365 retention policies are used to *preserve and/or delete* items (such as for regulatory compliance).
+
+Finally, there are many different types of holds that can be placed on an object in Exchange – In-place/eDiscovery hold, Litigation hold and retention policy/label.  Each have their own benefits and use cases.  The purpose of this article is to discuss how Exchange handles deleted items when affected by retention or a hold, so will not discuss the difference between each of these types of holds.  You can learn more about them at the links listed above.
 
 !!! info
     We plan to release future articles describing the differences between MRM policies and M365 retention policies as well as the different types of holds that can affect an Exchange mailbox and when to use each.  We will update the links here once released.
