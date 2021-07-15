@@ -1,4 +1,4 @@
-# Deep Dive into the Recoverable Items Folder
+# Deep Dive into the Exchange Recoverable Items Folder
 
 Exchange is frequently a common target for retention policies, eDiscovery holds, litigation holds, etc.  But how does a hold or retention affect the content within a mailbox?  This is what we hope to clarify with this article.
 
@@ -44,15 +44,20 @@ Within the mailbox, two logical containers exist.  The first, in which most of t
 
 The second container is called the ‘non-IPM subtree’, and contains operational and configuration data related to the mailbox.  Within this non-IPM subtree, and thus virtually invisible to the user (as a folder), is a location called the **Recoverable Items (RI) folder** which houses it’s [own set of subfolders](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#recoverable-items-folder) used for various purposes including storing audit logs, calendar logging information and, of course, storing deleted items for recovery and/or retention.
 
+<figure>
+    <img src="../../img/ri-1.png"/> 
+    <figcaption>Figure 1: Diagram of the mailbox split into two logical containers or trees.</figcaption>
+</figure>
+
 ## Deletions
 
 When items are deleted from their original location, they are generally (unless deleted with SHIFT + DELETE) first sent to the ‘Deleted Items’ folder within the IPM Subtree.  This is a sort of visible safety net that provides users another chance to restore something if it was accidentally deleted.  However, if permanently deleted, or if deleted from the 'Deleted Items' folder (otherwise known as a [soft delete](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#terminology)), it is then sent to the **Deletions** subfolder within the Recoverable Items folder, which is another less visible safety net.  Items in this folder [can be restored or purged by the user in Outlook or Outlook on the Web (OWA)](https://support.microsoft.com/en-us/office/recover-deleted-items-or-email-in-outlook-web-app-c3d8fc15-eeef-4f1c-81df-e27964b7edd4) for as long as the mailbox is [configured to keep deleted items for](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).  This configuration is referred to as the **RetainDeletedItemsFor** value which, in Exchange Online, is 14 days by default, expandable to up to 30 days. 
 
-*Figure 1* in the diagram below gives a very high level view of the *user visible* deletion process:
+*Figure 2* in the diagram below gives a very high level view of the *user visible* deletion process:
 
 <figure>
-    <img src="../../img/ri-1.png"/> 
-    <figcaption>Figure 1: Diagram of deleting mailbox content without any holds or retention applied.</figcaption>
+    <img src="../../img/ri-2.png"/> 
+    <figcaption>Figure 2: Diagram of deleting mailbox content without any holds or retention applied.</figcaption>
 </figure>
 
 To put it simply, the deletions subfolder within the RI is a built-in feature to help ensure managing data in Exchange is somewhat accident-proof for the user.  However, as easy as it is to restore items from the RI, users can also purge (or [hard delete](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#terminology)) items.  So what happens in the case of malicious intent?  How can an organization be sure to retain items related to litigation, regulation or company policy?  That’s where holds and retention are necessary – but since the Deletions subfolder in the RI is visible to the user, we needed another place to store items affected by retention and holds.
@@ -76,7 +81,7 @@ The **Purges** folder should be considered the beginning of a deleted item's ret
 
 The first scenario we wanted to cover here was if there was no retention or holds applied to the mailbox.  But wait - didn't we discuss that above? Yes - however there's some extra *non user visible* things happening in the background.
 
-Exchange Online has a feature called [single item recovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#single-item-recovery), which is enabled on every mailbox by default.  The purpose of this feature is to allow administrators a short amount of time to restore purged items without needing to rely on a backup of the mailbox. As depicted in *Figure 2* below, it will retain any items that have been hard deleted within the Purges folder for as long as the **RetainDeletedItemsFor** value is configured, *based on the last modified time of the item*.  
+Exchange Online has a feature called [single item recovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#single-item-recovery), which is enabled on every mailbox by default.  The purpose of this feature is to allow administrators a short amount of time to restore purged items without needing to rely on a backup of the mailbox. As depicted in *Figure 3* below, it will retain any items that have been hard deleted within the Purges folder for as long as the **RetainDeletedItemsFor** value is configured, *based on the last modified time of the item*.  
 
 !!! note
     The last modified time of the item is updated **any time a modification is made** including moving from the Deletions folder to the Purges folder.
@@ -87,8 +92,8 @@ Exchange Online has a feature called [single item recovery](https://docs.microso
     The user deletes an email message from the inbox then soft deletes it from the Deleted items folder.  7 days later, the user goes into the Deletions folder within Outlook or OWA and hard deletes the message.  At this point, single item recovery will move the message to the Purges folder, where it will remain for 14 days before finally being purged.
 
 <figure>
-    <img src="../../img/ri-2.png"/> 
-    <figcaption>Figure 2: Diagram of deleting mailbox content with single item recovery enabled.</figcaption>
+    <img src="../../img/ri-3.png"/> 
+    <figcaption>Figure 3: Diagram of deleting mailbox content with single item recovery enabled.</figcaption>
 </figure>
 
 ### Absolute hold vs Query-based hold
@@ -103,8 +108,8 @@ Absolute holds are basically defined as when litigation hold or [delay hold](htt
     Because they always apply to the entire mailbox, **absolute holds always take precedence over any other type of hold**.
 
 <figure>
-    <img src="../../img/ri-3.png"/> 
-    <figcaption>Figure 3: Diagram of deleting mailbox content when litigation hold is enabled.</figcaption>
+    <img src="../../img/ri-4.png"/> 
+    <figcaption>Figure 4: Diagram of deleting mailbox content when litigation hold is enabled.</figcaption>
 </figure>
 
 #### Query-based hold
@@ -133,8 +138,8 @@ This is where the **RetainDeletedItemsFor** configuration is again important.  A
     The user deletes an email from their inbox, then soft deletes the message from the deleted items folder.  After 7 days, the user hard deletes the message from the Deletions folder.  The message is then stored within the Purges folder for 14 days before being moved to the DiscoveryHolds folder to remain until no longer subject to the applied retention policy.
 
 <figure>
-    <img src="../../img/ri-4.png"/> 
-    <figcaption>Figure 4: Diagram of deleting mailbox content that has a Query-based hold applied.</figcaption>
+    <img src="../../img/ri-5.png"/> 
+    <figcaption>Figure 5: Diagram of deleting mailbox content that has a Query-based hold applied.</figcaption>
 </figure>
 
 ## Versions
@@ -151,13 +156,13 @@ Now, consider - *what if an object is modified*?  We, of course, need to make su
     When the user removes the attachment, Exchange will copy the original version of the message (with the attachment) to the Versions folder *before* removing the attachment.  When the user hard deletes the message, it will be retained in the Purges folder for 14 days, then moved to the DiscoveryHolds folder.  Both the original sent message and the deleted modified message will be discoverable via eDiscovery searches and both will be removed once the eDiscovery hold is removed.
 
 <figure>
-    <img src="../../img/ri-5.png"/> 
-    <figcaption>Figure 5: Diagram modifying content that has a query-based hold enabled.</figcaption>
+    <img src="../../img/ri-6.png"/> 
+    <figcaption>Figure 6: Diagram modifying content that has a query-based hold enabled.</figcaption>
 </figure>
 
 ## Quota
 
-One of the benefits of the recoverable items folder is that it has a [quota separate from that of the user's mailbox](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#recoverable-items-mailbox-quotas).  *This is actually incredibly important*.  The recoverable items folder should be completely seamless to the user (in other words, they user should have no idea it exists) - if it shared the same quota as the mailbox, all kinds of potential issues could arise, such as preventing the user from sending/receiving email because they unintentionally deleted too many things that were subject to a hold.  
+One of the benefits of the recoverable items folder is that it has a [quota separate from that of the user's mailbox](https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#recoverable-items-mailbox-quotas).  *This is actually incredibly important*.  The Recoverable Items folder should be completely seamless to the user (in other words, they user should have no idea it exists) - if it shared the same quota as the mailbox, all kinds of potential issues could arise, such as preventing the user from sending/receiving email because they unintentionally deleted too many things that were subject to a hold.  
 
 In Exchange Online, the following quota's exist:
 
