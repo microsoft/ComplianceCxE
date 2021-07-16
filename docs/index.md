@@ -5,9 +5,9 @@ The **Customer Acceleration Team (CAT)** is a World Wide team, our charter is he
 We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis. Also, do submit your feedback and contributions to the site via the appropriate links.
 
 !!! warning "Disclaimer"
-    Please note that **official** documentation for Microsoft 365 Compliance products are available at [https://docs.microsoft.com](https://docs.microsoft.com).  
-    
-    The Compliance CAT team works directly with customers to collect insights and develop recommendations and best practices which we integrate into the content on this site.  We recommend you refer to this content for best practices and lessons learned when deploying compliance products in Microsoft 365, and the official documentation for supportability, licensing and other information from the product group.
+    This site supplements the official [Microsoft 365 compliance documentation](https://docs.microsoft.com/microsoft-365/compliance/) and other information on the [docs.microsoft.com](https://docs.microsoft.com) site.
+
+    The resources on this site are direct from the **Microsoft Compliance CAT** team. We work closely with customers to collect insights, develop recommendations, and distil best practices for deploying Microsoft compliance solutions. Use the content on this site to benefit from our experience and lessons learned when you plan and deploy your own compliance solutions, and use the official documentation for supportability, licensing, and other information from the product group.
 
 ## Security vs Compliance
 

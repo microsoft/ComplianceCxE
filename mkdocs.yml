@@ -21,7 +21,8 @@ nav:
       #- Advanced Audit: notes/audit.md
       #- Insider Risk: notes/ir.md
       #- Communication Compliance: notes/cc.md
-      #- Information Governance: 
+      - Information Governance:
+        - Deep Dive into the Exchange Recoverable Items Folder: notes/mig/ri.md
       - Records Management: 
         - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
       #- Information Protection: notes/mip.md
