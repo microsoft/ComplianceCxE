@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-***MIP*: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data** | **July 20, 2021** |[Register](https://mipc.eventbuilder.com/event/47295)  |
-| *APAC* | 16:00 AEDT | [Register](https://mipc.eventbuilder.com/event/47295) |
 |***MIG*: Deep Dive on adaptive scopes** | **August 10, 2021** |  |
 |*APAC* | 13:00 AEDT | [Register](https://mipc.eventbuilder.com/event/45704) |
 | *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45703) |
