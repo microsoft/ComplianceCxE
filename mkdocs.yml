@@ -71,6 +71,9 @@ nav:
       - MIG/RM:
         - Introducing Adaptive Scopes - Private Preview: previews/adpscp.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Product Surveys: 
+      - Active Surveys: ActiveSurveys.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
 theme:
   name: material
   language: en
