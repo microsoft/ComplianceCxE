@@ -27,6 +27,7 @@ nav:
         - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
       #- Information Protection: notes/mip.md
       #- Data Loss Prevention: notes/dlp.md
+      - Compliance in K-12 Education: notes/ComplianceEdu.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - DAGs:
       - Getting Started: dag.md
