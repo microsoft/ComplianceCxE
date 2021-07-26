@@ -97,6 +97,8 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 extra:
+  analytics:
+    provider: custom
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/microsoft/ComplianceCxE/
