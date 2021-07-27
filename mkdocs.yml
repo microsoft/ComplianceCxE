@@ -121,3 +121,4 @@ markdown_extensions:
   - attr_list
 plugins:
   - search
+copyright: <a href="privacy/">Privacy Policy</a>
