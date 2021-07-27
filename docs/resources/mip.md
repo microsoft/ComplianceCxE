@@ -22,7 +22,7 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Data Classification White Paper](https://aka.ms/MIPC/DataClassification)
 
-* [End User Training for Sensitivity labels](https://aka.ms/MIPC/Blog-EndUserTraining_Sensitivity)
+* [End User Training for Sensitivity labels](../../enduser/sensitivity/)
 
 * [How to re-label documents classified with a deprecated sensitivity label](https://techcommunity.microsoft.com/t5/microsoft-security-and/how-to-re-label-documents-classified-with-a-deprecated/ba-p/2218259)
 
