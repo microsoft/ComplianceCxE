@@ -12,7 +12,7 @@ We built this page to help you easily find all relevant content and resources re
 ## Playbooks and Guides
 * [Deployment Acceleration Guide](../../dag/mig-rm)
 
-* [End User Training for Retention labels](https://techcommunity.microsoft.com/t5/security-compliance-identity/end-user-training-for-retention-labels-in-m365-how-to-accelerate/ba-p/1750861)
+* [End User Training for Retention labels](../../enduser/retention/)
 
 ## Webinars
 * [Microsoft Information Governance (MIG) Webinars](../../webinars#microsoft-information-governance)

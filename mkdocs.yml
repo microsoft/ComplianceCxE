@@ -27,6 +27,7 @@ nav:
         - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
       #- Information Protection: notes/mip.md
       #- Data Loss Prevention: notes/dlp.md
+      - Compliance in K-12 Education: notes/ComplianceEdu.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - DAGs:
       - Getting Started: dag.md
@@ -65,11 +66,10 @@ nav:
       - Episode 1: sbd\sbd-ep1.md
       - Episode 2: sbd\sbd-ep2.md
       - Episode 3: sbd\sbd-ep3.md
+      - Episode 4: sbd\sbd-ep4.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
-      - MIG/RM:
-        - Introducing Adaptive Scopes - Private Preview: previews/adpscp.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
 theme:
   name: material
@@ -93,6 +93,8 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 extra:
+  analytics:
+    provider: custom
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/microsoft/ComplianceCxE/
@@ -114,3 +116,4 @@ markdown_extensions:
   - attr_list
 plugins:
   - search
+copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a>
