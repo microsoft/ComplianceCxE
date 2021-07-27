@@ -14,7 +14,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | --- | --- | --- |
 |***MIG*: Deep Dive on adaptive scopes** | **September 21/22, 2021** |  |
 | *US/EMEA* | Sept. 21 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45703) |
-|*APAC* | Sept. 22 13:00 AEDT| [Register](https://mipc.eventbuilder.com/event45704) | 
+|*APAC* | Sept. 22 13:00 AEDT| [Register](https://mipc.eventbuilder.com/event/45704) | 
 |***CC*: Compliance Manager updates** | **August 24, 2021** |  |
 | *APAC* | 13:00 AEDT |[Register](https://mipc.eventbuilder.com/event/45706)|
 | *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
