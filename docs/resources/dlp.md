@@ -9,7 +9,7 @@ We built this page to help you easily find all relevant content and resources re
 ## Videos
 * [Vblog - Learn how to apply DLP policy to non-Microsoft cloud apps](https://techcommunity.microsoft.com/t5/security-compliance-identity/new-video-blog-apply-dlp-policies-to-non-microsoft-cloud/ba-p/2262054)
 
-* [How to configure a DLP policy](https://aka.ms/MIPC/video-configureDLPpolicy)
+* [How to configure a DLP policy](https://youtu.be/f4rTTLuSw4c)
 
 * [Microsoft Teams DLP - Know Your Data](https://aka.ms/MIPC/teamsdlpvideo1)
 
