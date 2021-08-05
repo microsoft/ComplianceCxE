@@ -1,11 +1,21 @@
 # Privacy Policy
 
-**TL;DR**: This site does not use cookies to track you and this site does not directly collect any data that can be used to identify you.
+**Your current consent status is:** <span id=status>Unknown</span> ([Change](javascript:cookieConsent.reset()))
+
+## TL;DR
+
+This site does not directly collect any data that can be used to identify you.  If you consent, we may use cookies for analytics purposes only.
+
+## The fine print
 
 When we launched our site, we wanted to provide a transparent and privacy-focused experience for our visitors.  Our only goal with this site is to provide guidance enriched by our 1:1 customer relationships for deploying Microsoft 365 Compliance products.  Therefore we elected to not collect any site analytics upon initial release.  
 
-However, over a short period of time, we learned that certain metrics are needed to better understand how many users are visiting our site, how many are or are not finding it useful, and what content is popular so that we can continue to provide guidance that is useful.  Since we still want to be privacy-focused, we decided to use a 3rd party open source analytics solution called Plausible Analytics, which is GDPR, CCPA and PECR compliant.  **Plausible does not use cookies to track visitors and all data is aggregate only.** 
+However, over a short period of time, we learned that certain metrics are needed to better understand how many users are visiting our site, how many are or are not finding it useful, and what content is popular so that we can continue to provide guidance that is useful.  Since we still want to be privacy-focused, we decided to use an open-source solution from Microsoft called [Clarity](https://clarity.microsoft.com) which, by default **does not use cookies to track our visitors**.  We have also elected to provide users the option to consent to allowing us to use cookies for analytics purposes only.  With or without cookies, all information is for **analytics only** and for the sole purpose of improving our site.
 
-For more information, please view the Plausible data policy here: [https://plausible.io/data-policy](https://plausible.io/data-policy)
+* If you choose to allow necessary cookies only, the only cookie we will drop is to allow your choice to persist.
 
-We also are currently testing an open source analytics project from Microsoft called [Clarity](https://clarity.microsoft.com).  Clarity by default does use cookies for collecting movement from page to page, however we have disabled this functionality.
+* If you choose to allow all cookies, we will only drop a cookie to allow your choice to persist and [any cookies that Clarity uses](https://docs.microsoft.com/en-us/clarity/cookie-list#what-cookies-does-clarity-set).
+
+* If you choose to [change your cookie preferences](javascript:cookieConsent.reset()), all cookies that we previously dropped will be removed until you update your preferences.  You can review the current status at the top of this page.
+
+For more information on what data is collected by Clarity, [review this document](https://docs.microsoft.com/en-us/clarity/clarity-data).

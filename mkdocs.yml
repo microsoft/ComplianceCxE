@@ -105,8 +105,11 @@ extra:
       link: https://aka.ms/MIPC/AskMIPTeam
 extra_css:
   - assets/extra.css
+  - assets/cookie-consent.css
 extra_javascript:
   - scripts/extlinks.js
+  - scripts/cookie-consent.js
+  - scripts/consent-init.js
 markdown_extensions:
   - toc:
       permalink: ⚓︎
@@ -117,4 +120,5 @@ markdown_extensions:
   - attr_list
 plugins:
   - search
-copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a>
+copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+

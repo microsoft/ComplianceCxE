@@ -7,7 +7,7 @@ function extLinkOnly() {
         if (lanksNum) {
             for (i = 0; i < lanksNum; i++) {
                 lankAcr = lanks[i];
-                if (lankAcr.hostname != window.location.hostname) {
+                if ((lankAcr.hostname != window.location.hostname) && (lankAcr.href != "javascript:cookieConsent.reset()")) {
                     lankAcr.target = "_blank";
                 }
             }
