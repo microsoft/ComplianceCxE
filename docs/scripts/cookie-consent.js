@@ -91,7 +91,7 @@
     }
 
     function removeCookie(name) {
-        document.cookie = name + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+        document.cookie = name + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=.microsoft.github.io'
     }
 
     function documentReady(fn) {
