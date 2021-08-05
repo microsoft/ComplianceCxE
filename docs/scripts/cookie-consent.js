@@ -158,11 +158,25 @@
         removeCookie(this.props.cookieName)
         
         //remove clarify cookies
-        var clarifyCookie1 = "_clck"
-        var clarifyCookie2 = "_clsk"
-        removeCookie(clarifyCookie1)
-        removeCookie(clarifyCookie2)
+        var clarifyCookie_clck = "_clck"
+        var clarifyCookie_clsk = "_clsk"
+        var clarifyCookie_CLID = "CLID"
+        var clarifyCookie_ANONCHK = "ANONCHK"
+        var clarifyCookie_MR = "MR"
+        var clarifyCookie_MUID = "MUID"
+        var clarifyCookie_SM = "SM"
+        removeCookie(clarifyCookie_clck)
+        removeCookie(clarifyCookie_clsk)
+        removeCookie(clarifyCookie_CLID)
+        removeCookie(clarifyCookie_ANONCHK)
+        removeCookie(clarifyCookie_MR)
+        removeCookie(clarifyCookie_MUID)
+        removeCookie(clarifyCookie_SM)
+        
+        //write cookie status to privacy page
         this.setCookieStatus()
+        
+        //show modal
         showDialog()
     }
 
