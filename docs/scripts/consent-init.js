@@ -1,4 +1,4 @@
-var cookieConsent = new CookieConsent({privacyPolicyUrl: "/privacy/"})
+var cookieConsent = new CookieConsent({privacyPolicyUrl: "/ComplianceCxE/privacy/"})
 
 if (cookieConsent.trackingAllowed()) {
     window.clarity('consent');

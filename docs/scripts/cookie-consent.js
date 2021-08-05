@@ -10,7 +10,7 @@
     this.props = {
         buttonPrimaryClass: "btn btn-primary", // the "accept all" buttons class, only used for styling
         buttonSecondaryClass: "btn btn-secondary", // the "accept necessary" buttons class, only used for styling
-        privacyPolicyUrl: "privacy/",
+        privacyPolicyUrl: "/ComplianceCxE/privacy/",
         autoShowModal: true, // disable autoShowModal on the privacy policy page, to make that page readable
         lang: navigator.language, // the language, in which the modal is shown
         blockAccess: false, // set "true" to block the access to the website before choosing a cookie configuration
@@ -19,7 +19,7 @@
         content: { // the content in all needed languages
             en: {
                 title: "Cookie settings",
-                body: "We use cookies to personalize content and analyze access to our website. " +
+                body: "We use cookies to gain richer analytics for the sole purpose of improving our site. " +
                     "You can choose whether you only accept cookies that are necessary for the functioning of the website " +
                     "or whether you also want to allow tracking cookies. For more information, please refer to our --privacy-policy--.",
                 privacyPolicy: "privacy policy",
