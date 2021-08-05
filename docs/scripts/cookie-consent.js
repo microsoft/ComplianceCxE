@@ -91,7 +91,7 @@
     }
 
     function removeCookie(name) {
-        document.cookie = name + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=.microsoft.github.io'
+        document.cookie = name + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
     }
 
     function documentReady(fn) {
@@ -157,10 +157,12 @@
     this.reset = function () {
         removeCookie(this.props.cookieName)
         
-        var clarifyCookieclck = "_clck"
-        var clarifyCookieclsk = "_clsk"
-        removeCookie(clarifyCookieclck)
-        removeCookie(clarifyCookieclsk)
+        //remove clarify cookies
+        var allCookies = document.cookie.split(';');
+        // The "expire" attribute of every cookie is 
+        // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
+        for (var i = 0; i < allCookies.length; i++)
+            document.cookie = allCookies[i] + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=.microsoft.github.io'
         
         //write cookie status to privacy page
         this.setCookieStatus()
