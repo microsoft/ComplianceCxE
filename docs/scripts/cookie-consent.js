@@ -27,7 +27,7 @@
                 buttonAcceptTechnical: "Only accept technically necessary cookies"
             }
         },
-        cookieName: "cookie-consent-tracking-allowed",  // the name of the cookie, the cookie is `true` if tracking was accepted
+        cookieName: "cookie-consent-tracking-allowed-catcxe",  // the name of the cookie, the cookie is `true` if tracking was accepted
         modalId: "cookieConsentModal" // the id of the modal dialog element
     }
     for (var property in props) {
