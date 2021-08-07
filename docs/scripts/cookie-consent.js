@@ -128,7 +128,6 @@
                 document.body.append(this.modal)
                 this.modal.querySelector(".btn-accept-necessary").addEventListener("click", function () {
                     setCookie(self.props.cookieName, "false", 365)
-                    writeCookieStatus()
                     hideDialog()
                     if(self.props.postSelectionCallback) {
                         self.props.postSelectionCallback()
@@ -136,8 +135,6 @@
                 })
                 this.modal.querySelector(".btn-accept-all").addEventListener("click", function () {
                     setCookie(self.props.cookieName, "true", 365)
-                    window.clarity('consent');
-                    writeCookieStatus()
                     hideDialog()
                     if(self.props.postSelectionCallback) {
                         self.props.postSelectionCallback()
@@ -156,17 +153,7 @@
     // API
     this.reset = function () {
         removeCookie(this.props.cookieName)
-        
-        //remove clarify cookies
-        var allCookies = document.cookie.split(';');
-        // The "expire" attribute of every cookie is 
-        // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
-        for (var i = 0; i < allCookies.length; i++)
-            document.cookie = allCookies[i] + '=; Path=/; SameSite=Strict; Expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=.microsoft.github.io'
-        
-        //write cookie status to privacy page
-        this.setCookieStatus()
-        
+                
         //show modal
         showDialog()
     }
