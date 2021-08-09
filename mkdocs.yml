@@ -27,7 +27,7 @@ nav:
         - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
       #- Information Protection: notes/mip.md
       #- Data Loss Prevention: notes/dlp.md
-      - Compliance in K-12 Education: notes/ComplianceEdu.md
+      - Compliance in K-12 Education: notes/complianceedu.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - DAGs:
       - Getting Started: dag.md
@@ -53,6 +53,7 @@ nav:
     - Playbooks:
       - Teams DLP Playbook: playbooks/teamsdlp.md
       - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
+      #- Communication Compliance - Financial Services Industry Playbook: playbooks/fsicc.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - End User Training:
       - Sensitivity Labels: enduser\sensitivity.md
