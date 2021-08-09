@@ -342,21 +342,21 @@ You have additional option such as if you want to capture Optical Character reco
 You also want to make sure you specify what precent of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the message based on your organization requirements. 
 
 <figure>
-    <img src="../../playbooks/img/fsi/picture18.png" align="left"/> 
+    <img src="../../playbooks/img/fsi/Picture18.png" align="left"/> 
     <figcaption>Figure 18: Optical Character Recognition</figcaption>
 </figure>
 
 When you are done click Next to go to the review settings screen.
 
 <figure>
-    <img src="../../playbooks/img/fsi/picture19.png" align="left"/> 
+    <img src="../../playbooks/img/fsi/Picture19.png" align="left"/> 
     <figcaption>Figure 19: Review and finish the policy</figcaption>
 </figure>
 
 If everything looks correct then click create policy to create the new policy. 
 
 <figure>
-    <img src="../../playbooks/img/fsi/picture20.png" align="left"/> 
+    <img src="../../playbooks/img/fsi/Picture20.png" align="left"/> 
     <figcaption>Figure 20: Policy Created</figcaption>
 </figure>
 
