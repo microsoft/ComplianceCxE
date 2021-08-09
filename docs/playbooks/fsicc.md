@@ -381,8 +381,12 @@ Based on experience, a solid Implementation strategy follows these three phases
 ## References
 
 [Learn about communication compliance - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance?view=o365-worldwide)
+
 [Communication compliance with Microsoft Teams - Microsoft Teams | Microsoft Docs](https://docs.microsoft.com/en-us/microsoftteams/communication-compliance)
+
 [Sensitive information type entity definitions - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-entity-definitions?view=o365-worldwide)
+
 [Get started with trainable classifiers - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/classifier-get-started-with?view=o365-worldwide)
+
 [Trainable classifier auto-labeling with sensitivity labels webinar - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-security-and/trainable-classifier-auto-labeling-with-sensitivity-labels/ba-p/1247424)
 
