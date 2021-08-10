@@ -43,4 +43,9 @@
     padding: 2px;
     text-align: center;
   }
+  .md-grid {
+    max-width: 1440px;
+  }
+  
+  
   
