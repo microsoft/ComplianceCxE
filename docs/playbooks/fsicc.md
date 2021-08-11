@@ -216,7 +216,7 @@ The following fields are Optional but can help cut down on false positives by pr
 
 In this case we have a large list of terms so we care going to use a Custom Keyword Dictionary (Lexicon) by uploading the CSV or TXT file. Note you have other options when creating your elements based on your needs.
 
-We will select Keyword dictionary:
+We will select **Keyword dictionary**:
 
 <figure>
     <img src="../../playbooks/img/fsi/picture4.png" align="left"/> 
@@ -289,14 +289,14 @@ Once in the Communication Compliance solution click on **Create policy** and sel
     <figcaption>Figure 12: Customer Communication Compliance Policy</figcaption>
 </figure>
 
-You need to provide a Name for your Communication Compliance policy (required field) and add a description if you would like to your Custom Policy. When done click **Next**
+You need to provide a Name for your Communication Compliance policy (required field) and add a description if you would like to your custom policy. When done click **Next**.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture13.png" align="left"/> 
     <figcaption>Figure 13: Name and describe your policy</figcaption>
 </figure>
 
-Define what users and/or groups you want to supervise communications for and who the reviews should be for this policy. Click **Next**
+Define what users and/or groups you want to supervise communications for and who the reviews should be for this policy. Click **Next**.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture14.png" align="left"/> 
@@ -305,7 +305,7 @@ Define what users and/or groups you want to supervise communications for and who
 
 Choose locations you wish to monitor communications. Click **Next**.
 
-!!! Note "If you have any data connectors to 3rd paty sources such as Slack or Bloomberg you will also see those here."
+!!! Note "If you have any [data connectors](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) to 3rd paty sources such as Slack or Bloomberg Message, etc you will also see those here."
 
 <figure>
     <img src="../../playbooks/img/fsi/picture15.png" align="left"/> 
@@ -313,7 +313,7 @@ Choose locations you wish to monitor communications. Click **Next**.
 </figure>
 
 
-One the choose conditions and review percentage screen. Choose the direction you want to monitor communication 
+On the "Choose conditions and review percentage" page. Choose the direction you want to monitor communication. You have trree options here:
 
 -	Inbound Detects communications sent to supervised users from external and internal senders, including other supervised users in this policy.
 
@@ -323,7 +323,7 @@ One the choose conditions and review percentage screen. Choose the direction you
 
 Choose your conditions. 
 
-In our case we are going to be selecting the custom keyword dictionary that we created earlier using c**ontent contains any of the sensitive info types**. There are several options to pick from and you can find more details here - [Communication compliance feature reference - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide&source=docs#policy-settings)
+In our case we are going to be selecting the custom keyword dictionary that we created earlier using **content contains any of the sensitive info types**. There are several options to pick from and you can find more details here - [Communication compliance feature reference - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide&source=docs#policy-settings)
 
 <figure>
     <img src="../../playbooks/img/fsi/picture16.png" align="left"/> 
@@ -335,13 +335,13 @@ In our case we are going to be selecting the custom keyword dictionary that we c
     <figcaption>Figure 17: Select the custom keyword dictonary</figcaption>
 </figure>
 
-Click **Add**. 
+After selecting the custom SIT we created before we click **Add**. 
 
-If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictonary. 
+If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictonary. So we are not going to add any more conditions. 
 
-You have additional option such as if you want to capture optical character recognition (OCR) where we will search for these words on images or hard written notes. 
+You also have additional options such as if you want to capture optical character recognition (OCR) where we will search for these words on images or hard written notes. 
 
-You may also want to make sure you specify what precent of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the message based on your organization requirements. 
+You also want to make sure you specify what precentage of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the messages based on your organization requirements. 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture18.png" align="left"/> 
@@ -355,7 +355,7 @@ When you are done click **Next** to go to the review settings screen.
     <figcaption>Figure 19: Review and finish the policy</figcaption>
 </figure>
 
-Review the settings and if everything looks correct then click **create policy** to create the new policy. 
+Review the settings and if everything looks correct then click **create policy** to create the new policy. Otherwise you can go back and make any required changes.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture20.png" align="left"/> 
