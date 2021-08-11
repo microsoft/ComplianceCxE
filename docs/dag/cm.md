@@ -295,7 +295,7 @@ Now that you know how to configure groups, it’s time to get started by picking
 
 Below is an example of the assessments page. It lists the assessments you select to track for your organization and your compliance score denominator is determined by all your tracked assessments. Thus, the more assessments you add, the more improvement actions you see on your improvement actions page, and the higher your score denominator is. 
 
-![](images\cm-fig1.png)
+![](images/cm-fig1.png)
 
 #### Setting up an assessment
 
@@ -404,7 +404,7 @@ Actions are assigned a score value based on whether they’re mandatory or discr
 
 Each action has an assigned value in Compliance Manager based on the risk it represents: 
 
-![](images\cm-fig2.png)
+![](images/cm-fig2.png)
     
 ###  Run: Customize and Expand Assessments  
 Now that you have a strong foundation in Compliance Manager and you have worked with an out of box assessment template, we’ll look at how you can build on this to create your own assessments, expand on the prebuilt assessments, or use Compliance Manager to assess 3rd party platforms or applications. This can really drive home the value of having a centrally managed location to track all your compliance management needs. We see customers using a mix of out of box assessment and adding their own custom assessments or expanding on the out of box assessments to meet their company’s needs. This allows for a lot of flexibility.  
@@ -473,7 +473,7 @@ The **Actions** tab is required. It designates improvement actions managed b
     * **ActionDescription**: Provide a description of the action, which will be shown under “How to Implement” for the action’s page in Compliance Manager. 
     * **(Optional) Dimension fields** – use syntax dimension-yourdimensionkey. Add any additional dimensions you wish to use to describe this action – if you are using a new DimensionKey or DimensionValue, you need to provide it in the Dimensions Tab, described in the next section below. 
 
- ![](images\cm-fig5.png)
+ ![](images/cm-fig5.png)
 
 #### Dimensions tab (Optional)
 

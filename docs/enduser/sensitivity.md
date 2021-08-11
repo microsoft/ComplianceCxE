@@ -36,4 +36,4 @@ In summary, this training will help to:
 
 ## All files download
 
-Sensitivity Labeling End User Training documentation from [here](sensitivity\End-User-Adoption-Training_Sensitivity-Labels.zip)
+Sensitivity Labeling End User Training documentation from [here](sensitivity/End-User-Adoption-Training_Sensitivity-Labels.zip)
