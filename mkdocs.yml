@@ -56,19 +56,19 @@ nav:
       #- Communication Compliance - Financial Services Industry Playbook: playbooks/fsicc.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - End User Training:
-      - Sensitivity Labels: enduser\sensitivity.md
-      - Retention Labels: enduser\retention.md
+      - Sensitivity Labels: enduser/sensitivity.md
+      - Retention Labels: enduser/retention.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Webinars:
       - Webinars: webinars.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Scenario Based Demos:
       - About the Series: sbd.md
-      - Episode 1: sbd\sbd-ep1.md
-      - Episode 2: sbd\sbd-ep2.md
-      - Episode 3: sbd\sbd-ep3.md
-      - Episode 4: sbd\sbd-ep4.md
-      - Episode 5: sbd\sbd-ep5.md
+      - Episode 1: sbd/sbd-ep1.md
+      - Episode 2: sbd/sbd-ep2.md
+      - Episode 3: sbd/sbd-ep3.md
+      - Episode 4: sbd/sbd-ep4.md
+      - Episode 5: sbd/sbd-ep5.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
@@ -79,8 +79,8 @@ theme:
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
-  logo: img\scm-shield.png
-  favicon: img\scm-shield.png
+  logo: img/scm-shield.png
+  favicon: img/scm-shield.png
   features:
     - navigation.expand
     - navigation.top
