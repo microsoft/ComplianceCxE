@@ -160,14 +160,14 @@ Organizations can configure custom keyword dictionaries (or lexicons) to provide
 
 [How to create a custom Sensitive Informaiton type using a keyword dictionary](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide#custom-keyword-dictionaries)
 
-In the Microsoft Compliance Center at compliance.microsoft.com click on the Data Classification Workload, and then click on Sensitive Info Types (SIT) to create the SIT.  
+In the Microsoft Compliance Center at [compliance.microsoft.com](compliance.microsoft.com) click on the **Data Classification**, and then click on **Sensitive Info Types** and **Create sensitive info type** to create the SIT.  
 
 <figure>
     <img src="../../playbooks/img/fsi/picture1.png" align="left"/> 
     <figcaption>Figure 1: Mirosoft Sensitive Info Types</figcaption>
 </figure>
 
-From here, you want to name your SIT and provide a description.  These are mandatory fields.
+From here, you want to name your SIT and provide a description. These are both mandatory fields. When done click **Next**.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture2.png" align="left"/> 
@@ -223,7 +223,7 @@ We will select Keyword dictionary:
     <figcaption>Figure 4: Select Keyword Dictonary</figcaption>
 </figure>
 
-This will open a new window which we are required to uploade our csv or txt file and name our dictonary.
+This will open a new window which we are required to upload our csv or txt file and name our dictonary.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture5.png" align="left"/> 
@@ -235,14 +235,14 @@ This will open a new window which we are required to uploade our csv or txt file
     <figcaption>Figure 6: Select csv or txt file</figcaption>
 </figure>
 
-The following keyword or phrases will be added to the UI as illustrated:
+The following keyword(s) or phrases will be added to the UI as illustrated:
 
 <figure>
     <img src="../../playbooks/img/fsi/picture7.png" align="left"/> 
     <figcaption>Figure 7: Add Keyword dictionary</figcaption>
 </figure>
 
-Provide a name for the Lexicon/keyword dictonary and click done.
+Provide a name for the Lexicon/keyword dictonary and click **done**.
 
 !!! Note "This is the minimum requirements for a custom SIT but as mentioned above you might want to provide other supporting elements and conditions to cut down on the false positives." 
 
@@ -251,9 +251,9 @@ Provide a name for the Lexicon/keyword dictonary and click done.
     <figcaption>Figure 8: New pattern with custom dictonary</figcaption>
 </figure>
 
-Once you are complete with your pattern click Create. If you like you can add additional patterns to this SIT for example you might have a Low, Medium and High pattern in the same SIT. Your low might be just find a keywork while a High is finding a keyword with supporting elements. 
+Once you are complete with your pattern click **Create**. If you would like you can add additional patterns to this sensitive info type (SIT) for example you might have a Low, Medium and High pattern in the same SIT. Your low might be just find a keyword while a High is finding a keyword with supporting elements. 
 
-Once you are done with the patterns click on Next. 
+Once you are done with the patterns click on **Next**. 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture9.png" align="left"/> 
@@ -262,9 +262,9 @@ Once you are done with the patterns click on Next.
 
 Choose the recommend confidence level for the policy. If you only have one then you should match this. 
 
-!!! Notes "To leabr more about confidence levels check out this video- [Confidence Level Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4Hx60)"
+!!! Notes "To learn more about confidence levels check out this video- [Confidence Level Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4Hx60)"
 
-In our case we choose High so we will choose high here.
+In our case we choose high so we will choose high here.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture10.png" align="left"/> 
@@ -280,32 +280,32 @@ Review your settings and continue.
 
 ### Create your Communication Compliance Policy
 
-Now that we have created our custom keywork dictionary we will switch over to the Communication Compliance solution to create a new Policy. 
+Now that we have created our custom keywork dictionary we will switch over to the Communication Compliance solution to create a new Communication Compliance Policy. 
 
-Once in the Communication Compliance soltuons click on Create policy and select Custom Policy.
+Once in the Communication Compliance solution click on **Create policy** and select **Custom Policy**.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture12.png" align="left"/> 
     <figcaption>Figure 12: Customer Communication Compliance Policy</figcaption>
 </figure>
 
-You need to provide a Name for your Communication Compliance policy (required field) and add a description if you like to your Custom Policy.
+You need to provide a Name for your Communication Compliance policy (required field) and add a description if you would like to your Custom Policy. When done click **Next**
 
 <figure>
     <img src="../../playbooks/img/fsi/picture13.png" align="left"/> 
     <figcaption>Figure 13: Name and describe your policy</figcaption>
 </figure>
 
-Define what users and/or groups you want to supervise and who the reviews should be for this policy. 
+Define what users and/or groups you want to supervise communications for and who the reviews should be for this policy. Click **Next**
 
 <figure>
     <img src="../../playbooks/img/fsi/picture14.png" align="left"/> 
     <figcaption>Figure 14: Choose supervised users and reviewers</figcaption>
 </figure>
 
-Choose locations to Monitor Communications. Click Next.
+Choose locations you wish to monitor communications. Click **Next**.
 
-!!! Note "If you have any data connectors to 3rd paty sources you will also see these here."
+!!! Note "If you have any data connectors to 3rd paty sources such as Slack or Bloomberg you will also see those here."
 
 <figure>
     <img src="../../playbooks/img/fsi/picture15.png" align="left"/> 
@@ -313,9 +313,7 @@ Choose locations to Monitor Communications. Click Next.
 </figure>
 
 
-Choose Conditions and Review Percentage
-
-Choose the direction you want to monitor communication 
+One the choose conditions and review percentage screen. Choose the direction you want to monitor communication 
 
 -	Inbound Detects communications sent to supervised users from external and internal senders, including other supervised users in this policy.
 
@@ -323,7 +321,9 @@ Choose the direction you want to monitor communication
 
 -	Internal Detects communications between the supervised users or groups in this policy.
 
-Choose your conditions. In our case we are going to be selecting the custom keyword dictionary that we created earlier using Content contains any of the sensitive info types. There are several options to pick from and you can find more details here - [Communication compliance feature reference - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide&source=docs#policy-settings)
+Choose your conditions. 
+
+In our case we are going to be selecting the custom keyword dictionary that we created earlier using c**ontent contains any of the sensitive info types**. There are several options to pick from and you can find more details here - [Communication compliance feature reference - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide&source=docs#policy-settings)
 
 <figure>
     <img src="../../playbooks/img/fsi/picture16.png" align="left"/> 
@@ -335,32 +335,34 @@ Choose your conditions. In our case we are going to be selecting the custom keyw
     <figcaption>Figure 17: Select the custom keyword dictonary</figcaption>
 </figure>
 
-Click Add. If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictonary. 
+Click **Add**. 
 
-You have additional option such as if you want to capture Optical Character recognition where we will search for these words on images or hard written notes. 
+If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictonary. 
 
-You also want to make sure you specify what precent of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the message based on your organization requirements. 
+You have additional option such as if you want to capture optical character recognition (OCR) where we will search for these words on images or hard written notes. 
+
+You may also want to make sure you specify what precent of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the message based on your organization requirements. 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture18.png" align="left"/> 
     <figcaption>Figure 18: Optical Character Recognition</figcaption>
 </figure>
 
-When you are done click Next to go to the review settings screen.
+When you are done click **Next** to go to the review settings screen.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture19.png" align="left"/> 
     <figcaption>Figure 19: Review and finish the policy</figcaption>
 </figure>
 
-If everything looks correct then click create policy to create the new policy. 
+Review the settings and if everything looks correct then click **create policy** to create the new policy. 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture20.png" align="left"/> 
     <figcaption>Figure 20: Policy Created</figcaption>
 </figure>
 
-Once this is complete you will have a Communication Compliance policy using a customer Lexicon set of keywords.  
+Once this is complete you will have a Communication Compliance policy using a custom Lexicon set of keywords.  
 
 !!! Notes "Please take the following note:"
     If simple dictionary matches are not enough for a particular scenario an organization needs to detect, multiple keyword lists can be combined via more complex logic (e.g. one word from list A near a word from list B but without the presence of a word from list C) by [creating a custom Sensitive Information Type in the Compliance Center](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoft-365%2Fcompliance%2Fcreate-a-custom-sensitive-information-type%3Fview%3Do365-worldwide&data=04%7C01%7Cv-jasayl%40microsoft.com%7C7ab6a33f6b53467802a408d8fa3ffaf4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534500071852224%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=r7DjiJ6GWhwErBQ8hAZWvB1FNunsMSD50fg2ugSh%2BaI%3D&reserved=0) or [via PowerShell using a custom XML file](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoft-365%2Fcompliance%2Fcreate-a-custom-sensitive-information-type-in-scc-powershell%3Fview%3Do365-worldwide&data=04%7C01%7Cv-jasayl%40microsoft.com%7C7ab6a33f6b53467802a408d8fa3ffaf4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534500071852224%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=bGEV2FEH5mj%2F2gqALPkesII1Q%2BG4hfKuT%2BmsRBfglFg%3D&reserved=0).
@@ -370,7 +372,7 @@ Once this is complete you will have a Communication Compliance policy using a cu
 
 See [Microsoft 365 productivity illustrations](https://docs.microsoft.com/en-us/microsoft-365/solutions/productivity-illustrations?view=o365-worldwide) for guidance on implementing all M365 capabilities with a focus on cross technologies.
 
-Based on experience, a solid Implementation strategy follows these three phases
+Based on experience, a solid implementation strategy follows these three phases:
 
 **Crawl** -The first stage is about starting to evaluate your organization's security and compliance with your goal of defining a strategic direction for your company. For example, you can create test policies with basic dictionaries that include the words directly associated with the scenarios one wants to detect (e.g. for bribes words like award, payment, reward, bonus, “on us”, complimentary, etc.) and monitor communications using these, especially to detect false positives. For each false positive, take note of the words in those messages that you could use to identify the topics where the target words alone would cause a false positive. In the walk phase, you can implement more complex rules that use the learnings from the first phase to more precisely target the right messages. 
 
