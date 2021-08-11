@@ -244,7 +244,7 @@ The following keyword or phrases will be added to the UI as illustrated:
 
 Provide a name for the Lexicon/keyword dictonary and click done.
 
-!!! Note "This is the minumun requirements for a custom SIT but as mentioned above you might want to provide other supporting elements and conditions to cut down on the false positives." 
+!!! Note "This is the minimum requirements for a custom SIT but as mentioned above you might want to provide other supporting elements and conditions to cut down on the false positives." 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture8.png" align="left"/> 
