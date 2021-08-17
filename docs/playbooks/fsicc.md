@@ -5,7 +5,7 @@ title: Microsoft Communication Compliance - Playbook for Financial Services Indu
 ---
 
 !!! Note "How to use this guide"
-    Please use this guide as a starting point for monitoring and protecting your communication in Microsoft Communication Compliance. All links and references should be up to date, however, if you have a question about the correctness of any information in this document, please reach out to our [yammer group]( aka.ms/askmipteam ).
+    Please use this guide as a starting point for monitoring and protecting your communication in Microsoft Communication Compliance. All links and references should be up to date, however, if you have a question about the correctness of any information in this document, please reach out to our [yammer group](https://aka.ms/askmipteam ).
 
     All screenshots in this guide contain the proper configuration settings according to the best practices at the time of publication. Please ensure that your configurations mirror those used in this guide. Please refer to the Microsoft documentation online at docs for the latest updates
 
@@ -38,7 +38,7 @@ Digital Communication Governance and Controls. Compliance professionals face an 
 
 ### Geopolitical Uncertainty
 
-Companies, especially those with global footprints and regulatory demands, face increased geopolitical risks. Regulators worldwide have implemented communication supervision regulations, including 17A-4, GDPR, and MiFID II, and are taking other steps that may focus on future communication supervision regulatory requirements. Organizations should map their regulatory rules to their  controls, evaluate ongoing regulatory changes, and formalize risk analysis and issue management processes to address these added risks. Organizations who are using Microsoft 365 can also look at utilizing Compliance Manager to stay on top of all the different compliance regulations impacting your industry and/or location and use these as a guide to help you stay complaant with this ever changing environment. More on Compliance [Manager Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide#:~:text=%20Compliance%20Manager%20helps%20simplify%20compliance%20and%20reduce,suggested%20improvement%20actions%20to%20help%20you...%20More%20)
+Companies, especially those with global footprints and regulatory demands, face increased geopolitical risks. Regulators worldwide have implemented communication supervision regulations, including 17A-4, GDPR, and MiFID II, and are taking other steps that may focus on future communication supervision regulatory requirements. Organizations should map their regulatory rules to their  controls, evaluate ongoing regulatory changes, and formalize risk analysis and issue management processes to address these added risks. Organizations who are using Microsoft 365 can also look at utilizing Compliance Manager to stay on top of all the different compliance regulations impacting your industry and/or location and use these as a guide to help you stay compliant with this ever changing environment. More on Compliance [Manager Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide#:~:text=%20Compliance%20Manager%20helps%20simplify%20compliance%20and%20reduce,suggested%20improvement%20actions%20to%20help%20you...%20More%20)
 
 ### Intended Audience
 
@@ -84,7 +84,7 @@ Policies should provide specific language explaining to employees using communic
 
 ### Types of Electronic Communications Requiring Supervision Policies
 
-**External Communications.** From a compliance perspective, organizations must establish communication supervision policies regarding the forms of electronic communications that they permit employees to use when conducting business with the public and take reasonable steps to monitor compliance with such policies and regulatory requirements. More specifically, FINRA expects communication supervision policies to prohibit communications with the public for business purposes from employees' own electronic communications devices (including, for example, home computers) unless the orginaztion is capable of properly supervising, receiving, and retaining such communications. 
+**External Communications.** From a compliance perspective, organizations must establish communication supervision policies regarding the forms of electronic communications that they permit employees to use when conducting business with the public and take reasonable steps to monitor compliance with such policies and regulatory requirements. More specifically, FINRA expects communication supervision policies to prohibit communications with the public for business purposes from employees' own electronic communications devices (including, for example, home computers) unless the organization is capable of properly supervising, receiving, and retaining such communications. 
 
 **Internal Communications**. Financial Services firms may use "risk-based principles" to decide the extent to which internal communications will be reviewed. In connection with reaching a risk-based assessment, the guidance suggests areas that firms should consider, including assessing information barriers' effectiveness.  In addition, firms may view "various relevant existing processes," such as steps taken to reduce, manage, or eliminate potential conflicts of interest; and reviews of internal electronic communications that occur in connection with internal and/or regulatory examinations, transaction reviews, internal disciplinary reviews, and reviews relating to customer complaints or arbitration.
 
@@ -158,13 +158,13 @@ Organizations can configure custom keyword dictionaries (or lexicons) to provide
 
 ### Create Your Lexicon or Custom Dictionary
 
-[How to create a custom Sensitive Informaiton type using a keyword dictionary](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide#custom-keyword-dictionaries)
+[How to create a custom Sensitive Information type using a keyword dictionary](https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide#custom-keyword-dictionaries)
 
-In the Microsoft Compliance Center at [compliance.microsoft.com](compliance.microsoft.com) click on the **Data Classification**, and then click on **Sensitive Info Types** and **Create sensitive info type** to create the SIT.  
+In the Microsoft Compliance Center at [compliance.microsoft.com](https://compliance.microsoft.com) click on the **Data Classification**, and then click on **Sensitive Info Types** and **Create sensitive info type** to create the SIT.  
 
 <figure>
     <img src="../../playbooks/img/fsi/picture1.png" align="left"/> 
-    <figcaption>Figure 1: Mirosoft Sensitive Info Types</figcaption>
+    <figcaption>Figure 1: Microsoft Sensitive Info Types</figcaption>
 </figure>
 
 From here, you want to name your SIT and provide a description. These are both mandatory fields. When done click **Next**.
@@ -202,17 +202,17 @@ The following fields are Optional but can help cut down on false positives by pr
 - Add any additional supporting elements
 - Add any additional checks
 
-**Useful Links:**
+#### Useful Links
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learn about sensitive information types](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-learn-about?view=o365-worldwide)
+* [Learn about sensitive information types](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-learn-about?view=o365-worldwide)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Get Started with Custom Sensitive Information Types](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-custom-sensitive-information-type?view=o365-worldwide)
+* [Get Started with Custom Sensitive Information Types](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-custom-sensitive-information-type?view=o365-worldwide)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Create a Keyword Dictonary](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-keyword-dictionary?view=o365-worldwide)
+* [Create a Keyword Dictionary](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-keyword-dictionary?view=o365-worldwide)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Functions](https://docs.microsoft.com/en-us/microsoft-365/compliance/what-the-dlp-functions-look-for?view=o365-worldwide)
+* [Functions](https://docs.microsoft.com/en-us/microsoft-365/compliance/what-the-dlp-functions-look-for?view=o365-worldwide)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Regular Expresions](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/) - M365 sensitive information types uses the Boost.RegEx 5.1.3 engine.
+* [Regular Expressions](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/) - M365 sensitive information types uses the Boost.RegEx 5.1.3 engine.
 
 In this case we have a large list of terms so we care going to use a Custom Keyword Dictionary (Lexicon) by uploading the CSV or TXT file. Note you have other options when creating your elements based on your needs.
 
@@ -220,14 +220,14 @@ We will select **Keyword dictionary**:
 
 <figure>
     <img src="../../playbooks/img/fsi/picture4.png" align="left"/> 
-    <figcaption>Figure 4: Select Keyword Dictonary</figcaption>
+    <figcaption>Figure 4: Select Keyword Dictionary</figcaption>
 </figure>
 
-This will open a new window which we are required to upload our csv or txt file and name our dictonary.
+This will open a new window which we are required to upload our csv or txt file and name our dictionary.
 
 <figure>
     <img src="../../playbooks/img/fsi/picture5.png" align="left"/> 
-    <figcaption>Figure 5: Upload Keyword Dictonary file</figcaption>
+    <figcaption>Figure 5: Upload Keyword Dictionary file</figcaption>
 </figure>
 
 <figure>
@@ -242,13 +242,13 @@ The following keyword(s) or phrases will be added to the UI as illustrated:
     <figcaption>Figure 7: Add Keyword dictionary</figcaption>
 </figure>
 
-Provide a name for the Lexicon/keyword dictonary and click **done**.
+Provide a name for the Lexicon/keyword dictionary and click **done**.
 
 !!! Note "This is the minimum requirements for a custom SIT but as mentioned above you might want to provide other supporting elements and conditions to cut down on the false positives." 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture8.png" align="left"/> 
-    <figcaption>Figure 8: New pattern with custom dictonary</figcaption>
+    <figcaption>Figure 8: New pattern with custom dictionary</figcaption>
 </figure>
 
 Once you are complete with your pattern click **Create**. If you would like you can add additional patterns to this sensitive info type (SIT) for example you might have a Low, Medium and High pattern in the same SIT. Your low might be just find a keyword while a High is finding a keyword with supporting elements. 
@@ -280,7 +280,7 @@ Review your settings and continue.
 
 ### Create your Communication Compliance Policy
 
-Now that we have created our custom keywork dictionary we will switch over to the Communication Compliance solution to create a new Communication Compliance Policy. 
+Now that we have created our custom keyword dictionary we will switch over to the Communication Compliance solution to create a new Communication Compliance Policy. 
 
 Once in the Communication Compliance solution click on **Create policy** and select **Custom Policy**.
 
@@ -305,7 +305,7 @@ Define what users and/or groups you want to supervise communications for and who
 
 Choose locations you wish to monitor communications. Click **Next**.
 
-!!! Note "If you have any [data connectors](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) to 3rd paty sources such as Slack or Bloomberg Message, etc you will also see those here."
+!!! Note "If you have any [data connectors](https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide) to 3rd party sources such as Slack or Bloomberg Message, etc you will also see those here."
 
 <figure>
     <img src="../../playbooks/img/fsi/picture15.png" align="left"/> 
@@ -313,7 +313,7 @@ Choose locations you wish to monitor communications. Click **Next**.
 </figure>
 
 
-On the "Choose conditions and review percentage" page. Choose the direction you want to monitor communication. You have trree options here:
+On the "Choose conditions and review percentage" page. Choose the direction you want to monitor communication. You have tree options here:
 
 -	Inbound Detects communications sent to supervised users from external and internal senders, including other supervised users in this policy.
 
@@ -332,16 +332,16 @@ In our case we are going to be selecting the custom keyword dictionary that we c
 
 <figure>
     <img src="../../playbooks/img/fsi/picture17.png" align="left"/> 
-    <figcaption>Figure 17: Select the custom keyword dictonary</figcaption>
+    <figcaption>Figure 17: Select the custom keyword dictionary</figcaption>
 </figure>
 
 After selecting the custom SIT we created before we click **Add**. 
 
-If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictonary. So we are not going to add any more conditions. 
+If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictionary. So we are not going to add any more conditions. 
 
 You also have additional options such as if you want to capture optical character recognition (OCR) where we will search for these words on images or hard written notes. 
 
-You also want to make sure you specify what precentage of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the messages based on your organization requirements. 
+You also want to make sure you specify what percentage of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the messages based on your organization requirements. 
 
 <figure>
     <img src="../../playbooks/img/fsi/picture18.png" align="left"/> 
