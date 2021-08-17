@@ -51,12 +51,12 @@ When blocked with an option to override, an administrator might allow you to pic
 </figure>
 
 <figure>
-    <img src="../../enduser/img/dlpenduser/picture3.png" align="left"/> 
+    <img src="../../enduser/img/dlpenduser/picture3.png"/> 
     <figcaption>Figure 3: Toast message: Block with override, Business justification options.</figcaption>
 </figure>
 
 <figure>
-    <img src="../../enduser/img/dlpenduser/picture4.png" align="left"/> 
+    <img src="../../enduser/img/dlpenduser/picture4.png"/> 
     <figcaption>Figure 4: Toast message: Block with override, business justification options, notes.</figcaption>
 </figure>
 
