@@ -117,6 +117,8 @@ _Receiver Screen:_
 
 The receiver gets a blank blocked message, as shown below. Please note that there will be a delay of a few seconds in blocking the message and which is normal behavior (passive DLP).
 
+[Teams DLP end user experience - Video](https://aka.ms/mipc/teamsdlpvideo3) 
+
 ### Protecting Sensitive Information in Documents Sharing:
 
 If a user attempts to share a document that contains sensitive information with external users/guests in a Microsoft Teams Channel or chat, the DLP rule prevents opening the document by the external user. Note that, in this case, the DLP policy must include SharePoint and OneDrive locations for protection to be in place.
