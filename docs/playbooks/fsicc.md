@@ -17,7 +17,8 @@ title: Microsoft Communication Compliance - Playbook for Financial Services Indu
 
 Microsoft's Communication Compliance Playbook for the Financial Services Industry is intended to help Compliance Officers, and Auditors better understand their ability to manage current regulatory requirements regarding communication supervision and the controls needed to manage the risks associated thereof. This understanding can, in turn, help identify potential strategies and solutions designed to protect you, your firm, your personnel, and your clients. The Playbook can be used as a set of guiding principles and best practice use cases for Microsoft Communication Compliance. Additionally, this guide focuses on the regulatory drivers, i.e., the SEC 17A-4, and what internal and external auditors in the Financial Services Industry can use as auditable evidence in substantiating communication supervision controls. This Playbook will be updated when new features are introduced to Microsoft Communication Compliance or when additional FSI regulatory controls and processes are required. 
 
-Please note: this document focuses on and covers various use cases that can be achieved using **Communication Compliance for the Financial Services Industries**. This is only a guide and should not be interpreted as a guarantee of compliance. It is up to you to evaluate and validate the effectiveness of customer controls per your regulatory environment. 
+!!! Note "Please note" 
+    This document focuses on and covers various use cases that can be achieved using **Communication Compliance for the Financial Services Industries**. This is only a guide and should not be interpreted as a guarantee of compliance. It is up to you to evaluate and validate the effectiveness of customer controls per your regulatory environment. 
 
 ### Objective
 
