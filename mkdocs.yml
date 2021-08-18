@@ -58,6 +58,7 @@ nav:
     - End User Training:
       - Sensitivity Labels: enduser/sensitivity.md
       - Retention Labels: enduser/retention.md
+      - Microsoft DLP User Education & User Experience: enduser/dlpenduser.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Webinars:
       - Webinars: webinars.md
