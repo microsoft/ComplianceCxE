@@ -13,11 +13,10 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
 |***MIG*: Deep Dive on adaptive scopes** | **September 21/22, 2021** |  |
-| *US/EMEA* | Sept. 21 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45703) |
-|*APAC* | Sept. 22 13:00 AEDT| [Register](https://mipc.eventbuilder.com/event/45704) | 
-|***CC*: Compliance Manager updates** | **August 24, 2021** |  |
-| *APAC* | 13:00 AEDT |[Register](https://mipc.eventbuilder.com/event/45706)|
-| *US/EMEA* | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/45705) |
+| US/EMEA | Sept. 21 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45703) |
+|*APAC* | Sept. 22 13:00 AEDT| [Register](https://mipc.eventbuilder.com/event45704) | 
+|***MIP*: New features to help secure external collaboration using MIP** | **September 28, 2021** |  
+|   | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
 
 ## Past Webinars
 
@@ -36,6 +35,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|August 24, 2021|**CM**: Compliance Manager Updates|[Video](https://mipc.eventbuilder.com/event/45706)|Coming soon|
 |April 20, 2021|**CM**: What's New from Ignite regarding Compliance Manager|[YouTube](https://www.youtube.com/watch?v=LzIbMZJPAII)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-compliance-manager/ba-p/2307554)|
 |Oct 01, 2020|**CM**: Compliance Manager Overview|[Video](https://aka.ms/MIPC/Video-Webinar-ComplianceManager)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceManagerWebinar)|
 |Apr. 15, 2020|**CM**: Compliance score how-to|[Video](https://aka.ms/MIPC/Video-ComplianceScoreWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceScoreWebinar)|
@@ -60,8 +60,8 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](resources/files/Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](resources/files/July 7 FAQ.pdf) |
-|July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| [Video](https://mipc.eventbuilder.com/event/47133) | [Deck](resources/files/MIP - Sensitivity Label in PBI.pdf) - [FAQ](resources/files/July 7 FAQ.pdf) |
+|July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](resources\files\Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
+|July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| [Video](https://mipc.eventbuilder.com/event/47133) | [Deck](resources\files\MIP - Sensitivity Label in PBI.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
 |May 4, 2021|**MIP**: What's New from Ignite regarding Microsoft Information Protection|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
 |Feb 19, 2021|**MIP**: Office Channels|[Video](https://aka.ms/MIPC/webinar-officechannels)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/office-channels-webinar/ba-p/2223780)|
 |Feb 10, 2021|**MIP**: Extending MIP with high-value third-party solutions|[Video](https://aka.ms/MIPC/webinar-mip3rdparty)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/extending-mip-with-high-value-3rd-party-solutions-webinar/ba-p/2220774)|
