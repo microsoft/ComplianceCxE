@@ -39,6 +39,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Mitigate the Impact of Communication Risks by Accelerating Review Time](https://aka.ms/ccinspire2021)
 
+* [Cybersecurity’s next fight: How to protect employees from online harassment](https://www.microsoft.com/security/blog/2021/08/25/cybersecuritys-next-fight-how-to-protect-employees-from-online-harassment/)
+
 ## Customer Stories 
 * [TD Securities addresses regulatory obligations using Communication Compliance](https://customers.microsoft.com/en-us/story/1391545301764211731-td-securities-banking-capital-markets-compliance)
 
