@@ -35,7 +35,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|August 24, 2021|**CM**: Compliance Manager Updates|[Video](https://mipc.eventbuilder.com/event/45706)|[Deck](../resources/files/CM%20Updates%20Aug%202021.pdf)/[FAQ](resources\files\8 24 FAQ.pdf)| 
+|August 24, 2021|**CM**: Compliance Manager Updates|[Video](https://mipc.eventbuilder.com/event/45706)|[Deck](../resources/files/CM%20Updates%20Aug%202021.pdf)/[FAQ](../resources/files/8 24 FAQ.pdf)| 
 |April 20, 2021|**CM**: What's New from Ignite regarding Compliance Manager|[YouTube](https://www.youtube.com/watch?v=LzIbMZJPAII)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-compliance-manager/ba-p/2307554)|
 |Oct 01, 2020|**CM**: Compliance Manager Overview|[Video](https://aka.ms/MIPC/Video-Webinar-ComplianceManager)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceManagerWebinar)|
 |Apr. 15, 2020|**CM**: Compliance score how-to|[Video](https://aka.ms/MIPC/Video-ComplianceScoreWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceScoreWebinar)|
