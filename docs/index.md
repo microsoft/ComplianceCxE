@@ -43,3 +43,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 * [Insider Risk Management in Microsoft 365](resources\ir)
 * [Microsoft Information Governance in Microsoft 365](resources\mig)
 * [Microsoft Information Protection in Microsoft 365](resources\mip)
+
+## Latest Tweets
+
+<a class="twitter-timeline" href="https://twitter.com/MipNews?ref_src=twsrc%5Etfw">Tweets by MipNews</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
