@@ -1,3 +1,5 @@
+# Episode 2 - Data Discovery Concept
+
 ## In This Episode
 
 In this episode, we will continue on the Information classification and governance introduction topic. We will also go through the Data Discovery and Risk Analysis concept and example. Followed by the classification taxonomy for the tenant and the data retention plan.

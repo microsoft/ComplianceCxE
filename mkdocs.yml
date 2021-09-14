@@ -65,14 +65,14 @@ nav:
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Scenario Based Demos:
       - About the Series: sbd.md
-      - Episode 1: sbd/sbd-ep1.md
-      - Episode 2: sbd/sbd-ep2.md
-      - Episode 3: sbd/sbd-ep3.md
-      - Episode 4: sbd/sbd-ep4.md
-      - Episode 5: sbd/sbd-ep5.md
-      - Episode 6: sbd/sbd-ep6.md
-      - Episode 7: sbd/sbd-ep7.md
-      - Episode 8: sbd/sbd-ep8.md
+      - E01 - Series Intro: sbd/sbd-ep1.md
+      - E02 - Data Discovery Concept: sbd/sbd-ep2.md
+      - E03 - Security vs Compliance: sbd/sbd-ep3.md
+      - E04 - AIP Scanner: sbd/sbd-ep4.md
+      - E05 - Sensitivity Labels: sbd/sbd-ep5.md
+      - E06 - Label Behaviors: sbd/sbd-ep6.md
+      - E07 - Container Labels: sbd/sbd-ep7.md
+      - E08 - Client-side Autolabel: sbd/sbd-ep8.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
