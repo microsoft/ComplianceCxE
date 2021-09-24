@@ -12,9 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***MIG*: Deep Dive on adaptive scopes** | **September 21/22, 2021** |  |
-| US/EMEA | Sept. 21 16:00 GMT / 8:00 PST| [Register](https://mipc.eventbuilder.com/event/45703) |
-|*APAC* | Sept. 22 13:00 AEDT| [Register](https://mipc.eventbuilder.com/event/45704) | 
 |***MIP*: New features to help secure external collaboration using MIP** | **September 28, 2021** |  
 |   | 16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
 
@@ -52,6 +49,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|September 21, 2021|**MIG**: Deep Dive on Adaptive Scopes|[Video](https://mipc.eventbuilder.com/event/45703)|Coming soon|
 |May 19, 2021|**MIG**: What's New with Information Governance: Announcing multi-stage disposition and adaptive scopes|[Video](https://mipc.eventbuilder.com/event/43250)|[FAQ](https://m365x314771.sharepoint.com/:w:/s/MIPComplianceResources/ETGz9Mej4CZDlhlC4wJHP1wB9EmZhscLIN07HP-1AlNLzA?e=vSl2uREfHe3ycX5QRNoUm_71jau4UB57OWlnzZ9qLxYNkc87x53Q?e=crqLWj) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/ETrZLXBLqvhEloMtWtStbmABMsR1wk1wtHBzWcoZngElcA?e=wSq8TC)|
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
 |May 26, 2020|**MIG**: Records Management|[Video](https://aka.ms/MIPC/Video-RecordsManagementWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-RecordsManagementWebinar)|
