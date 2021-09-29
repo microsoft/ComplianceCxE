@@ -33,7 +33,7 @@ nav:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
       - Microsoft Compliance Configuration Analyzer (MCCA): dag/mcca.md
-      - Adanced eDiscovery and Advanced Audit: dag/aed-audit.md
+      - Advanced eDiscovery and Advanced Audit: dag/aed-audit.md
       - Insider Risk Management and Communication Compliance: dag/ir-cc.md
       - Microsoft Information Governance and Records Management: dag/mig-rm.md
       - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
@@ -73,6 +73,7 @@ nav:
       - E06 - Label Behaviors: sbd/sbd-ep6.md
       - E07 - Container Labels: sbd/sbd-ep7.md
       - E08 - Client-side Autolabel: sbd/sbd-ep8.md
+      - E09 - Service-side Autolabel: sbd/sbd-ep9.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
