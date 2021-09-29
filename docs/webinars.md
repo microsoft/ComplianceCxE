@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***MIP*: New features to help secure external collaboration using MIP** |  |  
-| US/EMEA  | September 28, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
 |***D&R*: What's New in Advanced eDiscovery** |  |  
 | US/EMEA  | November 10, 2021  17:00 GMT / 9:00 PST | [Register](https://mipc.eventbuilder.com/event/51035) |
 | APAC  | November 12, 2021  14:30 AEDT / 9:00 IST | [Register](https://mipc.eventbuilder.com/event/51031) |
@@ -68,6 +66,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection (MIP)| [Video](https://mipc.eventvuilder.com/event/49793) | Coming soon |
 |July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](resources\files\Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
 |July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| [Video](https://mipc.eventbuilder.com/event/47133) | [Deck](resources\files\MIP - Sensitivity Label in PBI.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
 |May 4, 2021|**MIP**: What's New from Ignite regarding Microsoft Information Protection|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
