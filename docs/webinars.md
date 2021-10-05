@@ -18,7 +18,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |***D&R*: How to use the new Microsoft Graph eDiscovery API to automate and customize your Advanced eDiscovery workflow** |  |  
 | US/EMEA  | November 17, 2021  17:00 GMT / 9:00 PST | [Register](https://mipc.eventbuilder.com/event/51037) |
 | APAC  | November 19, 2021  14:30 AEDT / 9:00 IST | [Register](https://mipc.eventbuilder.com/event/51034) |
-|***D&R*: Teams workflow in Advanced eDiscovery using the new Large Case feature** |  |  
+|***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
 | US/EMEA  | December 1, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
 | APAC  | December 3, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
 
@@ -57,7 +57,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|September 21, 2021|**MIG**: Deep Dive on Adaptive Scopes|[Video](https://mipc.eventbuilder.com/event/45703)|Coming soon|
+|September 21, 2021|**MIG**: Deep Dive on Adaptive Scopes|[Video](https://mipc.eventbuilder.com/event/45703)|Coming Soon|
 |May 19, 2021|**MIG**: What's New with Information Governance: Announcing multi-stage disposition and adaptive scopes|[Video](https://mipc.eventbuilder.com/event/43250)|[FAQ](https://m365x314771.sharepoint.com/:w:/s/MIPComplianceResources/ETGz9Mej4CZDlhlC4wJHP1wB9EmZhscLIN07HP-1AlNLzA?e=vSl2uREfHe3ycX5QRNoUm_71jau4UB57OWlnzZ9qLxYNkc87x53Q?e=crqLWj) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/ETrZLXBLqvhEloMtWtStbmABMsR1wk1wtHBzWcoZngElcA?e=wSq8TC)|
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
 |May 26, 2020|**MIG**: Records Management|[Video](https://aka.ms/MIPC/Video-RecordsManagementWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-RecordsManagementWebinar)|
@@ -66,7 +66,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection (MIP)| [Video](https://mipc.eventbuilder.com/event/49793) | Coming soon |
+|September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection (MIP)| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration.pdf) |
 |July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](../resources/files/Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
 |July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| [Video](https://mipc.eventbuilder.com/event/47133) | [Deck](../resources/files/MIP - Sensitivity Label in PBI.pdf) - [FAQ](resources\files\July 7 FAQ.pdf) |
 |May 4, 2021|**MIP**: What's New from Ignite regarding Microsoft Information Protection|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
