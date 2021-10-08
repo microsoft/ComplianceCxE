@@ -12,15 +12,15 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***D&R*: What's New in Advanced eDiscovery** |  |  
+|***D&R*: What's new in Advanced eDiscovery** |  |  
 | US/EMEA  | November 10, 2021  17:00 GMT / 9:00 PST | [Register](https://mipc.eventbuilder.com/event/51035) |
 | APAC  | November 12, 2021  14:30 AEDT / 9:00 IST | [Register](https://mipc.eventbuilder.com/event/51031) |
-|***D&R*: How to use the new Microsoft Graph eDiscovery API to automate and customize your Advanced eDiscovery workflow** |  |  
+|***D&R*: How to use the new Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
 | US/EMEA  | November 17, 2021  17:00 GMT / 9:00 PST | [Register](https://mipc.eventbuilder.com/event/51037) |
 | APAC  | November 19, 2021  14:30 AEDT / 9:00 IST | [Register](https://mipc.eventbuilder.com/event/51034) |
 |***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
-| US/EMEA  | December 1, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
-| APAC  | December 3, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
+| US/EMEA  | December 1, 2021  17:00 GMT / 9:00 PST | [Register](https://mipc.eventbuilder.com/event/49793) |
+| APAC  | December 3, 2021  14:30 AEDT / 9:00 IST | [Register](https://mipc.eventbuilder.com/event/49793) |
 
 
 ## Past Webinars
