@@ -26,7 +26,7 @@ nav:
       - Records Management: 
         - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
       - MIP/DLP:
-        - MIP Template: notes/mip-dlp/mip-dlp.md
+        - Best Practices for Creating MIP and DLP Policies: notes/mip-dlp/mip-dlp-best-pratices.md
       #- Data Loss Prevention: notes/dlp.md
       - Compliance in K-12 Education: notes/ComplianceEdu.md #must remain mixed-case as file is named that way and existing links will break if changed
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
