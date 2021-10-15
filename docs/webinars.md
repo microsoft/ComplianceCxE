@@ -33,9 +33,9 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
 |April 7, 2021|**D&R**: What's New with Advanced eDiscovery Spring 2021|[YouTube](https://www.youtube.com/watch?v=d1v059DVKK0)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-with-advanced-ediscovery-spring-2021/ba-p/2299661)|
-|Oct 19, 2020|**D&R**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-DRWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-discover-amp-respond-webinar-new-announcements-amp/ba-p/1858454)|
-|May 14, 2020|**D&R**: eDiscovery for Teams|[Video](https://aka.ms/MIPC/Video-eDiscoveryWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-AEDWebinar)|
-|Apr. 7, 2020|**D&R**: Advanced Audit|[Video](https://aka.ms/MIPC/Video-AdvancedAuditWebinar)|[Deck/FAQ](https://aka.ms/MIPC/Blog-AdvancedAuditWebinar)|
+|Oct 19, 2020|**D&R**: New Announcements and Updates|[Video](https://m365x314771.sharepoint.com/:v:/s/MIPComplianceResources/ETohU0SaOAtHnVUrR8CpDSkBwVazaimmg6KdA0yQqKIZjQ)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-discover-amp-respond-webinar-new-announcements-amp/ba-p/1858454)|
+|May 14, 2020|**D&R**: eDiscovery for Teams|[Video](https://m365x314771.sharepoint.com/:v:/s/MIPComplianceResources/EVv9MnkN8r5NsW9zdo-Yk5wBeSDMSvW3wgnTyEJ98q-y5A)|[Deck/FAQ](https://aka.ms/MIPC/Blog-AEDWebinar)|
+|Apr. 7, 2020|**D&R**: Advanced Audit|[Video](https://m365x314771.sharepoint.com/:v:/s/MIPComplianceResources/EfeSpCiaxYxMvt4FEYlS86ABn8NrVErDOj_0C3lXgz9Nnw)|[Deck/FAQ](https://aka.ms/MIPC/Blog-AdvancedAuditWebinar)|
 
 
 
