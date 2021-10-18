@@ -1,5 +1,4 @@
-# Preventing users from sharing sensitive documents outside your organization
-
+# Preventing and educating users from sharing sensitive documents externally
 
 ## Overview    
 This short note is to help organizations build a policy to help educate their information workers to apply the right label when sharing files externally.
