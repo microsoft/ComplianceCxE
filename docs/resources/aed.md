@@ -15,4 +15,3 @@ We built this page to help you easily find all relevant content and resources re
 ## Webinars
 * [Discover & Respond (DnR) Webinars](../../webinars#discovery--response)
 
-
