@@ -18,7 +18,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |***D&R*: What's new in Advanced eDiscovery** |  |  
 | US/EMEA  | November 10, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 12, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
-|***D&R*: How to use the new Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
+|***D&R*: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
 | US/EMEA  | November 17, 2021    17:00 GMT /   9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 19, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
