@@ -4,21 +4,32 @@ title: Active Surveys
 intro: List of Active Compliance Surveys
 ---
 
-## MIP/DLP - Trainable Classifiers Survey
+## Microsoft Insider Risk and Communication Compliance Customer Feature Survey
 
-The Compliance engineering team at Microsoft is working to expand classification capabilities in Microsoft 365 Compliance solutions. Our Machine-learning based Trainable Classifiers are a key component of this solution that can be used to detect information that is relevant to specific actions you might want to take on content across different solutions including Automatic labeling, Information Governance, and Communication Compliance. We are working both to expand the use of trainable classifiers to additional workloads and to provide additional classifiers to address new business-centric scenarios in each of these workloads. 
- 
-In order to prioritize this work, we need your insights regarding the potential value of each of the classifiers we are considering for MIP.
- 
-Please provide your responses to the following survey - [https://ncv.microsoft.com/NkKbIZWPmV](https://ncv.microsoft.com/NkKbIZWPmV) 
+We are excited to announce that the IRCC 22H1 customer feature survey is now open and available!
+
+This survey captures some of the asks we captured from our customers via the various engagements, discussions, and feedback channels.
+
+Please take a few minutes to share your feedback and help influence the platform.
+
+[https://aka.ms/mipc/IRCC22H1-FeatureSurveySurvey](https://aka.ms/mipc/IRCC22H1-FeatureSurveySurvey)
+
+**The survey is available until November 1st, 2021.**
 
 
-## MIG - Trainable Classifiers Survey
 
-New out-of-the-box trainable classifiers for Information Governance and Records Management
+## MIP & DLP 22H1 Customer feature surveys
 
-Please respond to the survey here: [https://aka.ms/MIG-AI](https://aka.ms/MIG-AI)
+We are excited to announce that the MIP & DLP 22H1 customer feature surveys are now open and available!
 
-Microsoft is planning to offer more built-in, ready-use out-of-box classifiers in our compliance solutions. You can use these machine-learning trainable classifiers to automatically detect, classify, retain/delete, and manage content, even if you do not know where the content is located in Microsoft 365.
+These surveys captures the top asks we captured from our customers via the various engagements, discussions and feedback channels.
 
-We want to seek your input on the types of data that may benefit from these trainable classifiers. Thank you in advance for taking the time to share your feedback and insights. We take customer feedback seriously and use it to prioritize what we build in our products.
+The surveys are available at:
+	
+Microsoft Information Protection: [https://aka.ms/MIPC/MIP22H1-FeatureSurvey](https://aka.ms/MIPC/MIP22H1-FeatureSurvey)
+	
+Data Loss Prevention: [https://aka.ms/MIPC/DLP22H1-FeatureSurvey](https://aka.ms/MIPC/DLP22H1-FeatureSurvey)
+
+**Surveys will be available until November 2nd, 2021.**
+
+If you want to influence the platform with features and capabilities that you want, need and like, this is the time to make it happen and share your feedback.
