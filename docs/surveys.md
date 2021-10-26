@@ -6,7 +6,7 @@ This survey captures some of the asks we captured from our customers via the var
 
 Please take a few minutes to share your feedback and help influence the platform.
 
-[https://aka.ms/mipc/IRCC22H1-FeatureSurveySurvey](https://aka.ms/mipc/IRCC22H1-FeatureSurveySurvey)
+[https://aka.ms/mipc/IRCC22H1-FeatureSurvey](https://aka.ms/mipc/IRCC22H1-FeatureSurvey)
 
 **The survey is available until November 1st, 2021.**
 
