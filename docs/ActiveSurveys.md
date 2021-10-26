@@ -17,7 +17,6 @@ Please take a few minutes to share your feedback and help influence the platform
 **The survey is available until November 1st, 2021.**
 
 
-
 ## MIP & DLP 22H1 Customer feature surveys
 
 We are excited to announce that the MIP & DLP 22H1 customer feature surveys are now open and available!
