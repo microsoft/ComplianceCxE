@@ -1,9 +1,3 @@
----
-layout: home
-title: Active Surveys
-intro: List of Active Compliance Surveys
----
-
 ## Microsoft Insider Risk and Communication Compliance Customer Feature Survey
 
 We are excited to announce that the IRCC 22H1 customer feature survey is now open and available!
