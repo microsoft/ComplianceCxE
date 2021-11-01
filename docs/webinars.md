@@ -18,12 +18,16 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |***D&R*: What's new in Advanced eDiscovery** |  |  
 | US/EMEA  | November 10, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 12, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
+|***MIG*: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes** |  |  
+| US/EMEA  | November 11, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
 |***D&R*: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
 | US/EMEA  | November 17, 2021    17:00 GMT /   9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 19, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
 | US/EMEA  | December 1, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | December 3, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
+***MIG*: Building Advanced Queries for SharePoint Sites with Adaptive Policy Scopes** |  |  
+| US/EMEA  | December 9, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
 
 
 ## Past Webinars
