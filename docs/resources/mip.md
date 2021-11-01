@@ -18,6 +18,8 @@ We built this page to help you easily find all relevant content and resources re
 * [Data protection in Power BI](https://youtu.be/zEx0449K7F8)
 
 ## Playbooks and Guides
+* [Microsoft Information Protection (MIP) Ninja Training](https://aka.ms/mipninja)
+
 * [Deployment Acceleration Guide](../../dag/mip-dlp)
 
 * [Data Classification White Paper](https://aka.ms/MIPC/DataClassification)
