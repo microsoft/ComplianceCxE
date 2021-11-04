@@ -82,9 +82,9 @@ nav:
     - Previews:
       - Join Private Previews: previews.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
-    - Active Surveys:
-      - Surveys: surveys.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS     
+    #- Active Surveys:
+      #- Surveys: surveys.md
+      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS     
 theme:
   name: material
   language: en
