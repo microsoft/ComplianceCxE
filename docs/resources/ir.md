@@ -19,6 +19,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Insider Risk Management Configure HR Data Connector](https://aka.ms/mipc/hrdataconnectorsetup)
 
+* [Microsoft 365 Insider Risk Management and St. Luke's University Health Network](https://www.youtube.com/watch?app=desktop&v=SUlSxuxFL70)
+
 ## Playbooks, Guides and Blogs
 * [Deployment Acceleration Guide](../../dag/ir-cc)
 
@@ -28,11 +30,17 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Insider Risk Blog](http://aka.ms/InsiderRiskBlog)
 
+* [Ignite 2021 Announcements](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/drive-efficiency-and-accelerate-time-to-action-in-managing/ba-p/2902373)
+
+* [Microsoft 365 Insider Risk Management Sentinel Connector](https://docs.microsoft.com/en-us/azure/sentinel/data-connectors-reference#microsoft-365-insider-risk-management-irm-preview)
+
 ## Podcast
 * [Uncovering Hidden Risks](https://uncoveringhiddenrisks.libsyn.com/)
 
 ## Webinars
 * [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)
+
+* Upcoming - What’s new with Insider Risk and Communication Compliance | US/EMEA  | November 22, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884)
 
 ## Learning Path
 * [Insider Risk Management learning path](https://aka.ms/insiderrisklp)

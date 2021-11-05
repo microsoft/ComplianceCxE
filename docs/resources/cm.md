@@ -23,6 +23,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Microsoft Compliance Manager](https://aka.ms/compliancemanager/techdocs)
 
+* [Ignite 2021 Announcements](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-compliance-manager-extensibility-beyond-microsoft-365/ba-p/2883896)
+
 ## Webinars
 * [Compliance Manager (CM) Webinars](../../webinars#compliance-manager)
 

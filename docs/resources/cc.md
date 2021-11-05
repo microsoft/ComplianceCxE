@@ -35,7 +35,7 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Communication Compliance Feature updates](http://aka.ms/featureupdates)
 
-* [Ignite 2020 Announcements](http://aka.ms/ccignite2020)
+* [Ignite 2021 Announcements](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/discover-and-manage-communication-risks-with-communication/ba-p/2909291)
 
 * [Mitigate the Impact of Communication Risks by Accelerating Review Time](https://aka.ms/ccinspire2021)
 
@@ -48,6 +48,8 @@ We built this page to help you easily find all relevant content and resources re
 * [Reducing Code of Conduct and Regulatory Compliance Violation Risks - Video](https://mipc.eventbuilder.com/event/45690) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/Eeb6R4lf4UVMqJah1CKN1z0BGmkbKnWS_isOMu2gCERzjQ?e=0TdFoE) / [FAQ](https://m365x314771.sharepoint.com/:b:/s/MIPComplianceResources/EfaYJKbOHklPr9_BqBpJRd8Bn57ZEUzAUqnI8Dn6d3fB5g?e=yZxRVZ) 
 
 * [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)
+
+* Upcoming - What’s new with Insider Risk and Communication Compliance | US/EMEA  | November 22, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884)
 
 ## Podcast
 * [Uncovering Hidden Risks](https://uncoveringhiddenrisks.libsyn.com/)
