@@ -13,7 +13,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
 |***D&R*: What's new in Advanced eDiscovery** |  |  
-| US/EMEA  | November 10, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 12, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***MIG*: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes** |  |  
 | US/EMEA  | November 11, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
@@ -39,6 +38,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|November 10, 2021|**D&R**: What's New in Advanced eDiscovery |[Video](https://mipc.eventbuilder.com/event/51035)|Coming Soon|
 |April 7, 2021|**D&R**: What's New with Advanced eDiscovery Spring 2021|[YouTube](https://www.youtube.com/watch?v=d1v059DVKK0)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-with-advanced-ediscovery-spring-2021/ba-p/2299661)|
 |Oct 19, 2020|**D&R**: New Announcements and Updates|[Video](https://m365x314771.sharepoint.com/:v:/s/MIPComplianceResources/ETohU0SaOAtHnVUrR8CpDSkBwVazaimmg6KdA0yQqKIZjQ)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-discover-amp-respond-webinar-new-announcements-amp/ba-p/1858454)|
 |May 14, 2020|**D&R**: eDiscovery for Teams|[Video](https://m365x314771.sharepoint.com/:v:/s/MIPComplianceResources/EVv9MnkN8r5NsW9zdo-Yk5wBeSDMSvW3wgnTyEJ98q-y5A)|[Deck/FAQ](https://aka.ms/MIPC/Blog-AEDWebinar)|
