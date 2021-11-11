@@ -14,8 +14,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | --- | --- | --- |
 |***D&R*: What's new in Advanced eDiscovery** |  |  
 | APAC  | November 12, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
-|***MIG*: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes** |  |  
-| US/EMEA  | November 11, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
 |***MIP+DLP*: What’s new with Microsoft Information Protection + Data Loss Prevention** |  |  
 | US/EMEA  | November 15, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52888) |
 |***D&R*: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
@@ -67,6 +65,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|November 11, 2021|**MIG**: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes|[Video](https://mipc.eventbuilder.com/event/52683)|Coming Soon|
 |September 21, 2021|**MIG**: Deep Dive on Adaptive Scopes|[Video](https://mipc.eventbuilder.com/event/45703)|[Deck](../resources/files/Adaptive Policy Scopes Launch Webinar.pdf) - [FAQ](../resources/files/Deep Dive on Adaptive Scopes FAQ.pdf)|
 |May 19, 2021|**MIG**: What's New with Information Governance: Announcing multi-stage disposition and adaptive scopes|[Video](https://mipc.eventbuilder.com/event/43250)|[FAQ](https://m365x314771.sharepoint.com/:w:/s/MIPComplianceResources/ETGz9Mej4CZDlhlC4wJHP1wB9EmZhscLIN07HP-1AlNLzA?e=vSl2uREfHe3ycX5QRNoUm_71jau4UB57OWlnzZ9qLxYNkc87x53Q?e=crqLWj) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/ETrZLXBLqvhEloMtWtStbmABMsR1wk1wtHBzWcoZngElcA?e=wSq8TC)|
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
