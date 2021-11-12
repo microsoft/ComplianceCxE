@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***D&R*: What's new in Advanced eDiscovery** |  |  
-| APAC  | November 12, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***MIP+DLP*: What’s new with Microsoft Information Protection + Data Loss Prevention** |  |  
 | US/EMEA  | November 15, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52888) |
 |***D&R*: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
