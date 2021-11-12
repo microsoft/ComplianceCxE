@@ -63,7 +63,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|November 11, 2021|**MIG**: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes|[Video](https://mipc.eventbuilder.com/event/52683)|Coming Soon|
+|November 11, 2021|**MIG**: Building Advanced Queries for Users and Groups with Adaptive Policy Scopes|[Video](https://mipc.eventbuilder.com/event/52683)|[Deck](../resources/files/Building_Advanced_Queries.pdf) |
 |September 21, 2021|**MIG**: Deep Dive on Adaptive Scopes|[Video](https://mipc.eventbuilder.com/event/45703)|[Deck](../resources/files/Adaptive Policy Scopes Launch Webinar.pdf) - [FAQ](../resources/files/Deep Dive on Adaptive Scopes FAQ.pdf)|
 |May 19, 2021|**MIG**: What's New with Information Governance: Announcing multi-stage disposition and adaptive scopes|[Video](https://mipc.eventbuilder.com/event/43250)|[FAQ](https://m365x314771.sharepoint.com/:w:/s/MIPComplianceResources/ETGz9Mej4CZDlhlC4wJHP1wB9EmZhscLIN07HP-1AlNLzA?e=vSl2uREfHe3ycX5QRNoUm_71jau4UB57OWlnzZ9qLxYNkc87x53Q?e=crqLWj) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/ETrZLXBLqvhEloMtWtStbmABMsR1wk1wtHBzWcoZngElcA?e=wSq8TC)|
 |Oct 26, 2020|**MIG**: New Announcements and Updates|[Video](https://aka.ms/MIPC/Video-MIGWebinar)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-governance-webinar-new-announcements-amp/ba-p/1862018#M4535)|
