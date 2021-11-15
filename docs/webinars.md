@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***MIP+DLP*: What’s new with Microsoft Information Protection + Data Loss Prevention** |  |  
-| US/EMEA  | November 15, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52888) |
 |***D&R*: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows** |  |  
 | US/EMEA  | November 17, 2021    17:00 GMT /   9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | November 19, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
@@ -73,7 +71,8 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection (MIP)| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration v2.pdf) - [FAQ](../resources/files/FAQ New features external collab using MIP.pdf) |
+|November 15, 2021|**MIP**: What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
+|September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration v2.pdf) - [FAQ](../resources/files/FAQ New features external collab using MIP.pdf) |
 |July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](../resources/files/Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](..resources/files/July 7 FAQ.pdf) |
 |July 7, 2021|**MIP**: Leverage M365 sensitivity labels to improve your Power BI deployment compliance and protect sensitive business data| [Video](https://mipc.eventbuilder.com/event/47133) | [Deck](../resources/files/MIP - Sensitivity Label in PBI.pdf) - [FAQ](..resources/files/July 7 FAQ.pdf) |
 |May 4, 2021|**MIP**: What's New from Ignite regarding Microsoft Information Protection|[YouTube](https://www.youtube.com/watch?v=TjtYhGfHHok&feature=youtu.be)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-microsoft-information/ba-p/2351825)|
@@ -95,6 +94,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|November 15, 2021|**DLP**: What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
 |November 9, 2021|**DLP**: Migration of Exchange Transport Rules (EAC-DLP) to Unified DLP (DLP-ExO) Using Wizard | [Video](https://mipc.eventbuilder.com/event/51845) | Coming Soon |
 |March 17, 2021|**DLP**: Unified DLP|[YouTube](https://aka.ms/MIPC/webinar-unifieddlp)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/unified-dlp-webinar/ba-p/2247308)|
 |Jan 26, 2021|**DLP**: Remote Workers DLP|[YouTube](https://aka.ms/MIPC/webinar-teamsdlp)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-remote-workers-dlp-webinar/ba-p/2203530)|
