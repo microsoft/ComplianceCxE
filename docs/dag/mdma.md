@@ -10,13 +10,21 @@ You can safely use the MDMA tool to create DLP policies in test mode, which does
 ## Migration tasks that M365 DMA performs
 
 MDMA takes over many of the difficult or tedious tasks involved in a DLP migration project:
-- In traditional migration scenario, you need to perform feasibility analysis between source & target DLP platforms, map features, migrate policies manually, and test and tweak DLP policies. Your migrated DLP policies can be up and running within minutes of starting the M365 DMA process.
-- With M365 DMA, you can scale up your migration project quickly from moving a single policy manually to multiple policies at the same time.
-- M365 DMA automatically identifies Sensitive Information Types (SITs) or Data Identifiers in source policies and creates Custom SITs in your Microsoft tenant moving over all your custom regular expressions and keywords in a few clicks.
-- M365 DMA detects which conditions, exclusions & actions are currently being used in source policies and automatically creates new rules with the same conditions, exclusions & actions.
-- M365 DMA provides you with a detailed migration report with policy wise migration status and recommendations.
-- M365 DMA ensures that your DLP policy migration project is completely private and takes place within the boundaries of your organization.
-- M365 DMA supports policy migration from Symantec Data Loss Prevention 15.7 or earlier.
+
+* In traditional migration scenario, you need to perform feasibility analysis between source & target DLP platforms, map features, migrate policies manually, and test and tweak DLP policies. Your migrated DLP policies can be up and running within minutes of starting the M365 DMA process.
+
+* With M365 DMA, you can scale up your migration project quickly from moving a single policy manually to multiple policies at the same time.
+
+* M365 DMA automatically identifies Sensitive Information Types (SITs) or Data Identifiers in source policies and creates Custom SITs in your Microsoft tenant moving over all your custom regular expressions and keywords in a few clicks.
+
+* M365 DMA detects which conditions, exclusions & actions are currently being used in source policies and automatically creates new rules with the same conditions, exclusions & actions.
+
+* M365 DMA provides you with a detailed migration report with policy wise migration status and recommendations.
+
+* M365 DMA ensures that your DLP policy migration project is completely private and takes place within the boundaries of your organization.
+
+* M365 DMA supports policy migration from Symantec Data Loss Prevention 15.7 or earlier.
+
 ### How does MDMA work?
 ![image](https://user-images.githubusercontent.com/52564314/138813155-645a8179-ec31-4f7c-ba71-81f921715642.png)
 
