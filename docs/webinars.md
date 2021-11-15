@@ -95,7 +95,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
 |November 15, 2021|**DLP**: What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
-|November 9, 2021|**DLP**: Migration of Exchange Transport Rules (EAC-DLP) to Unified DLP (DLP-ExO) Using Wizard | [Video](https://mipc.eventbuilder.com/event/51845) | Coming Soon |
+|November 9, 2021|**DLP**: Migration of Exchange Transport Rules (EAC-DLP) to Unified DLP (DLP-ExO) Using Wizard | [Video](https://mipc.eventbuilder.com/event/51845) | [Deck](../resources/files/ETR to DLP.pdf) - FAQ |
 |March 17, 2021|**DLP**: Unified DLP|[YouTube](https://aka.ms/MIPC/webinar-unifieddlp)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/unified-dlp-webinar/ba-p/2247308)|
 |Jan 26, 2021|**DLP**: Remote Workers DLP|[YouTube](https://aka.ms/MIPC/webinar-teamsdlp)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-remote-workers-dlp-webinar/ba-p/2203530)|
 |Nov 04, 2020|**DLP**: On-Premises DLP|[Video](https://aka.ms/MIPC/Video-OnPremisesDLP)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-on-premises-dlp-webinar/ba-p/1878047#M4545)|
