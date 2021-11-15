@@ -37,7 +37,7 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 5. **Reporting**: MDMA provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
 
 ## Download Process
-Use the GitHub link to download the tool and follow instructions for how to install, run and configure the tool.
+Use the [GitHub link](https://aka.ms/MDMA) to download the tool and follow instructions for how to install, run and configure the tool.
 
 ## Provide Feedback & Report Bugs
-Please report errors, share feedback & any feature requests with us by opening a new issue in this Github repository. Alternatively, you can reach out to us at cxe-help@microsoft.com or via your CXE / Fasttrack / Microsoft partner to share your feedback and suggestions.
+Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://aka.ms/MDMA). Alternatively, you can reach out to us at cxe-help@microsoft.com or via your CXE / Fasttrack / Microsoft partner to share your feedback and suggestions.
