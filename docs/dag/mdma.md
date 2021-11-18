@@ -1,5 +1,3 @@
-# M365 DLP Migration Assistant
-
 
 ## What is M365 DLP Migration Assistant?
 
@@ -26,18 +24,25 @@ MDMA takes over many of the difficult or tedious tasks involved in a DLP migrati
 * M365 DMA supports policy migration from Symantec Data Loss Prevention 15.7 or earlier.
 
 ### How does MDMA work?
+
 ![image](https://user-images.githubusercontent.com/52564314/138813155-645a8179-ec31-4f7c-ba71-81f921715642.png)
 
 During a given instance of migration, the M365 DLP Migration Assistant works in **five** phases:
 
 1. **Input**: MDMA ingests one or more Symantec DLP policy XML files.
-2. **Analyze**: MDMA interprets the files & identifies Symantec DLP policy constructs.
-3. **Rationalize**: MDMA maps the identified Symantec DLP policy constructs to Unified DLP capabilities. It performs validations for Unified DLP platform limitations.
-4. **Migrate**: MDMA executes PowerShell scripts for the DLP scenarios identified & supported by the UDLP platform. 
-5. **Reporting**: MDMA provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
+
+1. **Analyze**: MDMA interprets the files & identifies Symantec DLP policy constructs.
+
+1. **Rationalize**: MDMA maps the identified Symantec DLP policy constructs to Unified DLP capabilities. It performs validations for Unified DLP platform limitations.
+
+1. **Migrate**: MDMA executes PowerShell scripts for the DLP scenarios identified & supported by the UDLP platform.
+
+1. **Reporting**: MDMA provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
 
 ## Download Process
+
 Use the [GitHub link](https://aka.ms/MDMA) to download the tool and follow instructions for how to install, run and configure the tool.
 
 ## Provide Feedback & Report Bugs
-Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://aka.ms/MDMA). Alternatively, you can reach out to us at cxe-help@microsoft.com or via your CXE / Fasttrack / Microsoft partner to share your feedback and suggestions.
+
+Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://github.com/OfficeDev/MDMA/issues).
