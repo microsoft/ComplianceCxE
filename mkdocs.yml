@@ -24,11 +24,12 @@ nav:
       - Information Governance:
         - Deep Dive into the Exchange Recoverable Items Folder: notes/mig/ri.md
       - Records Management: 
-        - Annoucing Multi-Stage Public Preview: notes/mig/ms.md
+        - Announcing Multi-Stage Public Preview: notes/mig/ms.md
       - MIP/DLP:
         - Best Practices for Creating MIP and DLP Policies: notes/mip-dlp/mip-dlp-best-practices.md
         - Preventing external sharing with DLP policy: notes/mip-dlp/DLP-policy-externalshare.md
         - Blocking upload of files with higher sensitivity label to SPO: notes/mip-dlp/SPOblockUpload.md
+        - Microsoft 365 Compliance Audit Log Activities via the O365 Management API: notes/mip-dlp/audit-log-management-activity-api.md
       #- Data Loss Prevention: notes/dlp.md
       - Compliance in K-12 Education: notes/ComplianceEdu.md #must remain mixed-case as file is named that way and existing links will break if changed
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
