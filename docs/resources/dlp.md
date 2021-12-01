@@ -17,7 +17,8 @@ We built this page to help you easily find all relevant content and resources re
 
 * [Microsoft Teams DLP - End User Experience](https://aka.ms/MIPC/teamsdlpvideo3)
 
-* [Microsoft Teams DLP - Reporting](https://aka.ms/MIPC/teamsdlpvideo4)
+*  🆕[Microsoft Teams DLP - Reporting](https://aka.ms/MIPC/mipc/extendDLPpolicy)
+
 
 ## Playbooks and Guides
 * [Deployment Acceleration Guide](../../dag/mip-dlp)
