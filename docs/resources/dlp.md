@@ -18,7 +18,7 @@ We built this page to help you easily find all relevant content and resources re
 * [Microsoft Teams DLP - End User Experience](https://aka.ms/MIPC/teamsdlpvideo3)
 *  [Microsoft Teams DLP - Reporting](https://aka.ms/MIPC/teamsdlpvideo4)
 
-*  🆕[How to extend auto label policy to DLP](https://aka.ms/MIPC/mipc/extendDLPpolicy)
+*  🆕[How to extend auto label policy to DLP](https://aka.ms/MIPC/extendDLPpolicy)
 
 
 ## Playbooks and Guides
