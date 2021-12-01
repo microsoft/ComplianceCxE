@@ -13,7 +13,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
 |***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
-| US/EMEA  | December 1, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | December 3, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***IRCC*: What’s new with Insider Risk and Communication Compliance** |  |  
 | US/EMEA  | December 7, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884) |
@@ -28,6 +27,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|December 1, 2021|**D&R**: How to use the Advanced eDiscovery with Microsoft Teams |[Video](https://mipc.eventbuilder.com/event/51037)|Coming soon|
 |November 17, 2021|**D&R**: How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows |[Video](https://mipc.eventbuilder.com/event/51036)|[Deck](../resources/files/Graph API for AeD.pdf)|
 |November 10, 2021|**D&R**: What's New in Advanced eDiscovery |[Video](https://mipc.eventbuilder.com/event/51035)|Coming Soon|
 |April 7, 2021|**D&R**: What's New with Advanced eDiscovery Spring 2021|[YouTube](https://www.youtube.com/watch?v=d1v059DVKK0)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-with-advanced-ediscovery-spring-2021/ba-p/2299661)|
