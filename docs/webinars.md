@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***CM*: What’s new with Compliance Manager** |  |  
-| US/EMEA  | November 29, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52885) |
 |***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
 | US/EMEA  | December 1, 2021    17:00 GMT / 9:00 PST | [Register](https://aka.ms/ediscoverywebinar) |
 | APAC  | December 3, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
@@ -43,6 +41,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|November 29, 2021|**CM**: What's New with Compliance Manager|[Video](https://mipc.eventbuilder.com/event/52885)|Coming soon| 
 |August 24, 2021|**CM**: Compliance Manager Updates|[Video](https://mipc.eventbuilder.com/event/45706)|[Deck](../resources/files/CM%20Updates%20Aug%202021.pdf)/[FAQ](../resources/files/8 24 FAQ.pdf)| 
 |April 20, 2021|**CM**: What's New from Ignite regarding Compliance Manager|[YouTube](https://www.youtube.com/watch?v=LzIbMZJPAII)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-from-ignite-regarding-compliance-manager/ba-p/2307554)|
 |Oct 01, 2020|**CM**: Compliance Manager Overview|[Video](https://aka.ms/MIPC/Video-Webinar-ComplianceManager)|[Deck/FAQ](https://aka.ms/MIPC/Blog-ComplianceManagerWebinar)|
