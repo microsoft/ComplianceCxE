@@ -14,7 +14,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | --- | --- | --- |
 |***IRCC*: What’s new with Insider Risk and Communication Compliance** |  |  
 | US/EMEA  | December 7, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884) |
-***MIP*: Introduction to Microsoft Privacy** |  |  
+|***MIP*: Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)** |    
 | US/EMEA  | December 14, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/54251) |
 ***MIG*: Building Advanced Queries for SharePoint Sites wnith Adaptive Policy Scopes** |  |  
 | US/EMEA  | January 20, 2022, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
