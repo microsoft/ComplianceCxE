@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***D&R*: How to use Advanced eDiscovery with Microsoft Teams** |  |  
-| APAC  | December 3, 2021    14:30 AEDT / 9:00 IST | [Register](https://aka.ms/ediscoverywebinar) |
 |***IRCC*: What’s new with Insider Risk and Communication Compliance** |  |  
 | US/EMEA  | December 7, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884) |
 ***MIP*: Introduction to Microsoft Privacy** |  |  
