@@ -12,8 +12,6 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-|***MIP*: Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)** |    
-| US/EMEA  | December 14, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/54251) |
 ***MIG*: Building Advanced Queries for SharePoint Sites wnith Adaptive Policy Scopes** |  |  
 | US/EMEA  | January 20, 2022, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
 ***MIP*: Protecting your sensitive assets in a hybrid environment using Microsoft Compliance products** |  |  
@@ -68,6 +66,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|December 14, 2021|**MIP**: Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)| [Video](https://mipc.eventbuilder.com/event/54251) | Coming Soon |
 |November 15, 2021|**MIP**: What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
 |September 28, 2021|**MIP**: New features to help secure external collaboration using Microsoft Information Protection| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration v2.pdf) - [FAQ](../resources/files/FAQ New features external collab using MIP.pdf) |
 |July 13, 2021|**MIP**: Advanced Classification and Auto Labeling| [Video](https://mipc.eventbuilder.com/event/45701) | [Deck](../resources/files/Webinar Advanced Classification and Auto Labeling July 13 2021.pdf) - [FAQ](..resources/files/July 7 FAQ.pdf) |
