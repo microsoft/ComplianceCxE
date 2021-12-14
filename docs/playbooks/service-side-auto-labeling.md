@@ -180,7 +180,7 @@ If you don't immediately see this option, first select **Show all**.
 You will only see this option if you have not set up labeling, in-app labeling recommendation, auto-labeling policy, Teams DLP, or DLP for devices. If you have already set up an auto-labeling policy, you will not be shown this banner but can configure our default auto-labeling policy on your own
 [Learn about the default labels and policies for Microsoft Information Protection - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials?view=o365-worldwide#service-side-auto-labeling)
 
-## Step 2: Create an auto-abeling policy
+## Step 2: Create an auto-labeling policy
 ### Get started with auto-labeling with our default auto-labeling policy protecting credit card numbers on SharePoint, OneDrive, and Exchange
 If you already have your labels set up but have not create any auto-labeling policies;
 In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?linkid=2077149), navigate to sensitivity labels:
@@ -345,16 +345,16 @@ If you do not have labels set up yet:
 * [Set up all things labeling with our default policies and configurations](#step-1-create-and-publish-sensitivity-labels)
 If you have labels, and an Exchange DLP policy
 
-* **Extend your Exchange DLP policy to auto-labeling - Need section reference here**
+* [Extend your Exchange DLP policy to auto-labeling](#extend-dlp-policies-covering-exchange-to-auto-labeling)
 If you have client-side auto-labeling set up, but no service side auto-labeling policy
 
 * Use client-side auto labeling or recommendations and service-side auto labeling in combination, with the same conditions but with different thresholds, ex. use high confidence matches for service-side auto labeling and use low or medium confidence for a client-side recommendation, which gives the user an option to dismiss the label if it isn't appropriate for the content and apply a different label.
 
 If you have labels set up, but no service side auto-labeling policy
 
-1. **Get started with auto-labeling with our default auto-labeling policy - Need section reference here**
+1. [Get started with auto-labeling with our default auto-labeling policy](#get-started-with-auto-labeling-with-our-default-auto-labeling-policy-protecting-credit-card-numbers-on-sharepoint-onedrive-and-exchange)
 
-1. Create custom auto-labeling policy using a template (**see scenarios above - Need section reference here**)
+1. [Create custom auto-labeling policy using a template](#auto-labeling-use-cases-from-our-customers) 
 
 1. Create auto labeling policies that trigger for different confidence levels of the SITs with different counts (ex. one high confidence count or multiple medium confidence count) to avoid false positives without risking leakage of large amounts of sensitive data that may not meet the most stringent conditions of higher confidence.
 Use content explorer to understand where data is present that may need to be included in an auto-labeling policy. 
