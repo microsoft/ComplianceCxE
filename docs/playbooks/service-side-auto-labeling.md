@@ -38,6 +38,10 @@ The table below provides a comparison of Service-side, Client-side, and Defender
 |---|---|---|---|
 |  **Application support**  |  SharePoint, OneDrive and Exchange Online  |  Word, PowerPoint, Excel or Outlook Microsoft 365 apps, or AIP plugin for Office  |  SharePoint, OneDrive and third-party services supported by Defender for cloud apps  |
 | **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
+| **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
+| **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
+| **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
+| **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
 
 In addition, label priority is used in determining when and how an auto-label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. 
 
@@ -47,6 +51,14 @@ In addition, label priority is used in determining when and how an auto-label wi
 | |  Client-side auto labeling  |  Apply new label  |
 | |  Service-side auto labeling  |  Apply new label  |
 |  **Label manually applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+| |  Client-side auto labeling  |  No action. Manually applied label takes precedence  |
+| |  Service-side auto labeling  |  No action. Manually applied label takes precedence  |
+|  **Default label applied (Label policy)**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+| |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
+| |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
+|  **Auto label aplied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+| |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
+| |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
 
 ## Licensing Requirements
 To understand your licensing requirements and options for MIP, see the Information Protection section from the [Microsoft 365 licensing documentation](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-sensitivity-labeling). Below is the sensitivity labeling licensing info for your quick reference, however, we encourage you to reference the M365 licensing documentation for up-to-date information.
