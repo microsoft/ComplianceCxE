@@ -7,4 +7,4 @@ One of our field person created a great summary manual associated with the SDB, 
 ## Download the pdf
 
 
-[Summary manual associated with the SDB](files/2. Compliance Scenario Based Demo SDB.pdf)
+[Summary manual associated with the SDB](files/SBDinPDF.pdf)
