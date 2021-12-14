@@ -159,7 +159,10 @@ You can easily get started with all things labeling by using our easy set-up of 
 If you don't immediately see this option, first select **Show all**.
 2.	In the **Overview** tab you should see the following banner:
 
-Insert banner visual
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 **Activate recommended features** to set up our default policy configurations designed to protect credit card numbers. 
 You will only see this option if you have not set up labeling, in-app labeling recommendation, auto-labeling policy, Teams DLP, or DLP for devices. If you have already set up an auto-labeling policy, you will not be shown this banner but can configure our default auto-labeling policy on your own
@@ -173,7 +176,10 @@ In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?link
 If you don't immediately see this option, first select **Show all**.
 In the **Overview** tab you should see the following banner:
 
-Insert banner visual
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 **Activate recommended features** to set up our default policy configurations designed to 	protect credit card numbers. 
 You will be asked to pick two of your existing labels to use in the auto-labeling policy in 	simulation mode. We recommend using a “Confidential” like sublabel for both, with the 	higher count auto-labeling credit card policy having more protections than the low count. 
@@ -186,13 +192,24 @@ In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?link
 If you don't immediately see this option, first select **Show all**.
 In the **Overview** tab you should see the following banner:
 
-Insert banner visual
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture5.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 Extend your Exchange DLP policy to an auto-labeling policy in simulation mode.
 
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture6.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
+
 ### Create your own auto-labeling policy
 
-Insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture7.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 You want to protect the sensitive data in your organization. What is sensitive in your organization? Start with our sensitive information types. We have 200+ out of the box sensitive information types that we help detect in your organization. Check content explorer to see which sensitive information types we are finding. 
 So, what information is there? Do you detect a lot of sensitive information that needs to be protected with labeling?
@@ -228,7 +245,10 @@ If you are seeing high amounts of false positives, fine-tune your policy with th
 * Use Boolean operators to combine groups
     - Look for SSN AND Driver’s License instead of SSN OR driver’s License 
 
-Insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 More advanced refinement strategies if the above don’t work:
 * Switch this policy to be for client-side auto labeling, since false positives are much less problematic with client-side since the user can take care of the "mistake" with one click
@@ -245,7 +265,10 @@ You can see what’s getting labeled through activity explorer.
 ### Scenario 1: Protecting payment information of customers
 A lot of customers have an interest in protecting their financial data surrounding payment data to comply with financial regulations. This usually entails a combination of bank account numbers, PII (Personal Identifiable Information) of customers, credit card numbers and account information. 
 
-Insert Visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture9.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 Recommendation:
 * Use our U.S. Gramm-Leach Bliley Act (GLBA) Enhanced template
@@ -258,7 +281,10 @@ Recommendation:
 ### Scenario 2: Complying with HIPPA regulations on health care data
 Another field that we’ve seen a lot of interest in protecting is health care data information to comply with HIPPA regulations.
 
-Insert Visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture10.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 Recommendation:
 * Use our U.S. Health Insurance Act (HIPPA) Enhanced template
@@ -271,7 +297,10 @@ Recommendation:
 ### Scenario 3: Protecting personal data
 Similarly, we have seen an interest in protecting the personal data of both customers and employees. We have auto-labeling templates to protect U.S. Personally Identifiable Information (PII) Data, General Data Protection Regulation (GDPR), and more.
 
-Insert Visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture11.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 Recommendation:
 * Use our U.S. PII Data Enhanced or GDPR Enhanced template
@@ -286,11 +315,17 @@ Advanced Scenario:
 ## Reports
 Simulation results showing number of files and emails matched in how which locations are available when you click on the auto-labeling policy for more details.
 
-Insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture12.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 After an auto-labeling policy is enabled, you can view the labeling activity in Activity Explorer. 
 
-Insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture13.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 ## Implementation Strategy
 If you do not have labels set up yet:
@@ -324,7 +359,10 @@ How should I finetune for false positives?
 * Use Boolean operators to combine groups
     - Look for SSN AND Driver’s License instead of SSN OR driver’s License 
 
-Insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture14.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 -	Advanced method: use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
 What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
