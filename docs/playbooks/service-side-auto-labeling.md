@@ -375,6 +375,10 @@ How should I finetune for false positives?
     <img src="../../playbooks/img/ss-auto-labeling/Picture14.png"/> 
     <figcaption>Figure 2: Banner</figcaption>
 </figure>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
+    <figcaption>Figure 2: Banner</figcaption>
+</figure>
 
 -	Advanced method: use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
 What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
