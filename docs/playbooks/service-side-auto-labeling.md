@@ -372,10 +372,6 @@ How should I finetune for false positives?
     - Look for SSN AND Driver’s License instead of SSN OR driver’s License 
 
 <figure>
-    <img src="../../playbooks/img/ss-auto-labeling/Picture14.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
-</figure>
-<figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
     <figcaption>Figure 2: Banner</figcaption>
 </figure>
