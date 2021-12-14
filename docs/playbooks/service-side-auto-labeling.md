@@ -4,7 +4,7 @@
 Microsoft Information Protection (MIP) is a built-in, intelligent, unified, and extensible solution to protect sensitive data across your enterprise – in Microsoft 365 cloud services, on-premises, third-party SaaS applications, and more. MIP provides a unified set of capabilities to know your data, protect your data, and protect against data loss across Microsoft 365 apps (e.g., Word, PowerPoint, Excel, Outlook) and services (e.g., Microsoft Teams, SharePoint, and Exchange).
 
 <figure>
-    <img src="../../playbooks/img/ss-auto-labeling/picture1.png"/> 
+    <img src="../../playbooks/img/ss-auto-labeling/Picture1.png"/> 
     <figcaption>Figure 1: Microsoft Information Protection Cycle</figcaption>
 </figure>
 
@@ -14,7 +14,10 @@ For more info: [Microsoft Information Protection in Microsoft 365 - Microsoft 36
 ## MIP Overview 
 The foundation of MIP is the ability to classify data by our Data Classification Service, please see the MIP constellation below to view how the MIP functionalities all work together.  
 
-Insert MIP visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture2.png"/> 
+    <figcaption>Figure 2: Microsoft Information Protection Architecture</figcaption>
+</figure>
 
 Identifying and classifying sensitive items that are under your organization's control is the first step in the Information Protection discipline. Foundational to Microsoft are its classification capabilities—from out-of-the-box sensitive information types to machine learning trainable classifiers to automatically finding and classifying sensitive content at scale. Sensitive Information Types are pattern-based classifiers which detect sensitive information like social security, credit card or bank account numbers within a tenant, and help customers to identify, evaluate, and protect their data. Data Classification Service and specifically Sensitive Information Types allow customers to define and identify what information is considered sensitive in their environments. They are utilized by various Microsoft 365 Compliance related features including, but not limited to: Data Loss Prevention, Communication Compliance, Insider Risk Management, Auto-Labeling, Retention, and Sensitivity Labels. 
 We announced several key enhancements to the intelligence and built-in capabilities of MIP across Microsoft 365 applications and services. These capabilities help organizations reduce the number of false positives as they accurately classify ever-increasing amounts of data. These capabilities also increase the coverage of classified data as they go across Microsoft 365 services and workloads.
@@ -31,7 +34,10 @@ There are multiple methods for automatically applying a label to emails and docu
 **Service-side auto-labeling:** Service-side auto-labeling is sometimes referred to as *auto-labeling for data at rest and data in transit*. Unlike client-side auto-labeling, service side auto labeling does not depend on the client to analyze the document content while it is being created. Instead, service-side auto-labeling reviews content that is stored (at-rest) in SharePoint or OneDrive document libraries, or that is "in-flight". For instance, when a message is submitted to transport. All policy review and application are done within the service. Service-side auto-labeling policies are created and configured from the Information Protection section of the Compliance Center under the Auto-labeling policy tab. Auto-labeling policies don't support recommended labeling because the user doesn't interact with the labeling process. Instead, the administrator runs the policies in simulation mode to help ensure the correct labeling of content before applying the label. 
 The table below provides a comparison of Service-side, Client-side, and Defender for cloud apps auto-labeling solutions and can help you identify when a particular solution is appropriate for labeling needs.
 
-Insert table here
+|  Capability  |  Service side  |  Client side  |  Defender for cloud apps (MCAS)  |
+|---|---|---|---|
+|  **Application support**  |  SharePoint, OneDrive and Exchange Online  |  Word, PowerPoint, Excel or Outlook Microsoft 365 apps, or AIP plugin for Office  |  SharePoint, OneDrive and third-party services supported by Defender for cloud apps  |
+| **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
 
 In addition, label priority is used in determining when and how an auto-label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. 
 
