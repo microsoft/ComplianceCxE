@@ -311,13 +311,20 @@ Insert visual here
 
 -	Advanced method: use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
 What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
+
 -	Since we have a limit of 25,000 files being labeled a day on SharePoint/OneDrive, we want to make sure it does not take us that long to label all the matches from your policy.
+
 -	First check to make sure all the matches are accurate. If not, please finetune the policy for false positives. 
+
 -	If the matches all look accurate but the matches still exceed 1 million, scope your policies to a smaller subset of locations first and enforce that policy. Then go in and create another identical policy scoped to the remaining locations.
 How does changing label protections affect auto-labeling?
+
 -	For SharePoint and OneDrive, when a file is open, we retrieve the updated protection actions of the labels. Therefore, any updates to the label protections will be reflected on the document the next time it is opened.
+
 -	For Exchange, emails are stamped with the label and associated protections at the time of the email being sent. If a label protection is modified, previously labeled emails with that label will retain the old permissions, but any new emails sent will have the new label protections. 
-What happens if I need to change my label schema after enforcing an auto-labeling policy?
+
+### What happens if I need to change my label schema after enforcing an auto-labeling policy?
+
 We recommend that you have your established label schema in place before continuing to auto-labeling, but understand that sometimes minds change and revisions are needed.
 
 1.	Decide what your new label schema is
@@ -327,8 +334,6 @@ We recommend that you have your established label schema in place before continu
 1.	Determine if the label you used for auto-labeling is still appropriate?
 	
 	1.	If so, you are all set.
-	
-	1.	
 	
 	1.	If not, determine the replacement label you would like to use.
 		
@@ -342,10 +347,13 @@ We recommend that you have your established label schema in place before continu
 		
 		1.	Delete original label if no longer part of your new label schema
 
-What is simulation mode?
+### What is simulation mode?
+
 -	Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as an reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. 
 What happens when I turn on a policy?
+
 -	Files and emails will start getting labeled according to your auto-labeling policy. You can view what is being labeled in activity explorer.
+
 -	We have a limit of 25,000 files being labeled a day on SharePoint/OneDrive, so labeling might span the course of several days depending on how many matched files we found in simulation mode.
 
 ## Abbreviations
