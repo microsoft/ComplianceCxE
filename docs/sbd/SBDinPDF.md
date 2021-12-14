@@ -7,4 +7,4 @@ One of our field person created a great summary manual associated with the SDB, 
 ## Download the pdf
 
 
-[Summary manual associated with the SDB](docs/resources/files/SBDinPDF.pdf)
+[Summary manual associated with the SDB](https://microsoft.github.io/ComplianceCxE/resources/files/SBDinPDF.pdf)
