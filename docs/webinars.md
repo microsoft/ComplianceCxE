@@ -15,7 +15,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 ***MIG*: Building Advanced Queries for SharePoint Sites wnith Adaptive Policy Scopes** |  |  
 | US/EMEA  | January 20, 2022, 2021    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/adaptivepolicyscopes) |
 ***MIP*: Protecting your sensitive assets in a hybrid environment using Microsoft Compliance products** |  |  
-| US/EMEA  | January 25, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/53704) |
+| US/EMEA  | February 15, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/53704) |
 
 ## Past Webinars
 
