@@ -56,7 +56,7 @@ In addition, label priority is used in determining when and how an auto-label wi
 |  **Default label applied (Label policy)**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
 | |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
-|  **Auto label aplied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+|  **Auto label applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
 | |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
 
