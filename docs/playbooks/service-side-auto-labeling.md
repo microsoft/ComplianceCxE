@@ -38,10 +38,15 @@ Insert table here
 To understand your licensing requirements and options for MIP, see the Information Protection section from the [Microsoft 365 licensing documentation](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-sensitivity-labeling). Below is the sensitivity labeling licensing info for your quick reference, however, we encourage you to reference the M365 licensing documentation for up-to-date information.
 
 For **manual sensitivity labeling**, the following licenses provide user rights:
+
 * Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium
+
 * Enterprise Mobility + Security E3/E5
+
 * Office 365 E5/A5/E3/A3/F3
+
 * AIP Plan 1
+
 * AIP Plan 2
 
 For both **client and service-side automatic sensitivity labeling**, the following licenses provide user rights:
