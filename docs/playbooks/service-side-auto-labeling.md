@@ -95,7 +95,10 @@ For instructions to add users to the default roles or create your own role group
 
 The basic flow for deploying and applying sensitivity labels:
 
-insert visual here
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture3.png"/> 
+    <figcaption>Figure 3:Service side auto labeling</figcaption>
+</figure>
 
 ## MIP Service Auto-Labeling in depth
 Auto labeling is a built-in Microsoft service that triggers off sensitive content found in files in SharePoint Online, OneDrive for Business and emails in Exchange Online. Define what sensitive information you want us to protect using regulatory templates, 200+ out of box sensitive info or custom types, named entities, Exact Data Match and ML models in an auto labeling policy. We will simulate what files are detected that match your auto-labeling policy in our simulation mode, so you can review and be confident in our matches before agreeing to allow us to automatically label those documents.
