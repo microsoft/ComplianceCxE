@@ -88,13 +88,20 @@ Auto labeling is a built-in Microsoft service that triggers off sensitive conten
 
 ## Protecting Sensitive Information in SharePoint/OneDrive
 Sensitive files are automatically detected and labeled at rest.
-* Office files for Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) are supported.
-    - These files can be auto-labeled at rest before or after the auto-labeling policies are created. Files cannot be auto-labeled if they are part of an open session (the file is open).
-    - Currently, attachments to list items aren't supported and won't be auto-labeled.
-* Maximum of 25,000 automatically labeled files in your tenant per day.
-* Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 sites (SharePoint or OneDrive) when they are specified individually. You can also specify all sites, and this configuration is exempt from the 100 sites maximum.
-* Existing values for modified, modified by, and the date are not changed as a result of auto-labeling policies—for both simulation mode and when labels are applied.
-* When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the account that last modified the file. If this account is no longer in Azure Active Directory, the label won't be applied because these values can't be set.
+
+- Office files for Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) are supported.
+ 
+	- These files can be auto-labeled at rest before or after the auto-labeling policies are created. Files cannot be auto-labeled if they are part of an open session (the file is open).
+    
+ 	- Currently, attachments to list items aren't supported and won't be auto-labeled.
+
+- Maximum of 25,000 automatically labeled files in your tenant per day.
+
+- Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 sites (SharePoint or OneDrive) when they are specified individually. You can also specify all sites, and this configuration is exempt from the 100 sites maximum.
+
+- Existing values for modified, modified by, and the date are not changed as a result of auto-labeling policies—for both simulation mode and when labels are applied.
+
+- When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the account that last modified the file. If this account is no longer in Azure Active Directory, the label won't be applied because these values can't be set.
 
 ## Protecting Sensitive Information inExchange
 Sensitive emails are automatically detected and labeled in transit/ as they are sent. For Exchange, it does not include emails at rest (mailboxes).
@@ -270,16 +277,24 @@ Insert visual here
 
 ## Implementation Strategy
 If you do not have labels set up yet:
-* **Set up all things labeling with our default policies and configurations - Need section reference here**
+
+* [Set up all things labeling with our default policies and configurations](#step-1-create-and-publish-sensitivity-labels)
 If you have labels, and an Exchange DLP policy
+
 * **Extend your Exchange DLP policy to auto-labeling - Need section reference here**
 If you have client-side auto-labeling set up, but no service side auto-labeling policy
+
 * Use client-side auto labeling or recommendations and service-side auto labeling in combination, with the same conditions but with different thresholds, ex. use high confidence matches for service-side auto labeling and use low or medium confidence for a client-side recommendation, which gives the user an option to dismiss the label if it isn't appropriate for the content and apply a different label.
+
 If you have labels set up, but no service side auto-labeling policy
+
 1. **Get started with auto-labeling with our default auto-labeling policy - Need section reference here**
-2. Create custom auto-labeling policy using a template (**see scenarios above - Need section reference here**)
-3. Create auto labeling policies that trigger for different confidence levels of the SITs with different counts (ex. one high confidence count or multiple medium confidence count) to avoid false positives without risking leakage of large amounts of sensitive data that may not meet the most stringent conditions of higher confidence.
+
+1. Create custom auto-labeling policy using a template (**see scenarios above - Need section reference here**)
+
+1. Create auto labeling policies that trigger for different confidence levels of the SITs with different counts (ex. one high confidence count or multiple medium confidence count) to avoid false positives without risking leakage of large amounts of sensitive data that may not meet the most stringent conditions of higher confidence.
 Use content explorer to understand where data is present that may need to be included in an auto-labeling policy. 
+
 ## FAQ
 How should I finetune for false positives?
 * Increase the thresholds of sensitive information types found to determine severity
@@ -304,16 +319,29 @@ How does changing label protections affect auto-labeling?
 -	For Exchange, emails are stamped with the label and associated protections at the time of the email being sent. If a label protection is modified, previously labeled emails with that label will retain the old permissions, but any new emails sent will have the new label protections. 
 What happens if I need to change my label schema after enforcing an auto-labeling policy?
 We recommend that you have your established label schema in place before continuing to auto-labeling, but understand that sometimes minds change and revisions are needed.
+
 1.	Decide what your new label schema is
-2.	Create the new label schema. Edit existing labels if possible to fit the new label hierarchy, but do not delete any old labels yet.
-3.	Determine if the label you used for auto-labeling is still appropriate?
-a.	If so, you are all set.
-b.	If not, determine the replacement label you would like to use.
-i.	Make sure the replacement label has a higher label priority than the original label. 
-ii.	Edit the auto-labeling policy to use the new label with higher label priority
-iii.	Simulate the policy
-iv.	Enforce the policy
-v.	Delete original label if no longer part of your new label schema
+
+1.	Create the new label schema. Edit existing labels if possible to fit the new label hierarchy, but do not delete any old labels yet.
+
+1.	Determine if the label you used for auto-labeling is still appropriate?
+	
+	1.	If so, you are all set.
+	
+	1.	
+	
+	1.	If not, determine the replacement label you would like to use.
+		
+		1.	Make sure the replacement label has a higher label priority than the original label. 
+	
+		1. 	Edit the auto-labeling policy to use the new label with higher label priority
+		
+		1.	Simulate the policy
+		
+		1.	Enforce the policy
+		
+		1.	Delete original label if no longer part of your new label schema
+
 What is simulation mode?
 -	Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as an reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. 
 What happens when I turn on a policy?
