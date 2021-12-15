@@ -44,8 +44,7 @@ The table below provides a comparison of Service-side, Client-side, and Defender
 |  **Application support**  |  SharePoint, OneDrive and Exchange Online  |  Word, PowerPoint, Excel or Outlook Microsoft 365 apps, or AIP plugin for Office  |  SharePoint, OneDrive and third-party services supported by Defender for cloud apps  |
 | **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
 | **Policy scoping**  |  By site, group or user  |  By label  |  By service, site, folder  |
-| **Classification options**  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching Trainable classifiers (in private preview)
-|  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers; Fingerprint; Regular Expression  |
+| **Classification options**  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching Trainable classifiers (in private preview)|  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers; Fingerprint; Regular Expression  |
 
 In addition, label priority is used in determining when and how an auto-label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. 
 
