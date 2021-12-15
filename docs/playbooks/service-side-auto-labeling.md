@@ -123,6 +123,7 @@ By default, **Global Administrators** for your tenant have access to this admin 
 Alternatively, using the default roles, you can create a new role group and add either **Sensitivity Label Administrator or Organization Configuration** roles to this group. For a read-only role, use **Sensitivity Label Reader**.
 
 These permissions are required only to create and configure sensitivity labels and their label policies. They are not required to apply the labels in apps or services. If additional permissions are needed for specific configurations that relate to sensitivity labels, those permissions will be listed in their respective documentation instructions.
+
 To be able to review matched items we find while in simulation mode (process before deployment that allows you to verify what items we will help you label if you turn on the policy), make sure you have the following permissions:
 
 - **Content Explorer List viewer:** Membership in this role group allows you to see each item and its location in list view. The *data classification list viewer* role has been pre-assigned to this role group.
