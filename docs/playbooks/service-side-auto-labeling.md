@@ -281,6 +281,7 @@ Pick your scope
 * Option 1: ALL – SharePoint sites, OneDrive accounts and Email users
 * Option 2: Subset of sites or accounts – can use PowerShell for longer lists
 * *Roadmap*: We are working to support OneDrive groups 
+
 Select a label to use for auto-labeling
 * This label will not go into effect until you turn on your policy from simulation mode.
 * You can always simulate the policy. Check the matches, and then go back and edit the label used for the policy. 
@@ -315,8 +316,7 @@ More advanced refinement strategies if the above don’t work:
 * Include additional dictionary-based SITs as conditions to narrow down the matches to those that talk about the relevant topics. ex. a rule for matching patient diagnostics may be enhanced by requiring the presence of words like diagnostic, diagnosis, condition, symptom, patient, etc.
 
 ## Step 7: Enforce
-When you are confident in the matches you see in simulation, turn on your policy from simulation mode so that we can start auto labeling the files and emails in your organization. 
-You can see what’s getting labeled through activity explorer. 
+When you are confident in the matches you see in simulation, turn on your policy from simulation mode so that we can start auto labeling the files and emails in your organization. You can see what’s getting labeled through activity explorer. 
 
 ## Auto labeling use cases from our customers
 ### Scenario 1: Protecting payment information of customers
@@ -405,7 +405,7 @@ If you have labels set up, but no service side auto-labeling policy
 Use content explorer to understand where data is present that may need to be included in an auto-labeling policy. 
 
 ## FAQ
-How should I finetune for false positives?
+### How should I finetune for false positives?
 * Increase the thresholds of sensitive information types found to determine severity
     - It is okay to use different thresholds for individual classifiers
 * Understand confidence levels and how they are defined
