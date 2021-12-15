@@ -9,6 +9,7 @@ Microsoft Information Protection (MIP) is a built-in, intelligent, unified, and 
 </figure>
 
 Some of the key MIP capabilities include Sensitive information types (SIT), Trainable classifiers, Data classification, Sensitivity labels, Data loss prevention, Endpoint data loss prevention etc. 
+
 For more info: [Microsoft Information Protection in Microsoft 365 - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/information-protection?view=o365-worldwide)
 
 ## MIP Overview 
