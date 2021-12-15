@@ -57,7 +57,7 @@ nav:
       #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks:
       - Microsoft Information Protection:
-        - Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
+        - 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
       - Data Loss Prevention:
         - Teams DLP Playbook: playbooks/teamsdlp.md
         - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
@@ -85,7 +85,7 @@ nav:
       - E09 - Service-side Autolabel: sbd/sbd-ep9.md
       - E10 - MEM/Intune and MIP: sbd/sbd-ep10.md
       - E11 - MEM/Intune and MIP Part 2: sbd/sbd-ep11.md
-      - 🆕SBD in PDF  - Summary of SBD in pdf: sbd/SBDinPDF.md
+      - 🆕 SBD in PDF  - Summary of SBD in pdf: sbd/SBDinPDF.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
       - Join Private Previews: previews.md
