@@ -74,43 +74,43 @@ To understand your licensing requirements and options for MIP, see the Informati
 
 For **manual sensitivity labeling**, the following licenses provide user rights:
 
-* Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium
+- Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium
 
-* Enterprise Mobility + Security E3/E5
+- Enterprise Mobility + Security E3/E5
 
-* Office 365 E5/A5/E3/A3/F3
+- Office 365 E5/A5/E3/A3/F3
 
-* AIP Plan 1
+- AIP Plan 1
 
-* AIP Plan 2
+- AIP Plan 2
 
 For both **client and service-side automatic sensitivity labeling**, the following licenses provide user rights:
 
-* Microsoft 365 E5/A5/G5
+- Microsoft 365 E5/A5/G5
 
-* F5 Compliance
+- F5 Compliance
 
-* F5 Security & Compliance
+- F5 Security & Compliance
 
-* Microsoft 365 E5/A5/G5 Information Protection and Governance
+- Microsoft 365 E5/A5/G5 Information Protection and Governance
 
-* Office 365 E5
+- Office 365 E5
 
 For **client-side automatic sensitivity labeling only**, the following license provides user rights:
 
-* Enterprise Mobility + Security E5/A5/G5
+- Enterprise Mobility + Security E5/A5/G5
 
-* AIP Plan 2
+- AIP Plan 2
 
 To **apply and view sensitivity labels in Power BI and to protect data when it's exported from Power BI to Excel, PowerPoint, or PDF**, the following licenses provide user rights:
 
-* Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium
+- Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium
 
-* Enterprise Mobility + Security E3/E5
+- Enterprise Mobility + Security E3/E5
 
-* AIP Plan 1
+- AIP Plan 1
 
-* AIP Plan 2
+- AIP Plan 2
 	
 Note: G3 and G5 are the Office 365 services/plans for Government organizations.
 For feature-level licensing requirements please refer to [Licensing PDF file](https://go.microsoft.com/fwlink/?linkid=2139145).
@@ -125,9 +125,9 @@ Alternatively, using the default roles, you can create a new role group and add 
 These permissions are required only to create and configure sensitivity labels and their label policies. They are not required to apply the labels in apps or services. If additional permissions are needed for specific configurations that relate to sensitivity labels, those permissions will be listed in their respective documentation instructions.
 To be able to review matched items we find while in simulation mode (process before deployment that allows you to verify what items we will help you label if you turn on the policy), make sure you have the following permissions:
 
-* **Content Explorer List viewer:** Membership in this role group allows you to see each item and its location in list view. The *data classification list viewer* role has been pre-assigned to this role group.
+- **Content Explorer List viewer:** Membership in this role group allows you to see each item and its location in list view. The *data classification list viewer* role has been pre-assigned to this role group.
 
-* **Content Explorer Content viewer:** Membership in this role group allows you to view the contents of each item in the list. The data classification content viewer role has been pre-assigned to this role group.
+- **Content Explorer Content viewer:** Membership in this role group allows you to view the contents of each item in the list. The data classification content viewer role has been pre-assigned to this role group.
 
 For instructions to add users to the default roles or create your own role groups, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center-permissions?view=o365-worldwide).
 
