@@ -110,12 +110,18 @@ For feature-level licensing requirements please refer to [Licensing PDF file](ht
 
 ## Role Requirements
 Sensitivity labels from the MIP solution let you classify and protect your organization's data, while making sure that user productivity and their ability to collaborate isn't hindered. Members of your compliance team who will create sensitivity labels need permissions to the Microsoft 365 compliance center.
+
 By default, **Global Administrators** for your tenant have access to this admin center and can give compliance officers and other people access, without giving them all the permissions of a tenant admin. For this delegated limited admin access, add users to the **Compliance Data Administrator, Compliance Administrator, or Security Administrator** role group.
+
 Alternatively, using the default roles, you can create a new role group and add either **Sensitivity Label Administrator or Organization Configuration** roles to this group. For a read-only role, use **Sensitivity Label Reader**.
+
 These permissions are required only to create and configure sensitivity labels and their label policies. They are not required to apply the labels in apps or services. If additional permissions are needed for specific configurations that relate to sensitivity labels, those permissions will be listed in their respective documentation instructions.
 To be able to review matched items we find while in simulation mode (process before deployment that allows you to verify what items we will help you label if you turn on the policy), make sure you have the following permissions:
-* **Content Explorer List viewer:** Membership in this role group allows you to see each item and its location in list view. The data classification list viewer role has been pre-assigned to this role group.
+
+* **Content Explorer List viewer:** Membership in this role group allows you to see each item and its location in list view. The *data classification list viewer* role has been pre-assigned to this role group.
+
 * **Content Explorer Content viewer:** Membership in this role group allows you to view the contents of each item in the list. The data classification content viewer role has been pre-assigned to this role group.
+
 For instructions to add users to the default roles or create your own role groups, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center-permissions?view=o365-worldwide).
 
 The basic flow for deploying and applying sensitivity labels:
@@ -147,16 +153,25 @@ Sensitive files are automatically detected and labeled at rest.
 
 ## Protecting Sensitive Information inExchange
 Sensitive emails are automatically detected and labeled in transit/ as they are sent. For Exchange, it does not include emails at rest (mailboxes).
+
 Note: emails detected in simulation mode will not be labeled when the policy is turned on, as we only label emails in transit and those emails were sent before the policy was enforced. 
-* Unlike manual labeling or auto-labeling with Office apps, PDF attachments as well as Office attachments are also scanned for the conditions you specify in your auto-labeling policy. When there is a match, the email is labeled but not the attachment.
-    - For PDF files, if the label applies encryption, these files are encrypted by using [Office 365 Message Encryption (OME)](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide) when your tenant is [enabled for PDF attachments](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome-faq?view=o365-worldwide#are-pdf-file-attachments-supported-).
-    - For these Office files, Word, PowerPoint, and Excel are supported. If the label applies encryption, they are encrypted by using [Office 365 Message Encryption (OME)](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide).
-* If you have Exchange mail flow rules or data loss prevention (DLP) policies that apply IRM encryption: When content is identified by these rules or policies and an auto-labeling policy, the label is applied. If that label applies encryption, the IRM settings from the Exchange mail flow rules or DLP policies are ignored. However, if that label doesn't apply encryption, the IRM settings from the mail flow rules or DLP policies are applied in addition to the label.
-* Email that has IRM encryption with no label will be replaced by a label with any encryption settings when there is a match by using auto-labeling.
-* Incoming email is labeled when there is a match with your auto-labeling conditions:
-* If the label is configured for [encryption](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide), that encryption isn't applied.
-* If the label is configured to apply [dynamic markings](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables), be aware that this configuration can result in the names of people outside your organization.
-* When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the person who sends the email. There currently isn't a way to set a Rights Manager owner for all incoming email messages that are automatically encrypted.
+- Unlike manual labeling or auto-labeling with Office apps, PDF attachments as well as Office attachments are also scanned for the conditions you specify in your auto-labeling policy. When there is a match, the email is labeled but not the attachment.
+
+	- For PDF files, if the label applies encryption, these files are encrypted by using [Office 365 Message Encryption (OME)](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide) when your tenant is [enabled for PDF attachments](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome-faq?view=o365-worldwide#are-pdf-file-attachments-supported-).
+
+	- For these Office files, Word, PowerPoint, and Excel are supported. If the label applies encryption, they are encrypted by using [Office 365 Message Encryption (OME)](https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide).
+
+- If you have Exchange mail flow rules or data loss prevention (DLP) policies that apply IRM encryption: When content is identified by these rules or policies and an auto-labeling policy, the label is applied. If that label applies encryption, the IRM settings from the Exchange mail flow rules or DLP policies are ignored. However, if that label doesn't apply encryption, the IRM settings from the mail flow rules or DLP policies are applied in addition to the label.
+
+- Email that has IRM encryption with no label will be replaced by a label with any encryption settings when there is a match by using auto-labeling.
+
+- Incoming email is labeled when there is a match with your auto-labeling conditions:
+
+- If the label is configured for [encryption](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide), that encryption isn't applied.
+
+- If the label is configured to apply [dynamic markings](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables), be aware that this configuration can result in the names of people outside your organization.
+
+- When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the person who sends the email. There currently isn't a way to set a Rights Manager owner for all incoming email messages that are automatically encrypted.
 
 ## Requirements for  configuring MIP Auto-labeling
 * Simulation mode:
