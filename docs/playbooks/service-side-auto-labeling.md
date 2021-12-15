@@ -201,6 +201,7 @@ Note: emails detected in simulation mode will not be labeled when the policy is 
 * We recommend that you have your label taxonomy and hierarchy defined in a label policy applied to all users to help them get started with manual labeling from the information worker side. 
     - In defining your labels, you can set up in-app auto-labeling recommendations, where you define what sensitive information you are concerned about, and information workers will see a banner that says that recommends them to label this document with that label if your defined sensitive information is found in the document they are working with. 
     - You can define a default label in your label policy that is automatically applied to files and emails in use that have not been manually labeled. 
+
 You can easily get started with all things labeling by using our easy set-up of default label schema, label policy, and auto-labeling policy. 
 1.	In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?linkid=2077149), navigate to sensitivity labels:
     - **Solutions** > **Information protection**
