@@ -56,9 +56,9 @@ nav:
       #- Data Loss Prevention: powershell/dlp.md
       #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks:
-      - MIP:
+      - Microsoft Information Protection:
         - Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
-      - DLP:
+      - Data Loss Prevention:
         - Teams DLP Playbook: playbooks/teamsdlp.md
         - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
       - Communication Compliance:
