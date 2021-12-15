@@ -411,15 +411,17 @@ How should I finetune for false positives?
     <figcaption>Figure 15: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
 </figure>
 
--	Advanced method: use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
-What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
+-	Advanced method: Use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
+
+### What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
 
 -	Since we have a limit of 25,000 files being labeled a day on SharePoint/OneDrive, we want to make sure it does not take us that long to label all the matches from your policy.
 
 -	First check to make sure all the matches are accurate. If not, please finetune the policy for false positives. 
 
 -	If the matches all look accurate but the matches still exceed 1 million, scope your policies to a smaller subset of locations first and enforce that policy. Then go in and create another identical policy scoped to the remaining locations.
-How does changing label protections affect auto-labeling?
+
+### How does changing label protections affect auto-labeling?
 
 -	For SharePoint and OneDrive, when a file is open, we retrieve the updated protection actions of the labels. Therefore, any updates to the label protections will be reflected on the document the next time it is opened.
 
