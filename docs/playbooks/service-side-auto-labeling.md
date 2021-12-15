@@ -5,7 +5,7 @@ Microsoft Information Protection (MIP) is a built-in, intelligent, unified, and 
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture1.png"/> 
-    <figcaption>Figure 1: Microsoft Information Protection Cycle</figcaption>
+    <figcaption>Figure 1: MIP life cycle</figcaption>
 </figure>
 
 Some of the key MIP capabilities include Sensitive information types (SIT), Trainable classifiers, Data classification, Sensitivity labels, Data loss prevention, Endpoint data loss prevention etc. 
@@ -17,7 +17,7 @@ The foundation of MIP is the ability to classify data by our Data Classification
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture2.png"/> 
-    <figcaption>Figure 2: Microsoft Information Protection Architecture</figcaption>
+    <figcaption>Figure 2: How MIP functionalities work together</figcaption>
 </figure>
 
 Identifying and classifying sensitive items that are under your organization's control is the first step in the Information Protection discipline. Foundational to Microsoft are its classification capabilities—from out-of-the-box sensitive information types to machine learning trainable classifiers to automatically finding and classifying sensitive content at scale. Sensitive Information Types are pattern-based classifiers which detect sensitive information like social security, credit card or bank account numbers within a tenant, and help customers to identify, evaluate, and protect their data. Data Classification Service and specifically Sensitive Information Types allow customers to define and identify what information is considered sensitive in their environments. They are utilized by various Microsoft 365 Compliance related features including, but not limited to: Data Loss Prevention, Communication Compliance, Insider Risk Management, Auto-Labeling, Retention, and Sensitivity Labels. 
@@ -135,7 +135,7 @@ The basic flow for deploying and applying sensitivity labels:
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture3.png"/> 
-    <figcaption>Figure 3:Service side auto labeling</figcaption>
+    <figcaption>Figure 3:Labeling flow from admin configuration and end user interaction to protection enforcement</figcaption>
 </figure>
 
 ## MIP Service Auto-Labeling in depth
@@ -208,7 +208,7 @@ If you don't immediately see this option, first select **Show all**.
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 4: Banner for easy set-up of default policies located on the MIP overview page</figcaption>
 </figure>
 
 **Activate recommended features** to set up our default policy configurations designed to protect credit card numbers. 
@@ -225,7 +225,7 @@ In the **Overview** tab you should see the following banner:
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 5: Banner for easy set-up of default policies located on the MIP overview page</figcaption>
 </figure>
 
 **Activate recommended features** to set up our default policy configurations designed to 	protect credit card numbers. 
@@ -241,21 +241,21 @@ In the **Overview** tab you should see the following banner:
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture5.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 6: Extend Exchange Online DLP policy to auto-labeling</figcaption>
 </figure>
 
 Extend your Exchange DLP policy to an auto-labeling policy in simulation mode.
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture6.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 7: Select your existing Exchange Online DLP policy to convert to auto-labeling simulation</figcaption>
 </figure>
 
 ### Create your own auto-labeling policy
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture7.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 8: Different types of classifiers that can be used in auto-labeling policy: sensitive information types, named entities (in private preview), exact data match, and trainable classifiers (coming in 2022)</figcaption>
 </figure>
 
 You want to protect the sensitive data in your organization. What is sensitive in your organization? Start with our sensitive information types. We have 200+ out of the box sensitive information types that we help detect in your organization. Check content explorer to see which sensitive information types we are finding. 
@@ -294,7 +294,7 @@ If you are seeing high amounts of false positives, fine-tune your policy with th
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 9: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
 </figure>
 
 More advanced refinement strategies if the above don’t work:
@@ -314,7 +314,7 @@ A lot of customers have an interest in protecting their financial data surroundi
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture9.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 10: Out of the box financial templates you can use for auto-labeling</figcaption>
 </figure>
 
 Recommendation:
@@ -330,7 +330,7 @@ Another field that we’ve seen a lot of interest in protecting is health care d
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture10.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 11: Out of the box healthcare templates you can use for auto-labeling and the grouping of sensitive information types they protect </figcaption>
 </figure>
 
 Recommendation:
@@ -346,7 +346,7 @@ Similarly, we have seen an interest in protecting the personal data of both cust
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture11.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 12: Out of the box privacy templates you can use for auto-labeling</figcaption>
 </figure>
 
 Recommendation:
@@ -364,14 +364,14 @@ Simulation results showing number of files and emails matched in how which locat
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture12.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 13: Example of simulation mode showing number of files matched for review</figcaption>
 </figure>
 
 After an auto-labeling policy is enabled, you can view the labeling activity in Activity Explorer. 
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture13.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 14: Activity Explorer showcases auto labeling activities </figcaption>
 </figure>
 
 ## Implementation Strategy
@@ -408,7 +408,7 @@ How should I finetune for false positives?
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
-    <figcaption>Figure 2: Banner</figcaption>
+    <figcaption>Figure 15: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
 </figure>
 
 -	Advanced method: use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)
