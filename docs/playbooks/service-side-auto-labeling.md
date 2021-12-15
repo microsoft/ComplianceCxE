@@ -220,6 +220,7 @@ You will only see this option if you have not set up labeling, in-app labeling r
 ## Step 2: Create an auto-labeling policy
 ### Get started with auto-labeling with our default auto-labeling policy protecting credit card numbers on SharePoint, OneDrive, and Exchange
 If you already have your labels set up but have not create any auto-labeling policies;
+
 In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?linkid=2077149), navigate to sensitivity labels:
     - Solutions > Information protection 
 If you don't immediately see this option, first select **Show all**.
@@ -231,7 +232,9 @@ In the **Overview** tab you should see the following banner:
 </figure>
 
 **Activate recommended features** to set up our default policy configurations designed to 	protect credit card numbers. 
+
 You will be asked to pick two of your existing labels to use in the auto-labeling policy in 	simulation mode. We recommend using a “Confidential” like sublabel for both, with the 	higher count auto-labeling credit card policy having more protections than the low count. 
+
 If you have already set up an auto-labeling policy, you will not be shown this banner but can configure our default auto-labeling policy on your own
 [Learn about the default labels and policies for Microsoft Information Protection - Microsoft 	365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials?view=o365-worldwide#service-side-auto-labeling).
 
