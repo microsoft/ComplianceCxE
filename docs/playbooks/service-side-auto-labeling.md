@@ -452,7 +452,8 @@ We recommend that you have your established label schema in place before continu
 ### What is simulation mode?
 
 -	Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as an reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. 
-What happens when I turn on a policy?
+
+### What happens when I turn on a policy?
 
 -	Files and emails will start getting labeled according to your auto-labeling policy. You can view what is being labeled in activity explorer.
 
