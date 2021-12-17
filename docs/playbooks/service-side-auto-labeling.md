@@ -21,7 +21,7 @@ The foundation of MIP is the ability to classify data by our Data Classification
     <figcaption>Figure 2: How MIP functionalities work together</figcaption>
 </figure>
 
-Identifying and classifying sensitive items that are under your organization's control is the first step in the Information Protection discipline. Foundational to Microsoft are its classification capabilities—from out-of-the-box sensitive information types to machine learning trainable classifiers to automatically finding and classifying sensitive content at scale. Sensitive Information Types are pattern-based classifiers which detect sensitive information like social security, credit card or bank account numbers within a tenant, and help customers to identify, evaluate, and protect their data. Data Classification Service and specifically Sensitive Information Types allow customers to define and identify what information is considered sensitive in their environments. They are utilized by various Microsoft 365 Compliance related features including, but not limited to: Data Loss Prevention, Communication Compliance, Insider Risk Management, Auto-Labeling, Retention, and Sensitivity Labels. 
+Identifying and classifying sensitive items that are under your organization's control is the first step in the Information Protection discipline. Foundational to Microsoft are its classification capabilities—from out-of-the-box sensitive information types to machine learning trainable classifiers to automatically finding and classifying sensitive content at scale. Sensitive Information Types are pattern-based classifiers which detect sensitive information like social security, credit card or bank account numbers within a tenant, and help customers to identify, evaluate, and protect their data. Data Classification Service and specifically Sensitive Information Types allow customers to define and identify what information is considered sensitive in their environments. Once you identify what sensitive content is important to you, you can leverage this data classification across your Microsoft 365 Compliance features including, but not limited to: Data Loss Prevention, Communication Compliance, Insider Risk Management, Auto-Labeling, Retention, and Sensitivity Labels. 
 
 We announced several key enhancements to the intelligence and built-in capabilities of MIP across Microsoft 365 applications and services. These capabilities help organizations reduce the number of false positives as they accurately classify ever-increasing amounts of data. These capabilities also increase the coverage of classified data as they go across Microsoft 365 services and workloads.
 
@@ -35,11 +35,12 @@ Sensitivity labels are at their basic level a tag, that is customizable, persist
 ## Auto-Labeling Overview
 There are multiple methods for automatically applying a label to emails and documents based on their content in Microsoft 365, two of the key ones are:
 
-**Client-side auto-labeling:** Client-side auto-labeling happens on the client workstation as the user creates or edits a document or email using Word, Excel, PowerPoint, and Outlook. Depending on the content detected, the label is applied automatically or recommended to the users based on the properties of the label. A default label can also be assigned to documents. This form of client-side labeling does not evaluate document content based on conditions defined on a global policy, but it is based on properties defined for each label. It's important to understand that auto-labeling is supported in various degrees by both the Azure Information Protection Unified Labeling client as well as the Microsoft 365 apps for Enterprises (built-in support). 
+**[Client-side auto-labeling:](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide)** Client-side auto-labeling happens on the client workstation as the user creates or edits a document or email using Word, Excel, PowerPoint, Outlook, and Office web applications (OWA). Depending on the content detected, the label is applied automatically or recommended to the users based on the properties of the label. A default label can also be assigned to documents and emails. This form of client-side labeling does not evaluate document content based on conditions defined on a global policy, but it is based on properties defined for each label.
 
-**Service-side auto-labeling:** Service-side auto-labeling is sometimes referred to as *auto-labeling for data at rest and data in transit*. Unlike client-side auto-labeling, service side auto labeling does not depend on the client to analyze the document content while it is being created. Instead, service-side auto-labeling reviews content that is stored (at-rest) in SharePoint or OneDrive document libraries, or that is "in-flight". For instance, when a message is submitted to transport. All policy review and application are done within the service. Service-side auto-labeling policies are created and configured from the Information Protection section of the Compliance Center under the Auto-labeling policy tab. Auto-labeling policies don't support recommended labeling because the user doesn't interact with the labeling process. Instead, the administrator runs the policies in simulation mode to help ensure the correct labeling of content before applying the label. 
+**Service-side auto-labeling:** Service-side auto-labeling is sometimes referred to as *auto-labeling for data at rest and data in transit*. Unlike client-side auto-labeling, service side auto labeling does not depend on the client to analyze the document content while it is being created. Instead, service-side auto-labeling reviews content that is stored (at-rest) in SharePoint or OneDrive document libraries, or that is "in-flight" or being sent within Exchange. For instance, when a message is submitted to transport. All policy review and application are done within the service. Service-side auto-labeling policies are created and configured from the Information Protection section of the Compliance Center under the Auto-labeling policy tab. Auto-labeling policies don't support recommended labeling because the user doesn't interact with the labeling process. Instead, the administrator runs the policies in simulation mode to help ensure the correct labeling of content before applying the label. 
 
-The table below provides a comparison of Service-side, Client-side, and Defender for cloud apps auto-labeling solutions and can help you identify when a particular solution is appropriate for labeling needs.
+**Comparison of auto-labeling solutions:**
+The table below provides a comparison of Service-side, Client-side, and Defender for cloud apps auto-labeling solutions that can help you identify when a particular solution is appropriate for labeling needs.
 
 |  Capabilities  |  Service side  |  Client side  |  Defender for cloud apps (MCAS)  |
 |---|---|---|---|
@@ -54,20 +55,23 @@ The table below provides a comparison of Service-side, Client-side, and Defender
 | **Label incoming emails**  | Yes (label only) | On reply or forward |  N/A |
 | **Labeling limits**  | 25k documents labeled per day | None |  100 documents labeled per day (can be extended upon request) |
 
-In addition, label priority is used in determining when and how an auto-label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. 
+For more information on the comparison of client vs. service auto-labeling, we have documentation here: [Automatically apply a sensitivity label to content in Microsoft 365 - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically?view=o365-worldwide#compare-auto-labeling-for-office-apps-with-auto-labeling-policies)
+
+**How does client and service side labeling work in different labeling scenarios?**
+A principle we have is that client/end user provided labels always overrides service basedservice-based ones. In addition, label priority is used in determining when and how an automatic label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. 
 
 |  Scenario  |  Label Setting  |  Behavior  |
 |---|---|---|
 |  **Content has no label**  |  Client-side recommendation  |  Recommend new label  |
 | |  Client-side auto labeling  |  Apply new label  |
 | |  Service-side auto labeling  |  Apply new label  |
-|  **Label manually applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+|  **Content has label manually applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  No action. Manually applied label takes precedence  |
 | |  Service-side auto labeling  |  No action. Manually applied label takes precedence  |
-|  **Default label applied (Label policy)**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+|  **Content has default label applied (Label policy)**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
 | |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
-|  **Auto label applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+|  **Content has auto label applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
 | |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
 
@@ -156,8 +160,7 @@ Sensitive files are automatically detected and labeled at rest.
 
 - Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 sites (SharePoint or OneDrive) when they are specified individually. You can also specify all sites, and this configuration is exempt from the 100 sites maximum.
 
-- Existing values for modified, modified by, and the date are not changed as a result of auto-labeling policies—for both simulation mode and when labels are applied.
-
+- Existing values for modified, modified by, and the date are not changed because of auto-labeling policies—for both simulation mode and when labels are applied.
 - When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the account that last modified the file. If this account is no longer in Azure Active Directory, the label won't be applied because these values can't be set.
 
 ## Protecting Sensitive Information in Exchange
@@ -182,7 +185,7 @@ Sensitive emails are automatically detected and labeled in transit/ as they are 
 
 - When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the person who sends the email. There currently isn't a way to set a Rights Manager owner for all incoming email messages that are automatically encrypted.
 
-## Requirements for configuring MIP Auto-labeling
+## Requirements for configuring Service-side Auto-labeling
 * Simulation mode:
     - Auditing for Microsoft 365 must be turned on. If you need to turn on auditing or you're not sure whether auditing is already on, see [Turn audit log search on or off](https://docs.microsoft.com/en-us/microsoft-365/compliance/turn-audit-log-search-on-or-off?view=o365-worldwide).
 
@@ -524,7 +527,7 @@ We recommend that you have your established label schema in place before continu
 
 ### What is simulation mode?
 
-Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as an reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. 
+Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as a reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. 
 
 ### What happens when I turn on a policy?
 
@@ -536,12 +539,13 @@ Simulation mode is a process between configuring the policy and enforcing it. It
 
 | Acronym | Definition |
 |---|---|
-| **MIP** | Microsoft Information Protection |
-| **SPO** | SharePoint Online |
-| **ODB** | OneDrive for Business |
-| **EXO** | Exchange Online |
-| **SIT** | Sensitive Information Type |
-| **NER** | Named Entity Recognition |
 | **EDM** | Exact Data Match |
+| **EXO** | Exchange Online |
+| **MIP** | Microsoft Information Protection |
+| **NER** | Named Entity Recognition |
+| **ODB** | OneDrive for Business |
+| **OWA** | Office Web Applications |
 | **PII** | Personally Identifiable Information |
-| **TC** | Tranable Classifiers |
+| **SIT** | Sensitive Information Type |
+| **SPO** | SharePoint Online |
+| **TC** | Trainable Classifiers |
