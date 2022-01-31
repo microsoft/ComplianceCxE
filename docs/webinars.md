@@ -13,7 +13,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
 ***MIP*: Protecting your sensitive assets in a hybrid environment using Microsoft Compliance products** |  |  
-| US/EMEA  | February 15, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/53704) |
+| US/EMEA  | March 8, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/53704) |
 
 ## Past Webinars
 
