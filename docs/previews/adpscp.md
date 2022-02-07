@@ -1,10 +1,10 @@
 
-Now available for testing in both Information Governance and Records Management solutions
+Now GA in both Information Governance and Records Management solutions
 The long awaited feature is here. 
 
 ## What is the feature?
 
-Today, we are  announcing the private preview for adaptive policy scopes. This new functionality allows admins to create attribute-based retention or label policies that can be scoped to geography, department, or other user, group, or site attributes. 
+Today, we are  announcing the general availability for adaptive policy scopes. This new functionality allows admins to create attribute-based retention or label policies that can be scoped to geography, department, or other user, group, or site attributes. 
 
 
 ## Improvements and key benefits
@@ -20,10 +20,4 @@ Today, we are  announcing the private preview for adaptive policy scopes. This n
 * **Scope reporting** – Similar to policy reporting, can also view a report of all the changes that happen to user, site and group scopes.
 
 
-Not registered? Slots are available! Review the steps to join our Private Preview ring [here](../../previews), then fill out this form to nominate your test tenant at [https://aka.ms/MIPC/AdaptiveScopes-Preview](https://aka.ms/MIPC/AdaptiveScopes-Preview)
-
-
-Looking forward to hearing from you.
-
-
-Randall on behalf of the MIG product group
+GEAR on behalf of the MIG product group

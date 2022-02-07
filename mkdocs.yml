@@ -55,7 +55,7 @@ nav:
       #- Information Protection: powershell/mip.md
       #- Data Loss Prevention: powershell/dlp.md
       #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
-    - Playbooks:
+    - Playbooks/Guides/JumpStarts:
       - Microsoft Information Protection:
         - 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
       - Data Loss Prevention:
