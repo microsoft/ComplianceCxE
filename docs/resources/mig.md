@@ -9,10 +9,12 @@ We built this page to help you easily find all relevant content and resources re
 ## Videos
 * [How to Auto-apply Retention Labels using Compliance Center](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-to-auto-apply-retention-labels-using-compliance-center-three/ba-p/1845647)
 
-## Playbooks and Guides
+## JumpStarts and Guides
 * [Deployment Acceleration Guide](../../dag/mig-rm)
 
 * [End User Training for Retention labels](../../enduser/retention/)
+
+* [Adaptive Scopes Exchange Workload JumpStart](../../playbooks/migjump)
 
 ## Webinars
 * [Microsoft Information Governance (MIG) Webinars](../../webinars#microsoft-information-governance)
