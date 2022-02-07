@@ -44,27 +44,21 @@ nav:
       - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
       - Resources: dag/dag-resources.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
-    #- PowerShell: 
-      #- Compliance Manager: powershell/cm.md
-      #- Advanced eDiscovery: powershell/aed.md
-      #- Advanced Audit: powershell/audit.md
-      #- Insider Risk: powershell/ir.md
-      #- Communication Compliance: powershell/cc.md
-      #- Information Governance: powershell/mig.md
-      #- Records Management: powershell/rm.md
-      #- Information Protection: powershell/mip.md
-      #- Data Loss Prevention: powershell/dlp.md
-      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
-    - Playbooks/Guides/JumpStarts:
-      - Playbooks/Guides/JumpStarts: playbooks.md
-      #- Microsoft Information Protection:
-        #- 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
-      #- Data Loss Prevention:
-        #- Teams DLP Playbook: playbooks/teamsdlp.md
-        #- Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
-      #- Communication Compliance:
-        #- Financial Services Industry Playbook: playbooks/fsicc.md
-      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Playbooks:
+      - Getting Started: playbooks.md
+      - Microsoft Information Protection:
+        - 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
+      - Data Loss Prevention:
+        - Teams DLP Playbook: playbooks/teamsdlp.md
+        - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
+      - Communication Compliance:
+        - Financial Services Industry Playbook: playbooks/fsicc.md
+      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+    - Jump Starts:
+      - Getting Started: jumpstarts.md
+      - Microsoft Information Governance:
+        - Adaptive Policy Scopes: 
+          - Exchange Workload: jumpstarts/adaptive-exchange.md
     - End User Training:
       - Sensitivity Labels: enduser/sensitivity.md
       - Retention Labels: enduser/retention.md
