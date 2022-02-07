@@ -56,14 +56,15 @@ nav:
       #- Data Loss Prevention: powershell/dlp.md
       #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks/Guides/JumpStarts:
-      - Microsoft Information Protection:
-        - 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
-      - Data Loss Prevention:
-        - Teams DLP Playbook: playbooks/teamsdlp.md
-        - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
-      - Communication Compliance:
-        - Financial Services Industry Playbook: playbooks/fsicc.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+      - Playbooks: playbooks.md
+      #- Microsoft Information Protection:
+        #- 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
+      #- Data Loss Prevention:
+        #- Teams DLP Playbook: playbooks/teamsdlp.md
+        #- Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
+      #- Communication Compliance:
+        #- Financial Services Industry Playbook: playbooks/fsicc.md
+      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - End User Training:
       - Sensitivity Labels: enduser/sensitivity.md
       - Retention Labels: enduser/retention.md
