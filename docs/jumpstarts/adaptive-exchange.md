@@ -70,7 +70,7 @@ We detail a single common method for applying a retention policy that can cover 
     </figure>
 
 !!! Tip
-    If needing to add more regions, simply click **Add Attribute** then repeat steps 6 & 7. You can also add City, Office, Department or Job Title as well during this step.
+    If needing to add more regions, simply click **Add Attribute** then repeat steps 6 & 7. You can also add City, Office, Department or Job Title attributes as well during this step.
 
 8.	On the **Review And Finish** page, edit any information that maybe incorrect then click Submit.
 
@@ -103,21 +103,21 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt11.png"/> 
-        <figcaption>Figure 9: Choosing the type of retention policy with Adaptive radio button selected</figcaption>
+        <figcaption>Figure 11: Choosing the type of retention policy with Adaptive radio button selected</figcaption>
     </figure>
 
 5.	On the **Choose Adaptive Policy Scopes And Locations** page, click **Add Scopes**.
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt12.png"/> 
-        <figcaption>Figure 11: Choosing the adaptive policy scope and location with Add Scopes selected </figcaption>
+        <figcaption>Figure 12: Choosing the adaptive policy scope and location with Add Scopes selected </figcaption>
     </figure>
 
 6.	On the **Choose Adaptive Policy Scopes** dialog box, choose the scope created earlier in step x. Click **Add** to continue.
 
     <figure>
         <img src="../../jumpstarts/img/migjump/adapt13.png"/> 
-        <figcaption>Figure 12: Choosing the adaptive policy scope with Email Only Region selected </figcaption>
+        <figcaption>Figure 13: Choosing the adaptive policy scope with Email Only Region selected </figcaption>
     </figure>
 
 ### Adding Exchange workload
@@ -126,7 +126,7 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt14.png"/> 
-        <figcaption>Figure 13: Chosing the adaptive policy scope with Exchange Email Status set to On </figcaption>
+        <figcaption>Figure 14: Chosing the adaptive policy scope with Exchange Email Status set to On </figcaption>
     </figure>
 
 ### Configuring retention period
@@ -135,7 +135,7 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt15.png"/> 
-        <figcaption>Figure 14: Configuring retention period to 1 year and at the end of this period Do Nothing enabled </figcaption>
+        <figcaption>Figure 15: Configuring retention period to 1 year and at the end of this period Do Nothing enabled </figcaption>
     </figure>
 
 9.	Lastly, review settings and make changes if need be then click **Submit**.
