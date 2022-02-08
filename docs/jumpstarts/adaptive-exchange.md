@@ -6,15 +6,15 @@ title: JumpStart Series
 
 The JumpStart series is intended to help companies start with a simple approach to governing data residing in the M365 platform by reducing the complexity of knowing where to start, taking the first steps to reduce risk, and complying with laws on how the data is governed.
 
-Great, but what if I don’t know what I don’t know. The below guidance helps to begin gathering an understanding of data within the Exchange workload and the actions need to govern this data.
+Great, but what if I don’t know what I don’t know. Developing an organisational policy takes time given the number of business roles involved.  What data are we supposed to protect? How much data should we retain? Sadly, if you’re not governing anything now, you have no way to ensure that data isn’t being deleted by a disgruntled employee or someone with malicious intent while that policy gets developed. The below guidance helps you to begin gathering an understanding of the potentially sensitive data within the Exchange workload and provides helpful insights that you can use to determine what actions are needed to effectively govern this data over the next few months.
 
 The mindset behind this approach allows the start of classifying content that then can be reviewed in activity explorer and content explorer. Using content explorer [Getting started with content explorer](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide#:~:text=How%20to%20use%20content%20explorer%201%20Open%20Microsoft,the%20label%20from%20the%20list.%20More%20items...%20) allows a quick point in time view of how the label is applied to items in M365 before acting on the data and predicts outcome for organizational compliance with regulation. Activity explorer [Getting started with activity explorer](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-activity-explorer?view=o365-worldwide) builds on content explorer displaying the history of how the data is labeled.
 
-We detail a single common method for applying a retention policy that can cover the specific country/region or city, etc.. within your organization. For more in-depth guide to Information Governance, refer to [Deployment Accelerator Guide](../..dag/mig-rm) do know the below step-by-step will be a cumulative activity that starts as a building block for your company's governance strategy.
+We detail a single common method for applying a retention policy that can cover the specific country/region or city, etc.. within your organization. For more of an in-depth guide to Information Governance, refer to [Deployment Accelerator Guide](../..dag/mig-rm). Do know the below step-by-step will be a cumulative activity that starts as a building block for your company's governance strategy. The first step is putting a retention policy in place to apply a base level of data governance before deciding on the labels to apply.
 
 ## Getting Started
 
-**Start with labeling data with country or region attribute** 
+**Start by using user data that contians country or region attributes** 
 
 ### Creating scopes
 
@@ -66,7 +66,7 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt7.png"/> 
-        <figcaption>Figure 7: Value text box populated with region Asia</figcaption>
+        <figcaption>Figure 7: Value text box populated with region equal to US</figcaption>
     </figure>
 
 !!! Tip
@@ -87,14 +87,14 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt9.png"/> 
-        <figcaption>Figure 8: Information Governance main page with New Retention Policy selected</figcaption>
+        <figcaption>Figure 9: Information Governance main page with New Retention Policy selected</figcaption>
     </figure>
 
 3.	On the **Name Your Retention Policy** page, add a name for the retention policy and a description. Click **Next** to continue.
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt10.png"/> 
-        <figcaption>Figure 8: Name Your Retention Policy page wit Name and Description fields shown</figcaption>
+        <figcaption>Figure 10: Name Your Retention Policy page with Name and Description fields shown</figcaption>
     </figure>
 
 ### Adaptive scope policy
@@ -103,21 +103,21 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt11.png"/> 
-        <figcaption>Figure 9: Chosing the type of retention policy with Adaptive radio button selected</figcaption>
+        <figcaption>Figure 9: Choosing the type of retention policy with Adaptive radio button selected</figcaption>
     </figure>
 
 5.	On the **Choose Adaptive Policy Scopes And Locations** page, click **Add Scopes**.
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt12.png"/> 
-        <figcaption>Figure 10: Chosing the adaptive policy scope and location with Add Scopes selected </figcaption>
+        <figcaption>Figure 11: Choosing the adaptive policy scope and location with Add Scopes selected </figcaption>
     </figure>
 
 6.	On the **Choose Adaptive Policy Scopes** dialog box, choose the scope created earlier in step x. Click **Add** to continue.
 
     <figure>
         <img src="../../jumpstarts/img/migjump/adapt13.png"/> 
-        <figcaption>Figure 11: Chosing the adaptive policy scope with Email Only Region selected </figcaption>
+        <figcaption>Figure 12: Choosing the adaptive policy scope with Email Only Region selected </figcaption>
     </figure>
 
 ### Adding Exchange workload
@@ -126,7 +126,7 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt14.png"/> 
-        <figcaption>Figure 12: Chosing the adaptive policy scope with Exchange Email Status set to On </figcaption>
+        <figcaption>Figure 13: Chosing the adaptive policy scope with Exchange Email Status set to On </figcaption>
     </figure>
 
 ### Configuring retention period
@@ -135,7 +135,7 @@ We detail a single common method for applying a retention policy that can cover 
 
     <figure>
         <img src="../../jumpstarts/img/migjump/Adapt15.png"/> 
-        <figcaption>Figure 13: Configuring retention period to 1 year and at the end of this period Do Nothing enabled </figcaption>
+        <figcaption>Figure 14: Configuring retention period to 1 year and at the end of this period Do Nothing enabled </figcaption>
     </figure>
 
 9.	Lastly, review settings and make changes if need be then click **Submit**.
