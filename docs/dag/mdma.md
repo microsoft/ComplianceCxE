@@ -1,7 +1,7 @@
 
 ## What is Migration Assistant for Microsoft DLP?
 
-The MDMA tool is a Windows based desktop application that will migrate your DLP policies from other DLP platforms to our Unified DLP platform. 
+The Migration Assistant for Microsoft DLP tool is a Windows based desktop application that will migrate your DLP policies from other DLP platforms to our Unified DLP platform. 
 Our tool takes you through a simple five-step migration process. It accepts Symantec DLP policy XML exports, performs mapping, and creates equivalent Unified DLP policies through PowerShell scripts.
 You can safely use the tool to create DLP policies in test mode, which does not affect your live data or interact with current environment. 
 
