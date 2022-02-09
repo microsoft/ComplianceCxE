@@ -142,7 +142,7 @@ Policy name and review steps:
 
 * Review your settings and either click publish labels or auto-apply to save your settings depending on the scenario.
 
-* It can take up to 1 day for labels to appear and only for those mailboxes that have 10MB of data or more as noted above in the considerations.
+* It can take up to 7 days for labels to appear and only for those mailboxes that have 10MB of data or more as noted above in the considerations.
 
 #### Start Simple
 
