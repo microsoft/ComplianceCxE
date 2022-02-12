@@ -17,8 +17,8 @@ nav:
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Notes from the Field:
       - Getting Started: notes.md
-      - Information Governance:
-        - Deep Dive into the Exchange Recoverable Items Folder: notes/mig/ri.md
+      #- Information Governance:
+        #- Deep Dive into the Exchange Recoverable Items Folder: notes/mig/ri.md
       - MIP/DLP:
         - Best Practices for Creating MIP and DLP Policies: notes/mip-dlp/mip-dlp-best-practices.md
         - Preventing external sharing with DLP policy: notes/mip-dlp/DLP-policy-externalshare.md
