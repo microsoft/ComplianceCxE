@@ -89,6 +89,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|February 9, 2021|**DLP**: Endpoint DLP Updates| Coming Soon | Coming Soon |
 |November 15, 2021|**DLP**: What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
 |November 9, 2021|**DLP**: Migration of Exchange Transport Rules (EAC-DLP) to Unified DLP (DLP-ExO) Using Wizard | [Video](https://mipc.eventbuilder.com/event/51845) | [Deck](../resources/files/ETR to DLP.pdf) - [FAQ](../resources/files/FAQ ETR to DLP.pdf) |
 |March 17, 2021|**DLP**: Unified DLP|[YouTube](https://aka.ms/MIPC/webinar-unifieddlp)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/microsoft-security-and/unified-dlp-webinar/ba-p/2247308)|
