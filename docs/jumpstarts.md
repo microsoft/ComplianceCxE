@@ -4,7 +4,7 @@ Jump starts are step-by-step guidance that we've created to help get started wit
 
 ## How can I get started?
 
-Choose an available guide and follow the how-to to implement within your own environment.
+Choose an available guide and follow the how-to steps to implement within your own environment.
 
 ## Can I contribute to Jump Start guides?
 
