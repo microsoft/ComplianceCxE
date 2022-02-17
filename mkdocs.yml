@@ -50,7 +50,7 @@ nav:
     - Jump Starts:
       - Getting Started: jumpstarts.md
       - Microsoft Information Governance:
-        - Auto-apply Lables:
+        - Auto-apply Labels:
           - Using KQL Exchange Workload: jumpstarts/kql-exchange.md
         - Adaptive Policy Scopes: 
           - Exchange Workload: jumpstarts/adaptive-exchange.md
