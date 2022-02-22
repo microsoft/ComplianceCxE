@@ -41,8 +41,8 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 
 ## Download Process
 
-Use the [GitHub link](https://aka.ms/DLPMigration) to download the tool and follow instructions for how to install, run and configure the tool.
+Use the [GitHub link](https://aka.ms/MAMD) to download the tool and follow instructions for how to install, run and configure the tool.
 
 ## Provide Feedback & Report Bugs
 
-Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://github.com/OfficeDev/MDMA/issues).
+Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://github.com/OfficeDev/MAMD/issues).
