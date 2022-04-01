@@ -52,7 +52,7 @@ The table below provides a comparison of Service-side, Client-side, and Defender
 | **Interaction with users**  | Label visible after user opens document | Automatic labeling: user can override; Recommended label: user can accept or dismiss |  Label visible after user opens document. Content markings are applied on save |
 | **Applied to**  | New and existing documents (including simulation mode); New emails | Content that's created or edited by users |  New and existing documents (file policy); Content being downloaded; Content being uploaded |
 | **Behaviors**  | Label is applied; Outbound email is protected; Outbound attachment is protected (Office and PDF documents); Protection is applied to document; Content markings are applied after user opens document and saves it | Label is applied; Document is protected; Email is protected; Attachment is protected (Office attachment only); Content marking is applied |  Label is applied; Protection is applied; Content markings are applied after user opens document and saves it |
-| **Label incoming emails**  | Yes (label only) | On reply or forward |  N/A |
+| **Label external incoming emails**  | Yes | On reply or forward |  N/A |
 | **Labeling limits**  | 25k documents labeled per day | None |  100 documents labeled per day (can be extended upon request) |
 
 For more information on the comparison of client vs. service auto-labeling, we have documentation here: [Automatically apply a sensitivity label to content in Microsoft 365 - Microsoft 365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically?view=o365-worldwide#compare-auto-labeling-for-office-apps-with-auto-labeling-policies)
