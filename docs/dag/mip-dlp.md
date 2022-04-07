@@ -12,7 +12,7 @@ The objective is to create a deployment plan that follows the progression of cra
 
 * [Data Loss Prevention (DLP)](#data-loss-prevention)
 
-* [Microsoft Cloud App Security (MCAS)](https://docs.microsoft.com/cloud-app-security/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
+* [Microsoft Defender for Cloud Apps (MDCA)](https://docs.microsoft.com/cloud-app-security/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
 
 * [Compliance Manager](../cm/)
 
@@ -50,7 +50,7 @@ The main capabilities associated with MIP are as follows:
 * Service encryption with Customer Key
 * SharePoint Information Rights Management (IRM)
 * Rights Management connector
-* Microsoft Cloud App Security (MCAS)
+* Microsoft Defender for Cloud Apps (MDCA)
 * Microsoft Information Protection (MIP) SDK
 * Data Loss Prevention (DLP)
 
@@ -82,7 +82,7 @@ With these requirements in mind, the following best practices have proven to mak
     
     - Microsoft 365 cloud: Use Content Explorer in Microsoft 365 compliance center to discover data stored in Microsoft 365 (SharePoint, OneDrive), read more about it [here](https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide). 
     
-    - Non-Microsoft cloud repositories: Use Microsoft Cloud App Security to connect non-Microsoft applications and discover sensitive information beyond the Microsoft 365 services. Read more about it [here](https://docs.microsoft.com/cloud-app-security/enable-instant-visibility-protection-and-governance-actions-for-your-apps).
+    - Non-Microsoft cloud repositories: Use Microsoft Defender for Cloud Apps to connect non-Microsoft applications and discover sensitive information beyond the Microsoft 365 services. Read more about it [here](https://docs.microsoft.com/cloud-app-security/enable-instant-visibility-protection-and-governance-actions-for-your-apps).
     
     - On-premises repositories: Use Azure Information Protection Scanner to discover data stored in your on-premises file shares, read more about it [here](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install). 
     
@@ -228,7 +228,7 @@ There are two different methods for automatically applying a sensitivity label t
         
         - When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the person who sends the email.
 
-With these limitations in mind, Microsoft Cloud App Security (MCAS) can be used to apply labels for these services and several third-party SaaS applications also. MCAS has its own limitations and considerations which are discussed in [this blog post](https://techcommunity.microsoft.com/t5/microsoft-security-and/mcas-data-protection-blog-series-do-i-use-mcas-or-mip/ba-p/2011039).
+With these limitations in mind, Microsoft Defender for Cloud Apps (MDCA) can be used to apply labels for these services and several third-party SaaS applications also. MDCA has its own limitations and considerations which are discussed in [this blog post](https://techcommunity.microsoft.com/t5/microsoft-security-and/mcas-data-protection-blog-series-do-i-use-mcas-or-mip/ba-p/2011039).
 
 To protect and label structured data you should consider a solution like Azure Purview which among other things can allow you to Classify data using built-in and custom classifiers and Microsoft Information Protection sensitivity labels which allows you to label sensitive data consistently across SQL Server, Azure, Microsoft 365, and Power BI. To understand more about Azure Purview, check out this [link](https://docs.microsoft.com/en-us/azure/purview/create-sensitivity-label). 
 
@@ -255,7 +255,7 @@ To comply with business standards and industry regulations, organizations must p
 
 With a DLP policy, you can:
 
-* Identify sensitive information across many locations, such as Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Teams, Windows 10 Devices, Microsoft Cloud App Security. For example, you can identify any document containing a credit card number that is stored in any OneDrive for Business site, or you can monitor just the OneDrive sites of specific people.
+* Identify sensitive information across many locations, such as Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Teams, Windows 10 Devices, Microsoft Defender for Cloud Apps. For example, you can identify any document containing a credit card number that is stored in any OneDrive for Business site, or you can monitor just the OneDrive sites of specific people.
 
 * Prevent the accidental sharing of sensitive information. For example, you can identify any document or email containing a health record that is shared with people outside your organization, and then automatically block access to that document or block the email from being sent.
 
@@ -281,7 +281,7 @@ Learn about [how DLP policies are structured](https://docs.microsoft.com/en-us/m
     - OneDrive for Business
     - Microsoft Teams
     - Devices
-    - Microsoft Cloud App Security (acting as a proxy for creation of MCAS policy within the tenant
+    - Microsoft Defender for Cloud Apps (acting as a proxy for creation of MDCA policy within the tenant
 
 * Currently only global full or view only permissions are available for alerts at this time and cannot be further carved into areas of responsibility based on such as departments, locations etc. All designs should take this limitation into account before deployment is undertaken. If this capability is an absolute requirement, consider establishing a feed of all DLP alerts and activities into [Azure Sentinel](https://techcommunity.microsoft.com/t5/microsoft-security-and/advanced-incident-management-for-office-and-endpoint-dlp-using/ba-p/1811497) and configuring access rights accordingly within the solution..
 
