@@ -20,7 +20,9 @@ We built this page to help you easily find all relevant content and resources re
 * [Microsoft Information Governance (MIG) Webinars](../../webinars#microsoft-information-governance)
 
 ## Blogs
-* [Lifecycle of an item in SharePoint: Where does it go?](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228)
+* [Using Adaptive Policy Scopes to Apply M365 Retention to Shared, Resource, and Inactive Mailboxes](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-adaptive-policy-scopes-to-apply-m365-retention-to-shared/ba-p/3053641)
+
+* [Using Custom SharePoint Site Properties to Apply Microsoft 365 Retention with Adaptive Policy Scopes](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970)
 
 ## Downloads
 * [Information Governance and Records Management permissions by feature/persona/role](files/Permissions.xlsx)
