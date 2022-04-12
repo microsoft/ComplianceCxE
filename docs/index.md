@@ -24,7 +24,6 @@ We built this page to help you easily find all relevant content and resources re
 ## Social Media and Forums
 
 * :fontawesome-brands-yammer:{ style="color: #999" } [MIP Yammer Channel](https://aka.ms/MIPC/AskMIPTeam)
-* :fontawesome-brands-twitter:{ style="color: #1DA1F2" } [MIPNews Twitter](https://twitter.com/MIPNews)
 
 ## Upcoming Webinars
 
@@ -43,7 +42,3 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 * [Insider Risk Management in Microsoft 365](resources\ir)
 * [Microsoft Information Governance in Microsoft 365](resources\mig)
 * [Microsoft Information Protection in Microsoft 365](resources\mip)
-
-## Latest Tweets
-
-<a class="twitter-timeline" href="https://twitter.com/MipNews?ref_src=twsrc%5Etfw">Tweets by MipNews</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
