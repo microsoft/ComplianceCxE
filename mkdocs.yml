@@ -110,8 +110,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/microsoft/ComplianceCxE/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/MIPNews
     - icon: fontawesome/brands/yammer
       link: https://aka.ms/MIPC/AskMIPTeam
 extra_css:
