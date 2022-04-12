@@ -14,7 +14,7 @@ We built this page to help you easily find all relevant content and resources re
 
 * [End User Training for Retention labels](../../enduser/retention/)
 
-* [Adaptive Scopes Exchange Workload JumpStart](../../playbooks/migjump)
+* [Adaptive Scopes Exchange Workload JumpStart](../../jumpstarts/adaptive-exchange/)
 
 ## Webinars
 * [Microsoft Information Governance (MIG) Webinars](../../webinars#microsoft-information-governance)
