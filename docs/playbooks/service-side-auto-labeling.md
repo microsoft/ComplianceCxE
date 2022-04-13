@@ -205,11 +205,12 @@ Sensitive emails are automatically detected and labeled in transit/ as they are 
 
     - If the labels you want to use for auto-labeling are configured to use visual markings (headers, footers, watermarks), note that these are not applied to documents.
 
-    - If the labels apply [encryption](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide):
+- We recommend that you have your label taxonomy and hierarchy defined in a label policy applied to all users to help them get started with manual labeling from the information worker side. 
+- [Optional] While it is important to have your label taxonomy mostly defined, this does not include the need to define protection actions like encyrption. Encryption can be added to the label properties after the fact. Since protections are checked every time a document is opened, changes in protections to labels will be enforced. 
+
+ - If the labels apply [encryption](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide):
 	    - When the auto-labeling policy includes locations for SharePoint or OneDrive, the label must be configured for the **Assign permissions now** setting.
 	    - When the auto-labeling policy is just for Exchange, the label can be configured for either **Assign permissions now** or **Let users assign permissions** (for the Do Not Forward or Encrypt-Only options).
-
-- We recommend that you have your label taxonomy and hierarchy defined in a label policy applied to all users to help them get started with manual labeling from the information worker side. 
     - In defining your labels, you can set up in-app auto-labeling recommendations, where you define what sensitive information you are concerned about, and information workers will see a banner that says that recommends them to label this document with that label if your defined sensitive information is found in the document they are working with. 
     - You can define a default label in your label policy that is automatically applied to files and emails in use that have not been manually labeled. 
 
