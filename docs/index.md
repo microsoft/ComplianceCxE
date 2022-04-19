@@ -9,13 +9,9 @@ We built this page to help you easily find all relevant content and resources re
 
     The resources on this site are direct from the **Microsoft Purview CAT** team. We work closely with customers to collect insights, develop recommendations, and distil best practices for deploying Microsoft compliance solutions. Use the content on this site to benefit from our experience and lessons learned when you plan and deploy your own compliance solutions, and use the official documentation for supportability, licensing, and other information from the product group.
 
-## Security vs Compliance
+## Getting Started
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9QZ4IRko0pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## General Information on Getting Started
-
-* Visit the docs site to review [Microsoft Purview Compliance documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
+* Visit the docs site to review [Microsoft Purview documentation](https://docs.microsoft.com/en-us/microsoft-365/compliance/?view=o365-worldwide)
 * Ready to deploy? Start with guidance from [CxE Deployment Acceleration Guides (DAGs)](dag)
 * Review the license requirements for features [Security and Compliance Licensing Guidance](https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 * Always use a development tenant for Proof of Concept and testing [What is a 'Dev Tenant' and why would you want one?](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/what-is-a-dev-tenant-and-why-would-you-want-one/ba-p/2036610)
@@ -27,7 +23,7 @@ We built this page to help you easily find all relevant content and resources re
 
 ## Upcoming Webinars
 
-The Compliance CxE team regularly hosts webinars to present what's changing and new with our products.  Check out the [Webinars page](webinars) for upcoming webinars. 
+The Microsoft Purview CxE team regularly hosts webinars to present what's changing and new with our products.  Check out the [Webinars page](webinars) for upcoming webinars. 
 
 !!! note
     Every webinar is **always** recorded and published [here](webinars/#past-webinars) along with the PowerPoint Decks and Q&A.
