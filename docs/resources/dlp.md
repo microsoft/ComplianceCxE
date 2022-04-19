@@ -1,10 +1,6 @@
----
-layout: home
-title: DLP Resources
-intro: Data Loss Prevention Resources
----
+# Microsoft Purview Data Loss Prevention
 
-We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
+We built this page to help you easily find all relevant content and resources relating to the Microsoft Purview solutions. Please bookmark this page for future reference as we will update it on an ongoing basis.
 
 ## Videos
 * [Vblog - Learn how to apply DLP policy to non-Microsoft cloud apps](https://techcommunity.microsoft.com/t5/security-compliance-identity/new-video-blog-apply-dlp-policies-to-non-microsoft-cloud/ba-p/2262054)
@@ -35,4 +31,4 @@ We built this page to help you easily find all relevant content and resources re
 * [Join Endpoint DLP preview ring](https://aka.ms/MIPC/EndpointDLP-PreviewRing)
 
 ## Webinars
-* [Data Loss Prevention (DLP) Webinars](../../webinars#data-loss-prevention)
+* [Data Loss Prevention (DLP) Webinars](../../webinars/#microsoft-purview-data-loss-prevention)

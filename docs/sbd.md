@@ -1,6 +1,6 @@
 ## Introduction
 
-In this new series we explore a fictitious company and the process they must go through to fully adopt and deploy Microsoft 365 compliance technologies.  Make sure to check back frequently as we continue to release new episodes!
+In this new series we explore a fictitious company and the process they must go through to fully adopt and deploy Microsoft Purview technologies.  Make sure to check back frequently as we continue to release new episodes!
 
 ## The Story
 

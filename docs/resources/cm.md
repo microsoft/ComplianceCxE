@@ -1,17 +1,13 @@
----
-layout: home
-title: CM Resources
-intro: Compliance Manager Resources
----
+# Microsoft Purview Compliance Manager
 
-We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
+We built this page to help you easily find all relevant content and resources relating to the Microsoft Purview solutions. Please bookmark this page for future reference as we will update it on an ongoing basis.
 
 ## Survey
 As a valued customer and partner with Microsoft we value your input and opinions. We here at Microsoft are constantly striving to provide our customers and partners with the very best in technology that meets or exceeds their needs. To this end we are asking that you take a brief survey (10minutes), located [here](https://ncv.microsoft.com/XYZhzQNtaf). 
 
 
-## MS Compliance Manager "Ninja" Training
-* [MSCM Ninja Training](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-compliance-manager-mscm-ninja-training-q1-2022/ba-p/3181322)
+## Ninja Training
+* [Microsoft Purview Compliance Manager Ninja Training](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-compliance-manager-mscm-ninja-training-q1-2022/ba-p/3181322)
 
 ## Videos
 * [Introduction to Compliance Manager](https://techcommunity.microsoft.com/t5/microsoft-security-and/introduction-to-compliance-manager-vblog/ba-p/2227643)
@@ -26,16 +22,16 @@ As a valued customer and partner with Microsoft we value your input and opinions
 * [Episode #3 - Scenario Based Demos - Compliance Manager](https://www.youtube.com/watch?v=XaBnjGK9pDM)
 
 ## Playbooks and Guides
-* [MS Compliance Manager Interactive Guide](https://mslearn.cloudguides.com/en-us/guides/Simplify%20compliance%20and%20reduce%20risk%20with%20Microsoft%20Compliance%20Manager)
+* [Compliance Manager Interactive Guide](https://mslearn.cloudguides.com/en-us/guides/Simplify%20compliance%20and%20reduce%20risk%20with%20Microsoft%20Compliance%20Manager)
 
 * [Deployment Acceleration Guide](../../dag/cm)
 
-* [Microsoft Compliance Manager](https://aka.ms/compliancemanager/techdocs)
+* [Microsoft Purview Compliance Manager](https://aka.ms/compliancemanager/techdocs)
 
 * [Ignite 2021 Announcements](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-compliance-manager-extensibility-beyond-microsoft-365/ba-p/2883896)
 
 ## Webinars
-* [Compliance Manager (CM) Webinars](../../webinars#compliance-manager)
+* [Microsoft Purview Compliance Manager Webinars](../../webinars#microsoft-purview-compliance-manager)
 
 ## Learning Path
-* [Reduce risk with Microsoft Compliance Manager](https://docs.microsoft.com/en-us/learn/paths/compmgmt/)
+* [Reduce risk with Microsoft Purview Compliance Manager](https://docs.microsoft.com/en-us/learn/paths/compmgmt/)

@@ -1,10 +1,4 @@
----
-layout: home
-title: How to Contribute
-intro: How to Contribute
----
-
-The Compliance CxE team encourages collaboration of our content.  This article describes how you can contribute.
+The Microsoft Purview CxE team encourages collaboration of our content.  This article describes how you can contribute.
 
 ## Submitting an Issue
 

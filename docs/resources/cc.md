@@ -1,10 +1,6 @@
----
-layout: home
-title: Communication Compliance (CC)
-intro: Communication Compliance Resources
----
+# Microsoft Purview Communication Compliance Resources
 
-We built this page to help you easily find all relevant content and resources relating to the compliance solutions in Microsoft 365. Please bookmark this page for future reference as we will update it on an ongoing basis.
+We built this page to help you easily find all relevant content and resources relating to the Microsoft Purview solutions. Please bookmark this page for future reference as we will update it on an ongoing basis.
 
 ## Videos
 * [Monitor inappropriate communication through Microsoft 365](https://www.youtube.com/watch?v=C3Y8WZ7o_dI&list=PLXtHYVsvn_b_Fjf1G7bpfiuQib2OwZ7PQ&index=4)
@@ -47,7 +43,7 @@ We built this page to help you easily find all relevant content and resources re
 ## Webinars
 * [Reducing Code of Conduct and Regulatory Compliance Violation Risks - Video](https://mipc.eventbuilder.com/event/45690) / [Deck](https://m365x314771.sharepoint.com/:p:/s/MIPComplianceResources/Eeb6R4lf4UVMqJah1CKN1z0BGmkbKnWS_isOMu2gCERzjQ?e=0TdFoE) / [FAQ](https://m365x314771.sharepoint.com/:b:/s/MIPComplianceResources/EfaYJKbOHklPr9_BqBpJRd8Bn57ZEUzAUqnI8Dn6d3fB5g?e=yZxRVZ) 
 
-* [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#insider-risk-managementcommunication-compliance)
+* [Insider Risk Management and Communication Compliance (IRCC) Webinars](https://microsoft.github.io/ComplianceCxE/webinars/#microsoft-purview-insider-risk-management-and-communication-compliance)
 
 * Upcoming - What’s new with Insider Risk and Communication Compliance | US/EMEA  | November 22, 2021  16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/52884)
 
@@ -56,3 +52,6 @@ We built this page to help you easily find all relevant content and resources re
 
 ## Learning Path
 * [Communication Compliance learning path](https://docs.microsoft.com/en-us/learn/modules/m365-compliance-insider-prepare-communication-compliance/)
+
+## Ninja Training
+* [Microsoft Purview Communication Compliance Ninja Training](https://aka.ms/communicationcomplianceninja)
