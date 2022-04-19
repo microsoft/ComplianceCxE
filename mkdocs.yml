@@ -1,4 +1,4 @@
-site_name: Compliance Customer Experience Engineering (CxE)
+site_name: Microsoft Purview Customer Experience Engineering (CxE)
 site_url: https://microsoft.github.io/ComplianceCxE
 repo_url: https://github.com/microsoft/ComplianceCxE
 repo_name: microsoft/ComplianceCxE
@@ -6,40 +6,35 @@ edit_uri: https://github.com/microsoft/ComplianceCxE/edit/public/docs
 nav:
     - OSS: 
       - One Stop Shop: index.md
-      - Advanced Audit: resources/audit.md
-      - Advanced eDiscovery (AeD): resources/aed.md
-      - Communication Compliance (CC): resources/cc.md
-      - Compliance Manager (CM): resources/cm.md
-      - Data Loss Prevention (DLP): resources/dlp.md
-      - Insider Risk Management (IR): resources/ir.md
-      - Microsoft Information Governance (MIG/RM): resources/mig.md
-      - Microsoft Information Protection (MIP): resources/mip.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+      - Audit: resources/audit.md
+      - eDiscovery: resources/aed.md
+      - Communication Compliance: resources/cc.md
+      - Compliance Manager: resources/cm.md
+      - Data Loss Prevention: resources/dlp.md
+      - Insider Risk Management: resources/ir.md
+      - Data Lifecycle Management/Records Management: resources/mig.md
+      - Information Protection: resources/mip.md
     - Notes from the Field:
       - Getting Started: notes.md
-      #- Information Governance:
-        #- Deep Dive into the Exchange Recoverable Items Folder: notes/mig/ri.md
-      - MIP/DLP:
-        - Best Practices for Creating MIP and DLP Policies: notes/mip-dlp/mip-dlp-best-practices.md
+      - IP/DLP:
+        - Best Practices for Creating IP and DLP Policies: notes/mip-dlp/mip-dlp-best-practices.md
         - Preventing external sharing with DLP policy: notes/mip-dlp/DLP-policy-externalshare.md
         - Blocking upload of files with higher sensitivity label to SPO: notes/mip-dlp/SPOblockUpload.md
-        - Microsoft 365 Compliance Audit Log Activities via the O365 Management API: notes/mip-dlp/audit-log-management-activity-api.md
+        - Microsoft Purview Audit (Premium) Log Activities via the O365 Management API: notes/mip-dlp/audit-log-management-activity-api.md
       - Compliance in K-12 Education: notes/ComplianceEdu.md #must remain mixed-case as file is named that way and existing links will break if changed
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - DAGs:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
       - Microsoft Compliance Configuration Analyzer (MCCA): dag/mcca.md
-      - Migration Assistant for Microsoft DLP: dag/mamd.md
-      - Advanced eDiscovery and Advanced Audit: dag/aed-audit.md
+      - Migration Assistant for Microsoft Purview DLP: dag/mamd.md
+      - eDiscovery and Audit: dag/aed-audit.md
       - Insider Risk Management and Communication Compliance: dag/ir-cc.md
-      - Microsoft Information Governance and Records Management: dag/mig-rm.md
-      - Microsoft Information Protection and Data Loss Prevention: dag/mip-dlp.md
+      - Data Lifecycle Management and Records Management: dag/mig-rm.md
+      - Information Protection and Data Loss Prevention: dag/mip-dlp.md
       - Resources: dag/dag-resources.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Playbooks:
       - Getting Started: playbooks.md
-      - Microsoft Information Protection:
+      - Information Protection:
         - 🆕 Service Side Auto-labeling: playbooks/service-side-auto-labeling.md
       - Data Loss Prevention:
         - Teams DLP Playbook: playbooks/teamsdlp.md
@@ -49,7 +44,7 @@ nav:
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Jump Starts:
       - Getting Started: jumpstarts.md
-      - Microsoft Information Governance:
+      - Data Lifecycle Management:
         - Auto-apply Labels:
           - Using KQL Exchange Workload: jumpstarts/kql-exchange.md
         - Adaptive Policy Scopes: 
@@ -57,11 +52,9 @@ nav:
     - End User Training:
       - Sensitivity Labels: enduser/sensitivity.md
       - Retention Labels: enduser/retention.md
-      - Microsoft DLP User Education & User Experience: enduser/dlpenduser.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
+      - DLP User Education & User Experience: enduser/dlpenduser.md
     - Webinars:
       - Webinars: webinars.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Scenario Based Demos:
       - About the Series: sbd.md
       - E01 - Series Intro: sbd/sbd-ep1.md
@@ -76,13 +69,8 @@ nav:
       - E10 - MEM/Intune and MIP: sbd/sbd-ep10.md
       - E11 - MEM/Intune and MIP Part 2: sbd/sbd-ep11.md
       - 🆕 SBD in PDF  - Summary of SBD in pdf: sbd/SBDinPDF.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Previews:
-      - Join Private Previews: previews.md
-      - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
-    #- Active Surveys:
-      #- Surveys: surveys.md
-      #- 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS     
+      - Join Private Previews: previews.md    
 theme:
   name: material
   language: en
