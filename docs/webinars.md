@@ -56,7 +56,9 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|May 4, 2022| Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP)| [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4XUcD) | Deck - FAQ |
+
+|May 18, 2022| Configuring Exact Data Matching for Accurate Data Classification | [Video](https://mipc.eventbuilder.com/event/61024) | [Deck](../resources/files/Configuring EDM for accurate classification.pdf)  |
+|May 4, 2022| Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP)| [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4XUcD) | [Deck](../resources/files/Deck - Tips and tricks for reducing FPs.pdf) - [FAQ](../resources/files/Webinar FAQ - Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP.docx)|
 |December 14, 2021| Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)| [Video](https://mipc.eventbuilder.com/event/54251) | [Deck](../resources/files/MS Privacy webinar.pdf)  |
 |November 15, 2021| What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
 |September 28, 2021| New features to help secure external collaboration using Microsoft Information Protection| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration v2.pdf) - [FAQ](../resources/files/FAQ New features external collab using MIP.pdf) |
