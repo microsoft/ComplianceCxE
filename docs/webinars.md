@@ -6,8 +6,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
-***MIP*: Protecting your sensitive assets in a hybrid environment using Microsoft Compliance products** |  |  
-| US/EMEA  | March 8, 2022    16:00 GMT / 8:00 PST | [Register](https://mipc.eventbuilder.com/event/53704) |
+
 
 ## Past Webinars
 
@@ -57,6 +56,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
+|May 4, 2022| Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP)| [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4XUcD) | Deck - FAQ |
 |December 14, 2021| Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)| [Video](https://mipc.eventbuilder.com/event/54251) | [Deck](../resources/files/MS Privacy webinar.pdf)  |
 |November 15, 2021| What’s new with Microsoft Information Protection + Data Loss Prevention| [Video](https://mipc.eventbuilder.com/event/52888) | Coming Soon |
 |September 28, 2021| New features to help secure external collaboration using Microsoft Information Protection| [Video](https://mipc.eventbuilder.com/event/49793) | [Deck](../resources/files/MIP External Collaboration v2.pdf) - [FAQ](../resources/files/FAQ New features external collab using MIP.pdf) |
