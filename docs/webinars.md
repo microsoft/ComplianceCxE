@@ -6,6 +6,8 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 | Webinar Topic | Date & Time | Registration Link | 
 | --- | --- | --- |
+***MIP*: Configuring Exact Data Matching (EDM) for Accurate Classification, Part 2: Advanced Scenarios**| June 1, 2022    16:00 GMT / 8:00 PST | [Register](https://teams.microsoft.com/registration/v4j5cvGGr0GRqy180BHbRw,k-u8fp_gCkiBrJN97fzM5Q,OztpggOCq0-oaf8y4ZkvoQ,bcHr78t7xkyy41rubnOzZg,8fk6LhlioU-nd1mRo9kBXQ,3yUU7RCGXUGbf_rZxvuoYw?mode=read&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47) |
+
 
 
 ## Past Webinars
