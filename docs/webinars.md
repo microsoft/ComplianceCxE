@@ -58,7 +58,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
 |June 8, 2022| Configuring Exact Data Matching (EDM) for Accurate Classification, Part 3: Addressing Challenging Requirements | Coming Soon |Coming Soon|
-|June 1, 2022| Configuring Exact Data Matching for Accurate Data Classification, Part 2: Advanced Scenarios | [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4Yebs)|Coming Soon|
+|June 1, 2022| Configuring Exact Data Matching for Accurate Data Classification, Part 2: Advanced Scenarios | [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4Yebs)|[Deck](../resources/files/Deploying EDM for accurate classification Part 2.pptx)|
 |May 18, 2022| Configuring Exact Data Matching for Accurate Data Classification | [Video](https://mipc.eventbuilder.com/event/61024)|[Deck](../resources/files/Configuring EDM for accurate classification.pdf) - [FAQ](../resources/files/Webinar FAQ - Configuring EDM for accurate data classification.docx)|
 |May 4, 2022| Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP)| [Video](https://www.microsoft.com/en-us/videoplayer/embed/RE4XUcD) | [Deck](../resources/files/Deck - Tips and tricks for reducing FPs.pdf) - [FAQ](../resources/files/Webinar FAQ - Tips and tricks for maximizing accuracy and reducing false positive detections in MIP and DLP.docx)|
 |December 14, 2021| Be a Privacy Hero: Start your organization's M365 Privacy journey today before the end of this webinar! (Trial available to E1/E3/E5)| [Video](https://mipc.eventbuilder.com/event/54251) | [Deck](../resources/files/MS Privacy webinar.pdf)  |
