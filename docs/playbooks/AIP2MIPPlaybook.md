@@ -74,18 +74,6 @@ It's important to highlight that since the AIP Unified Labeling client and built
 
 In order to be able to utilize built-in sensitivity labels in Office, your users must be assigned licenses that cover this functionality. The list of licenses that support this functionality is available [here](https://aka.ms/AIP2MIPPrereqs).
 
-Internal note: the link above is a placeholder, the document must be created and contain the following information:
-
-_\*\*\* beginning of content to move into linked document \*\*\*_
-
-All users must be licensed to use using Microsoft Purview Information Protection:
-
-- Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium (Information Protection for Office 365 – Standard should be enabled if E5 license only has been assigned)
-- Office 365 E5/A5/G5/E3/A3/G3/F1/F3 or Business Premium
-- Enterprise Mobility + Security E3/E5 or AIP Plan 1 pr Plan 2 (need additional specific Office license?)
-
-_\*\*\* end of content to move into linked document \*\*\*_
-
 One additional requirement for performing the migration is that all devices where sensitivity labels will be applied or protected documents will be consumed must have a network connection with internet access so they can communicate with Microsoft 365 services. Permanently disconnected devices without the ability to access Office 365 services can't use built-in sensitivity labels. If you have environments with such devices, work with your Microsoft account team to discuss options to integrate these devices into your information protection environment.
 
 ## Step 2: verify Office application versions and upgrade apps if required.
