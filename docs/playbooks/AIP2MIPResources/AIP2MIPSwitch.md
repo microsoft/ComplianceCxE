@@ -46,3 +46,5 @@ The following table summarizes how these settings interact to define the label U
 | |
 | Yes​ | Not set​ | 0 or not set​ | AIP​ | Built-in labeling​ | New behavior. In the absence of overriding settings, versions of Office earlier than 16.0.15716 load the AIP client if installed, and later versions ignore the plugin and show the built-in labeling UI. ​ |
 | Yes​ | Null​ | 1​ | AIP​ | AIP​ | New behavior. AIP client is forced to load in newer Office clients by configuring the AIPException setting. ​ |
+
+For additional information on disabling the AIP Plugin for Office and enabling built-in sensitivity labeling see [How to disable the AIP add-in to use built-in labeling for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps) in the public documentation for sensitivity labels.
