@@ -14,47 +14,145 @@ Pre-requisites:
 
 If you are currently using the OutlookWarnUntrustedCollaborationLabel advanced setting in the AIP client to warn users of possible oversharing without blocking them, you need to implement a DLP policy for Exchange that has a rule with the following settings:
 
-| **Configuration** | **Value** |
-| --- | --- |
-| Conditions | ** Content Contains ** / ** Sensitivity Label ** / The labels that need to be controlled |
-|| ** And Not ** / ** Recipient domain is ** / list of internal domains allowed in the oversharing popup configuration |
-|| As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **| 
-| --- | --- |
-| Actions | No actions |
-| User notification | Enabled |
-|  | Notify users in Office 365 service with a policy tip |
-|  | Customize the text of the policy tip to match the text in your oversharing popup configuration |
-| User overrides | Disabled |
+<table>
+<thead>
+<tr>
+<th><strong>Configuration</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Conditions&nbsp;&nbsp;</td>
+<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+</tr>
+<tr>
+<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
+</tr>
+<tr>
+<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>No actions defined</td>
+</tr>
+<tr>
+<td rowspan="3">User notification&nbsp;&nbsp;</td>
+<td>Notification enabled</td>
+</tr>
+<tr>
+<td>Notify users in Office 365 service with a policy tip</td>
+</tr>
+<tr>
+<td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
+</tr>
+<tr>
+<td>User overrides</td>
+<td>Disabled</td>
+</tr>
+</tbody>
+</table>
 
 	
 ## Implementing rules that require justification from users when they try to share sensitive content externally via email
 
 If you are currently using the OutlookJustifyUntrustedCollaborationLabel advanced setting in the AIP client to block sharing of sensitive content until they justify the action you need to implement a DLP policy for Exchange that has a rule with the following settings:
 
-| **Configuration** | **Value** |
-| --- | --- |
-| Conditions | ** Content Contains ** / ** Sensitivity Label ** / The labels that need to be controlled |
-|| ** And Not ** / ** Recipient domain is ** / list of internal domains allowed in the oversharing popup configuration |
-|| As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **| 
-| --- | --- |
-| Actions | Restrict access or encrypt the content in Microsoft 365 locations / Block everyone |
-| User notification | Enabled |
-|  | Notify users in Office 365 service with a policy tip |
-|  | Customize the text of the policy tip to match the text in your oversharing popup configuration |
-| User overrides | Allow overrides from M365 services / Allow overrides / Require user to provide a business justification to override |
+<table>
+<thead>
+<tr>
+<th><strong>Configuration</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Conditions&nbsp;&nbsp;</td>
+<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+</tr>
+<tr>
+<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
+</tr>
+<tr>
+<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>
+<table>
+<tbody>
+<tr>
+<td>Restrict access or encrypt the content in Microsoft 365 locations / Block everyone</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td rowspan="3">User notification&nbsp;&nbsp;</td>
+<td>Notification enabled</td>
+</tr>
+<tr>
+<td>Notify users in Office 365 service with a policy tip</td>
+</tr>
+<tr>
+<td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
+</tr>
+<tr>
+<td>User overrides</td>
+<td>Allow overrides from M365 services / Allow overrides / Require user to provide a business justification to override</td>
+</tr>
+</tbody>
+</table>
 
 ## Implementing rules that block users from sending sensitive content externally via email
 
 If you are currently using the OutlookBlockUntrustedCollaborationLabel advanced setting in the AIP client to block sharing of sensitive content without allowing users to override the action you need to implement a DLP policy for Exchange that has a rule with the following settings:
 
-| **Configuration** | **Value** |
-| --- | --- |
-| Conditions | ** Content Contains ** / ** Sensitivity Label ** / The labels that need to be controlled |
-|| ** And Not ** / ** Recipient domain is ** / list of internal domains allowed in the oversharing popup configuration |
-|| As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **| 
-| --- | --- |
-| Actions | Restrict access or encrypt the content in Microsoft 365 locations / Block everyone |
-| User notification | Enabled |
-|  | Notify users in Office 365 service with a policy tip |
-|  | Customize the text of the policy tip to match the text in your oversharing popup configuration |
-| User overrides | Disabled |
+<table>
+<thead>
+<tr>
+<th><strong>Configuration</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Conditions&nbsp;&nbsp;</td>
+<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+</tr>
+<tr>
+<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
+</tr>
+<tr>
+<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>
+<table>
+<tbody>
+<tr>
+<td>Restrict access or encrypt the content in Microsoft 365 locations / Block everyone</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td rowspan="3">User notification&nbsp;&nbsp;</td>
+<td>Notification enabled</td>
+</tr>
+<tr>
+<td>Notify users in Office 365 service with a policy tip</td>
+</tr>
+<tr>
+<td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
+</tr>
+<tr>
+<td>User overrides</td>
+<td>Not enabled</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
