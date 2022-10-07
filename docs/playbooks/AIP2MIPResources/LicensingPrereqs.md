@@ -1,4 +1,4 @@
-Licensing requirements for using built-in sensitivity labeling in Office
+# Licensing requirements for using built-in sensitivity labeling in Office
 
 All users must be licensed to use using Microsoft Purview Information Protection:
 
