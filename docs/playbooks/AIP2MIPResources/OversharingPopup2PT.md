@@ -17,20 +17,18 @@ If you are currently using the OutlookWarnUntrustedCollaborationLabel advanced s
 <table>
 <thead>
 <tr>
-<th><strong>Configuration</strong></th>
+<th><strong>Rule setting</strong></th>
 <th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td rowspan="3">Conditions&nbsp;&nbsp;</td>
-<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+<td rowspan="2">Conditions</td>
+<td><p><strong>Content Contains</strong> / <strong>Sensitivity Label</strong>: list of labels that need to be controlled by the policy</p>
+	<p><strong>AND NOT</strong></p><p><strong>Recipient domain is</strong>: list of internal domains allowed in the oversharing popup configuration</p></td>
 </tr>
 <tr>
-<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
-</tr>
-<tr>
-<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
+<td>As an alternative to the later condition you can use <strong>Content is shared from Microsoft 365 / With people outside my organization<strong></td>
 </tr>
 <tr>
 <td>Actions</td>
@@ -41,14 +39,14 @@ If you are currently using the OutlookWarnUntrustedCollaborationLabel advanced s
 <td>Notification enabled</td>
 </tr>
 <tr>
-<td>Notify users in Office 365 service with a policy tip</td>
+	<td><strong>Notify users in Office 365 service with a policy tip</strong></td>
 </tr>
 <tr>
 <td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
 </tr>
 <tr>
 <td>User overrides</td>
-<td>Disabled</td>
+<td>Not enabled</td>
 </tr>
 </tbody>
 </table>
@@ -61,39 +59,28 @@ If you are currently using the OutlookJustifyUntrustedCollaborationLabel advance
 <table>
 <thead>
 <tr>
-<th><strong>Configuration</strong></th>
+<th><strong>Rule setting</strong></th>
 <th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td rowspan="3">Conditions&nbsp;&nbsp;</td>
-<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+<td rowspan="2">Conditions</td>
+<td><p><strong>Content Contains</strong> / <strong>Sensitivity Label</strong>: list of labels that need to be controlled by the policy</p>
+	<p><strong>AND NOT</strong></p><p><strong>Recipient domain is</strong>: list of internal domains allowed in the oversharing popup configuration</p></td>
 </tr>
 <tr>
-<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
-</tr>
-<tr>
-<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
-</tr>
+<td>As an alternative to the later condition you can use <strong>Content is shared from Microsoft 365 / With people outside my organization<strong></td></tr>
 <tr>
 <td>Actions</td>
-<td>
-<table>
-<tbody>
-<tr>
-<td>Restrict access or encrypt the content in Microsoft 365 locations / Block everyone</td>
-</tr>
-</tbody>
-</table>
-</td>
+<td><strong>Restrict access or encrypt the content in Microsoft 365 locations</strong> / <strong>Block everyone</strong></td>
 </tr>
 <tr>
 <td rowspan="3">User notification&nbsp;&nbsp;</td>
 <td>Notification enabled</td>
 </tr>
 <tr>
-<td>Notify users in Office 365 service with a policy tip</td>
+	<td><strong>Notify users in Office 365 service with a policy tip</strong></td>
 </tr>
 <tr>
 <td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
@@ -112,39 +99,29 @@ If you are currently using the OutlookBlockUntrustedCollaborationLabel advanced 
 <table>
 <thead>
 <tr>
-<th><strong>Configuration</strong></th>
+<th><strong>Rule setting</strong></th>
 <th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td rowspan="3">Conditions&nbsp;&nbsp;</td>
-<td>** Content Contains ** / ** Sensitivity Label **: The list of labels that need to be controlled by the policy</td>
+<td rowspan="2">Conditions</td>
+<td><p><strong>Content Contains</strong> / <strong>Sensitivity Label</strong>: list of labels that need to be controlled by the policy</p>
+	<p><strong>AND NOT</strong></p><p><strong>Recipient domain is</strong>: list of internal domains allowed in the oversharing popup configuration</p></td>
 </tr>
 <tr>
-<td>** AND NOT ** / ** Recipient domain is **: list of internal domains allowed in the oversharing popup configuration</td>
-</tr>
-<tr>
-<td>As an alternative to the later condition you can use ** Content is shared from Microsoft 365 / With people outside my organization **</td>
+<td>As an alternative to the later condition you can use <strong>Content is shared from Microsoft 365 / With people outside my organization<strong></td>
 </tr>
 <tr>
 <td>Actions</td>
-<td>
-<table>
-<tbody>
-<tr>
-<td>Restrict access or encrypt the content in Microsoft 365 locations / Block everyone</td>
-</tr>
-</tbody>
-</table>
-</td>
+<td><strong>Restrict access or encrypt the content in Microsoft 365 locations</strong> / <strong>Block everyone</strong></td>
 </tr>
 <tr>
-<td rowspan="3">User notification&nbsp;&nbsp;</td>
+<td rowspan="3">User notification</td>
 <td>Notification enabled</td>
 </tr>
 <tr>
-<td>Notify users in Office 365 service with a policy tip</td>
+	<td><strong>Notify users in Office 365 service with a policy tip</strong></td>
 </tr>
 <tr>
 <td>Customize the text of the policy tip to match the text in your oversharing popup configuration</td>
@@ -155,4 +132,3 @@ If you are currently using the OutlookBlockUntrustedCollaborationLabel advanced 
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
