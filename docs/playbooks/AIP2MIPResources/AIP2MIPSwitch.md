@@ -6,13 +6,12 @@ There are three configuration elements that control whether the AIP plugin is lo
 
 - The add-in load controls in the Windows registry for the plugin corresponding to each Office application. The Office add-in load controls are documented [here](https://learn.microsoft.com/en-US/microsoft-365/troubleshoot/group-policy/office-add-in-not-loaded). The identifiers for each of the addins to use as per the guidance in the document linked above are as follows:
 
-| **Application** | **ProgID** |
-| --- | --- |
-| Word | MSIP.WordAddin |
-| --- | --- |
-| Excel | MSIP.ExcelAddin |
-| PowerPoint | MSIP.PowerPointAddin |
-| Outlook | MSIP.OutlookAddin |
+ | **Application** | **ProgID** |
+ | --- | --- |
+ | Word | MSIP.WordAddin |
+ | Excel | MSIP.ExcelAddin |
+ | PowerPoint | MSIP.PowerPointAddin |
+ | Outlook | MSIP.OutlookAddin |
 
 - The value "UseOfficeForLabelling" (dword) under the [HKEY\_CURRENT\_USER\Software\Microsoft\Office\16.0\Common\Security\Labels] registry key in computers running Office for Windows versions lower than 16.0.15716.0. Setting this value to 1 disables the plugin in all Office applications and enables built-in labeling. Setting it to 0 disables built-in labeling and loads the plugin if installed. This setting has no effect on versions of Office 16.0.15716.0 or greater.
 - The value "AIPException" (dword) under [HKEY\_CURRENT\_USER\Software\Microsoft\Office\16.0\Common\Security\Labels] registry key in computers running Office for Windows versions 16.0.15716.0 or greater. Setting this value to 1 forces load of the AIP plugin while disabling the built-in labeling UI if the plugin is installed. Setting it to 0 or not configuring it disables built-in labeling and loads the plugin if installed. This setting has no effect on versions of Office lower than 16.0.15716.0.
@@ -23,7 +22,6 @@ The following table summarizes how these settings interact to define the label U
 
 | **AIP plugin installed​** | **Settings​ (as described above)** | **Label Experience​** | **Explanation of behavior** |
 | --- | --- | --- | --- |
-|
  | UseOfficeforLabelling​ | AIPException​ | Office Version \< ​16.0.15716 | Office version 16.0.15716 or greater​ |
  |
 | No, or add-in loading is disabled | 0​ | Any | No labeling UI​ | No labeling UI​ | No change in behavior. No sensitivity labeling experience |
