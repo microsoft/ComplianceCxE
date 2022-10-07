@@ -34,7 +34,7 @@ For a detailed comparison of the capabilities of built-in labeling in Office app
 
 It's important to highlight that while the AIP plugin is only available for Office on Windows desktops, users of labeling with devices running Mac OS, iOS or Android, as well as users of the Office web apps in Microsoft 365 have been using built-in labeling, much in the same way users of Windows will be doing once you disable the AIP plugin in their devices. This consistency in capabilities and user experience can make deployment, updates and support easier for all those involved.
 
-For these reasons, Microsoft recently announced the upcoming deprecation of the AIP Unified Labeling Office plugin functionality that is replaced with built-in labeling in Office apps. As of this writing Microsoft plans to support the use of the AIP plugin for Office apps until March 2024 (see [the official deprecation announcement](https://aka.ms/AIP2MIPDeprecation)for details), and by this date organizations will need to have transitioned to using built-in labels in Office applications to ensure continued supportability. Nevertheless, Microsoft recommends migrating to built-in labeling as early as possible to leverage the benefits described above as well as new enhancements that will be introduced in the coming months.
+For these reasons, Microsoft recently announced the upcoming deprecation of the AIP Unified Labeling Office plugin functionality that is replaced with built-in labeling in Office apps. As of this writing Microsoft plans to support the use of the AIP plugin for Office apps until March 2024 (see [the official deprecation announcement](https://aka.ms/AIP2MIPDeprecation) for details), and by this date organizations will need to have transitioned to using built-in labels in Office applications to ensure continued supportability. Nevertheless, Microsoft recommends migrating to built-in labeling as early as possible to leverage the benefits described above as well as new enhancements that will be introduced in the coming months.
 
 One other important clarification is that the deprecation announcement discussed above and the migration process discussed in this document is relevant only to the AIP plugin for Office, which is one component of the AIP client for Windows. Other components shipped as part of this client are not affected by this process and can continue to be used as today until changes relevant to these components are announced. These components include the Classify and Protect functionality in Windows Explorer, the AIP viewer for opening protected non-Office files on Windows devices, the AIP Scanner and the AIP PowerShell modules.
 
@@ -60,7 +60,11 @@ Migrating from the AIP plugin to built-in labeling in Office does not change the
 
 # Migrating from the AIP plugin to built-in labeling in Office apps
 
-This section describes the process to migrate from the AIP plugin to built-in sensitivity labels in Office in detail. The process involves the following steps.
+This section describes the process to migrate from the AIP plugin to built-in sensitivity labels in Office in detail. 
+
+## Overview of the migration steps
+
+The migration process involves the following steps.
 
 1. Confirm configuration pre-requisites are met, including assignment of licenses, software products and compatible labeling configurations.
 2. Verify that you are running Office applications that include all the equivalent functionality to the AIP features on which you currently rely. If this is not the case, plan for the update to be performed once you have upgraded to the required versions. If desired, you can test sensitivity labeling in the preview versions of the Office applications to validate that they meet your requirements and to prepare for the implementation in advance of the availability of the functionality in question in the Office channel your organization uses.
@@ -69,6 +73,8 @@ This section describes the process to migrate from the AIP plugin to built-in se
 5. Roll out the required settings to disable the AIP plugin and start using built-in labeling in Office applications.
 
 It's important to highlight that since the AIP Unified Labeling client and built-in sensitivity labels in Office use the same labeling and protection syntax, labels and labeled documents produced with either tool are fully compatible with each other. This means that the steps for the migration can be performed gradually, and that if there are any concerns or challenges in updating some devices, you can have an extended period of coexistence between users of built-in labeling in Office for Windows and users of the AIP plugin, just like it is now the case for users of built-in labeling in Mac, iOS and Android devices.
+
+Below you will find detailed guidance for executing the steps described above.
 
 ## Step 1: Verification of pre-requisites
 
@@ -116,7 +122,7 @@ Delivering proactive communications to users to prepare them for these changes i
 
 Other changes such as improvements in autolabeling behaviors, the sensitive content review pane, inheritance of labels to exported PDF documents, are generally self-explanatory and should not require proactive user communications.
 
-If it is desired to provide information to help desk or support teams for them to better be able to support users during the migration, it is recommended that they review the [sensitivity labels in Office apps documentation for administrators](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide) and the [end-user documentation for sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide). It may also be useful to share with support personnel information about [known issues and limitations in sensitivity labeling](https://support.microsoft.com/en-us/office/known-issues-with-sensitivity-labels-in-office-b169d687-2bbd-4e21-a440-7da1b2743edc).
+If it is desired to provide information to help desk or support teams for them to better be able to support users during the migration, it is recommended that they review the [sensitivity labels in Office apps documentation for administrators](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide) and the [end-user documentation for sensitivity labels](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9). It may also be useful to share with support personnel information about [known issues and limitations in sensitivity labeling](https://support.microsoft.com/en-us/office/known-issues-with-sensitivity-labels-in-office-b169d687-2bbd-4e21-a440-7da1b2743edc).
 
 ## Step 5: disable the AIP plugin
 
@@ -124,6 +130,6 @@ Disabling the AIP plugin is the final step in the process to migrate to built-in
 
 If you have deployed configurations to force loading the AIP plugin in Office, or to disable built-in labeling, you must remove those settings as part of this process.
 
-The process to enable sensitivity labels in Office and disable the AIP plugin is documented [here](https://aka.ms/AIP2MIPswitch).
+Follow [this process](https://aka.ms/AIP2MIPswitch) to enable sensitivity labels in Office and disable the AIP plugin.
 
 #
