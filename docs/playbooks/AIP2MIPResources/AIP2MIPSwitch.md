@@ -15,7 +15,7 @@ There are three configuration elements that control whether the AIP plugin is lo
  | PowerPoint | MSIP.PowerPointAddin |
  | Outlook | MSIP.OutlookAddin |
 
-Please note that all the settings above can be deployed via GPO.
+All the settings listed above can be deployed via GPO or via any other method that can push a registry change to Windows devices.
 
 The following table summarizes how these settings interact to define the label UI that's active in Office applications when the AIP plugin is installed.
 
