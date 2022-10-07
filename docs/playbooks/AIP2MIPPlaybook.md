@@ -82,33 +82,13 @@ You must also verify that all users are running the minimum required versions of
 
 To validate your readiness, check capabilities of the currently supported versions of the Office 365 apps which are documented [here](https://aka.ms/AIPMIPVersionParity).
 
-Internal note: content that's equivalent to the following must be included in a separate page that will be linked above.
-
-\*\*\* beginning of content to move into linked document \*\*\*
-
-Internal note: content that's equivalent to the following must be included in a separate page that will be linked above.
-
-| Requirement | Deployment wave |
-| --- | --- |
-| Users are trained to use the horizontal label bar under the ribbon: ![](RackMultipart20221006-1-hjmzp7_html_a4e7ff6f457522b.png) | Monthly Enterprise Channel: MEC Wave 1 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 1 (min version # TBD)Current Channel: CC Wave 1 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-| You have AIP policies with email oversharing popup notifications in place: ![](RackMultipart20221006-1-hjmzp7_html_144e481e141d3282.png) | Monthly Enterprise Channel: MEC Wave 2 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 2 (min version # TBD)Current Channel: CC Wave 2 (min version # TBD)Preview channel for evaluation: (min version # TBD)
-Note that this functionality also requires the configuration of DLP rules with Policy tips, see section below for details. |
-| Inheritance of label from attachments to email is configured. | Monthly Enterprise Channel: MEC Wave 1 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 1 (min version # TBD)Current Channel: CC Wave 1 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-| Your users rely on granting rights to whole domains when sharing with external parties: ![](RackMultipart20221006-1-hjmzp7_html_4987e12df25a944f.png) | Monthly Enterprise Channel: MEC Wave 1 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 1 (min version # TBD)Current Channel: CC Wave 1 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-| You have labels with Double Key Encryption settings defined. | Monthly Enterprise Channel: MEC Wave 2 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 2 (min version # TBD)Current Channel: CC Wave 2 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-| You have labels with s/MIME settings defined. | Monthly Enterprise Channel: MEC Wave 2 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 2 (min version # TBD)Current Channel: CC Wave 2 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-| Users rely on the end user revocation of documents | Monthly Enterprise Channel: MEC Wave 2 (min version # TBD) Semi Annual Enterprise Channel: SAEC Wave 2 (min version # TBD)Current Channel: CC Wave 2 (min version # TBD)Preview channel for evaluation: (min version # TBD) |
-|
- |
- |
-
-\*\*\* end of content to move to linked document \*\*\*
-
 Please note that Office 2013, Office 2016, Office 2019 and Office 2021 do not support built-in labeling and are thus not covered in this guide. If you have these versions of Office deployed in your environment, work with your account team to discuss how you can address the licensing and software deployment requirements to migrate users to the Microsoft 365 apps.
 
 You can verify the versions of Office that you are currently running in your environment by using the [Inventory section](https://config.office.com/officeSettings/inventory) of the Microsoft 365 apps admin portal described above.
 
-## Step 3: implement required configuration changes if needed
+If you want to confirm that your environment meets all the pre-requisites for migrating from the AIP add-in to built-in sensitivity labels in Office you can run the [self-assessment online tool](https://forms.office.com/r/UEKLAr61Yq). 
+
+## Step 3: implement required configuration changes if using specific advanced AIP configurations
 
 Some advanced configurations in the AIP client are not implemented directly by sensitivity labeling in Office apps but equivalent results can be achieved using other capabilities in the Microsoft 365 solution.
 
@@ -116,7 +96,7 @@ The following table lists specific AIP Advanced settings functionality and provi
 
 | **Functionality** | **Solution** | **Implementation guide** | **Requirements** |
 | --- | --- | --- | --- |
-| [AIP popupsto control oversharing](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) | Use of advanced Policy tips with DLP rules for Exchange. | [https://aka.ms/OversharingPU2PolicyTips](https://aka.ms/OversharingPU2PolicyTips) | Microsoft 365 E5/A5/G5, Compliance E5/A5/G5 or Information Protection E5/A5/G5 licenses. |
+| [AIP popups to control oversharing](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) | Use of advanced Policy tips with DLP rules for Exchange. | [https://aka.ms/OversharingPU2PolicyTips](https://aka.ms/OversharingPU2PolicyTips) | Microsoft 365 E5/A5/G5, Compliance E5/A5/G5 or Information Protection E5/A5/G5 licenses. |
 | [_LabelbyCustomProperties_ and _CustomPropertiesbyLabel_ advanced settings](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) for migrating labels from a third party solution or for coexistence with a third party labeling solution. | Solution TBD | [https://aka.ms/LabelbyCustomProperty2MIP](https://aka.ms/LabelbyCustomProperty2MIP) | TBD |
 | Remove redundant visual markings in labeled documents using the [_WordShapeNameToRemove_, _RemoveExternalContentMarkingInApp_, _ExternalContentMarkingToRemove_, _PowerPointShapeNameToRemove_](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)[_RemoveExternalMarkingFromCustomLayouts_, _RemoveExternalContentMarkingInAllSlides_ or _PowerPointRemoveAllShapesByShapeName_](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) advanced settings in AIP. | Solution TBD | [https://aka.ms/RemoveMarkings2MIP](https://aka.ms/RemoveMarkings2MIP) | TND |
 
@@ -145,58 +125,5 @@ Disabling the AIP plugin is the final step in the process to migrate to built-in
 If you have deployed configurations to force loading the AIP plugin in Office, or to disable built-in labeling, you must remove those settings as part of this process.
 
 The process to enable sensitivity labels in Office and disable the AIP plugin is documented [here](https://aka.ms/AIP2MIPswitch).
-
-Note: the content in the link above must be updated to include the following information.
-
-\*\*\* beginning of content to move to linked document \*\*\*
-
-In versions of Office for Windows earlier than 16.0.15716.0, the AIP plugin will be loaded if installed unless special configurations are deployed to change this behavior. Starting with Office version 16.0.15716.0, in the absence of special configurations, Office will use the built-in sensitivity labeling UI even if the AIP plugin is installed. If the AIP client is not installed on a device, the built-in sensitivity labeling UI will be shown unless explicitly disabled by policy.
-
-There are three configuration elements that control whether the AIP plugin is loaded and shown in Office applications if installed, or the built-in sensitivity label user interface is displayed and used. These three configurations are:
-
-- The add-in load controls in the Windows registry for the plugin corresponding to each Office application. The Office add-in load controls are documented [here](https://learn.microsoft.com/en-US/microsoft-365/troubleshoot/group-policy/office-add-in-not-loaded). The identifiers for each of the addins to use as per the guidance in the document linked above are as follows:
-
-| **Application** | **ProgID** |
-| --- | --- |
-| Word | MSIP.WordAddin |
-| --- | --- |
-| Excel | MSIP.ExcelAddin |
-| PowerPoint | MSIP.PowerPointAddin |
-| Outlook | MSIP.OutlookAddin |
-
-- The value "UseOfficeForLabelling" (dword) under the [HKEY\_CURRENT\_USER\Software\Microsoft\Office\16.0\Common\Security\Labels] registry key in computers running Office for Windows versions lower than 16.0.15716.0. Setting this value to 1 disables the plugin in all Office applications and enables built-in labeling. Setting it to 0 disables built-in labeling and loads the plugin if installed. This setting has no effect on versions of Office 16.0.15716.0 or greater.
-- The value "AIPException" (dword) under [HKEY\_CURRENT\_USER\Software\Microsoft\Office\16.0\Common\Security\Labels] registry key in computers running Office for Windows versions 16.0.15716.0 or greater. Setting this value to 1 forces load of the AIP plugin while disabling the built-in labeling UI if the plugin is installed. Setting it to 0 or not configuring it disables built-in labeling and loads the plugin if installed. This setting has no effect on versions of Office lower than 16.0.15716.0.
-
-Please note that all the settings above can be deployed via GPO.
-
-The following table summarizes how these settings interact to define the label UI that's active in Office applications when the AIP plugin is installed.
-
-| **AIP plugin installed​** | **Settings​ (as described above)** | **Label Experience​** | **Explanation of behavior** |
-| --- | --- | --- | --- |
-|
- | UseOfficeforLabelling​ | AIPException​ | Office Version \< ​16.0.15716 | Office version 16.0.15716 or greater​ |
- |
-| No, or add-in loading is disabled | 0​ | Any | No labeling UI​ | No labeling UI​ | No change in behavior. No sensitivity labeling experience |
-| No, or add-in loading is disabled | 1​ | Any | Built-in labeling​ | Built-in labeling​ | No change in behavior. Built-in labeling is _explicitly_ enabled and behavior doesn't change. |
-| No, or add-in loading is disabled | Not set​ | Any | Built-in labeling​ | Built-in labeling​ | No change in behavior. Built-in labeling is _implicitly_ enabled in the absence of any setting or the AIP plugin. |
-|
-| |
-|
-| |
-| Yes​ | 0​ | 0 or not set​ | AIP​ | No labeling UI​ | New behavior. User loses all labeling experience after update to version 16.0.15716. To keep AIP UI you must configure the AIPException setting.​ |
-| Yes​ | 0​ | 1​ | AIP​ | AIP​ | New behavior. AIP is _explicitly_ configured to load by the AIPException setting.​ |
-|
-| |
-|
-| |
-| Yes​ | 1​ | Any | Built-in labeling​ | Built-in labeling​ | No change in behavior. Built-in labels are ​enabled in all versions of Office. |
-|
-| |
-|
-| |
-| Yes​ | Not set​ | 0 or not set​ | AIP​ | Built-in labeling​ | New behavior. In the absence of overriding settings, versions of Office earlier than 16.0.15716 load the AIP client if installed, and later versions ignore the plugin and show the built-in labeling UI. ​ |
-| Yes​ | Null​ | 1​ | AIP​ | AIP​ | New behavior. AIP client is forced to load in newer Office clients by configuring the AIPException setting. ​ |
-
-\*\*\* end of content to move to linked document \*\*\*
 
 #
