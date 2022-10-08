@@ -1,16 +1,18 @@
 # Compare AIP Add-In with Built-In Labeling in M365 Apps
-Many of the labeling features supported by the AIP add-in are now supported by built-in labeling. The table below is an adaptation of [Feature parity for built-in labeling and the AIP add-in for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) and offers additional information to help you prepare your transition from the AIP add-in. 
+Many of the labeling features supported by the AIP add-in are now supported by built-in labeling. The table below is an adaptation of [Feature parity for built-in labeling and the AIP add-in for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) and offers additional information to help you prepare your transition from the AIP add-in. 
 
-> For a more detailed list of capabilities, minimum versions that might be needed, and configuration information, see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
+> 🗒️ Note: For a more detailed list of capabilities, minimum versions that might be needed, and configuration information, see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
 
 #### Legend
-- ✅ Supported: General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview)
-- ⭐ In Preview: Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now
-- 🔷 In Development: Development is under way. Keep an eye out for product roadmap updates.
-- 🟨 In Planning: In consideration for an upcoming development cycle, but not yet commited on product roadmap.
-- 🟣 AIP PowerShell: Not Planned for built-in labeling; functionality available in PowerShell or other AIP client tools.
-- ⚫ Not Planned: Items that are not in consideration for built-in labeling. Submit a support ticket for a Design Change Request (DCR) if these are important for your organization.
-- ⬛ Not Needed: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling
+The following categories help you identify the support status for Add-in functionality available in built-in labeling.
+
+- `✅ Supported`: General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview)
+- `⭐ In Preview`: Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now
+- `🔷 In Development`: Development is under way. Keep an eye out for product roadmap updates.
+- `🟨 In Planning`: In consideration for an upcoming development cycle, but not yet commited on product roadmap.
+- `🟣 AIP PowerShell`: Not Planned for built-in labeling; functionality available in PowerShell or other AIP client tools.
+- `⚫ Not Planned`: Items that are not in consideration for built-in labeling. Submit a support ticket for a Design Change Request (DCR) if these are important for your organization.
+- `⬛ Not Needed`: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling
 
 ## Azure Information Protection Add-in Scenarios
 Review the list of scenarios and their availability in built-in labeling below. Where available, references to additional resources are provided.
@@ -28,6 +30,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Support for labeling using Office perpetual | ⚫ Not Planned | [➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps) |
 | `______________________________________________________` | `_______________` | `___________________________` |
 
+> ⚠️ Note: M365 Apps for Enterprise require a network connection with internet access so they can communicate with Microsoft 365 services. Permanently disconnected devices without the ability to access Microsoft 365 services can't use built-in sensitivity labels. If you have environments with such devices, work with your Microsoft account team to discuss options to integrate these devices into your information protection environment.
 
 ### Labeling User Experience
 
