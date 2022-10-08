@@ -130,6 +130,6 @@ Disabling the AIP plugin is the final step in the process to migrate to built-in
 
 If you have deployed configurations to force loading the AIP plugin in Office, or to disable built-in labeling, you must remove those settings as part of this process.
 
-Follow [this process](https://aka.ms/AIP2MIPswitch) to enable sensitivity labels in Office and disable the AIP plugin..
+Follow [this process](https://aka.ms/AIP2MIPswitch) to enable sensitivity labels in Office and disable the AIP plugin.
 
-#
+[Compare Clients](AIP2MIP/CompareAIP2MIP.md)
