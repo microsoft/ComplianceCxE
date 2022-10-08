@@ -12,10 +12,10 @@ Many of the labeling features supported by the AIP add-in are now supported by b
 - ⚫ Not Planned: Items that are not in consideration for built-in labeling. Submit a support ticket for a Design Change Request (DCR) if these are important for your organization.
 - ⬛ Not Needed: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling
 
-# Azure Information Protection Add-in Scenarios
+## Azure Information Protection Add-in Scenarios
 Review the list of scenarios and their availability in built-in labeling below. Where available, references to additional resources are provided.
 
-## Labeling Environment
+### Labeling Environment
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -29,7 +29,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `______________________________________________________` | `_______________` | `___________________________` |
 
 
-## Labeling User Experience
+### Labeling User Experience
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -39,7 +39,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Label Colors | ⭐ In Preview | [📅 Microsoft 365 Roadmap 93217](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=93217) |
 | `______________________________________________________` | `_______________` | `___________________________` |
 
-## Labeling Enforcement
+### Labeling Enforcement
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -51,7 +51,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `______________________________________________________` | `_______________` | `___________________________` |
 
 
-## Labeling Automation
+### Labeling Automation
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -63,7 +63,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `______________________________________________________` | `_______________` | `___________________________` |
 
 
-## Encryption as an outcome for labeling
+### Encryption as an outcome for labeling
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -77,7 +77,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Document Revocation for End-Users | 🟨 In Planning | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/revoke-access-user#revoke-access-from-microsoft-office-apps) |
 | `______________________________________________________` | `_______________` | `___________________________` |
 
-## Collaboration with labeled content
+### Collaboration with labeled content
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -85,7 +85,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Block/warn/justify before sending emails | 🔷 In Development | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) |
 | `______________________________________________________` | `_______________` | `___________________________` |
 
-## Content Marking
+### Content Marking
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -94,7 +94,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Per app visual marking | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) |
 | `______________________________________________________` | `_______________` | `___________________________` |
 
-## Reporting and Auditing
+### Reporting and Auditing
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -104,7 +104,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `______________________________________________________` | `_______________` | `___________________________` |
 
 
-## Integrations with other labeling solutions
+### Integrations with other labeling solutions
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -112,9 +112,9 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Remove external markings | 🟣 AIP PowerShell | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) |
 | `______________________________________________________` | `_______________` | `_____________________________` |
 
-# Azure Information Protection Add-In Advanced Settings
+## Azure Information Protection Add-In Advanced Settings
 
-## Label Advanced Settings
+### Label Advanced Settings
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
@@ -127,7 +127,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `______________________________________________________` | `_______________` | `___________________________` |
 
 
-## Label Policy Advanced Settings
+### Label Policy Advanced Settings
 
 | AIP Add-in capability |Built-in labeling | Resources |
 |:-----|:-----|:-----|
