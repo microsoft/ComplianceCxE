@@ -26,7 +26,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Labeling for legacy Office files in Microsoft Office 97-2003 format (e.g. doc) | 🟣 AIP PowerShell | [➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)  |
 | Labeling for non-Office files from Office apps (e.g. csv)| 🟣 AIP PowerShell | [➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)  |
 | Support for labeling using Office perpetual | ⚫ Not Planned | [➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 ## Labeling User Experience
@@ -37,7 +37,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Multilanguage label names and descriptions | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels) |
 | Sensitivity bar | ⭐ In Preview | [📅 Microsoft 365 Roadmap 88517](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=88517)<br>[📣 Office Insiders Blog](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows) <br>[👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-bar)<br>[🧑‍💻 End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) |
 | Label Colors | ⭐ In Preview | [📅 Microsoft 365 Roadmap 93217](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=93217) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 ## Labeling Enforcement
 
@@ -48,7 +48,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Mandatory labeling:<br>- Separate setting for email | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#outlook-specific-options-for-default-label-and-mandatory-labeling) |
 | Downgrade Justification | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do)<br>[🧑‍💻 End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) |
 | Mandatory labeling:<br>- Postpone enforcement until save | 🟨 In Planning | [➡️ AIP Add-in Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 ## Labeling Automation
@@ -60,7 +60,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Automatic or recommended labeling:<br>- Label files and emails based on detecting sensitive information types | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically?view=o365-worldwide) |
 | Automatic or recommended labeling:<br>- Label emails from the highest sensitivity of their attachment | 🔷 In Development | [➡️ AIP Add-in Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) |
 | Default Labeling:<br>- Apply default sublabel instead of parent | 🟨 In Planning | [➡️ AIP Add-in Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-default-sublabel-for-a-parent-label) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 ## Encryption as an outcome for labeling
@@ -75,7 +75,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Double Key Encryption | 🟨 In Planning | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/microsoft-365/compliance/double-key-encryption-overview?view=o365-worldwide#can-i-use-double-key-encryption-with-microsoft-office-built-in-sensitivity-labeling) |
 | Document Tracking & Revocation for Compliance Admins | 🟨 In Planning | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/track-and-revoke-admin) |
 | Document Revocation for End-Users | 🟨 In Planning | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/revoke-access-user#revoke-access-from-microsoft-office-apps) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 ## Collaboration with labeled content
 
@@ -83,7 +83,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 |:-----|:-----|:-----|
 | Multi-user editing of encrypted files | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-coauthoring) |
 | Block/warn/justify before sending emails | 🔷 In Development | [➡️ AIP Add-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 ## Content Marking
 
@@ -92,7 +92,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Headers, footers, watermark | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-sensitivity-labels-can-do) |
 | Dynamic markings | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables) |
 | Per app visual marking | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 ## Reporting and Auditing
 
@@ -101,7 +101,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Labeling actions (e.g. FileSensitivityLabelApplied) | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) |
 | Policy matches  | ✅ Supported | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) |
 | Protection properties (e.g. ProtectionOwner, ProtectionType) | 🔷 In Development | [📅 Microsoft 365 Roadmap 98135](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 ## Integrations with other labeling solutions
@@ -124,7 +124,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `DefaultSubLabelId`         | 🟨 In Planning | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-default-sublabel-for-a-parent-label) |
 | `labelByCustomProperties`   | 🟣 AIP PowerShell | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | `customPropertiesByLabel`  | 🟣 AIP PowerShell | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#apply-a-custom-property-when-a-label-is-applied) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 ## Label Policy Advanced Settings
@@ -164,7 +164,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | `EnableLabelByMailHeader`                                       | ⚫ Not Planned | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | `EnableLabelBySharePointProperties`                             | ⚫ Not Planned | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | `EnableOutlookDistributionListExpansion`                        | ⚫ Not Planned | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
-| `______________________________________________________` | `_______________` | `_____________________________` |
+| `______________________________________________________` | `_______________` | `___________________________` |
 
 
 [^1]: `HideBarByDefault` is not needed with built-in labeling because the sensitivity bar is always visible without being obtrusive to end-users.
