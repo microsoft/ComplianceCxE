@@ -1,4 +1,4 @@
-# Auditing `⚠️ Parially Support` 
+# Auditing `⚠️ Partially Support` 
 
 Audting enables admins to review labeling activities in [Activity Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-activity-explorer) or [Content Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer).
 
