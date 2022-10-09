@@ -1,10 +1,6 @@
-# Sensitivity Menu
+# Sensitivity Menu `✅ Supported`
 
 The sensitivity menu is the primary method for users to apply labels that are assigned to them. It can be found in Home tab of the Ribbon in Word, Excel, PowerPoint, and Outlook.
-
-| Availability | IT Migration | IW Migration | Resources |
-| :---- | :----: | :---: | :---- |
-| `✅ Supported` | `🟢🔘🔘` | `🟢🔘🔘` | [🧑‍💻 End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) |
 
 ## Product Capabilities
 The table below lists the main characteristics of the sensitivity menu and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
