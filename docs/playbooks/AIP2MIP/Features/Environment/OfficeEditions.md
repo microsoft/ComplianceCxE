@@ -1,6 +1,6 @@
-# Labeling environments that support labeling `⚠️ Partial`
+# Office editions that support labeling `⚠️ Partial`
 
-xxxx
+Built-in sensitivity labels are [only available with M365 Apps for Enterprise](/docs/playbooks/AIP2MIP//AIP2MIPStep2.md). 
 
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
@@ -13,8 +13,4 @@ The table below lists the main characteristics of this feature and its compariso
 
 
 ## Learn More
-Use the references below to configure settings that affect xxx
-- xxx
- 
- Use these references to learn more about the end-user experience
-- xxx
+- Learn more about how to deploy versions of Office that support built-in labeling in the [Playbook's Step 2](/docs/playbooks/AIP2MIP//AIP2MIPStep2.md)
