@@ -1,6 +1,6 @@
 # File Types Supported for Labeling or Encryption `⚠️ Partial`
 
-xxxx
+Built-In sensitivity labels can only be applied to modern Office files or PDF documents.
 
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
@@ -12,11 +12,13 @@ The table below lists the main characteristics of this feature and its compariso
 | 3 | **Non-Office Files: PDF**             | `🚫 Not Supported` |  `🚫 Not Supported` | `✅ Supported` PDFs created from modern Office files retain the label, markings, and encryption |
 | 4 | **Non-Office Files: Other (e.g. csv)** | `✅ Supported` Admins provide a HEX color value in PowerShell |  `🚫 Not Supported` | `🚫 Not Supported` |
 
-
+## Migration Guidance
+For the use cases that aren't supported, review the following guidance for next steps:
+- File types that aren't supported with built-in labeling can still be classified and protected using the other AIP clients, such as Scanner, PowerShell, or Classify and Protect.
 
 ## Learn More
-Use the references below to configure settings that affect xxx
-- xxx
- 
- Use these references to learn more about the end-user experience
-- xxx
+- [File Types Supported with Built-In Labeling](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)
+- [File Types Supported with AIP Client](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-file-types)
+- [Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#pdf-support)
+- [Office Insiders Blog](https://insider.office.com/en-us/blog/apply-sensitivity-labels-to-pdfs-created-with-office-apps)
+- [End-User Support](https://support.microsoft.com/en-gb/topic/create-protected-pdfs-from-office-files-aba7e367-e482-49e7-b746-a385e48d01e4)
