@@ -38,7 +38,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | AIP Add-in capability | Built-in labeling | Change | Resources |
 |:-----|:-----|:-----|:-----|
 | 🖥️ **Labeling Environment** | | | | 
-| Admin can disable labeling | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🔘🔘🔘` | [👮 Compliance admin support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows)|
+| Choose a labeling client for Office | `✅ Supported` | `IT: 🔲🔲🟥`<br>`IW: 🔲🔲🟥` | 📖 [**Migration Guide**](Features/Environment/ConfigureLabelingClient.md)<br>[👮 Compliance admin support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows)|
 | Labeling for modern Office files in Open XML format (e.g. docx) | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🟢🔘🔘` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported) |
 | View and apply sensitivity labels in government cloud | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🟢🔘🔘` | |
 | Admin can scope labels independently for files and emails | `🔷 In Development` | `IT: 🔲🔲🟥`<br>`IW: 🟩🔲🔲` | [📅 Microsoft 365 Roadmap 99939](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939) |
@@ -88,12 +88,12 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | 📊 **Reporting and Analytics** | | | | 
 | Labeling actions (e.g. FileSensitivityLabelApplied) | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🔘🔘🔘` | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) |
 | Policy matches  | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🔘🔘🔘` | [👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) |
-| Protection properties (e.g. ProtectionOwner, ProtectionType) | `🔷 In Development` | `IT: 🟩🔲🔲`<br>`IW: 🔲🔲🔲` | [📅 Microsoft 365 Roadmap 98135](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135) |
+| Protection properties (e.g. ProtectionOwner, ProtectionType) | `🔷 In Development` | `IT: 🟩🔲🔲`<br>`IW: 🔲🔲🔲` | 📖 [**Migration Guide**](Features/Audit/Auditing.md)<br>[📅 Microsoft 365 Roadmap 98135](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135) |
 | | | |
 | 🔀 **Migrate from alternative labeling clients** | | | | 
 | Label by custom properties | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | Remove external markings | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) |
-| ~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~~ |
+| ~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
 
 
 ## Azure Information Protection Add-In Advanced Settings
