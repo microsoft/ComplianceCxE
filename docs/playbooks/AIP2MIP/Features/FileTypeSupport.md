@@ -13,16 +13,6 @@ The table below lists the main characteristics of this feature and its compariso
 | 4 | **Non-Office Files: Other (e.g. csv)** | `✅ Supported` Admins provide a HEX color value in PowerShell |  `🚫 Not Supported` | `🚫 Not Supported` |
 
 
-## Product Screenshots
-
-### AIP Add-in
-xxx
-
-### Built-In (Current)
-xxx
-
-### Built-In (Coming Soon)
-xxx
 
 ## Learn More
 Use the references below to configure settings that affect xxx
