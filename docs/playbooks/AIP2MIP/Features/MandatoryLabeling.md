@@ -1,4 +1,4 @@
-# Default Labeling ` XXXX`
+# Mandatory Labeling ` XXXX`
 xxxx
 
 ## Product Capabilities
