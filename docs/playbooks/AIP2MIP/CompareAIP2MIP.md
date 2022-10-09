@@ -9,18 +9,21 @@ To help you plan your migration, the following 3-level "traffic light" describes
 > Note: For features still in development or planning, we'll estimate the degree of change (represented in squares instead of circles) but can be subject to change before general availability.
 
 ##### For Compliance Admins (IT)
+
    - `🟢⚪⚪`: No change to label or policy configuration. No action required.
    - `⚪🟡⚪`: Minor changes to labels or policy using existing configuration methods. Plan for targeted testing.
    - `⚪⚪🔴`: Requires significant changes to configuration. Plan for extensive review and testing.
    - `⚪⚪🚫`: Requires using an alternative labeing client to complete the same scenario.
 
 ##### For End-Users (IW)
+
    - `🟢⚪⚪`: No change or minimal change to the user experience. No action required.
    - `⚪🟡⚪`: Functionally equivalent but with some UI changes that users need to adapt to. May require updates to screenshots. Some in-product notifications (aka teaching popups) provided to educate users.
    - `⚪⚪🔴`: Major changes to user experience requiring updated documentation, training, and comms.
 
 #### Feature Availability
 The following categories help you identify the support status for Add-in functionality available in built-in labeling.
+
 - `✅ Supported`: General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview)
 - `⭐ In Preview`: Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now
 - `🔷 In Development`: Development is under way. Keep an eye out for product roadmap updates. General availability **3-6 months** time horizon.
