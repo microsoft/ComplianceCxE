@@ -90,7 +90,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | 🔀 **Migrate from alternative labeling clients** | | | | 
 | Label by custom properties | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | Remove external markings | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) |
-| ~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
+| ~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
 
 
 ## Azure Information Protection Add-In Advanced Settings
