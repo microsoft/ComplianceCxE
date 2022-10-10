@@ -1,6 +1,7 @@
 # Step 5: Disable AIP Add-In and enable built-in sensitivity labels
-![Step5](https://user-images.githubusercontent.com/43501191/194729743-e4877328-ef82-4836-be38-ba6e36dc489f.png)
 
+| ![image](https://user-images.githubusercontent.com/43501191/194918269-c93db69f-b2c8-4c8d-b8e7-594b42835b89.png)<br> [Get Started](GetStarted.md)| ![image](https://user-images.githubusercontent.com/43501191/194918799-365edddb-b0bc-4bdf-85d0-606820d09b01.png)<br>[Step 1: Assign Licenses to M365 Apps for Enterprise](AIP2MIPStep1.md) | ![image](https://user-images.githubusercontent.com/43501191/194919001-565bbd8e-0c9d-42c4-9692-c639ee3b6ead.png)<br>[Step 2: Deploy M365 Apps for Enterprise](AIP2MIPStep2.md) | ![image](https://user-images.githubusercontent.com/43501191/194916965-30d791f5-b0e1-4627-b405-fed76e811db0.png)<br>[Step 3: Evaluate Information Protection Readiness](AIP2MIPStep3.md) | ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png)<br>[Step 4: Prepare Organization for Change](AIP2MIPStep4.md) | ![image](https://user-images.githubusercontent.com/43501191/194919890-732967cb-5bd9-415d-8228-89cd3f872fab.png)<br>Step 5: Switch to Built-In labeling | 
+| :--: | :--: | :--: | :--: | :--: | :--: |
 
 ## Overview
 Lorem ipsum
