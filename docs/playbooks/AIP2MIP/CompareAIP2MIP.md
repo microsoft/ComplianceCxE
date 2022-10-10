@@ -3,48 +3,43 @@ Many of the labeling features supported by the AIP add-in are now supported by b
 
 > 🗒️ Note: For a more detailed list of capabilities, minimum versions that might be needed, and configuration information, see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
 
-#### Change Management Insights
-To help you plan your migration, the following 3-level "traffic light" describes degrees of change that compliance IT admins and end-users/information workers can expect. 
-
-> Note: For features still in development or planning, we'll estimate the degree of change (represented in squares instead of circles) but can be subject to change before general availability.
-
-##### For Compliance Admins (IT)
-
-   - `🟢⚪⚪`: No change to label or policy configuration. No action required.
-   - `⚪🟡⚪`: Minor changes to labels or policy using existing configuration methods. Plan for targeted testing.
-   - `⚪⚪🔴`: Requires significant changes to configuration. Plan for extensive review and testing.
-   - `⚪⚪🚫`: Requires using an alternative labeing client to complete the same scenario.
-
-##### For End-Users (IW)
-
-   - `🟢⚪⚪`: No change or minimal change to the user experience. No action required.
-   - `⚪🟡⚪`: Functionally equivalent but with some UI changes that users need to adapt to. May require updates to screenshots. Some in-product notifications (aka teaching popups) provided to educate users.
-   - `⚪⚪🔴`: Major changes to user experience requiring updated documentation, training, and comms.
-
-#### Feature Availability
+### Feature Availability
 The following categories help you identify the support status for Add-in functionality available in built-in labeling.
 
 - `✅ Supported`: General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview)
 - `⭐ In Preview`: Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now
 - `🔷 In Development`: Development is under way. Keep an eye out for product roadmap updates. General availability **3-6 months** time horizon.
 - `🟨 In Planning`: In consideration for an upcoming development cycle, but not yet commited on product roadmap. General availability **6-12 months** time horizon.
-- `🟣 AIP Clients`: Not Planned for built-in labeling; functionality available in PowerShell or other AIP client tools.
 - `⚫ Not Planned`: Items that are not in consideration for built-in labeling. Submit a Microsoft support ticket for a Design Change Request (DCR) if these are important for your organization.
 - `🟢 Not Needed`: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling
+
+### Change Management Insights
+To help you plan your migration, the following "traffic light" ranks degrees of change that compliance IT admins and end-users/information workers can expect when transitioning from AIP Add-In (Current) to Built-In (Current), to Built-In (Coming Soon).
+
+- `🟢⚪⚪`: Fully Supported. Minor differences may exist, but does not require configuration changes or proactive end-user education.
+- `⚪🟡⚪`: Supported with minor differences. No configuration changes required, but may need updates to training, support docs, or end-user comms. Targeted testing recommended.
+- `⚪⚪🔴`: Supported, but requires changes to policy configuration and/or broad testing.
+- `⚪⚪⭕`: Supported with AIP Scanner, PowerShell, Classify & Protect
+- `⚪⚪🚫`: Not Supported.
+
+The migration guides available for most features provides additional details about the changes to expect and how to prepare.
+
+
+-----
 
 ## Azure Information Protection Add-in Scenarios
 Review the list of scenarios and their availability in built-in labeling below. Where available, references to additional resources are provided.
 
-| AIP Add-in capability | Built-in labeling | Change | Resources |
+| AIP Add-in capability | Built-in labeling | Evolution | Resources |
 |:-----|:-----|:-----|:-----|
 | 🖥️ **Labeling Environment** | | | | 
-| Choose a labeling client for Office | `✅ Supported` | `IT: 🔲🔲🟥`<br>`IW: 🔲🔲🟥` | 📖 [**Migration Guide**](Features/Environment/ConfigureLabelingClient.md)<br>[👮 Compliance admin support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows)|
-| Labeling for modern Office files in Open XML format (e.g. docx) | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🟢🔘🔘` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported) |
-| View and apply sensitivity labels in government cloud | `✅ Supported` | `IT: 🟢🔘🔘`<br>`IW: 🟢🔘🔘` | |
-| Admin can scope labels independently for files and emails | `🔷 In Development` | `IT: 🔲🔲🟥`<br>`IW: 🟩🔲🔲` | [📅 Microsoft 365 Roadmap 99939](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939) |
-| Labeling for legacy Office files in Microsoft Office 97-2003 format (e.g. doc) | 🟣 AIP Clients | `IT: 🔘🔘🚫`<br>`IW: 🔘🔘🚫` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)  |
-| Labeling for non-Office files from Office apps (e.g. csv)| 🟣 AIP Clients | `IT: 🔘🔘🚫`<br>`IW: 🔘🔘🚫` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-file-types)  |
-| Support for labeling using Office perpetual | `⚫ Not Planned` | `IT: 🔘🔘🚫`<br>`IW: 🔘🔘🚫` | 📖 [**Migration Guide**](Features/Environment/OfficeEditions.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps) |
+| Choose a labeling client for Office | `✅ Supported` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: 🟢⚪⚪`<br>`Built-In vSOON: 🟢⚪⚪` | 📖 [**Migration Guide**](Features/Environment/ConfigureLabelingClient.md)<br>[👮 Compliance admin support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows)|
+| Labeling for modern Office files in Open XML format (e.g. docx) | `✅ Supported` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: 🟢⚪⚪`<br>`Built-In vSOON: 🟢⚪⚪` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[👮 Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported) |
+| View and apply sensitivity labels in government cloud | `✅ Supported` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: 🟢⚪⚪`<br>`Built-In vSOON: ⚪⚪🔴` | |
+| Admin can scope labels independently for files and emails | `🔷 In Development` | `Add-In v2.14.9: ⚪⚪🚫`<br>`Built-In v1910: ⚪⚪🚫`<br>`Built-In vSOON: 🟢⚪⚪` | [📅 Microsoft 365 Roadmap 99939](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939) |
+| Labeling for legacy Office files in Microsoft Office 97-2003 format (e.g. doc) | `⚫ Not Planned` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: ⚪⚪⭕`<br>`Built-In vSOON: ⚪⚪⭕` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)  |
+| Labeling for non-Office files from Office apps (e.g. csv)| `⚫ Not Planned` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: ⚪⚪⭕`<br>`Built-In vSOON: ⚪⚪⭕` | 📖 [**Migration Guide**](Features/Environment/FileTypeSupport.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-file-types)  |
+| Support for labeling using Office perpetual | `⚫ Not Planned` | `Add-In v2.14.9: 🟢⚪⚪`<br>`Built-In v1910: ⚪⚪🚫`<br>`Built-In vSOON: ⚪⚪🚫` | 📖 [**Migration Guide**](Features/Environment/OfficeEditions.md)<br>[➡️ Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps) |
 | | | |
 | 🧑‍💻 **Labeling User Experience**  | | | | 
 | Sensitivity Status | `✅ Supported` |`IT: 🟢🔘🔘`<br>`IW: 🟢🔘🔘` | 📖 [**Migration Guide**](Features/UX/SensitivityStatus.md)<br>[🧑‍💻 End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) |
@@ -94,7 +89,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | 🔀 **Migrate from alternative labeling clients** | | | | 
 | Label by custom properties | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) |
 | Remove external markings | 🟣 AIP Clients | `IT: ⚪⚪🚫`<br>`IW: ⚪⚪🚫` | [➡️ AIP Addin-In Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) |
-| ~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
+| ~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
 
 
 ## Azure Information Protection Add-In Advanced Settings
