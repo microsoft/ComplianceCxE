@@ -1,5 +1,7 @@
 # Step 2: Deploy M365 Apps for Enterprise
-![Step2](https://user-images.githubusercontent.com/43501191/194729700-2ff6cba2-4e1a-4944-adc3-49cf9ed1c774.png)
+
+| ![image](https://user-images.githubusercontent.com/43501191/194918269-c93db69f-b2c8-4c8d-b8e7-594b42835b89.png)<br> [Get Started](GetStarted.md)| ![image](https://user-images.githubusercontent.com/43501191/194919568-ead6ef3a-1341-45e8-8c66-d3e9b71d1085.png)<br>[Step 1: Assign Licenses to M365 Apps for Enterprise](AIP2MIPStep1.md) | ![image](https://user-images.githubusercontent.com/43501191/194919540-f678a543-258c-45f3-840e-b89dbfe64d56.png)<br>Step 2: Deploy M365 Apps for Enterprise | ![image](https://user-images.githubusercontent.com/43501191/194916965-30d791f5-b0e1-4627-b405-fed76e811db0.png)<br>[Step 3: Evaluate Information Protection Readiness](AIP2MIPStep3.md) | ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png)<br>[Step 4: Prepare Organization for Change](AIP2MIPStep4.md) | ![image](https://user-images.githubusercontent.com/43501191/194917039-a7f0a7e9-521d-4b22-a05a-8ea9ec6be52a.png)<br>[Step 5: Switch to Built-In labeling](AIP2MIPStep5.md) | 
+| :--: | :--: | :--: | :--: | :--: | :--: |
 
 ## Overview
 The second step in preparing your migration to built-in labeling from AIP Add-in is to verify that all its users are configured and deployed with supported versions of Word, Excel, PowerPoint, and Outlook.
@@ -12,10 +14,10 @@ To use sensitivity labels that are built into Office desktop apps for Windows an
 ## Checklist
 If your users are fully deployed for M365 Apps for Enterprise, proceed to [step 3](AIP2MIPStep3.md). Otherwise, follow this checklist to plan your migration.
 
-- [ ] [Identify devices that are running the AIP Add-in](https://learn.microsoft.com/en-us/deployoffice/admincenter/inventory) and confirm they're all using M365 Apps
-- [ ] For users who are not using supported editions of Office, consult your Office deployment team to evaluate a migration strategy. 
-- [ ] [Leverage the Microsoft 365 FastTrack](https://learn.microsoft.com/en-us/fasttrack/introduction) resources to help you plan and manage your deployment.
-- [ ] [Review the minimum supported Office version](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-label-capabilities-in-word-excel-and-powerpoint) for sensitivity labeling capabilites you need.
+- [Identify devices that are running the AIP Add-in](https://learn.microsoft.com/en-us/deployoffice/admincenter/inventory) and confirm they're all using M365 Apps
+- For users who are not using supported editions of Office, consult your Office deployment team to evaluate a migration strategy. 
+- [Leverage the Microsoft 365 FastTrack](https://learn.microsoft.com/en-us/fasttrack/introduction) resources to help you plan and manage your deployment.
+- [Review the minimum supported Office version](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-label-capabilities-in-word-excel-and-powerpoint) for sensitivity labeling capabilites you need.
 
 ### Recommendations
 - To take full advantage of the latest sensitivity labeling capabilities in Office powered by Microsoft Purview, consider using [current or monthly release channels](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#comparison-of-the-update-channels-for-microsoft-365-apps)
