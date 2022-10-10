@@ -1,6 +1,7 @@
 # Step 3: Evaluate Information Protection Readiness
-![Step3](https://user-images.githubusercontent.com/43501191/194729755-6682d52b-ce93-4ff1-b58e-f27b2d37346b.png)
 
+| ![image](https://user-images.githubusercontent.com/43501191/194918269-c93db69f-b2c8-4c8d-b8e7-594b42835b89.png)<br> [Get Started](GetStarted.md)| ![image](https://user-images.githubusercontent.com/43501191/194918799-365edddb-b0bc-4bdf-85d0-606820d09b01.png)<br>[Step 1: Assign Licenses to M365 Apps for Enterprise](AIP2MIPStep1.md) | ![image](https://user-images.githubusercontent.com/43501191/194919001-565bbd8e-0c9d-42c4-9692-c639ee3b6ead.png)<br>[Step 2: Deploy M365 Apps for Enterprise](AIP2MIPStep2.md) | ![image](https://user-images.githubusercontent.com/43501191/194919760-6eeb480d-a98d-44b4-9010-6a1aa152f1ca.png)<br>Step 3: Evaluate Information Protection Readiness | ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png)<br>[Step 4: Prepare Organization for Change](AIP2MIPStep4.md) | ![image](https://user-images.githubusercontent.com/43501191/194917039-a7f0a7e9-521d-4b22-a05a-8ea9ec6be52a.png)<br>[Step 5: Switch to Built-In labeling](AIP2MIPStep5.md) | 
+| :--: | :--: | :--: | :--: | :--: | :--: |
 
 ## Overview
 The third step in preparing your migration is to evaluate the readiness of your information protection policies to transition to the built-in labeling solution in Office.
