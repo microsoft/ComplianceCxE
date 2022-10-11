@@ -1,8 +1,12 @@
-# Step 2: Deploy M365 Apps for Enterprise
+![image](https://user-images.githubusercontent.com/43501191/195112156-234a418b-a2ed-4f4a-a41a-700ec7617b4c.png)
 
-| ![image](https://user-images.githubusercontent.com/43501191/194918269-c93db69f-b2c8-4c8d-b8e7-594b42835b89.png)| ![image](https://user-images.githubusercontent.com/43501191/194919568-ead6ef3a-1341-45e8-8c66-d3e9b71d1085.png) | ![image](https://user-images.githubusercontent.com/43501191/194919540-f678a543-258c-45f3-840e-b89dbfe64d56.png)| ![image](https://user-images.githubusercontent.com/43501191/194916965-30d791f5-b0e1-4627-b405-fed76e811db0.png)| ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png)| ![image](https://user-images.githubusercontent.com/43501191/194917039-a7f0a7e9-521d-4b22-a05a-8ea9ec6be52a.png) | 
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| [Get Started](GetStarted.md) | [Step 1: Assign Licenses to M365 Apps for Enterprise](AIP2MIPStep1.md) | **Step 2: Deploy M365 Apps for Enterprise** | [Step 3: Evaluate Information Protection Readiness](AIP2MIPStep3.md) | [Step 4: Prepare Organization for Change](AIP2MIPStep4.md) | [Step 5: Switch to Built-In labeling](AIP2MIPStep5.md) |
+<h1 align="center">Step 2: Deploy M365 Apps for Enterprise</h1>
+
+<p align="center">
+<a href="GetStarted.md">Get Started</a> > <a href="AIP2MIPStep1.md">Step 1</a> > <b>Step 2</b>  > <a href="AIP2MIPStep3.md">Step 3</a>  > <a href="AIP2MIPStep4.md">Step 4</a> > <a href="AIP2MIPStep5.md">Step 5</a>
+</p>
+
+
 
 
 ## Overview
