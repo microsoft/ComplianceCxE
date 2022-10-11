@@ -38,14 +38,8 @@ While the AIP Unified Labeling client provides extensive and effective labeling 
 For a detailed comparison of the capabilities of built-in labeling in Office applications and those in the AIP plug-in, see [the public documentation for this topic](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide).
 
 
-[!WARNING]
-    This site supplements the official [Microsoft Purview documentation](https://docs.microsoft.com/microsoft-365/compliance/) and other information on the [docs.microsoft.com](https://docs.microsoft.com) site.
-    
-    
-    
-
 !!! note "Please note"
-    The deprecation announcement discussed above and the migration process discussed in this document is relevant only to the AIP add-in for Office, which is only one component of the AIP client for Windows. Other components shipped as part of this client are not affected by this migration and can continue to be used as today until changes relevant to these components are announced. These components include the Classify and Protect functionality in Windows Explorer for labeling Office and non-Office documents, the AIP viewer for opening protected non-Office files on Windows devices, the AIP Scanner for on-premises data and the AIP PowerShell module.
+    The deprecation announcement mentioned above and the migration process described in this document is relevant only to the AIP add-in for Office, which is one of several components of the AIP Unified Labeling client for Windows. Other components that ship as part of this client are not affected by this migration and can continue to be used as today until changes relevant to these components are announced. These components include the Classify and Protect functionality in Windows Explorer for labeling Office and non-Office documents, the AIP viewer for opening protected non-Office files on Windows devices, the AIP Scanner for on-premises data and the AIP PowerShell module.
 
 # What this migration involves
 
