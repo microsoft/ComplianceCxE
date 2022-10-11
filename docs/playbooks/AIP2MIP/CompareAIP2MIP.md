@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/43501191/195136914-9258327c-1237-4d47-8b9f-421d0e359f31.png)
+
+
 # Compare AIP Add-In with Built-In Labeling in M365 Apps
 Many of the labeling features supported by the AIP add-in are now supported by built-in labeling. The table below is an adaptation of [Feature parity for built-in labeling and the AIP add-in for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) and offers additional information to help you prepare your transition from the AIP add-in. 
 
