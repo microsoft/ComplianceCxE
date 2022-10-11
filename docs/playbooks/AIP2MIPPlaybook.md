@@ -30,8 +30,8 @@ This playbook provides a centralized resource to guide you through the prerequis
 - **Comparison Guide**: comprehensive roadmap and change-management guidelines each capability in the AIP add-in relative to its replacement in built-in labeling
 
 <p align="center">
-<a href="../AIP2MIP/GetStarted" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195162010-2ad4b47f-24d2-4a9d-a038-da0af10e7b24.png" alt="Migration Guide"/></a>&nbsp;&nbsp;
-<a href="../AIP2MIP/CompareAIP2MIP" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195162029-3266dc11-52b6-455f-86cb-ecb1fd22f0bc.png" alt="Comparison Guide"/></a></p>
+<a href="../AIP2MIP/GetStarted" ><img src="https://user-images.githubusercontent.com/43501191/195162010-2ad4b47f-24d2-4a9d-a038-da0af10e7b24.png" alt="Migration Guide"/></a>&nbsp;&nbsp;
+<a href="../AIP2MIP/CompareAIP2MIP" ><img src="https://user-images.githubusercontent.com/43501191/195162029-3266dc11-52b6-455f-86cb-ecb1fd22f0bc.png" alt="Comparison Guide"/></a></p>
 
 In most cases, the migration from AIP add-in to built-in labeling will be straightforward. The existing labels and policies are supported in built-in labeling with little-to-no extra effort once you’ve validated the functionality.
 
