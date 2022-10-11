@@ -10,11 +10,11 @@ This guide is structured into 5 steps that walk you through how to prepare.
 
 |  |  |
 | :--: |  :-- |
-| ![image](https://user-images.githubusercontent.com/43501191/194917711-3c41276a-e5ad-4f8e-9898-705fceee4a9c.png) | [**Step 1: Assign Licenses to M365 Apps for Enterprise**](AIP2MIPStep1.md) <br> This will walk you through the licensing differences when using the AIP Add-in with Office. |
-| ![image](https://user-images.githubusercontent.com/43501191/194919001-565bbd8e-0c9d-42c4-9692-c639ee3b6ead.png) | [**Step 2: Deploy M365 Apps for Enterprise**](AIP2MIPStep2.md) <br> This will walk you through the deployment requirements for M365 Apps that support built-in labeling. |
-| ![image](https://user-images.githubusercontent.com/43501191/194916965-30d791f5-b0e1-4627-b405-fed76e811db0.png) | [**Step 3: Evaluate Information Protection Readiness**](AIP2MIPStep3.md) <br> This will help you evaluate which AIP Add-in capabilities are available in built-in labeling and when to plan for your organization's migration. |
-| ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png) | [**Step 4: Prepare Organization for Change**](AIP2MIPStep4.md) <br> This will provide best practices and resources for managing change in your organization. |
-| ![image](https://user-images.githubusercontent.com/43501191/194917039-a7f0a7e9-521d-4b22-a05a-8ea9ec6be52a.png) | [**Step 5: Switch to Built-In labeling**](AIP2MIPStep5.md) <br> This will walk you through the final steps to disable the AIP Add-in and enable the built-in labeling experience.|
+| ![image](https://user-images.githubusercontent.com/43501191/195137301-503c202e-42a3-4b0d-9c92-b47815f6acef.png) | [**Step 1: Assign Licenses to M365 Apps for Enterprise**](AIP2MIPStep1.md) <br> This will walk you through the licensing differences when using the AIP Add-in with Office. |
+| ![image](https://user-images.githubusercontent.com/43501191/195137381-6e411aaf-935b-4a45-a684-b93b736f11d5.png) | [**Step 2: Deploy M365 Apps for Enterprise**](AIP2MIPStep2.md) <br> This will walk you through the deployment requirements for M365 Apps that support built-in labeling. |
+| ![image](https://user-images.githubusercontent.com/43501191/195137417-09a6f5c3-8735-436f-a804-129a853c63be.png) | [**Step 3: Evaluate Information Protection Readiness**](AIP2MIPStep3.md) <br> This will help you evaluate which AIP Add-in capabilities are available in built-in labeling and when to plan for your organization's migration. |
+| ![image](https://user-images.githubusercontent.com/43501191/195137434-bbc1a484-dae5-43c8-8b7e-4567d1530e21.png) | [**Step 4: Prepare Organization for Change**](AIP2MIPStep4.md) <br> This will provide best practices and resources for managing change in your organization. |
+| ![image](https://user-images.githubusercontent.com/43501191/195137451-ba59e661-1ef9-413b-a967-5c1db34dd696.png) | [**Step 5: Switch to Built-In labeling**](AIP2MIPStep5.md) <br> This will walk you through the final steps to disable the AIP Add-in and enable the built-in labeling experience.|
 
 
 <p align="center">
