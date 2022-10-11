@@ -29,7 +29,7 @@ If your users are fully deployed for M365 Apps for Enterprise, proceed to [step 
 - To take full advantage of the latest sensitivity labeling capabilities in Office powered by Microsoft Purview, consider using [current or monthly release channels](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#comparison-of-the-update-channels-for-microsoft-365-apps)
 - If you're deploying M365 Apps for the first time, but aren't yet ready to adopt the built-in labeling experience, [opt-out of built-in labeling](https://aka.ms/AIP2MIP/HowTo/OptOut). 
 
-> 💡 Tip: Check out [Office Deployment Insiders](https://www.youtube.com/c/OfficeDeploymentInsiders) YouTube channel for quick and easy tips to understand how to take manage your organization's deployment of M365 Apps.
+> 💡 Tip: Check out [Office Deployment Insiders](https://www.youtube.com/c/OfficeDeploymentInsiders) YouTube channel for quick and easy tips to understand how to  manage your organization's deployment of M365 Apps.
 
 ## Additional Resources
 - [M365 Admin Center's inventory of devices and add-ins](https://learn.microsoft.com/en-us/deployoffice/admincenter/inventory)
