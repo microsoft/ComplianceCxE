@@ -25,7 +25,7 @@ For customers currently using the AIP Add-in for Office, use the migration playb
 
 > 💡 Tip: You can continue using all other tools in the AIP client, such as the Scanner, PowerShell extensions, or Windows right-click extension Classify & Protect. These tools are not affected by disabling the add-in inside Office and continue to be the recommended tools for all your sensitivity labeling scenarios that aren’t available within the Office apps.
 
-## Addi-in to built-in migration playbook
+## Add-in to built-in migration playbook
 
 This playbook provides a centralized resource to guide you through the prerequisites, configuration, and deployment of the built-in sensitivity labels in Office. 
 
