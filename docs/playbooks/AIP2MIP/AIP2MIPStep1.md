@@ -1,14 +1,14 @@
-![image](https://user-images.githubusercontent.com/43501191/195112156-234a418b-a2ed-4f4a-a41a-700ec7617b4c.png)
+![image](https://user-images.githubusercontent.com/43501191/195136521-eda44bce-7ec6-4199-80b7-dfdad170bccd.png)
 
 <h1 align="center">Step 1: Assign Licenses for M365 Apps for Enterprise</h1>
 
 <p align="center">
-<a href="../AIP2MIP/GetStarted.md">Get Started</a> > <b>Step 1</b> > <a href="../AIP2MIP/AIP2MIPStep2.md">Step 2</a>  > <a href="../AIP2MIP/AIP2MIPStep3.md">Step 3</a>  > <a href="../AIP2MIP/AIP2MIPStep4.md">Step 4</a> > <a href="../AIP2MIP/AIP2MIPStep5.md">Step 5</a>
+<a href="../GetStarted">Get Started</a> > <b>Step 1</b> > <a href="../AIP2MIPStep2">Step 2</a>  > <a href="../AIP2MIPStep3">Step 3</a>  > <a href="../AIP2MIPStep4">Step 4</a> > <a href="../AIP2MIPStep5">Step 5</a>
 </p>
 
 
 ## Overview
-Built-In sensitivity labels require a [subscription for M365 Apps for Enterprise](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-applications-service-description). 
+Built-in labels require a [subscription edition of Office apps](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-applications-service-description). If you have standalone editions of Office, sometimes called "Office Perpetual", upgrade to Microsoft 365 Apps for Enterprise to benefit from the latest labeling capabilities.
 
 The first step in preparing your migration to built-in labeling from the AIP Add-in is to verify that all its users are appropriately licensed.
 
