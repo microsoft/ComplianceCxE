@@ -16,8 +16,6 @@ This guide is structured into 5 steps that walk you through how to prepare.
 | ![image](https://user-images.githubusercontent.com/43501191/195137434-bbc1a484-dae5-43c8-8b7e-4567d1530e21.png) | [**Step 4: Prepare Organization for Change**](AIP2MIPStep4.md) <br> This will provide best practices and resources for managing change in your organization. |
 | ![image](https://user-images.githubusercontent.com/43501191/195137451-ba59e661-1ef9-413b-a967-5c1db34dd696.png) | [**Step 5: Switch to Built-In labeling**](AIP2MIPStep5.md) <br> This will walk you through the final steps to disable the AIP Add-in and enable the built-in labeling experience.|
 
-
-<p align="center">
-<a href="AIP2MIPStep1.md" ><img src="https://user-images.githubusercontent.com/43501191/195101049-a43523c2-04b4-411a-b511-57ecb3a72484.png" alt="Get Started"/></a>
+Want to see where you fit into the migration process? Start with a self-evaluation that tailors the 5-step migration for your organization.
+<br><br>
 <a href="https://aka.ms/AIP2MIP/Guide/Evaluate" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195101782-871fda7c-d864-49d2-8f83-cd66d6cbffb0.png" alt="Self-Evaluation Guide"/></a>
-</p>
