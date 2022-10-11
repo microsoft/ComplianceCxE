@@ -10,26 +10,17 @@
 
 ## Overview
 
-While built-in sensitivity labels closely replicate the functionality implemented in the AIP plugin for Office, there are some specific differences in user interface and behavior which should be communicated to users in advance of the change so the chances of confusion are minimized. The main changes users will notice include:
+While built-in sensitivity labels closely replicate the functionality implemented in the AIP Add-in for Office, there are some specific differences in user interface and behavior which you should communicate to your users in advance of the change to minimize confusion and disruption. 
 
-- Movement of the Sensitivity button further to the right in the Office ribbon.
-- Movement of the (optionally displayed) label bar to the application's title bar and design change.
-- Availability of the sensitivity label option directly in the Save As dialog box.
-- Replacement of the Help and Feedback section of the label pull down with the Learn More customizable link.
-- Prompt to label documents upon creation or access rather than upon save action.
-- Changes in the experience when trying to share sensitive content with external users if the AIP Oversharing popup messages are in use in the organization.
-- Changes in the permissions picker when labels with user-defined permissions are applied.
-
-Delivering proactive communications to users to prepare them for these changes is usually beneficial, and a sample email with end-user awareness materials that can be used for this purpose can be found here. You may want to customize the materials with screen shots that show your own sensitivity labels, as well as remove sections about functionality you are not using in your environment.
-
-Other changes such as improvements in autolabeling behaviors, the sensitive content review pane, inheritance of labels to exported PDF documents, are generally self-explanatory and should not require proactive user communications.
-
-If it is desired to provide information to help desk or support teams for them to better be able to support users during the migration, it is recommended that they review the sensitivity labels in Office apps documentation for administrators and the end-user documentation for sensitivity labels. It may also be useful to share with support personnel information about known issues and limitations in sensitivity labeling.
+To help you evaluate the changes that you need to prepare for, the [Comparison Guide](CompareAIP2MIP.md) provides a simple ranking of each feature's change-management complexity and links to per-feature Change Guides with screenshots and reference material.
 
 
 ## Checklist
-Lorem ipsum
 
+- Use the [Comparison Guide](CompareAIP2MIP.md) to identify which changes your organization needs to prepare for.
+- Join a [preview program](PreviewAIP2MIP.md) to get prepare screenshots or language-specific user communication. Leverage support documentation for [admins](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide) or [end-users](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 
 ## Additional Resources
-Lorem ipsum
+
+- [Support documentation for Compliance Admins](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide)
+- [Support documentation for end-users](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
