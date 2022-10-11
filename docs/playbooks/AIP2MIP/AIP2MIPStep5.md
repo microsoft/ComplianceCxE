@@ -8,7 +8,9 @@
 </p>
 
 ## Overview
-Lorem ipsum
+Disabling the AIP plugin is the final step in the process to migrate to built-in sensitivity labels in Office. Once the AIP plugin is disabled, Office applications that support sensitivity labels will automatically show the labeling UI unless explicitly configured not to hide it.
+
+If you have deployed configurations to force loading the AIP plugin in Office, or to disable built-in labeling, you must remove those settings as part of this process.
 
 ## Checklist
 Lorem ipsum
