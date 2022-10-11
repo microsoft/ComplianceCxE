@@ -8,13 +8,18 @@
 </p>
 
 ## Overview
-Disabling the AIP plugin is the final step in the process to migrate to built-in sensitivity labels in Office. Once the AIP plugin is disabled, Office applications that support sensitivity labels will automatically show the labeling UI unless explicitly configured not to hide it.
+Once you're ready for the sensitivity labeling experience that's built into Office apps, it's time for the last step -- disable the AIP add-in and enable built-in labeling. 🎉
 
-If you have deployed configurations to force loading the AIP plugin in Office, or to disable built-in labeling, you must remove those settings as part of this process.
+> ⚠️ Warning: Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. This default will no longer be the case for newer versions of Office. If you previously set `UseOfficeForLabelling==0`, viewing and applying labels will be disabled even with the AIP Add-in. Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip).
+
 
 ## Checklist
-Lorem ipsum
-
+To enable built-in labeling in Office, you use either of the following options:
+- Remove configuration settings you've previously used, such as `UseOfficeForLabelling==0` or `AIPException==1`. This ensures users get the Microsoft-recommended default experience for sensitivity labels starting in versio v2211.
+- Set the Office configuration `UseOfficeForLabelling==true` and ensure `AIPException` is not set.
 
 ## Additional Resources
-Lorem ipsum
+
+- Use [Office configuration service](https://config.office.com/) to configure the settings for enabling/disabling AIP Add-in
+- [Support documentation for Admins](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip)
+- [How to use the new `AIPException` config for M365 Apps](AIPException.md)
