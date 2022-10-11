@@ -4,7 +4,7 @@
 <h1 align="center">Step 5: Disable AIP Add-In and enable built-in sensitivity labels</h1>
 
 <p align="center">
-<a href="GetStarted.md">Get Started</a> > <a href="AIP2MIPStep1.md">Step 1</a> > <a href="AIP2MIPStep2.md">Step 2</a>  > <a href="AIP2MIPStep3.md">Step 3</a>  > <a href="AIP2MIPStep4.md">Step 4</a> <b>Step 5</b>
+<a href="../AIP2MIP/GetStarted.md">Get Started</a> > <a href="../AIP2MIP/AIP2MIPStep1.md">Step 1</a> > <a href="../AIP2MIP/AIP2MIPStep2.md">Step 2</a>  > <a href="../AIP2MIP/AIP2MIPStep3.md">Step 3</a>  > <a href="../AIP2MIP/AIP2MIPStep4.md">Step 4</a> > <b>Step 5</b>
 </p>
 
 ## Overview
