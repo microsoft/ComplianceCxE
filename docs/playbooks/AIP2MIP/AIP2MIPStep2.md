@@ -3,7 +3,7 @@
 <h1 align="center">Step 2: Deploy M365 Apps for Enterprise</h1>
 
 <p align="center">
-<a href="GetStarted.md">Get Started</a> > <a href="AIP2MIPStep1.md">Step 1</a> > <b>Step 2</b>  > <a href="AIP2MIPStep3.md">Step 3</a>  > <a href="AIP2MIPStep4.md">Step 4</a> > <a href="AIP2MIPStep5.md">Step 5</a>
+<a href="../AIP2MIP/GetStarted.md">Get Started</a> > <a href="../AIP2MIP/AIP2MIPStep1.md">Step 1</a> > <b>Step 2</b>  > <a href="../AIP2MIP/AIP2MIPStep3.md">Step 3</a>  > <a href="../AIP2MIP/AIP2MIPStep4.md">Step 4</a> > <a href="../AIP2MIP/AIP2MIPStep5.md">Step 5</a>
 </p>
 
 
