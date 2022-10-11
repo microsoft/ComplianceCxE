@@ -1,8 +1,12 @@
-# Step 3: Evaluate Information Protection Readiness
 
-| ![image](https://user-images.githubusercontent.com/43501191/194918269-c93db69f-b2c8-4c8d-b8e7-594b42835b89.png)| ![image](https://user-images.githubusercontent.com/43501191/194918799-365edddb-b0bc-4bdf-85d0-606820d09b01.png) | ![image](https://user-images.githubusercontent.com/43501191/194919001-565bbd8e-0c9d-42c4-9692-c639ee3b6ead.png) | ![image](https://user-images.githubusercontent.com/43501191/194919760-6eeb480d-a98d-44b4-9010-6a1aa152f1ca.png)| ![image](https://user-images.githubusercontent.com/43501191/194916992-0829518e-00f5-4114-a17b-765b56dfa3c0.png)| ![image](https://user-images.githubusercontent.com/43501191/194917039-a7f0a7e9-521d-4b22-a05a-8ea9ec6be52a.png)| 
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| [Get Started](GetStarted.md) | [Step 1: Assign Licenses to M365 Apps for Enterprise](AIP2MIPStep1.md) | [Step 2: Deploy M365 Apps for Enterprise](AIP2MIPStep2.md) | **Step 3: Evaluate Information Protection Readiness** | [Step 4: Prepare Organization for Change](AIP2MIPStep4.md) | [Step 5: Switch to Built-In labeling](AIP2MIPStep5.md) |
+![image](https://user-images.githubusercontent.com/43501191/195111622-0d71be60-5b41-4034-960f-141046186321.png)
+
+<h1 align="center">Step 3: Evaluate Information Protection Readiness</h1>
+
+<p align="center">
+<a href="GetStarted.md">Get Started</a> > <a href="AIP2MIPStep1.md">Step 1</a> > <a href="AIP2MIPStep2.md">Step 2</a>  > <b>Step 3</b>  > <a href="AIP2MIPStep4.md">Step 4</a> > <a href="AIP2MIPStep5.md">Step 5</a>
+</p>
+
 
 
 ## Overview
