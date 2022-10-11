@@ -1,4 +1,4 @@
-# Migrating from AIP Unified Labeling to Microsoft Purview Information Protection and Office sensitivity labels
+# **Migrating from AIP Unified Labeling to Microsoft Purview Information Protection and Office sensitivity labels**
 
 # Introduction
 
