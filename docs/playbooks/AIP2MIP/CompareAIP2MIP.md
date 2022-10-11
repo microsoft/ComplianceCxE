@@ -11,7 +11,7 @@ The following categories help you identify the support status for Add-in functio
 - `🔷 In Development`: Development is under way. Keep an eye out for product roadmap updates. General availability **3-6 months** time horizon. Provides a `📅 M365 Roadmap` tracking item.
 - `🟨 In Planning`: In consideration for an upcoming development cycle, but not yet commited on product roadmap. General availability **6-12 months** time horizon.
 - `⚫ Not Planned`: Items that are not in consideration for built-in labeling. Submit a Microsoft support ticket for a Design Change Request (DCR) if these are important for your organization.
-- `🟢 Not Needed`: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling
+- `🟢 Not Needed`: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling.
 
 ### Change Management Insights
 To help you plan your migration, the following "traffic light" ranks degrees of change that compliance IT admins and end-users/information workers can expect when transitioning from AIP Add-In (Current) to Built-In (Current), to Built-In (Coming Soon).
@@ -21,9 +21,8 @@ To help you plan your migration, the following "traffic light" ranks degrees of 
 - `⚪⚠️⚪`: Supported, but requires changes to policy configuration and/or broad testing.
 - `⚪⚪⭕`: Supported with alternative solutions available from Microsoft (e.g. AIP Classify & Protect, SPO Auto Labeling)
 - `⚪⚪🚫`: Not Supported.
-- `⚪⚪⚪`: No change from prior state.
 
-The migration guides available for most features provides additional details about the changes to expect and how to prepare.
+The migration guides available for most features provide additional details about the changes to expect and how to prepare.
 
 -----
 
