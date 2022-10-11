@@ -63,5 +63,5 @@ Migrating from the AIP add-in to built-in labeling in Office does not change the
 
 # Migrating from the AIP add-in to built-in labeling in Office apps
 
-Now that you understand why you should be migrating fro the AIP add-in to built-in sensitivity labels in Office, [click here](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/GetStarted/) to learn how to plan and execute this migration.  
+Now that you understand why you should be migrating fro the AIP add-in to built-in sensitivity labels in Office, [click here](AIP2MIP/GetStarted/) to learn how to plan and execute this migration.  
 
