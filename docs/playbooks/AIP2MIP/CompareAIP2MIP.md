@@ -30,7 +30,7 @@ The migration guides available for most features provides additional details abo
 ## Azure Information Protection Add-in Scenarios
 Review the list of scenarios and their availability in built-in labeling below. Where available, references to additional resources are provided.
 
-| Scenario Refernce | Roadmap | Change Management | 
+| Scenario Reference | Roadmap | Change Management | 
 |:-----|:-----|:-----|
 | 🖥️ **Labeling Environment** | | |
 | Choose a labeling client for Office<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows) | `✅ Supported` | 📖[**Change Guide**](Features/Environment/ConfigureLabelingClient.md) *`(New)`*<br>- `Add-In vLATEST: 🟢⚪⚪`<br>- `Built-In v1910: ⚪⚠️⚪`<br>- `Built-In v2211: ⚪⚠️⚪` | 
