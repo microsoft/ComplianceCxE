@@ -44,7 +44,7 @@ For a detailed comparison of the capabilities of built-in labeling in Office app
     
     
 
-!!! warning "Please note"
+!!! note "Please note"
     The deprecation announcement discussed above and the migration process discussed in this document is relevant only to the AIP add-in for Office, which is only one component of the AIP client for Windows. Other components shipped as part of this client are not affected by this migration and can continue to be used as today until changes relevant to these components are announced. These components include the Classify and Protect functionality in Windows Explorer for labeling Office and non-Office documents, the AIP viewer for opening protected non-Office files on Windows devices, the AIP Scanner for on-premises data and the AIP PowerShell module.
 
 # What this migration involves
