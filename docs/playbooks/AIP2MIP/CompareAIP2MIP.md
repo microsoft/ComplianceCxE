@@ -80,7 +80,7 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Per app visual marking<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) | `✅ Supported` | 📖 Change Guide `[Coming Soon]`<br>- `Add-In vLATEST: 🟢⚪⚪`<br>- `Built-In v1910: ⚪⚪🚫`<br>- `Built-In v2010: 🟢⚪⚪` | 
 | | |
 | 📊 **Reporting and Analytics** | | | 
-| Disable Auditing<br>- Support: [👮 Admin](https://review.learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) | `✅ Supported` | 📖 Change Guide `[Coming Soon]`<br>- `Add-In vLATEST: 🟢⚪⚪`<br>- `Built-In v1910: ⚪⚪🚫`<br>- `Built-In v2011: 🟢⚪⚪` | 
+| Disable Auditing<br>- Support: [👮 Admin](https://review.learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) | `✅ Supported` | 📖 Change Guide `[Coming Soon]`<br>- `Add-In vLATEST: 🟢⚪⚪`<br>- `Built-In v1910: ⚪⚪🚫`<br>- `Built-In v2111: 🟢⚪⚪` | 
 | Auditing labeling activities <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) | `✅ Supported` | 📖 Change Guide `[Coming Soon]`<br>- `Add-In vLATEST: 🟢⚪⚪`<br>- `Built-In v1910: ⚪🟡⚪`<br>- `Built-In vSOON: 🟢⚪⚪` | 
 | | |
 | 🔀 **Migrate from alternative labeling clients** | | | 
