@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/43501191/195106327-46a0d337-43f9-4c7c-b2b9-d4031936c9bc.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 
 <h1 align="center">Step 5: Disable AIP Add-In and enable built-in sensitivity labels</h1>
