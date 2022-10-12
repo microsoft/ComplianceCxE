@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/43501191/195103906-0c24b1c5-f754-400d-a492-62aefdad150c.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 
 <h1 align="center">Step 4: Prepare your organization for change</h1>
