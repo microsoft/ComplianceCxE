@@ -1,5 +1,5 @@
 
-![image](https://user-images.githubusercontent.com/43501191/195111622-0d71be60-5b41-4034-960f-141046186321.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 <h1 align="center">Step 3: Evaluate Information Protection Readiness</h1>
 
