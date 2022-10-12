@@ -1,7 +1,13 @@
-![image](https://user-images.githubusercontent.com/43501191/195136914-9258327c-1237-4d47-8b9f-421d0e359f31.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 
-# Compare AIP Add-In with Built-In Labeling in M365 Apps
+<h1 align="center">Compare AIP Add-In with Built-In Labeling in M365 Apps</h1>
+
+<p align="center">
+<a href="https://aka.ms/AIP2MIP/HowTo/GetStarted">Playbook Overview</a> > <a href="../GetStarted">Get Started</a> > <a href="../AIP2MIPStep1">Step 1</a> > <a href="../AIP2MIPStep2">Step 2</a>  > <a href="../AIP2MIPStep3">Step 3</a> [<b>Compare Solutions</b>] > <a href="../AIP2MIPStep4">Step 4</a> > <a href="../AIP2MIPStep5">Step 5</a>
+</p>
+
+
 Many of the labeling features supported by the AIP add-in are now supported by built-in labeling. The table below is an adaptation of [Feature parity for built-in labeling and the AIP add-in for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) and offers additional information to help you prepare your transition from the AIP add-in. 
 
 Together, the combination of feature roadmap and change-management effort can help you plan a schedule for your migration. The roadmap indicates how soon the feature would be generally available in the fastest releast channel of Office; the effort gives you an estimate on how long it might take your organization to prepare and adopt the feature once it's available.
