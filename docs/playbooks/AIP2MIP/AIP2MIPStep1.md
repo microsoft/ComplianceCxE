@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/43501191/195147292-52236dc7-78bf-40b2-80a0-6c36d17b1ab7.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 <h1 align="center">Step 1: Assign Licenses for M365 Apps for Enterprise</h1>
 
