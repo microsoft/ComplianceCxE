@@ -8,15 +8,14 @@
 
 
 ## Overview
-Built-in labels require a [subscription edition of Office apps](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-applications-service-description). If you have standalone editions of Office, sometimes called "Office Perpetual", upgrade to Microsoft 365 Apps for Enterprise to benefit from the latest labeling capabilities.
+The first step in preparing your migration to built-in labeling from the AIP Add-in is to verify that all its users are appropriately licensed for the versions of Office that support built-in labeling.
 
-The first step in preparing your migration to built-in labeling from the AIP Add-in is to verify that all its users are appropriately licensed.
+Built-in labels require a subscription edition of Office apps. If you have standalone editions of Office, sometimes called "Office Perpetual", you'll need to first upgrade to Microsoft 365 Apps for Enterprise to benefit from the latest labeling capabilities.
 
 ## Checklist
 If your users are fully licensed for M365 Apps for Enterprise, proceed to [step 2](AIP2MIPStep2.md). Otherwise, follow this checklist to plan your migration.
 
 - [Review](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-applications-service-description#feature-availability) the availability of *Microsoft Purview Information Protection - manual sensitivity labeling* or *Microsoft Purview Information Protection - automatic sensitivity labeling*.
-- If users of the AIP Add-In are not licensed for M365 Apps for Enterprise, investigate if they are covered under Office Software Assurance.
 - Contact your Microsoft account team or contact support if you need help
 
 ## Additional Resources
