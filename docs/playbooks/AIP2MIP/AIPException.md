@@ -15,7 +15,7 @@ To ensure as many customers as possible are using built-in labeling to avoid mis
 
 Refer to the [support documentation](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in) for further details.
 
-> ⚠️ Warning: If you previous configured `UseOfficeForLabeling == 0` to disable built-in labeling, all sensitivility labeling clients provided by Microsoft will be disabled in M365 Apps by default starting in **version 2211**.
+> ⚠️ Warning: If you previously configured `UseOfficeForLabeling == 0` to disable built-in labeling, all sensitivility labeling clients provided by Microsoft will be disabled in M365 Apps by default starting in **version 2211**.
 
 Starting in v2211, the following sensitivity labeling clients are supported:
 
