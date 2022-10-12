@@ -1,8 +1,12 @@
 ![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 
+<h1 align="center">Preview programs for evaluating sensitivity labeling in M365 Apps</h1>
 
-# Preview programs for evaluating sensitivity labeling in M365 Apps
+<p align="center">
+<a href="https://aka.ms/AIP2MIP/HowTo/GetStarted">Playbook Overview</a> > <a href="../GetStarted">Get Started</a> > <a href="../AIP2MIPStep1">Step 1</a> > <a href="../AIP2MIPStep2">Step 2</a>  > <a href="../AIP2MIPStep3">Step 3</a>  > <a href="../AIP2MIPStep4">Step 4</a> [<b>Preview Programs</b>] > <a href="../AIP2MIPStep5">Step 5</a>
+</p>
+
 
 ## Overview 
 The best way to prepare for enabling the built-in labeling client is to get started today and try it out in your environment. We recommend deploying one of the available previews to subsets of your users and give feedback to Microsoft.
