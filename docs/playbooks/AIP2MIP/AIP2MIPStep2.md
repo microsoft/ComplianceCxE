@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/43501191/195112156-234a418b-a2ed-4f4a-a41a-700ec7617b4c.png)
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)
 
 <h1 align="center">Step 2: Deploy M365 Apps for Enterprise</h1>
 
