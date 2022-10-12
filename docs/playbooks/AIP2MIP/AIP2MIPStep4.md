@@ -17,7 +17,8 @@ To help you evaluate the changes that you need to prepare for, the [Comparison G
 
 ## Checklist
 
-- Use the [Comparison Guide](CompareAIP2MIP.md) to identify which changes your organization needs to prepare for.
+- Use the [Migration Effort](CompareAIP2MIP.md) estimates in the comparion guide to evaluate your change-management needs
+- Check back with the [Comparison Guide](CompareAIP2MIP.md) often for new Change Guides that provide side-by-side comparisons of the main functionality for each feature between the AIP Add-in and built-in labeling.
 - Join a [preview program](PreviewAIP2MIP.md) to get prepare screenshots or language-specific user communication. Leverage support documentation for [admins](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide) or [end-users](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 
 ## Additional Resources
