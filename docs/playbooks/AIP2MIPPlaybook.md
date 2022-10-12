@@ -17,28 +17,23 @@ Customers benefited from the choice between the AIP add-in or the built-in nativ
 |:---|:---|:---|
 | 🔓 Add-in can be disabled by end-users, leaving your data potentially vulnerable.<br>🛑 Add-in features are “frozen in time” since December 2021 at the start of its maintenance period. | 🐢 Like most add-ins, AIP regularly impacts end-user productivity because of performance implications with the add-in. <br>📱 Users of Office on other platforms face inconsistencies with sensitivity labeling since the Add-in only supports Office for PC. | ⚙️ AIP Add-in requires separate configuration, deployment, and management from the rest of the admin experience.|
 
-> ⚠️ Warning: Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. This default will no longer be the case for newer versions of Office. Soon, the built-in labeling will become the default. Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip).
-
 Read the blog “[From bolt-on to built-in information protection in Microsoft 365 Apps](https://aka.ms/AIP2MIP/Newsletter)” for an overview about this change.
 
-For customers currently using the AIP Add-in for Office, use the migration playbook below to help you plan and execute the transition to built-in labeling in Office apps.
+> ⚠️ Warning: Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. This default will no longer be the case for newer versions of Office. Soon, the built-in labeling will become the default. Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip).
+
 
 > 💡 Tip: You can continue using all other tools in the AIP client, such as the Scanner, PowerShell extensions, or Windows right-click extension Classify & Protect. These tools are not affected by disabling the add-in inside Office and continue to be the recommended tools for all your sensitivity labeling scenarios that aren’t available within the Office apps.
 
-## Add-in to built-in migration playbook
+## Get Started
 
-This playbook provides a centralized resource to guide you through the prerequisites, configuration, and deployment of the built-in sensitivity labels in Office. 
+For customers currently using the AIP Add-in for Office, use the playbooks below to help you plan and execute the transition to built-in labeling in Office apps. It provides a centralized resource to guide you through the prerequisites, configuration, and deployment of the built-in sensitivity labels in Office. 
 
-- **Migration Guide**: simple guidance to help you evaluate and execute replacement of the AIP add-in. 
-- **Comparison Guide**: comprehensive roadmap and change-management guidelines each capability in the AIP add-in relative to its replacement in built-in labeling
+| Self-Evaluation | Migration Playbook | Comparison Guide |
+| :----- | :----- | :----- | 
+| Try an interactive questionnaire that tailors the migration guide to your organization's needs.<br><br><p align="center"><a href="https://aka.ms/AIP2MIP/Guide/Evaluate" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195224353-b8263be1-7a68-40fe-ab2c-aa524da8bd84.png" alt="Self-Evaluation Guide"/></a></p> | Review a simple 5-step guide to help you learn, evaluate, and execute replacement of the AIP Add-in.<br><br><p align="center"><a href="../AIP2MIP/GetStarted" ><img src="https://user-images.githubusercontent.com/43501191/195224310-e7cc634b-01f8-4f28-b13f-45d1dc582d7b.png" alt="Migration Playbook"/></a></p> | Comprehensive roadmap and change-management guidelines each capability in the AIP add-in relative to its replacement in built-in labeling.<br><br><p align="center"><a href="../AIP2MIP/CompareAIP2MIP" ><img src="https://user-images.githubusercontent.com/43501191/195224282-2717594a-1d79-4cd7-a30a-4d6a22d1da6a.png" alt="Comparison Guide"/></a></p>|
 
-<p align="center">
-<a href="../AIP2MIP/GetStarted" ><img src="https://user-images.githubusercontent.com/43501191/195162010-2ad4b47f-24d2-4a9d-a038-da0af10e7b24.png" alt="Migration Guide"/></a>&nbsp;&nbsp;
-<a href="../AIP2MIP/CompareAIP2MIP" ><img src="https://user-images.githubusercontent.com/43501191/195162029-3266dc11-52b6-455f-86cb-ecb1fd22f0bc.png" alt="Comparison Guide"/></a></p>
 
-In most cases, the migration from AIP add-in to built-in labeling will be straightforward. The existing labels and policies are supported in built-in labeling with little-to-no extra effort once you’ve validated the functionality.
-
-## Need Help?
+## Get Help
 
 We recommend you join the Microsoft Purview [Customer Community Program (CCP)](https://aka.ms/JoinCompliancePrivacyCCP) for access to demos from the product teams, webinars from experts, and private previews that give you early access to all sensitivity labeling features that are coming soon to built-in labeling in Office.
 
