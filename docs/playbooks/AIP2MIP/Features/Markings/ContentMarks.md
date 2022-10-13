@@ -10,6 +10,10 @@ Lorem ipsum
 
 Lorem ipsum
 
+- Headers, footers, watermarks
+- Dynamic markings
+- Per-app visual markings
+
 
 ## Advanced Settings
 
