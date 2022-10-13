@@ -7,7 +7,9 @@ The table below lists the main characteristics of this feature and its compariso
 
 |  | Use Case            | Add-In| Built-In (Current) | Built-In (Coming Soon)|
 | :----                  | :---- | :---- | :---- | :---- |
-| 1 | **xxxx**           | `🟨 xxxx` xxxx  |  `🟨 xxxx` xxxx  | `🟨 xxxx` xxxx  |
+| 1 | **Apply MIP labels from alternative metadata**           | `🟨 xxxx` xxxx  |  `🟨 xxxx` xxxx  | `🟨 xxxx` xxxx  |
+| 2 | **Remove content marks from alternative labeling solutions**           | `🟨 xxxx` xxxx  |  `🟨 xxxx` xxxx  | `🟨 xxxx` xxxx  |
+
 
 
 ## Product Screenshots
