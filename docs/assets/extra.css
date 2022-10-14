@@ -47,5 +47,7 @@
     max-width: 1440px;
   }
   
-  
+.error {
+  color: #cc0000;
+}
   
