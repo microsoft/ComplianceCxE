@@ -165,10 +165,10 @@ Test fontawesome icon
 
 --------------
 
-:material-shield-check: Supported{ .ok }
+`:material-shield-check:{ .ok } Supported`
 
-:material-shield-off-outline: Not Supported{ .error }
+`:material-shield-off-outline:{ .error } Not Supported`
 
-:material-dev-to: In Development{ .warning }
+:material-dev-to:{ .warning } `In Development`
 
-:material-star: In Preview{ .pink }
+:material-star:{ .pink } `In Preview`
