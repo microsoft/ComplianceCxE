@@ -30,7 +30,7 @@
   }
 @media screen and (min-width: 48em){
   .md-content {
-      text-align: justify;
+      text-align: left;
   }
 }
   figure {
@@ -48,6 +48,23 @@
   }
   
 .error {
-  color: #cc0000;
+  color: #c50f1f;
 }
+
+.warning {
+  color: #ffaa44;
+}
+
+.success {
+  color: #6bb700;
+}
+
+.na {
+  color: #8a8886;
+}
+
+.pink {
+  color: #b4009e;
+}
+
   
