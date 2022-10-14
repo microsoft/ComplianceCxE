@@ -1,33 +1,44 @@
-# Sensitivity Status `✅ Fully Supported`
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)<br>
+[`➡️ Get Started`](../../GetStarted.md) > [`➡️ Step 1`](../../AIP2MIPStep1.md) > [`➡️ Step 2`](../../AIP2MIPStep2.md) > [`➡️ Step 3`](../../AIP2MIPStep3.md) > [`➡️ Step 4`](../../AIP2MIPStep4.md)[***`Change Guide`***](../../CompareAIP2MIP.md) > [`➡️ Step 5`](../../AIP2MIPStep5.md)
+
+
+# `User Interface` / `Sensitivity Status`
 
 The sensitivity status shows what label is currently applied to a file or email.
 
 ## Product Capabilities
-The table below lists the main characteristics of the sensitivity status and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
+The table below lists the main use cases for this feature and its transition from the AIP Add-in to the built-in labeling solution. These are mapped to product screenshots in the next section.
+|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | Built-In<br>`⭐ In Preview` |
+| :---: | :---- | :---- | :---- | :---- |
+| 1 | **Sensitivity Menu**<br> Determines how the selected label is represented in the sensitivity menu. <br>*See [Sensitivity Menu](SensitivityMenu.md)*| `✅ Supported` <br>Displays selected label in menu |  `✅ No change` | `✅ No change` |
+| 2 | **Sensitivity Bar** <br> Determines how the selected label is represented in the sensitivity bar.<br>*See [Sensitivity Bar](SensitivityBar.md)*| `✅ Supported` <br>Displays selected label in sensitivity bar |  `✅ No change` | `✅ No change` |
+| 3 | **Application Status**<br> Determines how the selected label is represented in the application status bar. | `🚫 Not Supported` |  `✅ Supported` <br>Displays selected label in application status bar alongside other document status indicators | `✅ Supported` <br>Selected label status hidden by default in app status bar. See note below. |
+|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
-|  | Use Case | Add-In| Built-In (Current) | Built-In (Coming Soon)|
-| :---- | :---- | :---- | :---- | :---- |
-| 1 | **Sensitivity Menu**   | `✅ Supported` Displays selected label in menu |  `✅ Supported` No change | `✅ Supported` No change |
-| 2 | **Sensitivity Bar**    | `✅ Supported` Displays selected label in bar |  `✅ Supported` No change | `✅ Supported` No change |
-| 3 | **Application Status** | `🚫 Not Supported` |  `✅ Supported` Displays selected label in application status bar alongside other document status indicators | `✅ Supported` Selected label status hidden by default in app status bar. |
+
+### Change Management Notes
+
+> **Note**
+>  *Removing Sensitivity Status from Application Status Bar*: The sensitivity status is hidden by default in the application status bar. This is because it's placement in the status bar is often missed by end-users and is dupicative with the label status in the sensitivity bar near the document title.
 
 
 ## Product Screenshots
 
-### Sensitivity menu with AIP Add-in
+Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above.
+
+### Add-In `🌎 Latest`
+
 ![image](https://user-images.githubusercontent.com/43501191/194781280-ff0c139a-2f0e-47ab-acc5-4e4f164daf48.png)
  
 
-### Sensitivity menu with Built-In (Current)
+### Built-In `🌎 Current Channel`
+
 ![image](https://user-images.githubusercontent.com/43501191/194781309-c39f64b3-b70d-47f1-ba25-9a81d0f35ef7.png)
 
-### Sensitivity menu with Built-In (Coming Soon)
-![image](https://user-images.githubusercontent.com/43501191/194781330-818bf687-b427-4b0a-9f9a-37ad9cf729bc.png)
+### Built-In `⭐ In Preview`
 
-## Migration Guidelines
-When transitioning from the add-in to the built-in labeling solution for Office, consider the following migration guidelines.
-- `IT 🟢⚪⚪ Silent Change`: There's no change required for compliance admins when replacing the add-in with built-in labeling for this feature.
-- `IW ⚪🟡⚪ Minor Change`: The sensitivity status is hidden by default in the application status bar. This is because it's placement in the status bar is often missed by end-users and is dupicative with the label status in the sensitivity bar near the document title.
+
+![image](https://user-images.githubusercontent.com/43501191/194781330-818bf687-b427-4b0a-9f9a-37ad9cf729bc.png)
 
 ## Learn More
 Use these references to learn more about the end-user experience
