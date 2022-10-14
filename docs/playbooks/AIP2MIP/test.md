@@ -165,10 +165,20 @@ Test fontawesome icon
 
 --------------
 
-`:material-shield-check:{ .ok } Supported`
+:material-shield-check:{ .ok } `Supported`
 
-`:material-shield-off-outline:{ .error } Not Supported`
+:material-shield-off-outline:{ .error } `Not Supported`
+
+:material-shield-off-outline:{ .na } `Not Planned`
+
 
 :material-dev-to:{ .warning } `In Development`
 
-:material-star:{ .pink } `In Preview`
+:material-calendar-edit:{ .warning } `In Planning`{ .warning }
+
+:material-calendar-star:{ .ping } `M365 Roadmap`
+
+
+:material-microsoft:{ .warning } `In Preview`
+
+:material-microsoft-word:{ .ok } :material-microsoft-excel:{ .ok } :material-microsoft-powerpoint:{ .ok } :material-microsoft-outlook:{ .na }
