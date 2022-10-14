@@ -9,11 +9,6 @@ The sensitivity bar offers a second method of viewing or applying sensitivity la
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-> Note: Although the new sensitivity bar for built-in labels uses less space than the add-in in editing view, it's available in more scenarios across the document lifecycle. Users with the new sensitivity bar can view and apply labels when saving a new document for the first time, renaming an existing file, or when using the File menu for additional document actions.
-
-> Note: To help users stay focused on their content while ensuring that they recognize the sensitivity of their documents, the label in the sensitivity bar hides the sublabel after a short delay when opening the file or changing labels. The parent label, or labels without sublabels, are always shown with their respective label color and encryption status. The full label name is shown in a tooltip or when using the sensitivity bar to change labels.
-
-
 |  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | Built-In<br>`⭐ In Preview` |
 | :---: | :---- | :---- | :---- | :---- |
 | 1 | **Placement** <br>Primary UI entry point for interacting with the sensitivity bar.  | `✅ Supported`<br>Appears below ribbon. Only avaialble in editing view.  |  `🚫 Not Supported` | `✅ Supported`<br>Appears in editing view near content's name in application title bar (files) or subject line (email), in application's file menu, Save New popup, and Rename File popup. |
@@ -26,7 +21,13 @@ The table below lists the main characteristics of this feature and its compariso
 | 8 | **Sensitivity Bar Default Visibility** <br>Determines whether sensitivity bar is hidden for users. | `✅ Supported` <br>Advanced setting [`HideBarByDefault`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#display-the-information-protection-bar-in-office-apps) controls whether sensitivity bar is hidden or shown. By default, it is shown to users. When admin hides the bar by default, user can still show it via Sensitivity Bar Toggle |  `🚫 Not Supported` | `✅ Supported` <br>When advanced setting [`HideBarByDefault`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#display-the-information-protection-bar-in-office-apps) is configured to hide the bar by default, the sensitivity bar collapses to show only the sensitivity icon, color, and encryption status where applicable. See [`Set-LabelPolicy`](https://learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
+### Change Management Notes
 
+> **Note**
+> Although the new sensitivity bar for built-in labels uses less space than the add-in in editing view, it's available in more scenarios across the document lifecycle. Users with the new sensitivity bar can view and apply labels when saving a new document for the first time, renaming an existing file, or when using the File menu for additional document actions.
+
+> **Note**
+> To help users stay focused on their content while ensuring that they recognize the sensitivity of their documents, the label in the sensitivity bar hides the sublabel after a short delay when opening the file or changing labels. The parent label, or labels without sublabels, are always shown with their respective label color and encryption status. The full label name is shown in a tooltip or when using the sensitivity bar to change labels.
 
 ## Product Screenshots
 
