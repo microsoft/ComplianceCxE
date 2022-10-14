@@ -161,3 +161,14 @@ Test fontawesome icon
 - :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
 
 </div>
+
+
+--------------
+
+:material-shield-check: Supported{ .ok }
+
+:material-shield-off-outline: Not Supported{ .error }
+
+:material-dev-to: In Development{ .warning }
+
+:material-star: In Preview{ .pink }
