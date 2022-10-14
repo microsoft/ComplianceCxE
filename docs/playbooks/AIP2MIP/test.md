@@ -113,4 +113,6 @@ Test fontawesome icon
 :material-calendar-star:{ .ping } `M365 Roadmap`
 
 
-:simple-microsoftword:{ .ok } , :simple-microsoftexcel:{ .ok } , :simple-microsoftpowerpoint:{ .ok } , :simple-microsoftoutlook:{ .na }
+:simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .xls } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .olk }
+
+:simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .na } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .na }
