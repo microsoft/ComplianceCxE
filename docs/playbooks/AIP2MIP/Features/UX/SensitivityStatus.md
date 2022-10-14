@@ -13,6 +13,7 @@ The table below lists the main use cases for this feature and its transition fro
 | 1 | **Sensitivity Menu**<br> Determines how the selected label is represented in the sensitivity menu. <br>*See [Sensitivity Menu](SensitivityMenu.md)*| `✅ Supported` <br>Displays selected label in menu |  `✅ No change` | `✅ No change` |
 | 2 | **Sensitivity Bar** <br> Determines how the selected label is represented in the sensitivity bar.<br>*See [Sensitivity Bar](SensitivityBar.md)*| `✅ Supported` <br>Displays selected label in sensitivity bar |  `✅ No change` | `✅ No change` |
 | 3 | **Application Status**<br> Determines how the selected label is represented in the application status bar. | `🚫 Not Supported` |  `✅ Supported` <br>Displays selected label in application status bar alongside other document status indicators | `✅ Supported` <br>Selected label status hidden by default in app status bar. See note below. |
+| 4 | **Localized Label Information** <br>Determines whether admin-provided label name and description respond to the user's display language in their Office app <br> See how to [configure display language](https://learn.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide#example-configuration-to-configure-a-sensitivity-label-for-different-languages) | `✅ Supported`  |  `✅ No Change` | `✅ No Change` |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
 
