@@ -10,12 +10,12 @@ Auditing enables admins to review labeling activities in [Activity Explorer](htt
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | Built-In<br>`Coming Soon` |
+|  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: `Latest`| :material-microsoft-office: Built-In<br>:material-cloud-download: `Current Channel` | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
 | :---: | :---- | :---- | :---- | :---- |
 | 1 | **Disable Auditing** <br>Determines whether apps respect the [`EnableAudit`](https://learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) setting  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
-| 1 | **Log Labeling Actions** <br>FileSensitivityLabelApplied, FileSensitivityLabelChanged, FileSensitivityLabelRemoved  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
-| 1 | **Log Auto labeling policy matches** <br>xxxx  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
-| 1 | **Log Protection Properties** <br>ProtectionOwner, ProtectionOwnerBefore, ProtectionTime, ProtectionType, ProtectionTypeBefore, RMSOwner  | :material-shield-check:{ .success } `Supported` |  :material-shield-off-outline:{ .error } `Not Supported` | :material-calendar-star:{ .warning } `In Preview` |
+| 2 | **Log Labeling Actions** <br>FileSensitivityLabelApplied, FileSensitivityLabelChanged, FileSensitivityLabelRemoved  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
+| 3 | **Log Auto labeling policy matches** <br>xxxx  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
+| 4 | **Log Protection Properties** <br>ProtectionOwner, ProtectionOwnerBefore, ProtectionTime, ProtectionType, ProtectionTypeBefore, RMSOwner  | :material-shield-check:{ .success } `Supported` |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
 
