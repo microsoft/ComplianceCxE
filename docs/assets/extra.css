@@ -52,11 +52,11 @@
 }
 
 .warning {
-  color: #ffaa44;
+  color: #ffc83d;
 }
 
 .success {
-  color: #6bb700;
+  color: #498205;
 }
 
 .na {
@@ -81,4 +81,20 @@
 
 .olk {
   color: #0078d4;
+} 
+
+.preview {
+  color: #0078d4;
+} 
+
+.development {
+  color: #ffc83d;
+} 
+
+.notplanned {
+  color: #ef6950;
+} 
+
+.notsupported {
+  color: #ef6950;
 } 
