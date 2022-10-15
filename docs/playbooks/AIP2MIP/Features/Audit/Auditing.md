@@ -1,31 +1,28 @@
-# Auditing `⚠️ Partially Support` 
-
-Audting enables admins to review labeling activities in [Activity Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-activity-explorer) or [Content Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer).
-
-## Scenarios
-The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section.
+![image](https://user-images.githubusercontent.com/43501191/195164735-920ec45a-cd2c-41a1-9d22-6a557ca9ddc3.png)<br>
+[`➡️ Get Started`](../../GetStarted.md) > [`➡️ Step 1`](../../AIP2MIPStep1.md) > [`➡️ Step 2`](../../AIP2MIPStep2.md) > [`➡️ Step 3`](../../AIP2MIPStep3.md) > [`➡️ Step 4`](../../AIP2MIPStep4.md)[***`Change Guide`***](../../CompareAIP2MIP.md) > [`➡️ Step 5`](../../AIP2MIPStep5.md)
 
 
-|  | Use Case            | Add-In<br>(Current)| Built-In<br>(Current) | Built-In<br>(Coming Soon)|
-| :----                  | :---- | :---- | :---- | :---- |
-| 1 | **Disable Auditing** | `✅ Supported`  |  `✅ Supported`  | `✅ Supported`  |
-| 2 | **Labeling Actions** <br>- FileSensitivityLabelApplied, FileSensitivityLabelChanged, FileSensitivityLabelRemoved | `✅ Supported`  |  `✅ Supported`  | `✅ Supported`  |
-| 3 | **Auto labeling policy matches**| `✅ Supported`  |  `✅ Supported`  | `✅ Supported`  |
-| 1 | **Protection Properties** <br>- ProtectionOwner, ProtectionOwnerBefore, ProtectionTime, ProtectionType, ProtectionTypeBefore, RMSOwner | `Not Supported`  |  `✅ Supported`  | `🔷 In Development`  |
-|  | ~~~~~ | ~~~~~~~~~~ | ~~~~~~~~~~ | ~~~~~~~~~~ |
+# `Auditing` 
+
+Auditing enables admins to review labeling activities in [Activity Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-activity-explorer) or [Content Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer).
 
 
-## Advanced Settings
+## Product Capabilities
+The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-lorem ipsum
+|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | Built-In<br>`Coming Soon` |
+| :---: | :---- | :---- | :---- | :---- |
+| 1 | **Disable Auditing** <br>Determines whether apps respect the [`EnableAudit`](https://learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) setting  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
+| 1 | **Log Labeling Actions** <br>FileSensitivityLabelApplied, FileSensitivityLabelChanged, FileSensitivityLabelRemoved  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
+| 1 | **Log Auto labeling policy matches** <br>xxxx  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `No Change` | :material-shield-check:{ .success } `No Change` |
+| 1 | **Log Protection Properties** <br>ProtectionOwner, ProtectionOwnerBefore, ProtectionTime, ProtectionType, ProtectionTypeBefore, RMSOwner  | :material-shield-check:{ .success } `Supported` |  :material-shield-off-outline:{ .error } `Not Supported` | :material-calendar-star:{ .warning } `In Preview` |
+|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
-## Migration Guidelines
-- `IT 🟩🔲🔲 Silent Change`: As new auditing events or properties are added, they'll be available directly in content explorer or activiity explorer with no action from Admins.
-- `IW 🟩🔲🔲 Silent Change`: end-users are not impacted by changes in auditing events.
 
+## Learn More
 
-## Learn more
-- [Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#auditing-labeling-activities)
+- [Auditing Labeling Activities](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#auditing-labeling-activities)
+- [Sensitivity label activities](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#sensitivity-label-activities)
 - [Activity Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-activity-explorer)
 - [Content Explorer](https://learn.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer)
 - [Auditing for PDFs labeled or encrypted in Office](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#pdf-support)
