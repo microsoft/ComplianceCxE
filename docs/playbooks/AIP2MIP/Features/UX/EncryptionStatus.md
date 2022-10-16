@@ -6,23 +6,27 @@
 
 The Encryption status shows whether the current file or email has encryption.
 
+
 ## Product Capabilities
+The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-The table below lists the main use cases for this feature and its transition from the AIP Add-in to the built-in labeling solution. These are mapped to product screenshots in the next section.
-
-|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | Built-In<br>`⭐ In Preview` |
-| :----: | :---- | :---- | :---- | :---- |
-| 1 | **Sensitivity Menu**<br>Determines how the sensitivity menu indicates which labels apply encryption. | `🚫 Not Supported`<br>No encryption indicator in sensitivity menu |  `🚫 Not Supported` <br>No encryption indicator in sensitivity menu  | `✅ Supported`<br>Displays encryption status of each available label in its icon |
-| 2 | **Sensitivity Bar** <br>Determines how the sensitivity bar indicates which labels apply encryption.  | `🚫 Not Supported`<br>No encryption indicator in sensitivity bar |  `🚫 Not Supported` | `✅ Supported` <br>Displays encryption status of each available label in its icon |
-| 3 | **Application Status** <br>Determines how the application status bar indicates whether the current document is encrypted.  | `✅ Supported`<br>Displays "lock" indicator in app status bar |  `✅ No Change` | `✅ No Change` |
-| 4 | **Policy Tip** <br>Determines how users are notified of encryption settings applied to a file.  | `✅ Supported`<br>Displays yellow bar showing label's name and description when encryption is applied |  `✅ Supported` <br>Policy tip only shown for user-defined permissions | `✅ Supported`<br>Policy tip only shown for user-defined permissions |
-| 5 | **View Permissions button** <br>Provides access to protection properties for a file that's encrypted. | `✅ Supported`<br>Available from Policy Tip and Application Status |  `✅ Supported` <br>Available from Application Status |`✅ Supported` <br>Available from Application Status |
+|  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
+| :---: | :---- | :---- | :---- | :---- |
+| 1 | **Sensitivity Menu**<br>Determines how the sensitivity menu indicates which labels apply encryption. | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>No encryption indicator in sensitivity menu |  :material-shield-off-outline:{ .notsupported } `Not Supported` <br>No encryption indicator in sensitivity menu  | :material-shield-check:{ .success } `Supported`<br>Displays encryption status of each available label in its icon |
+| 2 | **Sensitivity Bar** <br>Determines how the sensitivity bar indicates which labels apply encryption.  | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>No encryption indicator in sensitivity bar |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Displays encryption status of each available label in its icon |
+| 3 | **Application Status** <br>Determines how the application status bar indicates whether the current document is encrypted.  | :material-shield-check:{ .success } `Supported`<br>Displays "lock" indicator in app status bar |  :material-shield-check:{ .success } `No Change` |
+| 4 | **Policy Tip** <br>Determines how users are notified of encryption settings applied to a file.  | :material-shield-check:{ .success } `Supported`<br>Displays yellow bar showing label's name and description when encryption is applied |  :material-shield-check:{ .success } `Supported`<br>Policy tip only shown for user-defined permissions | :material-shield-check:{ .success } `Supported`<br>Policy tip only shown for user-defined permissions |
+| 5 | **View Permissions button** <br>Provides access to protection properties for a file that's encrypted. | :material-shield-check:{ .success } `Supported`<br>Available from Policy Tip and Application Status |  :material-shield-check:{ .success } `Supported`<br>Available from Application Status | :material-shield-check:{ .success } `Supported`<br>Available from Application Status |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
+
 
 ### Change Management Notes
 
-> **Note**
-> End-users may notice differences in how they determine if a document is encrypted. The main difference is relying on the sensitivity bar and its iconography as the primary indicator for encryption status.
+!!! note
+
+    End-users may notice differences in how they determine if a document is encrypted. 
+    The main difference is relying on the sensitivity bar and its iconography as the primary indicator for encryption status.
+
 
 ## Product Screenshots
 
@@ -44,6 +48,8 @@ Use the screenshots below to help you evaluate the visual changes that correspon
 
 ## Learn More
 
-- [Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-bar)
-- [End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
-- [Office Insiders Blog](https://insider.office.com/blog/sensitivity-bar-in-office-for-windows)
+:material-help-circle: [Compliance Admin Support](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-bar)
+
+:material-help-circle: [End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
+
+:material-help-circle: [Office Insiders Blog](https://insider.office.com/blog/sensitivity-bar-in-office-for-windows)
