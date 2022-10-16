@@ -9,7 +9,7 @@ Office apps that have built-in labeling for Word, Excel, and PowerPoint files su
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | 
+|  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)
 | :---: | :---- | :---- | :---- | 
 | 1 | **Office Open XML format (e.g. `.docx`, `.xlsx`, `.pptx`)** <br>Determines whether Office's modern file formats are supported for viewing and applying labels and encryption. | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` | 
 | 2 | **Microsoft Office 97-2003 format (e.g. `.doc`, `.xls`, `.ppt`)** <br>Determines whether Office's legacy file formats are supported for viewing and applying labels and encryption.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .error } `Not Supported` | 
