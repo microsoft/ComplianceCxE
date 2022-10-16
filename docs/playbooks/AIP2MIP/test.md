@@ -12,6 +12,10 @@ Test fontawesome icon
 
 :material-security:{ .error }
 
+-------------
+
+It is reference links [emphasis tutorials][myexample]
+
 
 -----
 
@@ -76,12 +80,6 @@ Test fontawesome icon
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
     
-!!! bug
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-    
 !!! example
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -99,20 +97,35 @@ Test fontawesome icon
 
 --------------
 
-:material-shield-check:{ .ok } `Supported`
+:material-shield-check:{ .success } `Supported`
 
-:material-shield-off-outline:{ .error } `Not Supported`
+:material-shield-off-outline:{ .notsupported } `Not Supported`
 
-:material-shield-off-outline:{ .na } `Not Planned`
+:material-shield-off-outline:{ .notplanned  } `Not Planned`
 
+:material-calendar-clock:{ .warning } `Coming Soon`
 
-:material-dev-to:{ .warning } `In Development`
+:material-alert:{ .error } `Major Change`<br>:material-calendar-star:{ .preview } `In Preview`
 
-:material-calendar-edit:{ .warning } `In Planning`{ .warning }
+:fontawesome-solid-download:   :material-cloud-download:
 
-:material-calendar-star:{ .ping } `M365 Roadmap`
+:material-calendar-star:{ .preview } `In Preview`
+
+:material-dev-to:{ .development  } `In Development`
+
+:material-calendar-edit:{ .warning } `In Planning`
+
+:material-help-circle: :material-web-check:
+
+:material-cloud-download: 
 
 
 :simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .xls } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .olk }
 
 :simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .na } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .na }
+
+
+---------
+
+[myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
+
