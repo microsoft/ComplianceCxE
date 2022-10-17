@@ -16,6 +16,7 @@ The table below lists the main characteristics of this feature and its compariso
 | 3 | **End-Users: Track Documents** <br>Determines whether documents that are registered via the Office client can be tracked by end-users.  | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>End-users cannot track documents they've encrypted with AIP Add-in  |  :material-shield-off-outline:{ .notplanned  } `Not Planned` ||
 | 4 | **End-Users: Revoke Documents** <br>Determines whether tracked documents can be revoked by end-users.  | :material-shield-check:{ .success } `Supported`<br>Requires advanced setting [`EnableRevokeGuiSupport == true`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#turn-off-the-revoke-option-for-end-users-in-office-apps) |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-edit:{ .warning } `In Planning` |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
+
 ### Change Management Notes
 
 !!! warning
@@ -27,7 +28,6 @@ The table below lists the main characteristics of this feature and its compariso
     Tracking and Revocation using the [AIP Add-in has various limitations](https://learn.microsoft.com/en-us/azure/information-protection/known-issues#known-issues-for-track-and-revoke-features) you should be aware of before relying on it.
     If this feature is required for organizations to transition to the built-in labeling solution, 
     consider these limitations to understand the extent to which your users are blocked during migration.
-
 
 ## Learn More
 
