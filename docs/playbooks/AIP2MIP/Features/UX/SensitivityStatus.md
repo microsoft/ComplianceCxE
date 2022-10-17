@@ -23,7 +23,7 @@ The table below lists the main use cases for this feature and its transition fro
 !!! note
 
     *Removing Sensitivity Status from Application Status Bar*: The sensitivity status is hidden by default in the application status bar.
-    This is because it's placement in the status bar is often missed by end-users and is dupicative with the label status in the sensitivity 
+    This is because it's placement in the status bar is often missed by end-users and is unnecessary with the label status in the sensitivity 
     bar near the document title.
 
 
