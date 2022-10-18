@@ -125,7 +125,12 @@ It is reference links [emphasis tutorials][myexample]
 :simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .na } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .na }
 
 
+![Presentation1](https://user-images.githubusercontent.com/43501191/196542628-accc288c-c901-458f-b817-133cda9a1274.gif)
+
+
 ---------
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
+
+
 
