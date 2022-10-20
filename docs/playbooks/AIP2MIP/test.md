@@ -128,6 +128,26 @@ It is reference links [emphasis tutorials][myexample]
 ![Presentation1](https://user-images.githubusercontent.com/43501191/196542628-accc288c-c901-458f-b817-133cda9a1274.gif)
 
 
+:fontawesome-solid-computer:		Environment
+
+:fontawesome-solid-user-shield:
+:fontawesome-solid-user-gear:
+:material-shield-account:
+
+
+:material-shield-alert-outline:	Enforcement
+
+:material-shield-star-outline:	Automation
+
+:material-shield-lock-outline:	Encryption
+
+:material-email-lock:			Collab
+
+:material-page-layout-header:		Marking
+
+
+:simple-powershell:			PowerShell
+
 ---------
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
