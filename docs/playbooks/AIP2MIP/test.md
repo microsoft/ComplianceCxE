@@ -1,4 +1,4 @@
-[Sensitivity Bar](/Features/UX/SensitivityBar.md)
+[Sensitivity Bar](Features/UX/SensitivityBar.md)
 
 Test fontawesome icon
 
