@@ -1,3 +1,5 @@
+[Sensitivity Bar](/Features/UX/SensitivityBar.md)
+
 Test fontawesome icon
 
 :fontawesome-regular-face-laugh-wink:{ .error }
@@ -125,13 +127,16 @@ It is reference links [emphasis tutorials][myexample]
 :simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .na } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .na }
 
 
-![Presentation1](https://user-images.githubusercontent.com/43501191/196542628-accc288c-c901-458f-b817-133cda9a1274.gif)
 
 
 :fontawesome-solid-computer:		Environment
 
 :fontawesome-solid-user-shield:
+
+
 :fontawesome-solid-user-gear:
+
+
 :material-shield-account:
 
 
@@ -148,9 +153,17 @@ It is reference links [emphasis tutorials][myexample]
 
 :simple-powershell:			PowerShell
 
+
+:material-file-chart:       Reporting
+
+:material-shield-sync-outline:      3p interop
+
+
+
 ---------
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
 
 
 
+![Presentation1](https://user-images.githubusercontent.com/43501191/196542628-accc288c-c901-458f-b817-133cda9a1274.gif)
