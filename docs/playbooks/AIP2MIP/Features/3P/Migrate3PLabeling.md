@@ -11,9 +11,16 @@ The table below lists the main characteristics of this feature and its compariso
 
 |  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history) | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | 
 | :---: | :---- | :---- | :---- |
-| 1 | **Migrate labels from Secure Islands and other labeling solutions** <br>For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced settings [`labelByCustomProperties`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) or [`EnableLabelByMailHeader`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions)  |  :material-shield-off-outline:{ .na } `Not Planned` | 
-| 2 | **Remove headers and footers from other labeling solutions** <br>Determines how to remove content marks from other labeling solutions.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced settings [`RemoveExternalContentMarkingInApp`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#use-the-removeexternalcontentmarkinginapp-advanced-property) or [`ExternalContentMarkingToRemove`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove) |  :material-shield-off-outline:{ .na } `Not Planned` | 
+| 1 | **Migrate labels from Secure Islands and other labeling solutions** <br>For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced settings `labelByCustomProperties`, `customPropertiesByLabel`, `EnableLabelBySharePointProperties`, `EnableLabelByMailHeader`  |  :material-shield-off-outline:{ .na } `Not Planned`<br>*See [Note below](#change-management-notes)* | 
+| 2 | **Remove headers and footers from other labeling solutions** <br>Determines how to remove content marks from other labeling solutions.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced settings `PowerPointRemoveAllShapesByShapeName`, `PowerPointShapeNameToRemove`, `WordShapeNameToRemove`,  `RemoveExternalContentMarkingInApp`, `RemoveExternalMarkingFromCustomLayouts` |  :material-shield-off-outline:{ .na } `Not Planned`<br>*See [Note below](#change-management-notes)*  | 
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
+
+### Change Management Notes
+
+!!! note
+
+    Use AIP's other tools, such as Scanner, PowerShell, or Classify & Protect to help you migrate labeling 
+    from alternative solutions. 
 
 
 ## Learn More
