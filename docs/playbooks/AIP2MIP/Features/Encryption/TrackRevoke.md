@@ -15,7 +15,7 @@ The table below lists the main characteristics of this feature and its compariso
 | 2 | **Admin: Revoke Documents** <br>Determines whether tracked documents can be revoked by compliance admins.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-edit:{ .warning } `In Planning` |
 | 3 | **End-Users: Track Documents** <br>Determines whether documents that are registered via the Office client can be tracked by end-users.  | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>End-users cannot track documents they've encrypted with AIP Add-in  |  :material-shield-off-outline:{ .notplanned  } `Not Planned` ||
 | 4 | **End-Users: Revoke Documents** <br>Determines whether tracked documents can be revoked by end-users.  | :material-shield-check:{ .success } `Supported`<br>Requires advanced setting [`EnableRevokeGuiSupport == true`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#turn-off-the-revoke-option-for-end-users-in-office-apps) |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-edit:{ .warning } `In Planning` |
-|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
+|  | ~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~ | 
 
 ### Change Management Notes
 
