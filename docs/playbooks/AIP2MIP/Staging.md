@@ -24,7 +24,7 @@ The following categories help you identify the support status for Add-in functio
 :material-calendar-cursor: `M365 Roadmap` tracking item.
 - :material-dev-to:{ .development  } `In Development`: Development is under way. Keep an eye out for product roadmap updates. General availability **3-6 months** time horizon. Provides a 
 :material-calendar-cursor: `M365 Roadmap` tracking item.
-- :material-calendar-edit:{ .warning } `In Planning` : In consideration for an upcoming development cycle, but not yet committed on product roadmap. General availability **6-12 months** time horizon.
+- :material-calendar-edit:{ .planning } `In Planning` : In consideration for an upcoming development cycle, but not yet committed on product roadmap. General availability **6-12 months** time horizon.
 - :material-shield-off-outline:{ .notplanned  } `Not Planned` : Items that are not in consideration for built-in labeling. Submit a Microsoft support ticket for a Design Change Request (DCR) if these are important for your organization.
 - :material-shield-check:{ .success } `Not Needed` : Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling.
 
@@ -69,8 +69,8 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Mandatory labeling: Enforce at file-save     | :material-shield-check:{ .success } `Supported`     | `🟠🟠⚪⚪⚪` | 
 | Mandatory labeling: Files vs. Emails         | :material-shield-check:{ .success } `Supported`     | `🟠⚪⚪⚪⚪` | 
 | Downgrade Justification                      | :material-shield-check:{ .success } `Supported`     | `🟠⚪⚪⚪⚪` | 
-| Manual Labeling: Preselect default sublabel  | :material-calendar-edit:{ .warning } `In Planning`  | `🟠🟠⚪⚪⚪` | 
-| Mandatory labeling: Enforcement at app close | :material-calendar-edit:{ .warning } `In Planning`  | `🟠⚪⚪⚪⚪` | 
+| Manual Labeling: Preselect default sublabel  | :material-calendar-edit:{ .planning } `In Planning`  | `🟠🟠⚪⚪⚪` | 
+| Mandatory labeling: Enforcement at app close | :material-calendar-edit:{ .planning } `In Planning`  | `🟠⚪⚪⚪⚪` | 
 | | | |
 | :material-shield-star-outline: **Labeling Automation** |||
 | Default Labeling: Files | :material-shield-check:{ .success } `Supported` | `🟠🟠⚪⚪⚪` | 
@@ -84,9 +84,9 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | User-defined permissions: Do Not Forward for emails | :material-shield-check:{ .success } `Supported` | `🟠🟠🟠⚪⚪`| 
 | User-defined permissions: Files restricted to domain names | :material-calendar-star:{ .preview } `In Preview`<br>:material-calendar-cursor: [M365 Roadmap 98131][RMID98131] | `🟠⚪⚪⚪⚪` | 
 | S/MIME for emails | :material-calendar-star:{ .preview } `In Preview`<br>:material-calendar-cursor: [M365 Roadmap 93199][RMID93199] | `🟠🟠⚪⚪⚪` | 
-| Double Key Encryption | :material-calendar-edit:{ .warning } `In Planning` | `🟠🟠🟠⚪⚪` | 
-| Document Tracking & Revocation for Compliance Admins | :material-calendar-edit:{ .warning } `In Planning` | `🟠🟠🟠⚪⚪` | 
-| Document Revocation for End-Users | :material-calendar-edit:{ .warning } `In Planning` | `🟠🟠🟠⚪⚪` | 
+| Double Key Encryption | :material-calendar-edit:{ .planning } `In Planning` | `🟠🟠🟠⚪⚪` | 
+| Document Tracking & Revocation for Compliance Admins | :material-calendar-edit:{ .planning } `In Planning` | `🟠🟠🟠⚪⚪` | 
+| Document Revocation for End-Users | :material-calendar-edit:{ .planning } `In Planning` | `🟠🟠🟠⚪⚪` | 
 | | | |
 | :material-send-lock: **Collaboration with labeled content** |||
 | Multi-user editing of files encrypted with admin-defined permissions | :material-shield-check:{ .success } `Supported` | `🟠🟠🟠⚪⚪` | 
@@ -122,8 +122,8 @@ The table below summarizes the advanced settings used by the AIP Add-in for M365
 | | | |
 | :material-shield-alert-outline: **Labeling Enforcement** |||
 | `DisableMandatoryInOutlook`    | :material-shield-check:{ .success } `Supported`      | - [Mandatory Labeling](Features/Enforcement/LabelColors.md) | 
-| `DefaultSubLabelId`            | :material-calendar-edit:{ .warning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/ManualLabeling.md) | 
-| `PostponeMandatoryBeforeSave`  | :material-calendar-edit:{ .warning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/LabelColors.md) | 
+| `DefaultSubLabelId`            | :material-calendar-edit:{ .planning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/ManualLabeling.md) | 
+| `PostponeMandatoryBeforeSave`  | :material-calendar-edit:{ .planning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/LabelColors.md) | 
 | `JustificationTextForUserText` | :material-shield-off-outline:{ .notplanned  } `Not Planned`    | - [Downgrade Justification](Features/Enforcement/DowngradeJustification.md) | 
 | | |
 | :material-shield-star-outline: **Labeling Automation** |||
@@ -135,7 +135,7 @@ The table below summarizes the advanced settings used by the AIP Add-in for M365
 | `RunPolicyInBackground`            | :material-shield-check:{ .success } `Not Needed` | - [Automatic Labeling](Features/Automation/AutomaticLabeling.md) | 
 | | |
 | :material-shield-lock-outline: **Encryption as an outcome for labeling** |||
-| `EnableRevokeGuiSupport`<br>`EnableTrackAndRevoke` | :material-calendar-edit:{ .warning } `In Planning` | - [Tracking & Revocation](Features/Encryption/TrackRevoke.md) | 
+| `EnableRevokeGuiSupport`<br>`EnableTrackAndRevoke` | :material-calendar-edit:{ .planning } `In Planning` | - [Tracking & Revocation](Features/Encryption/TrackRevoke.md) | 
 | `OutlookSkipSmimeOnReadingPaneEnabled`             | :material-shield-check:{ .success } `Not Needed`  | - [S/MIME](Features/Encryption/SMIME.md) | 
 | `SMimeEncrypt`<br>`SMimeSign`                      | :material-calendar-star:{ .preview } `In Preview`  | - [S/MIME](Features/Encryption/SMIME.md) | 
 | | |
@@ -161,8 +161,8 @@ The table below summarizes the advanced settings used by the AIP Add-in for M365
 - [Built-in labeling support reference](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide)
 - [AIP Add-in support reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide)
 
-<!-- ************* RMIDs ************* -->
 
+<!-- ************* RMIDs ************* -->
 
 [RMID99939]:    https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939
 [RMID93199]:    https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=93199
@@ -172,6 +172,10 @@ The table below summarizes the advanced settings used by the AIP Add-in for M365
 [RMID98131]:    https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98131
 [RMID100255]:    https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100255
 [RMID98135]:    https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135
+
+
+<!-- ************* RMIDs ************* -->
+
 
 
 
