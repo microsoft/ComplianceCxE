@@ -11,17 +11,16 @@ The table below lists the main characteristics of this feature and its compariso
 
 |  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
 | :----                  | :---- | :---- | :---- | :---- | 
-| 1 | **Encrypt with S/MIME** <br>Determines whether an email can be encrypted with S/MIME.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported` |
-| 2 | **Sign with S/MIME** <br>Determines whether an email can be signed with S/MIME.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported` |
+| 1 | **Encrypt with S/MIME** <br>Determines whether an email can be encrypted with S/MIME.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
+| 2 | **Sign with S/MIME** <br>Determines whether an email can be signed with S/MIME.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
 |  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
 
 ### Change Management Notes
 
 !!! tip
 
-    AIP Add-in uses advanced setting `OfficeContentExtractionTimeout` to work around 
-    performance degradations when using S/MIME labels. 
-    These performance issues do not impact Outlook when using the built-in labeling, 
+    AIP Add-in uses advanced setting `OfficeContentExtractionTimeout` to work around performance degradations 
+    when using S/MIME labels. These performance issues do not impact Outlook when using the built-in labeling, 
     so this setting is not needed when migrating from AIP add-in.
 
 ## Product Screenshots
