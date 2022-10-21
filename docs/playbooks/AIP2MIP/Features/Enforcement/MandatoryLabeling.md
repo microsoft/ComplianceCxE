@@ -15,6 +15,7 @@ The table below lists the main characteristics of this feature and its compariso
 | 2 | **Require a label for files: Triggered onExit**<br>Determines whether users are prompted to apply a label before closing their document. Users are still prompted to label their file during save, but can postpone its enforcement until they try to close the app.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`PostponeMandatoryBeforeSave`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling)  |  :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-calendar-clock:{ .planning } `In Planning` |
 | 3 | **Require a label for emails: Triggered onSend** <br>Determines whether users are prompted to apply a label before sending an email. | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported`  ||
 | 4 | **Exempt emails from mandatory labeling policy** <br>Determines whether admins can exempt emails from mandatory labeling. | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`DisableMandatoryInOutlook`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#exempt-outlook-messages-from-mandatory-labeling)  |  :material-shield-check:{ .success } `Supported`  ||
+|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
 
 
 ### Change Management Notes
