@@ -170,19 +170,19 @@ It is reference links [emphasis tutorials][myexample]
 
 ---------------
 
-:material-numeric-0-box:{ .num }
+:material-numeric-0-box:{ .num  } 
 
-:material-numeric-1-box:{ .num }
+:material-numeric-1-box:{ .num  } 
 
-:material-numeric-2-box:{ .num }
+:material-numeric-2-box:{ .num  } 
 
-:material-numeric-3-box:{ .num }
+:material-numeric-3-box:{ .num  } 
 
-:material-numeric-4-box:{ .num }
+:material-numeric-4-box:{ .num  } 
 
-:material-numeric-5-box:{ .num }
+:material-numeric-5-box:{ .num  } 
 
-:material-numeric-6-box:{ .num }
+:material-numeric-6-box:{ .num  }
 
 :material-numeric-7-box:{ .num }
 
