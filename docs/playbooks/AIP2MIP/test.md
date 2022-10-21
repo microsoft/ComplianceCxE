@@ -105,7 +105,7 @@ It is reference links [emphasis tutorials][myexample]
 
 :material-shield-off-outline:{ .notplanned  } `Not Planned`
 
-:material-calendar-clock:{ .warning } `Coming Soon`
+:material-calendar-clock:{ .planning } `Coming Soon`
 
 :material-alert:{ .error } `Major Change`<br>:material-calendar-star:{ .preview } `In Preview`
 
@@ -115,11 +115,13 @@ It is reference links [emphasis tutorials][myexample]
 
 :material-dev-to:{ .development  } `In Development`
 
-:material-calendar-edit:{ .warning } `In Planning`
+ :material-calendar-clock:{ .planning } `In Planning`
 
 :material-help-circle: :material-web-check:
 
 :material-cloud-download: 
+
+:material-calendar-cursor:
 
 
 :simple-microsoftword:{ .wrd } , :simple-microsoftexcel:{ .xls } , :simple-microsoftpowerpoint:{ .ppt } , :simple-microsoftoutlook:{ .olk }
@@ -146,19 +148,19 @@ It is reference links [emphasis tutorials][myexample]
 
 :material-shield-lock-outline:	Encryption
 
-:material-email-lock:			Collab
+:material-send-lock:			Collab
 
-:material-page-layout-header:		Marking
+:material-file-code:		Marking
 
 
 :simple-powershell:			PowerShell
 
 
-:material-file-chart:       Reporting
+:material-shield-search:      Reporting
 
 :material-shield-sync-outline:      3p interop
 
-
+:material-security-network:     Environment
 
 ---------
 
@@ -166,4 +168,28 @@ It is reference links [emphasis tutorials][myexample]
 
 
 
-![Presentation1](https://user-images.githubusercontent.com/43501191/196542628-accc288c-c901-458f-b817-133cda9a1274.gif)
+---------------
+
+:material-numeric-0-box:{ .num }
+
+:material-numeric-1-box:{ .num }
+
+:material-numeric-2-box:{ .num }
+
+:material-numeric-3-box:{ .num }
+
+:material-numeric-4-box:{ .num }
+
+:material-numeric-5-box:{ .num }
+
+:material-numeric-6-box:{ .num }
+
+:material-numeric-7-box:{ .num }
+
+:material-numeric-8-box:{ .num }
+
+:material-numeric-9-box:{ .num }
+
+:material-numeric-10-box:{ .num }
+
+
