@@ -9,11 +9,11 @@ Use S/MIME to encrypt emails instead of Rights Management Service when applying 
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-|  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
-| :----                  | :---- | :---- | :---- | :---- | 
-| 1 | **Encrypt with S/MIME** <br>Determines whether an email can be encrypted with S/MIME.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting `SMimeEncrypt`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
-| 2 | **Sign with S/MIME** <br>Determines whether an email can be signed with S/MIME.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting `SMimeSign`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
-|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
+| :---- | :---- | :---- | :---- | 
+| :material-numeric-1-box:{ .num  } **Encrypt with S/MIME** <br>Determines whether an email can be encrypted with S/MIME.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting `SMimeEncrypt`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
+| :material-numeric-2-box:{ .num  } **Sign with S/MIME** <br>Determines whether an email can be signed with S/MIME.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting `SMimeSign`  |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-calendar-star:{ .preview } `In Preview` |
+| ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
 
 ### Change Management Notes
 
