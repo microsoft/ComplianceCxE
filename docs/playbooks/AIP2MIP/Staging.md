@@ -122,7 +122,7 @@ The table below summarizes the advanced settings used by the AIP Add-in for M365
 | | | |
 | :material-shield-alert-outline: **Labeling Enforcement** |||
 | `DisableMandatoryInOutlook`    | :material-shield-check:{ .success } `Supported`      | - [Mandatory Labeling](Features/Enforcement/MandatoryLabeling.md) | 
-| `DefaultSubLabelId`            | :material-calendar-edit:{ .planning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/ManualLabeling.md) | 
+| `DefaultSubLabelId`            | :material-calendar-edit:{ .planning } `In Planning`    | - [Manual Labeling](Features/Enforcement/ManualLabeling.md) | 
 | `PostponeMandatoryBeforeSave`  | :material-calendar-edit:{ .planning } `In Planning`    | - [Mandatory Labeling](Features/Enforcement/MandatoryLabeling.md) | 
 | `JustificationTextForUserText` | :material-shield-off-outline:{ .notplanned  } `Not Planned`    | - [Downgrade Justification](Features/Enforcement/DowngradeJustification.md) | 
 | | |
