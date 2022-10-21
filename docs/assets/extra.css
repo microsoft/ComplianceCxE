@@ -84,7 +84,7 @@
 } 
 
 .preview {
-  color: #e3008c;
+  color: #881798;
 } 
 
 .development {
@@ -92,13 +92,17 @@
 } 
 
 .notplanned {
-  color: #ef6950;
+  color: #d13438;
 } 
 
 .notsupported {
-  color: #ef6950;
+  color: #d13438;
 } 
 
 .planning {
-    color: #005b70;
+    color: #986f0b;
+}
+
+.num {
+    color: #e3008c;
 }
