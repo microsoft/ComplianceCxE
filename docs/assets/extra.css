@@ -105,6 +105,5 @@
 
 .num {
     color: #e3008c;
-    transform-origin: left top;
-    transform: scale(1.5);
+    transform: scale(1);
 }
