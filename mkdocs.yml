@@ -110,6 +110,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - tables
 plugins:
   - search
 copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
