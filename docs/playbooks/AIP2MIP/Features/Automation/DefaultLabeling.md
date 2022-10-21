@@ -9,12 +9,12 @@ Default labels set a base level of protection settings that you can apply to all
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-|  | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | 
-| :----                  | :---- | :---- | :---- | 
-| 1 | **Apply user-default labels to files: On Save** <br>Determines whether a user's assigned default label is applied to new documents or edited documents when saved.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` |
-| 2 | **Apply user-default labels to emails: On Send** <br>Determines whether a user's assigned default label is applied to emails when sent.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` | 
-| 3 | **Differentiate default labels by content type** <br>Determines whether a user can be assigned different default labels for files vs. emails.  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `Supported` | 
-|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | 
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | 
+| :---- | :---- | :---- | 
+| :material-numeric-1-circle:{ .num  } **Apply user-default labels to files: On Save** <br>Determines whether a user's assigned default label is applied to new documents or edited documents when saved.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` |
+| :material-numeric-2-circle:{ .num  } **Apply user-default labels to emails: On Send** <br>Determines whether a user's assigned default label is applied to emails when sent.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` | 
+| :material-numeric-3-circle:{ .num  } **Differentiate default labels by content type** <br>Determines whether a user can be assigned different default labels for files vs. emails.  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `Supported` | 
+| ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | 
 
 
 
