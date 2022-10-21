@@ -54,8 +54,10 @@ TODO
 
 ## Learn More
 
-:material-help-circle: [Specify a default label](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)
+:material-help-circle: [AIP Add-in: Customize justification prompt texts for modified labels](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#customize-justification-prompt-texts-for-modified-labels)
 
-:material-help-circle: [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling)
+:material-help-circle: [Built-In: Require a justification for changing a label](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)
 
-:material-help-circle: [Easy Trials: Default sensitivity label policy](https://learn.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials#default-sensitivity-label-policy)
+:material-help-circle: [End-Users: Apply sensitivity labels to your files and email in Office](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
+
+
