@@ -202,7 +202,7 @@ It is reference links [emphasis tutorials][myexample]
 
 <table style="width:100%">
     <tr>
-        <th style="width:2%"></th>
+        <th>#</th>
         <th style="width:23%">Use Case</th>
         <th style="width:25%">AIP</th>
         <th style="width:25%">MIP v1</th>
@@ -217,8 +217,8 @@ It is reference links [emphasis tutorials][myexample]
     </tr>
     <tr>
         <td>2</td>
-        <td>Primary UI entry point for interacting with the sensitivity bar.	</td>
-        <td>AButton to close sensitivity bar. Requires sensitivity menu to show the bar.	</td>
+        <td>Primary UI entry point for *interacting* with the sensitivity bar.	</td>
+        <td>AButton to close sensitivity bar. [Requires](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/Staging/) sensitivity menu to show the bar.	</td>
         <td>Sensitivity status prompts for missing labels when optional "no label" or required (with mandatory labeling) "select a label"</td>
         <td>MIP Appears in editing view near content's name in application title bar (files) or subject line (email), in application's file menu, Save New popup, and Rename File popup.</td>
     </tr>
