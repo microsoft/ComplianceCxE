@@ -200,3 +200,25 @@ It is reference links [emphasis tutorials][myexample]
 ![Presentation2](https://user-images.githubusercontent.com/43501191/197310186-f9dad168-2f65-42a5-852c-50e08803d1a2.gif)
 
 
+<table style="width:100%">
+    <tr>
+        <th style="width:5%"></th>
+        <th style="width:35%">Use Case</th>
+        <th style="width:20%">AIP</th>
+        <th style="width:20%">MIP v1</th>
+        <th style="width:20%">MIP v2</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Use Case</td>
+        <td>AIP</td>
+        <td>MIP v1</td>
+        <td>MIP v2</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Primary UI entry point for interacting with the sensitivity bar.	</td>
+        <td>AButton to close sensitivity bar. Requires sensitivity menu to show the bar.	</td>
+        <td>Sensitivity status prompts for missing labels when optional "no label" or required (with mandatory labeling) "select a label"</td>
+        <td>MIP Appears in editing view near content's name in application title bar (files) or subject line (email), in application's file menu, Save New popup, and Rename File popup.</td>
+    </tr>
