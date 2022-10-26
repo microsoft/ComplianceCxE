@@ -109,8 +109,7 @@
 }
 
 .mybtn {
-    color: #125d9a;
-    border-style: solid;
-    border-color: #125d9a;
-    background-color: #f0f6fa;    
+    color: #ffffff;
+    background-color: #3a96dd;    
+    padding:8px;
 }
