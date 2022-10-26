@@ -115,6 +115,5 @@ markdown_extensions:
   - tables
 plugins:
   - search
-  - glightbox
 copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
 
