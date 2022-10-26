@@ -173,11 +173,11 @@ It is reference links [emphasis tutorials][myexample]
 
 === "AIP"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198154442-296b08c7-90e8-4aed-ac1c-cff2856cfa39.png)
+    ![image](https://user-images.githubusercontent.com/43501191/198155586-53390142-2a69-4a79-afcd-5ccc61d2b686.png)
 
 === "MIP"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198154453-b04ef2b2-704a-416b-8b8a-e71df2d0bc2c.png)
+    ![image](https://user-images.githubusercontent.com/43501191/198155614-9899b0c7-a12a-40c9-a9d5-249b09f87818.png)
 
 ---------
 
