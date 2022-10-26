@@ -107,3 +107,10 @@
     color: #e3008c;
     transform: scale(1.2);
 }
+
+.mybtn {
+    color: #125d9a;
+    border-style: solid;
+    border-color: #125d9a;
+    background-color: #f0f6fa;    
+}
