@@ -168,6 +168,17 @@ It is reference links [emphasis tutorials][myexample]
 
 :material-security-network:     Environment
 
+
+-----------
+
+=== "AIP"
+
+    ![image](https://user-images.githubusercontent.com/43501191/198154442-296b08c7-90e8-4aed-ac1c-cff2856cfa39.png)
+
+=== "MIP"
+
+    ![image](https://user-images.githubusercontent.com/43501191/198154453-b04ef2b2-704a-416b-8b8a-e71df2d0bc2c.png)
+
 ---------
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
