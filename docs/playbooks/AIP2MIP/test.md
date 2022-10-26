@@ -21,7 +21,13 @@ It is reference links [emphasis tutorials][myexample]
 
 -----
 
-[Send :fontawesome-solid-paper-plane:](#){ .md-button }
+[Start Evaluation :material-rocket-launch:](#){ .mybtn }
+
+[Review Playbook :material-book-open-variant:](#){ .mybtn }
+
+[Compare Solutions :material-compare-horizontal:](#){ .mybtn }
+
+[Try it now :octicons-person-add-16:](#){ .mybtn }
 
 
 ----------------
