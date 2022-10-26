@@ -111,5 +111,16 @@
 .mybtn {
     color: #ffffff;
     background-color: #3a96dd;    
-    padding:8px;
+    padding: 8px;
+    border: 2px solid #3a96dd;
+    border-radius: 4px;
 }
+
+.mybtn a {
+    color: #ffffff;
+}
+
+.mybtn a:hover {
+    color: #000000;
+}
+
