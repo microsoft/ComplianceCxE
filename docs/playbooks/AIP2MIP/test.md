@@ -21,13 +21,13 @@ It is reference links [emphasis tutorials][myexample]
 
 -----
 
-[Start Evaluation :material-rocket-launch:](#){ .mybtn }
+[Start Evaluation :material-rocket-launch:](https://aka.ms/AIP2MIP/Guide/Evaluate){ .mybtn }
 
-[Review Playbook :material-book-open-variant:](#){ .mybtn }
+[Review Playbook :material-book-open-variant:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/GetStarted){ .mybtn }
 
-[Compare Solutions :material-compare-horizontal:](#){ .mybtn }
+[Compare Solutions :material-compare-horizontal:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/CompareAIP2MIP){ .mybtn }
 
-[Try it now :octicons-person-add-16:](#){ .mybtn }
+[Try it now :octicons-person-add-16:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/PreviewAIP2MIP){ .mybtn }
 
 
 ----------------
