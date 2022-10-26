@@ -10,19 +10,25 @@
 
 Many of the labeling features supported by the AIP add-in are now supported by built-in labeling. The table below is an adaptation of [Feature parity for built-in labeling and the AIP add-in for Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) and offers additional information to help you prepare your transition from the AIP add-in. 
 
-Together, the combination of feature roadmap and change-management effort can help you plan a schedule for your migration. The roadmap indicates how soon the feature would be generally available in the fastest releast channel of Office; the effort gives you an estimate on how long it might take your organization to prepare and adopt the feature once it's available.
+Together, the combination of feature roadmap and change-management effort can help you plan a schedule for your migration. The roadmap indicates how soon the feature would be generally available in the fastest release channel of Office; the effort gives you an estimate on how long it might take your organization to prepare and adopt the feature once it's available.
 
-> 🗒️ Note: For a more detailed list of capabilities, minimum versions that might be needed, and configuration information, see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
+
+!!! note
+
+    For a more detailed list of capabilities, minimum versions that might be needed, and configuration information, 
+    see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
 
 ### Feature Roadmap
 The following categories help you identify the support status for Add-in functionality available in built-in labeling.
 
-- `✅ Supported`: General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview)
-- `⭐ In Preview`: Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now. Provides a `📅 M365 Roadmap` tracking item.
-- `🔷 In Development`: Development is under way. Keep an eye out for product roadmap updates. General availability **3-6 months** time horizon. Provides a `📅 M365 Roadmap` tracking item.
-- `🟨 In Planning`: In consideration for an upcoming development cycle, but not yet commited on product roadmap. General availability **6-12 months** time horizon.
-- `⚫ Not Planned`: Items that are not in consideration for built-in labeling. Submit a Microsoft support ticket for a Design Change Request (DCR) if these are important for your organization.
-- `🟢 Not Needed`: Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling.
+| Migration Readiness | Time Horizon |
+| :----       | :----       |
+| `✅ Supported`<br>General availability in [Current Channel](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#current-channel-overview) | **Now**. These features are [avaiable in a production release channel.](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint) |
+| `⭐ In Preview`<br>Available in [Insider Beta Channel](https://learn.microsoft.com/en-us/DeployOffice/office-insider/compare-channels) to try now. Provides a `📅 M365 Roadmap` tracking item. | **0-3 months**. These features are available in a public preview and encourage you to start testing now to prepare your organization for their release |
+| `🔷 In Development`<br>Development is under way. Keep an eye out for product roadmap updates. Provides a `📅 M365 Roadmap` tracking item. | **3-6 months** depending on your Office release channel. We encourage you to start actively planning your deployment now and recommend that you join a [preview ring](https://aka.ms/AIP2MIP/HowTo/Preview) to begin validation early. |
+| `🟨 In Planning`<br>In consideration for an upcoming development cycle, but not yet committed on product roadmap. | **6-12 months** depending on your Office release channel. We encourage you begin testing all other features that are already supported, in preview, or in development to minimize your adoption time of remaining in planning features. |
+| `⚫ Not Planned`<br>Items that are not in consideration for built-in labeling. Submit a Microsoft support ticket for a Design Change Request (DCR) if these are important for your organization. | NA |
+| `🟢 Not Needed`<br>Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling. | NA |
 
 ### Change Management Insights
 Use the ranking scheme below to help you assess how much effort you can expect to transition users to the replacement built-in feature. 
