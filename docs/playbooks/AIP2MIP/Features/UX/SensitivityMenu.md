@@ -21,21 +21,30 @@ The table below lists the main use cases for this feature and its transition fro
 | :material-numeric-6-circle:{ .num  } **Localization** <br>How are label names and descriptions surfaced to users who choose a display language for Office? | :material-shield-check:{ .success } `Supported`<br>User can show/hide sensitivity bar. |  :material-shield-off-outline:{ .notplanned  } `Not Applicable` | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>Sensitivity bar is designed to always remain on screen near the document title or email subject. *See [Sensitivity Bar](SensitivityBar.md)* |
 | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
+### Change Management Notes
+
+!!! note
+
+    When a label is applied to a content item but is not published to the signed-in user, the sensitivity menu shows the label as selected. 
+    If users remove that label or choose another one (if they have the rights to do so), 
+    that label will then be removed from the menu (since the user can only select label that are assigned to them)
+
+
 ## Product Screenshots
 
 Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
 
 === "Add-In :material-download:`Latest`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162498-5d75be94-4ba8-4d9d-8bdb-0068458b70b5.png)
+    [![image](img/SensitivityMenu/AIP.png)](img/SensitivityMenu/AIP.png)
 
 === "Built-In :material-cloud-download:`Current Channel`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162514-3b61d2c4-8bc3-4a60-88fb-67571a2fd61f.png)
+    [![image](img/SensitivityMenu/MIPv1.png)](img/SensitivityMenu/MIPv1.png)
 
 === "Built-In :material-calendar-clock: `Coming Soon`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162543-611e9f5c-a6df-4e27-882b-b0b4ee67f349.png)
+    [![image](img/SensitivityMenu/MIPv2.png)](img/SensitivityMenu/MIPv2.png)
 
     
 
@@ -44,6 +53,7 @@ Use the screenshots below to help you evaluate the visual changes that correspon
 :material-help-circle: [Learn about sensitivity labels](SCCLabels)
 
 :material-help-circle: [Apply sensitivity labels to your files and email in Office](IWLabels)
+
 
 
 <!-- ============ LINKS =========== -->

@@ -107,3 +107,20 @@
     color: #e3008c;
     transform: scale(1.2);
 }
+
+.mybtn {
+    color: #106ebe;
+    background-color: #c7e0f4;    
+    padding: 8px;
+    border: 2px solid #106ebe;
+    border-radius: 4px;
+}
+
+.mybtn a {
+    color: #ffffff;
+}
+
+.mybtn a:hover {
+    color: #000000;
+}
+

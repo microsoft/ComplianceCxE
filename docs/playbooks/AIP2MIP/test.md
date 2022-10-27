@@ -21,7 +21,13 @@ It is reference links [emphasis tutorials][myexample]
 
 -----
 
-[Send :fontawesome-solid-paper-plane:](#){ .md-button }
+[Start Evaluation :material-rocket-launch:](https://aka.ms/AIP2MIP/Guide/Evaluate){ .mybtn }
+
+[Review Playbook :material-book-open-variant:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/GetStarted){ .mybtn }
+
+[Compare Solutions :material-compare-horizontal:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/CompareAIP2MIP){ .mybtn }
+
+[Try it now :octicons-person-add-16:](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/PreviewAIP2MIP){ .mybtn }
 
 
 ----------------
@@ -162,6 +168,17 @@ It is reference links [emphasis tutorials][myexample]
 
 :material-security-network:     Environment
 
+
+-----------
+
+=== "AIP"
+
+    ![image](https://user-images.githubusercontent.com/43501191/198155586-53390142-2a69-4a79-afcd-5ccc61d2b686.png)
+
+=== "MIP"
+
+    ![image](https://user-images.githubusercontent.com/43501191/198155614-9899b0c7-a12a-40c9-a9d5-249b09f87818.png)
+
 ---------
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
@@ -200,3 +217,26 @@ It is reference links [emphasis tutorials][myexample]
 ![Presentation2](https://user-images.githubusercontent.com/43501191/197310186-f9dad168-2f65-42a5-852c-50e08803d1a2.gif)
 
 
+<table style="width:100%">
+    <tr>
+        <th>#</th>
+        <th style="width:23%">Use Case</th>
+        <th style="width:25%">AIP</th>
+        <th style="width:25%">MIP v1</th>
+        <th style="width:25%">MIP v2</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Use Case</td>
+        <td>AIP</td>
+        <td>MIP v1</td>
+        <td>MIP v2</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Primary UI entry point for *interacting* with the sensitivity bar.	</td>
+        <td>AButton to close sensitivity bar. [Requires](https://microsoft.github.io/ComplianceCxE/playbooks/AIP2MIP/Staging/) sensitivity menu to show the bar.	</td>
+        <td>Sensitivity status prompts for missing labels when optional "no label" or required (with mandatory labeling) "select a label"</td>
+        <td>MIP Appears in editing view near content's name in application title bar (files) or subject line (email), in application's file menu, Save New popup, and Rename File popup.</td>
+    </tr>
+</table>

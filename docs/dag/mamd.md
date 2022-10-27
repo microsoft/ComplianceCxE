@@ -1,4 +1,6 @@
 
+       ** The new version of the tool is in Private Preview. Sign-up for the private preview at: ** https://forms.office.com/r/KP1Edg4nEj
+
 ## What is Migration Assistant for Microsoft DLP?
 
 The Migration Assistant for Microsoft DLP tool is a Windows based desktop application that will migrate your DLP policies from other DLP platforms to our Unified DLP platform. 
