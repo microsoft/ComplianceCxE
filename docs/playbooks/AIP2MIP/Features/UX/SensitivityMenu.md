@@ -27,15 +27,15 @@ Use the screenshots below to help you evaluate the visual changes that correspon
 
 === "Add-In :material-download:`Latest`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162498-5d75be94-4ba8-4d9d-8bdb-0068458b70b5.png)
+    [![image](img/SensitivityMenu/AIP.png)](img/SensitivityMenu/AIP.png)
 
 === "Built-In :material-cloud-download:`Current Channel`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162514-3b61d2c4-8bc3-4a60-88fb-67571a2fd61f.png)
+    [![image](img/SensitivityMenu/MIPv1.png)](img/SensitivityMenu/MIPv1.png)
 
 === "Built-In :material-calendar-clock: `Coming Soon`"
 
-    ![image](https://user-images.githubusercontent.com/43501191/198162543-611e9f5c-a6df-4e27-882b-b0b4ee67f349.png)
+    [![image](img/SensitivityMenu/MIPv2.png)](img/SensitivityMenu/MIPv2.png)
 
     
 
@@ -45,7 +45,7 @@ Use the screenshots below to help you evaluate the visual changes that correspon
 
 :material-help-circle: [Apply sensitivity labels to your files and email in Office](IWLabels)
 
-![image](img/SensitivityMenu/AIP.png)
+
 
 <!-- ============ LINKS =========== -->
 
