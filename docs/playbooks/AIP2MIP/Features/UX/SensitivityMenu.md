@@ -11,39 +11,45 @@ The sensitivity menu is the primary method for users to apply labels that are as
 
 The table below lists the main use cases for this feature and its transition from the AIP Add-in to the built-in labeling solution. These are mapped to product screenshots in the next section.
 
-| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](AIPLatest) | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](MIPLatest) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
 | :---- | :---- | :---- | :---- |
-| :material-numeric-1-circle:{ .num  } **Placement**<br>Primary UI entry point for interacting with the sensitivity menu. | :material-shield-check:{ .success } `Supported`<br>Displays a "Sensitivity" menu in the app's primary commanding toolbar, Ribbon's Home tab, near text formatting options. Available only for signed-in users who are in scope of at least one label policy. |  :material-shield-check:{ .success } `Supported`<br>Displays a "Sensitivity" menu in the app's primary commanding toolbar, Ribbon's Home tab near the far right. Available only for signed-in users who are in scope of at least one label policy. | :material-shield-check:{ .success } `No change` |
-| :material-numeric-2-circle:{ .num  } **Policy Owner** <br>Username for signed-in user whose label policy is serving the visible labels in the menu. | :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-shield-check:{ .success } `Supported`<br>Displays username at the top of the label menu. | :material-shield-check:{ .success } `No change` |
-| :material-numeric-3-circle:{ .num  } **Label Taxonomy** <br>Representation of the parent/sublabel hierarchy and each label's admin-localized display name. | :material-shield-check:{ .success } `Supported`<br>Parent vs. sub-labels displayed in menu hierarchy in submenus. |  :material-shield-check:{ .success } `No change` ||
-| :material-numeric-4-circle:{ .num  } **Label Description** <br>Admin-localized tooltip text for a label.| :material-shield-check:{ .success } `Supported`<br>Description available on hover of each label in the menu in a tooltip.  |  :material-shield-check:{ .success } `No change` ||
-| :material-numeric-5-circle:{ .num  } **Label Color**<br>Determines how each label's color is displayed in the sensitivity menu.<br>*See [Label Color](LabelColors.md)* | :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Displays the color defined in the label information within the label icon. When no color is configured, the icon appears with no fill color. |
-| :material-numeric-6-circle:{ .num  } **Label Encryption** <br>Determines how each label's encryption settings are represented in the sensitivity menu. <br>*See [Encryption Status](EncryptionStatus.md)* | :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Displays "lock" alongside label that applies encryption. |
-| :material-numeric-7-circle:{ .num  } **Sensitivity Bar Toggle** <br>Determines whether a user can show or hide the sensitivity bar from the sensitivity menu.<br>*See [Sensitivity Bar](SensitivityBar.md)*| :material-shield-check:{ .success } `Supported`<br>User can show/hide sensitivity bar. |  :material-shield-off-outline:{ .notplanned  } `Not Applicable` | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>Sensitivity bar is designed to always remain on screen near the document title or email subject. *See [Sensitivity Bar](SensitivityBar.md)* |
-| :material-numeric-8-circle:{ .num  } **Help & Feedback**   <br>Determines how an admin-defined url in their label policy is represented in the sensitivity menu. | :material-shield-check:{ .success } `Supported`<br>Popup button available in sensitivity menu, requires advanced setting [`ReportAnIssueLink`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#add-report-an-issue-for-users)  |  :material-shield-check:{ .success } `Supported`<br>Displays "learn more" button within the menu, using configured from Compliance Admin Center's ["Provide users with a link to a custom help page"](https://learn.microsoft.com/en-us/microsoft-365/compliance/get-started-with-sensitivity-labels?view=o365-worldwide#end-user-documentation-for-sensitivity-labels) setting. | :material-shield-check:{ .success } `No change` |
-| :material-numeric-9-circle:{ .num  } **Localized Label Information** <br>Determines whether admin-provided label name and description respond to the user's display language in their Office app <br> See how to [configure display language](https://learn.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide#example-configuration-to-configure-a-sensitivity-label-for-different-languages) | :material-shield-check:{ .success } `Supported`  | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `No change`  |
+| :material-numeric-1-circle:{ .num  } **Placement**<br>How is the scenario surfaced to end users? | :material-shield-check:{ .success } `Supported`<br>Sensitivity menu available in the Home tab of the application's Ribbon, positioned roughly in the middle of the ribbon alongside formatting options. |  :material-shield-check:{ .success } `Supported`<br>Sensitivity menu available in the Home tab of the application's Ribbon. Positioned roughly near the end. | :material-shield-check:{ .success } `No change` |
+| :material-numeric-2-circle:{ .num  } **Policy owner** <br>How are users reminded of which identity their available labels are pulled from? | :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-shield-check:{ .success } `Supported`<br>Email address of signed-in user is visible at the top of the sensitivity menu. | :material-shield-check:{ .success } `No change` |
+| :material-numeric-3-circle:{ .num  } **Choose sensitivity** <br>How do users interact with this to select or change sensitivity labels?  |  :material-shield-check:{ .success } `Supported`<br>Sensitivity menu displays all labels published to the signed-in user in a hierarchical menu. Each label shows its name and selection state; label descriptions available as a tooltip. Users can remove a label by unchecking the selected label in the sensitivity menu (if they have the rights). | :material-shield-check:{ .success } `Supported`<br>Same experience as AIP Add-in | :material-shield-check:{ .success } `Supported`<br>Adds label color and encryption indicator to each label. |
+| :material-numeric-4-circle:{ .num  } **View sensitivity**<br>How is content's assigned sensitivity surfaced to users? | :material-shield-check:{ .success } `Supported`<br>Label that's currently assigned to the content item appears selected in the sensitivity menu, even if the label is not published to the signed-in user. |  :material-shield-check:{ .success } `Supported`<br>Same experience as AIP Add-in. See note below if content's applied label is not published to signed-in user. | :material-calendar-clock:{ .planning } `In Planning`<br>Same experience as AIP Add-in |
+| :material-numeric-5-circle:{ .num  } **Help & Feedback** <br>Can users access organization-specific help and support information? | :material-shield-check:{ .success } `Supported`<br>Users can access Help & Feedback window from sensitivity menu. | :material-shield-check:{ .success } `Supported`<br>Users can launch admin-configured url for org-specific help page from sensitivity menu. | :material-shield-check:{ .success } `No change` |
+| :material-numeric-6-circle:{ .num  } **Localization** <br>How are label names and descriptions surfaced to users who choose a display language for Office? | :material-shield-check:{ .success } `Supported`<br>User can show/hide sensitivity bar. |  :material-shield-off-outline:{ .notplanned  } `Not Applicable` | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>Sensitivity bar is designed to always remain on screen near the document title or email subject. *See [Sensitivity Bar](SensitivityBar.md)* |
 | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
 ## Product Screenshots
 
 Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
 
-### Add-In `🌎 Latest`
+=== "Add-In :material-download:`Latest`"
 
-![image](https://user-images.githubusercontent.com/43501191/194768341-7b459df0-d85c-496f-9f71-edb5e5d493a9.png)
+    ![image](https://user-images.githubusercontent.com/43501191/198162498-5d75be94-4ba8-4d9d-8bdb-0068458b70b5.png)
 
+=== "Built-In :material-cloud-download:`Current Channel`"
 
-### Built-In `🌎 Current Channel`
+    ![image](https://user-images.githubusercontent.com/43501191/198162514-3b61d2c4-8bc3-4a60-88fb-67571a2fd61f.png)
 
-![image](https://user-images.githubusercontent.com/43501191/194768592-b6e53ac9-f184-46a9-9ba8-f56bdaaae86d.png)
+=== "Built-In :material-calendar-clock: `Coming Soon`"
 
-### Built-In `⭐ In Preview`
+    ![image](https://user-images.githubusercontent.com/43501191/198162543-611e9f5c-a6df-4e27-882b-b0b4ee67f349.png)
 
-![image](https://user-images.githubusercontent.com/43501191/194768599-79cfe147-69c7-4e45-aca5-2eaf1cb4bf09.png)
-
+    
 
 ## Learn More
 
-:material-help-circle: [Learn about sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+:material-help-circle: [Learn about sensitivity labels](SCCLabels)
 
-:material-help-circle: [Configure a label color](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#label-colors)
+:material-help-circle: [Apply sensitivity labels to your files and email in Office](IWLabels)
+
+
+<!-- ============ LINKS =========== -->
+
+[AIPLatest]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history
+[MIPLatest]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps
+
+[SCCLabels]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels
+[IWLabels]: https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9
