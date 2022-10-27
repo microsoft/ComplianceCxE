@@ -45,6 +45,7 @@ Use the screenshots below to help you evaluate the visual changes that correspon
 
 :material-help-circle: [Apply sensitivity labels to your files and email in Office](IWLabels)
 
+![image](img/SensitivityMenu/AIP.png)
 
 <!-- ============ LINKS =========== -->
 
