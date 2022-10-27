@@ -21,6 +21,15 @@ The table below lists the main use cases for this feature and its transition fro
 | :material-numeric-6-circle:{ .num  } **Localization** <br>How are label names and descriptions surfaced to users who choose a display language for Office? | :material-shield-check:{ .success } `Supported`<br>User can show/hide sensitivity bar. |  :material-shield-off-outline:{ .notplanned  } `Not Applicable` | :material-shield-off-outline:{ .notsupported } `Not Supported`<br>Sensitivity bar is designed to always remain on screen near the document title or email subject. *See [Sensitivity Bar](SensitivityBar.md)* |
 | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
+### Change Management Notes
+
+!!! note
+
+    When a label is applied to a content item but is not published to the signed-in user, the sensitivity menu shows the label as selected. 
+    If users remove that label or choose another one (if they have the rights to do so), 
+    that label will then be removed from the menu (since the user can only select label that are assigned to them)
+
+
 ## Product Screenshots
 
 Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
