@@ -26,8 +26,10 @@ The table below lists the main use cases for this feature and its transition fro
 
 !!! note
 
-    Built-in labeling only shows labels that the signed-in user has assigned to them in their label policy. 
-    If the document is labeled with a sensitivity that's not published to the user, it is not shown to users.
+    With AIP Add-in, users see the document's current label as selected in the sensitivity menu, 
+    even if the user is not assigned that label in their policy. With built-in labeling in current channel, 
+    the sensitivity menu does not show the sensitivity labels that are not published to the current user. 
+    See [Sensitivity Status](SensitivityStatus.md) for more information.
 
 
 ## Product Screenshots
