@@ -9,41 +9,58 @@ The label color helps end-users recognize a sensitivity label at-a-glance.
 ## Product Capabilities
 The table below lists the main use cases for this feature and its transition from the AIP Add-in to the built-in labeling solution. These are mapped to product screenshots in the next section.
 
-| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`][AIPLatest] | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`][MIPLatest] | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
 | :---- | :---- | :---- | :---- |
-| :material-numeric-1-circle:{ .num  } **Default Color**   | :material-shield-check:{ .success } `Supported`<br>When admins don't choose a color, label icon appears without a fill color |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported` |
-| :material-numeric-2-circle:{ .num  } **Preset Colors**   | :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Admins can select from 10 present colors in the compliance center, and visible in the label icon. |
-| :material-numeric-3-circle:{ .num  } **Custom Colors**   | :material-shield-check:{ .success } `Supported`<br>Admins provide a HEX color value in Label Advanced Settings [`color`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-color-for-the-label). *See [`Set-Label`](https://learn.microsoft.com/en-us/powershell/module/exchange/set-label?view=exchange-ps#-advancedsettings)* |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported` |
+| :material-numeric-1-circle:{ .num  } **Default Color**<br>How are labels represented when no color is chosen?   | :material-shield-check:{ .success } `Supported`<br>When admins don't choose a color, label icon appears without a fill color |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Same as AIP Add-in |
+| :material-numeric-2-circle:{ .num  } **Preset Colors**<br>How are labels represented one of the preset colors is chosen?   | :material-shield-check:{ .success } `Supported`<br>Admins can select from 10 present colors in the compliance center, and visible in the label icon. |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Same as AIP Add-in |
+| :material-numeric-3-circle:{ .num  } **Custom Colors**<br>How are labels represented when admins configure a custom color (HEX value)?  | :material-shield-check:{ .success } `Supported`<br>Admins provide a HEX color value in Label Advanced Settings [`color`][AIPColors]. |  :material-shield-off-outline:{ .notsupported } `Not Supported` | :material-shield-check:{ .success } `Supported`<br>Same as AIP Add-in |
 | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
+### Change Management Notes
+
+!!! tip
+
+    There's no need for admins to make changes to their colors when adopting built-in labels. 
+    The currently-configured colors, if any, will be used as-is in Office apps.
 
 ## Product Screenshots
 
 Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
 
-See [Sensitivity Menu](SensitivityMenu.md), [Sensitivity Bar](SensitivityBar.md), [Sensitivity Status](SensitivityStatus.md) for mroe information about how the label color is used.
+See [Sensitivity Menu](SensitivityMenu.md), [Sensitivity Bar](SensitivityBar.md), [Sensitivity Status](SensitivityStatus.md) for more information about how the label color is used.
 
-### Sensitivity Label Color Wheel
+=== "Add-In :material-download:`Latest`"
 
-![image](https://user-images.githubusercontent.com/43501191/196059176-68430362-1ee1-4acd-8ab1-9cbc232a2a15.png)
+    [![image](img/LabelColors/AIP.png)](img/LabelColors/AIP.png)
 
-### Color Presets in Security & Compliance Admin Center
+=== "Built-In :material-cloud-download:`Current Channel`"
 
-![image](https://user-images.githubusercontent.com/43501191/194782177-ae6233f3-8344-4fbc-a39c-2dc2ef653ae0.png)
+    [![image](img/LabelColors/MIPv1.png)](img/LabelColors/MIPv1.png)
 
-### When custom colors are selected in Security & Compliance Admin Center
+=== "Built-In :material-calendar-clock: `Coming Soon`"
 
-![image](https://user-images.githubusercontent.com/43501191/194782162-70d755f7-dcf3-49bc-91be-d5923b13bdaa.png)
+    [![image](img/LabelColors/MIPv2.png)](img/LabelColors/MIPv2.png)
+
 
 
 ## Learn More
 
 Use these references to learn more about the end-user experience
 
-:material-help-circle: [Choose label color presets](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#label-colors)
+:material-help-circle: [Choose label color presets][SCCColors]
 
-:material-help-circle: [Configuring custom colors by using PowerShell](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configuring-custom-colors-by-using-powershell)
+:material-help-circle: [End-User Support][IWToolbar]
 
-:material-help-circle: [End-User Support](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
+:material-help-circle: [Office Insiders Blog][IWBlog]
 
-:material-help-circle: [Office Insiders Blog](https://insider.office.com/blog/sensitivity-bar-in-office-for-windows)
+
+<!-- ============ LINKS =========== -->
+
+[AIPLatest]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history
+[MIPLatest]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps
+
+[SCCToolbar]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#sensitivity-bar
+[SCCColors]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#label-colors
+[AIPColors]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-color-for-the-label
+[IWToolbar]: https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9
+[IWBlog]: https://insider.office.com/blog/sensitivity-bar-in-office-for-windows
