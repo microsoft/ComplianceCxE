@@ -9,13 +9,13 @@ Help & feedback tools allow users to get support or help troubleshoot issues.
 ## Product Capabilities
 The table below lists the main use cases for this feature and its transition from the AIP Add-in to the built-in labeling solution. These are mapped to product screenshots in the next section.
 
-| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`][AIPLatest] | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`][MIPLatest] | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
-| :---- | :---- | :---- | :---- |
-| :material-numeric-1-circle:{ .num  } **Microsoft Purview sensitivity labels support**<br>How do users access support information about sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Users are linked to Microsoft's support information for AIP. | :material-shield-check:{ .success } `Supported`<br>Users can rely on in-app help in Office for support information about sensitivity labels | :material-shield-check:{ .success } `No change` |
-| :material-numeric-2-circle:{ .num  } **Organization-specific sensitivity labels support**<br>How do users access internal support information about sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Admins can configure a link for users to "report an issue". <br>Requires advanced setting [`ReportAnIssueLink`][ReportAnIssueLink] | :material-shield-check:{ .success } `Supported`<br>Admins can configure a [custom URL in compliance admin center][SCCCustomURL], displayed to users as "Learn More" in [Sensitivity Menu](SensitivityMenu.md), [Sensitivity Bar](SensitivityBar.md) | :material-shield-check:{ .success } `No change` |
-| :material-numeric-3-circle:{ .num  } **Generate troubleshooting logs**<br>How can users obtain troubleshooting logs to provide during support cases? | :material-shield-check:{ .success } `Supported`<br>Users can export troubleshooting logs from Help & Feedback | :material-shield-check:{ .success } `Supported`<br>Troubleshooting logs integrated into [Office diagnostic logs][OfficeDiag] | :material-shield-check:{ .success } `No change`|
-| :material-numeric-4-circle:{ .num  } **Reset sensitivity labels**<br>How can users reset/resync their sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Help & Feedback window provides "reset settings" button. | :material-shield-check:{ .success } `Not Needed`<br>Built-in labeling does not need explicit reset for identity changes or troubleshooting. When switching identities, Office built-in labeling automatically resets sensitivity labels and rebooting the app can generally resolve any policy sync issues. | :material-shield-check:{ .success } `No change` |
-| ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`][AIPLatest] | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`][MIPLatest] | 
+| :---- | :---- | :---- | 
+| :material-numeric-1-circle:{ .num  } **Microsoft Purview sensitivity labels support**<br>How do users access support information about sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Users are linked to Microsoft's support information for AIP. | :material-shield-check:{ .success } `Supported`<br>Users can rely on in-app help in Office for support information about sensitivity labels |
+| :material-numeric-2-circle:{ .num  } **Organization-specific sensitivity labels support**<br>How do users access internal support information about sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Admins can configure a link for users to "report an issue". <br>Requires advanced setting [`ReportAnIssueLink`][ReportAnIssueLink] | :material-shield-check:{ .success } `Supported`<br>Admins can configure a [custom URL in compliance admin center][SCCCustomURL], displayed to users as "Learn More" in [Sensitivity Menu](SensitivityMenu.md), [Sensitivity Bar](SensitivityBar.md) |
+| :material-numeric-3-circle:{ .num  } **Generate troubleshooting logs**<br>How can users obtain troubleshooting logs to provide during support cases? | :material-shield-check:{ .success } `Supported`<br>Users can export troubleshooting logs from Help & Feedback | :material-shield-check:{ .success } `Supported`<br>Troubleshooting logs integrated into [Office diagnostic logs][OfficeDiag] |
+| :material-numeric-4-circle:{ .num  } **Reset sensitivity labels**<br>How can users reset/resync their sensitivity labels? | :material-shield-check:{ .success } `Supported`<br>Help & Feedback window provides "reset settings" button. | :material-shield-check:{ .success } `Not Needed`<br>Built-in labeling does not need explicit reset for identity changes or troubleshooting. When switching identities, Office built-in labeling automatically resets sensitivity labels and rebooting the app can generally resolve any policy sync issues. |
+| ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |
 
 ### Change Management Notes
 
@@ -37,10 +37,6 @@ See [Sensitivity Menu](SensitivityMenu.md), [Sensitivity Bar](SensitivityBar.md)
 === "Built-In :material-cloud-download:`Current Channel`"
 
     [![image](img/HelpFeedback/MIPv1.png)](img/HelpFeedback/MIPv1.png)
-
-=== "Built-In :material-calendar-clock: `Coming Soon`"
-
-    [![image](img/HelpFeedback/MIPv2.png)](img/HelpFeedback/MIPv2.png)
 
 
 
