@@ -124,7 +124,16 @@
     color: #000000;
 }
 
+@keyframes warning {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
 .warning {
-    color: #ffaa44;
+  animation: warning 1000ms infinite;
+  color: #ffaa44;
 }
 
