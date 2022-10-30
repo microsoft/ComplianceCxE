@@ -9,36 +9,29 @@ Markings are visual tags embedded within the content of a file or email that are
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
-|  | Use Case  | Add-In<br>`🌎 Latest`| Built-In<br>`🌎 Current Channel` | 
-| :---: | :---- | :---- | :---- | 
-| 1 | **Add header, footer, or watermark when applying a label** <br>Determines whether a header, footer, or watermark can be applied.  | `✅ Supported`  |  `✅ Supported` | 
-| 2 | **Set marking's text, color, size, and position** <br>Determines how formatting options are applied to content marks  | `✅ Supported`  |  `✅ Supported` | 
-| 3 | **Dynamic markings with variables** <br>Configure marking's text using variables that populate dynamically  | `✅ Supported`  |  `✅ Supported` | 
-| 4 | **Configure different markings per app** <br>Configure visual markings per Office application type by using an "If.App" variable statement  | `✅ Supported`  |  `✅ Supported` |
-|  | ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | 
+| Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](AIPLatest)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](MIPLatest) | 
+| :---- | :---- | :---- | 
+| **Add header, footer, or watermark when applying a label** <br>Determines whether a header, footer, or watermark can be applied.  | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported` | 
+| **Set marking's text, color, size, and position** <br>Determines how formatting options are applied to content marks  | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `Supported` | 
+| **Dynamic markings with variables** <br>Configure marking's text using variables that populate dynamically  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `Supported` | 
+| **Configure different markings per app** <br>Configure visual markings per Office application type by using an "If.App" variable statement  | :material-shield-check:{ .success } `Supported`  | :material-shield-check:{ .success } `Supported` |
+| ~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | 
 
 
 ### Change Management Notes
 
-> **Note**
-> There may be minor layout differences when applying labels with the add-in compared to the built-in client.
+!!! note
 
-## Product Screenshots
-
-Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
-
-
-### Add-In `🌎 Latest`
-
-xxxx
-
-### Built-In `🌎 Current Channel`
-
-xxxx
-
+    There may be minor layout differences when applying labels with the add-in compared to the built-in client.
 
 ## Learn More
 
 - [Learn about what sensitivity labels can do](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-sensitivity-labels-can-do)
 - [Dynamic markings with variables](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables)
 - [Setting different visual markings for Word, Excel, PowerPoint, and Outlook](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+
+<!-- ============ LINKS =========== -->
+
+[AIPLatest]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history
+[MIPLatest]: https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps
