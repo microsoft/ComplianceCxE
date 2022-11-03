@@ -2,19 +2,19 @@
 [`➡️ Get Started`](../../GetStarted.md) > [`➡️ Step 1`](../../AIP2MIPStep1.md) > [`➡️ Step 2`](../../AIP2MIPStep2.md) > [`➡️ Step 3`](../../AIP2MIPStep3.md) > [`➡️ Step 4`](../../AIP2MIPStep4.md)[***`Change Guide`***](../../CompareAIP2MIP.md) > [`➡️ Step 5`](../../AIP2MIPStep5.md)
 
 
-# `Labeling Enforcement` / `Mandatory Labeling`
+# `Labeling Enforcement` / `Require labels and justifications`
 
-Mandatory labeling ensures a label must be applied before users can save documents and send emails.
+Use Mandatory Labeling to enforce sensitivity labels for all files edited and emails sent. Consider enforcing justifications whenever users downgrade sensitivity labels.
+
 
 ## Product Capabilities
 The table below lists the main characteristics of this feature and its comparison across the AIP Add-in vs. the built-in labeling solution. These are mapped to product screenshots in the next section. 
 
 | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`][AIPLatest] | :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`][MIPLatest] | :material-microsoft-office: Built-In<br>:material-calendar-clock: `Coming Soon` |
 | :---- | :---- | :---- | :---- | 
-| :material-numeric-1-circle:{ .num  } **Require a label for files: Triggered onSave** <br>Determines whether users are prompted to apply a label before saving their file. | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `Supported` | :material-calendar-clock:{ .planning } `In Planning`<br>Sensitivity bar integrated directly within all Save, Export, Print scenarios where mandatory labeling is enforced "inline" in the user flow to minimize effort and simplify compliance with required labeling policies. |
-| :material-numeric-2-circle:{ .num  } **Require a label for files: Triggered onExit**<br>Determines whether users are prompted to apply a label before closing their document. Users are still prompted to label their file during save, but can postpone its enforcement until they try to close the app.  | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`PostponeMandatoryBeforeSave`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling)  |  :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-calendar-clock:{ .planning } `In Planning` |
-| :material-numeric-3-circle:{ .num  } **Require a label for emails: Triggered onSend** <br>Determines whether users are prompted to apply a label before sending an email. | :material-shield-check:{ .success } `Supported`  |  :material-shield-check:{ .success } `Supported`  | :material-shield-check:{ .success } `No change` |
-| :material-numeric-4-circle:{ .num  } **Exempt emails from mandatory labeling policy** <br>Determines whether admins can exempt emails from mandatory labeling. | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`DisableMandatoryInOutlook`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#exempt-outlook-messages-from-mandatory-labeling)  | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `No change` |
+| :material-numeric-1-circle:{ .num  } **Require a label when editing a file** <br>Determines how users are prompted to apply a label when creating or editing files. | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `Supported` | :material-calendar-clock:{ .planning } `In Planning`<br>Sensitivity bar integrated directly within all Save, Export, Print scenarios where mandatory labeling is enforced "inline" in the user flow to minimize effort and simplify compliance with required labeling policies. |
+| :material-numeric-2-circle:{ .num  } **Require a label before sending an email**<br>Determines how users are prompted to apply a label when sending emails. | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`PostponeMandatoryBeforeSave`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling)  |  :material-shield-off-outline:{ .notsupported } `Not Supported` |  :material-calendar-clock:{ .planning } `In Planning` |
+| :material-numeric-3-circle:{ .num  } **Require a justification to downgrade labels** <br>Determines how users are prompted to provide a justification when lowering the sensitivity of a file or email. | :material-shield-check:{ .success } `Supported`<br>Uses advanced setting [`DisableMandatoryInOutlook`](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#exempt-outlook-messages-from-mandatory-labeling)  | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `No change` |
 | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~ |  ~~~~~~~~~~~~~~~ | 
 
 
