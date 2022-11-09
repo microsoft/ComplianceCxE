@@ -20,6 +20,7 @@ It is reference links [emphasis tutorials][myexample]
 
 Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
+--8<-- "embed.md"
 
 -----
 
