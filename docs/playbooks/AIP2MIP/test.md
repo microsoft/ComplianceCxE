@@ -170,6 +170,7 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 :material-security-network:     Environment
 
+--8<-- "embed.md"
 
 -----------
 
@@ -185,7 +186,7 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 [myexample]: https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-externalcontentmarkingtoremove
 
-
+--8<-- "embed.md"
 
 ---------------
 
@@ -218,6 +219,7 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 ![Presentation2](https://user-images.githubusercontent.com/43501191/197310186-f9dad168-2f65-42a5-852c-50e08803d1a2.gif)
 
+--8<-- "embed.md"
 
 <table style="width:100%">
     <tr>
