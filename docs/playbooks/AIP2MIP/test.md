@@ -18,6 +18,8 @@ Test fontawesome icon
 
 It is reference links [emphasis tutorials][myexample]
 
+Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
 
 -----
 
@@ -240,3 +242,11 @@ It is reference links [emphasis tutorials][myexample]
         <td>MIP Appears in editing view near content's name in application title bar (files) or subject line (email), in application's file menu, Save New popup, and Rename File popup.</td>
     </tr>
 </table>
+
+
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+[^2]:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
