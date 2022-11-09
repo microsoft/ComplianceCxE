@@ -11,7 +11,7 @@ The table below lists the main characteristics of this feature and its compariso
 
 | Use Case  | :simple-microsoftazure: Add-In<br>:material-download: [`Latest`](AIPLatest)| :material-microsoft-office: Built-In<br>:material-cloud-download: [`Current Channel`](MIPLatest) | 
 | :---- | :---- | :---- | 
-| **Add header, footer, or watermark when applying a label** <br>Determines whether a header, footer, or watermark can be applied.  | :material-shield-check:{ .success } `Supported`<br>See [note 1][#change-management-notes] below.  |  :material-shield-check:{ .success } `Supported`<br>See [note 2][#change-management-notes] below. | 
+| **Add header, footer, or watermark when applying a label** <br>Determines whether a header, footer, or watermark can be applied.  | :material-shield-check:{ .success } `Supported`<br>See [note 1](#change-management-notes) below.  |  :material-shield-check:{ .success } `Supported`<br>See [note 2](#change-management-notes) below. | 
 | **Set marking's text, color, size, and position** <br>Determines how formatting options are applied to content marks  | :material-shield-check:{ .success } `Supported` | :material-shield-check:{ .success } `Supported` | 
 | **Dynamic markings with variables** <br>Configure marking's text using variables that populate dynamically  | :material-shield-check:{ .success } `Supported` |  :material-shield-check:{ .success } `Supported` | 
 | **Configure different markings per app** <br>Configure visual markings per Office application type by using an "If.App" variable statement  | :material-shield-check:{ .success } `Supported`  | :material-shield-check:{ .success } `Supported` |
@@ -20,12 +20,12 @@ The table below lists the main characteristics of this feature and its compariso
 
 ### Change Management Notes
 
-!!! note
+??? note "Note 1"
     
     AIP add-in retrieves and applies/re-applies content marking outcomes from the label policy each time a file is saved. 
     This may cause previously-removed content marks from re-appearing in the document after each save.
     
-!!! note
+??? note "Note 2"
 
     Unlike the add-in, built-in labeling in Office applies content marks the moment a label is applied, without the need to save the document. 
     Once added to a document, any further changes to the markings by the user persist with the file without being overwritten by the 
