@@ -26,6 +26,21 @@ The table below lists the main characteristics of this feature and its compariso
 
     Built-in labeling treats all sublabels with equal priority, so automatic labels do not override a lower-priority sublabel from the same parent label.
 
+## Product Screenshots
+
+Use the screenshots below to help you evaluate the visual changes that correspond to the numbered use cases above. 
+
+### Add-In `🌎 Latest`
+
+TODO
+
+### Built-In `🌎 Current Channel`
+
+TODO
+
+### Built-In `⭐ In Preview`
+
+TODO
 
 ## Learn more
 
