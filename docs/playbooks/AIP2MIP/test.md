@@ -1,3 +1,5 @@
+# Start
+
 [Sensitivity Bar](Features/UX/SensitivityBar.md)
 
 Test fontawesome icon
@@ -15,6 +17,8 @@ Test fontawesome icon
 :material-security:{ .error }
 
 -------------
+
+## Next
 
 It is reference links [emphasis tutorials][myexample]
 
@@ -105,6 +109,7 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
     
 -----------------
 
+#### Forth
 
 --------------
 
@@ -253,3 +258,36 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
+
+
+
+
+-----------
+
+### :material-numeric-4-circle:{ .num  } Customizations
+
+Determines whether users or admins can configure the default labeling experience. Microsoft Purview supports 
+
+* `OutlookDefaultLabel`
+* `OutlookDisableMandatory`
+
+=== "Add-in"
+    
+    :material-shield-check:{ .success } `Supported`: Uses advanced setting `OutlookDefaultLabel` to configure a different default label for emails. 
+    See [content-type scoping](../Environment/ContentTypeScoping.md) for differentiating default labels for files vs. emails.
+    
+    ![image](https://user-images.githubusercontent.com/43501191/198155586-53390142-2a69-4a79-afcd-5ccc61d2b686.png)
+
+=== "Built-in Current Channel"
+
+    :material-shield-check:{ .success } `Supported`<br>Same as AIP
+    ![image](https://user-images.githubusercontent.com/43501191/198155614-9899b0c7-a12a-40c9-a9d5-249b09f87818.png)
+    
+    
+=== "Built-in Coming Soon"
+
+    :material-shield-check:{ .success } `Supported`<br>No change
+
+---------
+
+
