@@ -15,7 +15,7 @@ The Compliance CxE team regularly hosts webinars to present what's changing and 
 
 |Date|Topic|Recording|Resources|
 |---|---|---|---|
-|December 1, 2021 | How to use the Advanced eDiscovery with Microsoft Teams |[NA]()|[Deck](../resources/files/How to use Advanced eDiscovery with Microsoft Teams.pdf)|
+|December 1, 2021 | How to use the Advanced eDiscovery with Microsoft Teams ||(../resources/files/How to use Advanced eDiscovery with Microsoft Teams.pdf)|
 |November 17, 2021 | How to use the Microsoft Graph API for Advanced eDiscovery to automate and customize your eDiscovery workflows |[Video](https://mipc.eventbuilder.com/event/51036)|[Deck](../resources/files/Graph API for AeD.pdf)|
 |November 10, 2021 | What's New in Advanced eDiscovery |[Video](https://mipc.eventbuilder.com/event/51035)|[Deck](../resources/files/What's New with AeD.pdf)|
 |April 7, 2021 | What's New with Advanced eDiscovery Spring 2021|[YouTube](https://www.youtube.com/watch?v=d1v059DVKK0)|[Deck/FAQ](https://techcommunity.microsoft.com/t5/security-compliance-identity/what-s-new-with-advanced-ediscovery-spring-2021/ba-p/2299661)|
