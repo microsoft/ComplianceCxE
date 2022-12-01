@@ -15,7 +15,7 @@ To ensure as many customers as possible are using built-in labeling to avoid mis
 
 Refer to the [support documentation](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in) for further details.
 
-> ⚠️ Warning: If you previously configured `UseOfficeForLabelling == 0` to disable built-in labeling, all sensitivility labeling clients provided by Microsoft will be disabled in M365 Apps by default starting in **version 2211**.
+> ⚠️ Warning: If you previously configured `UseOfficeForLabelling == 0` to disable built-in labeling, all sensitivility labeling clients provided by Microsoft will be disabled in M365 Apps by default starting in **version 2212**.
 
 
 
@@ -24,24 +24,24 @@ Refer to the [support documentation](https://learn.microsoft.com/en-us/microsoft
 Use the [support documentation](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip) as the primary resource for configuring the sensitivity labeling client in Office. The guide below provides a detailed support matrix, including the effect of the two policy settings with or without the AIP Add-in installed. 
 
 
-Starting in v2211, the following sensitivity labeling clients are supported:
+Starting in v2212, the following sensitivity labeling clients are supported:
 
 - `⛔ None`: Disable viewing and applying sensitivity labels from any Microsoft tool when `UseOfficeForLabelling == 0`. Allows customers to deploy alternative labeling solutions and avoid interoperability issues.
 - `✅ Built-In`: Microsoft recommends using built-in labeling instead of AIP Add-in wherever possible. Review the the [migration guide](GetStarted.md) to transition as soon as possible.
 - `⚠️ Add-In`: Use AIP Add-in instead during its support lifecycle.
 
 
-|   #   | Add-in Installed  | Office Policy Configuration                                                         | Outcome                                                       | Notes |
-| :---: | :---:              | :---                                                                  | :---                                                          | :---                  |
-| 1     | `false`           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {0, 1, undefined}`     | - `Prior v2211: ⛔ None`<br>- `After v2211: ⛔ None`          | *No change*. Labeling from Microsoft is fully disabled because `UseOfficeForLabelling=0`. |
-| 2     | `false`           | - `UseOfficeForLabelling = {1}`<br>- `AIPException = {0, 1, undefined}`     | - `Prior v2211: ✅ Built-In`<br>- `After v2211: ✅ Built-In`  | *No change*. Built-in labeling is explicitly enabled with `UseOfficeForLabelling=1`.  |
-| 3     | `false`           | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {0, 1, undefined}`  | - `Prior v2211: ✅ Built-In`<br>- `After v2211: ✅ Built-In`  | *No change*. Built-in labeling is implicitly enabled because `UseOfficeForLabelling=undefined`. |
+|   #   | Add-in Installed  | Office Policy Configuration | Outcome | Notes |
+| :---: | :---: | :--- | :--- | :--- |
+| 1     | `false`           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {0, 1, undefined}`     | - `Prior v2212: ⛔ None`<br>- `After v2212: ⛔ None`          | *No change*. Labeling from Microsoft is fully disabled because `UseOfficeForLabelling=0`. |
+| 2     | `false`           | - `UseOfficeForLabelling = {1}`<br>- `AIPException = {0, 1, undefined}`     | - `Prior v2212: ✅ Built-In`<br>- `After v2212: ✅ Built-In`  | *No change*. Built-in labeling is explicitly enabled with `UseOfficeForLabelling=1`.  |
+| 3     | `false`           | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {0, 1, undefined}`  | - `Prior v2212: ✅ Built-In`<br>- `After v2212: ✅ Built-In`  | *No change*. Built-in labeling is implicitly enabled because `UseOfficeForLabelling=undefined`. |
 |||||| 
-| 4     | **`true`**           | - `UseOfficeForLabelling = {1}`<br>- `AIPException = {0, 1, undefined}`  | - `Prior v2211: ✅ Built-In`<br>- `After v2211: ✅ Built-In`  | *No change*. Built-in labeling is explicitly enabled with `UseOfficeForLabelling=1`. |
-| 5     | **`true`**           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {0, undefined}`     | - `Prior v2211: ⚠️ Add-In`<br>- `After v2211: ⛔ None`        | **NEW**. Labeling from Microsoft is fully disabled because `UseOfficeForLabelling=0`. To enable AIP Add-in, must set `AIPException=1`. |
-| 6     | **`true`**           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {1}`           | - `Prior v2211: ⚠️ Add-In`<br>- `After v2211: ⚠️ Add-In`      | **NEW**. Built-in labeling is explicitly disabled with `UseOfficeForLabelling=0` and add-in is explicitly enabled with `AIPException=1`. |
-| 7     | **`true`**            | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {0, undefined}` | - `Prior v2211: ⚠️ Add-In`<br>- `After v2211: ✅ Built-In`    | **NEW**. Built-in labeling overrides add-in as the default unless `AIPException=1`. |
-| 8     | **`true`**            | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {1}`       | - `Prior v2211: ⚠️ Add-In`<br>- `After v2211: ⚠️ Add-In`      | **NEW**. Add-in labeling is explicitly enabled with `AIPException=1`. |
-|       |     | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                           | ~~~~~~~~~~~~~~~~~~~~                                        |                                                                          | 
+| 4     | **`true`**           | - `UseOfficeForLabelling = {1}`<br>- `AIPException = {0, 1, undefined}`  | - `Prior v2212: ✅ Built-In`<br>- `After v2212: ✅ Built-In`  | *No change*. Built-in labeling is explicitly enabled with `UseOfficeForLabelling=1`. |
+| 5     | **`true`**           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {0, undefined}`     | - `Prior v2212: ⚠️ Add-In`<br>- `After v2212: ⛔ None`        | **NEW**. Labeling from Microsoft is fully disabled because `UseOfficeForLabelling=0`. To enable AIP Add-in, must set `AIPException=1`. |
+| 6     | **`true`**           | - `UseOfficeForLabelling = {0}`<br>- `AIPException = {1}`           | - `Prior v2212: ⚠️ Add-In`<br>- `After v2212: ⚠️ Add-In`      | **NEW**. Built-in labeling is explicitly disabled with `UseOfficeForLabelling=0` and add-in is explicitly enabled with `AIPException=1`. |
+| 7     | **`true`**            | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {0, undefined}` | - `Prior v2212: ⚠️ Add-In`<br>- `After v2212: ✅ Built-In`    | **NEW**. Built-in labeling overrides add-in as the default unless `AIPException=1`. |
+| 8     | **`true`**            | - `UseOfficeForLabelling = {undefined}`<br>- `AIPException = {1}`       | - `Prior v2212: ⚠️ Add-In`<br>- `After v2212: ⚠️ Add-In`      | **NEW**. Add-in labeling is explicitly enabled with `AIPException=1`. |
+| ~   |  ~~   | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~	| 
 
 
