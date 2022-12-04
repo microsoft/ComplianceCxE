@@ -114,6 +114,8 @@ markdown_extensions:
   - md_in_html
   - footnotes
   - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
 plugins:
   - search
 copyright: <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
