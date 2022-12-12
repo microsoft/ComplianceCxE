@@ -43,7 +43,7 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 
 ## Download Process
 
-Use the [GitHub link](https://aka.ms/MAMD) to download the tool and follow instructions for how to install, run and configure the tool.
+Use the [GitHub] to download the tool and follow instructions for how to install, run and configure the tool or drop a email to DLPMigrations@microsoft.com.
 
 ## Provide Feedback & Report Bugs
 
