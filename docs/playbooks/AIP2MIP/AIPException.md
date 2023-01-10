@@ -11,7 +11,7 @@
 To ensure as many customers as possible are using built-in labeling to avoid missing new information protection capabilities that are unavailable with the AIP Add-in, M365 Apps have a new policy configuration.
 
 - Group Policy Setting `Use the Sensitivity feature in Office to apply and view sensitivity labels`, also known as regkey `UseOfficeForLabelling`, controls whether Office uses the built-in labeling client or none at all.
-- **New in M365 Apps Starting in v2211** Group Policy Setting `Use the Azure Information Protection add-in for sensitivity labeling`, also known as regkey `AIPException`, controls whether Office allows the AIP Add-in to be enabled in cases where the prior setting is disabled.
+- **New in M365 Apps Starting in v2212** Group Policy Setting `Use the Azure Information Protection add-in for sensitivity labeling`, also known as regkey `AIPException`, controls whether Office allows the AIP Add-in to be enabled in cases where the prior setting is disabled.
 
 Refer to the [support documentation](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in) for further details.
 
