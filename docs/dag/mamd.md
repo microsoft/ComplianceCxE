@@ -43,8 +43,7 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 ## Download Process & Documentation (Public Preview)
 
 Use the [GitHub](https://aka.ms/DLPMigrationAssistant) to download the tool and follow instructions for how to install, run and configure the tool.
-The [documentation](https://aka.ms/DLPMigrationAssistantDocs) is here.
-The [blog](https://aka.ms/DLPMigrationAssistantBlog) is here.
+The [documentation](https://aka.ms/DLPMigrationAssistantDocs) and the [blog](https://aka.ms/DLPMigrationAssistantBlog) is here.
 
 ## Provide Feedback & Report Bugs
 
