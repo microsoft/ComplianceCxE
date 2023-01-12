@@ -1,6 +1,5 @@
 
-       ** The new version of the tool is in Private Preview. Sign-up for the private preview at: ** https://forms.office.com/r/KP1Edg4nEj
-
+       
 ## What is Migration Assistant for Microsoft DLP?
 
 The Migration Assistant for Microsoft DLP tool is a Windows based desktop application that will migrate your DLP policies from other DLP platforms to our Unified DLP platform. 
@@ -41,9 +40,11 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 
 1. **Reporting**: This provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
 
-## Download Process
+## Download Process & Documentation
 
-Use the [GitHub] to download the tool and follow instructions for how to install, run and configure the tool or drop a email to DLPMigrations@microsoft.com.
+Use the [GitHub] (https://aka.ms/DLPMigrationAssistant) to download the tool and follow instructions for how to install, run and configure the tool.
+The documentation (https://aka.ms/DLPMigrationAssistantDocs) is here.
+The blog (https://aka.ms/DLPMigrationAssistantBlog) is here.
 
 ## Provide Feedback & Report Bugs
 
