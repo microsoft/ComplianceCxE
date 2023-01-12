@@ -40,9 +40,9 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 
 1. **Reporting**: This provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
 
-## Download Process & Documentation
+## Download Process & Documentation (Public Preview)
 
-Use the [GitHub] (https://aka.ms/DLPMigrationAssistant) to download the tool and follow instructions for how to install, run and configure the tool.
+Use the [GitHub](https://aka.ms/DLPMigrationAssistant) to download the tool and follow instructions for how to install, run and configure the tool.
 The documentation (https://aka.ms/DLPMigrationAssistantDocs) is here.
 The blog (https://aka.ms/DLPMigrationAssistantBlog) is here.
 
