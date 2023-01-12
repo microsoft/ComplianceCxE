@@ -41,6 +41,8 @@ nav:
         - Legacy DLP Policies (ETR) to DLP Playbook: playbooks/etr2dlp.md
       - Communication Compliance:
         - Financial Services Industry Playbook: playbooks/fsicc.md
+      - Classification
+        - Protecting Source Code Playbook: playbooks/sourceCodePlaybook.md
       - 💬 Submit CxE Feedback: https://aka.ms/mipc/mipcOSS
     - Jump Starts:
       - Getting Started: jumpstarts.md
