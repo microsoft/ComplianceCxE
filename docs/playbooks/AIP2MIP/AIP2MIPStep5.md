@@ -14,7 +14,7 @@ Once you're ready for the sensitivity labeling experience that's built into Offi
 
     Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. 
     This default will no longer be the case for newer versions of Office. 
-    If you previously set "Use the Sensitivity feature in Office to apply and view sensitivity labels" to 0, 
+    If you previously set `Use the Sensitivity feature in Office to apply and view sensitivity labels` to 0, 
     viewing and applying labels will be disabled even with the AIP Add-in. Otherwise, the add-in will be automatically replaced with built-in labeling.
     Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps).
 
