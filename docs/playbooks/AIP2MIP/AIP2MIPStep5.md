@@ -10,13 +10,25 @@
 ## Overview
 Once you're ready for the sensitivity labeling experience that's built into Office apps, it's time for the last step -- disable the AIP add-in and enable built-in labeling. 🎉
 
-> ⚠️ Warning: Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. This default will no longer be the case for newer versions of Office. If you previously set `UseOfficeForLabelling==0`, viewing and applying labels will be disabled even with the AIP Add-in. Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip).
+!!! warning
+
+    Up until recently, built-in labeling was turned off by default in Office for Windows apps when the AIP client was installed. 
+    This default will no longer be the case for newer versions of Office. 
+    If you previously set "Use the Sensitivity feature in Office to apply and view sensitivity labels" to 0, 
+    viewing and applying labels will be disabled even with the AIP Add-in. Otherwise, the add-in will be automatically replaced with built-in labeling.
+    Learn more about the [change of default labeling client and how to configure your preferred labeling client](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps).
 
 
 ## Checklist
-To enable built-in labeling in Office, you use either of the following options:
-- Remove configuration settings you've previously used, such as `UseOfficeForLabelling==0` or `AIPException==1`. This ensures users get the Microsoft-recommended default experience for sensitivity labels starting in versio v2211.
-- Set the Office configuration `UseOfficeForLabelling==true` and ensure `AIPException` is not set.
+
+!!! note
+
+    Minimum required version of Office was updated on January 17, 2023. Instead of v2212, the minimum version is 2302.
+
+To enable built-in labeling in Office, review this checklist:
+
+- Review the [configuration matrix](AIPException.md) to assess the impact to your organization's devices
+- Remove prior configurations of "Use the Sensitivity feature in Office to apply and view sensitivity labels" or reset it to its default
 
 ## Additional Resources
 
