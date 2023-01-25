@@ -26,30 +26,29 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `October 12, 2022`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `January 23, 203`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+
+`⭐ Available in private preview` 
+
+- Emails inherit the highest sensitivity from their attachments
+- Ability to assign different labels to users between Files and Emails
 
 `📅 Coming Soon to private preview` 
 
 - Sensisitivy bar in Outlook
-- Users can restrict access to domain names when using user-defined permissions
 - Block, Warn, Justify before sending emails based on sensitivity labels
-- Emails inherit the highest sensitivity from their attachments
-- Ability to assign different labels to users between Files and Emails
-
-`🆕 New in private preview` 
-
-- New and improved Policy Tips with Data Loss Prevention
 
 `✳️ Graduated to public preview` 
 
 - Sensitivity bar in Word, Excel, and PowerPoint. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
-- S/MIME encryption as an outcome of labeling. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)
 - AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
+- Users can restrict access to domain names when using user-defined permissions
+
 
 `✅ Graduated to general availability` 
 
 - Protect PDFs with sensitivity labels in Word, Excel, and PowerPoint. [Learn more](https://insider.office.com/en-us/blog/apply-sensitivity-labels-to-pdfs-created-with-office-apps)
-
+- S/MIME encryption as an outcome of labeling. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)
 
 
 #### Program Requirements
