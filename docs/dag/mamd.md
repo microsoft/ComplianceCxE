@@ -1,34 +1,53 @@
-# Deployment Acceleration Guides
 
-The deployment acceleration guides (DAGs) are written and updated continually by the global Compliance CxE team and are a resource designed to help with the following:
+       ** The new version of the tool is in Public Preview. Please find the latest release  [**here**](https://aka.ms/downloadTool)
 
-* [**One Compliance Story**](../dag/dag-resources/#one-compliance-story) covering how each solution complements each other
-* **Best Practices** based on the CxE team's experience with customer roadblocks
-* **Considerations** to take and research before starting your deployment
-* **Help Resources** links to additional readings and topics to gain a deeper understanding of the solution
-* **Appendix** for additional information on licensing
+# Microsoft Purview Data Loss Prevention migration assistant for Symantec (preview)
 
-The guides can be used both independently, but we recommend using all the solutions together for your deployment needs. We are not recommending one solution be implemented before another but have included information in each guide to tie all the solutions together with features to consider during your implementation. The guide covers current released feature as of today and is continuously updated as additional features progress from beta, or private preview to general availability.
 
-## How to use the Deployment Acceleration Guide
+## What is Microsoft Purview Data Loss Prevention migration assistant for Symantec (preview)? 
 
-Organizations of all types are moving to the cloud and adopting more solutions to meet data protection and compliance requirements from the Microsoft 365 (M365) suite of capabilities. Use this guide as a comprehensive source for the suite of solutions across information protection and compliance. Start by understanding best practices, key considerations and lessons learned from others who have gone before you. Use this cumulative knowledge and processes outlined in the following pages to drive alignment and consensus in your organization by taking the first steps toward a more secure, compliant posture for your organization in the cloud. 
+The Migration Assistant for Microsoft DLP tool is a Windows based desktop application that will migrate your DLP policies from other DLP platforms to our Unified DLP platform. 
+Our tool takes you through a simple five-step migration process. It accepts Symantec DLP policy XML exports, performs mapping, and creates equivalent Unified DLP policies through PowerShell scripts.
+You can safely use the tool to create DLP policies in test mode, which does not affect your live data or interact with current environment. 
 
-Each of the sections in this guide can be leveraged as standalone guidance, or all together to define your overall compliance strategy. Many of the solutions covered in this guide will require participation from various teams and business groups within your organization. Customers who achieve successful roll outs of the capabilities typically prioritize by a use case scenario and create a working virtual team to manage the requirements validation, proof of concept testing in a pre-production environment, internal checkpoints, and approvals and finally deployment into the production environment. We recommend identifying your top 1-2 scenarios for deployment and tackling those first, with the right resources from your broader team engaged. Once those priorities are deployed, come back to this guide to identify the next two priorities for deployment and repeat the process of stakeholder alignment, testing and validation on the path to successful deployment. 
+## Migration tasks that Microsoft Purview Data Loss Prevention migration assistant for Symantec performs are :
 
-We believe our solutions from Microsoft 365 are the best of suite to help our customers know their data better, by protecting and governing data throughout its lifecycle in a heterogenous environment. This is often the key starting point for many of our customers in their modern compliance journey – knowing what sensitive data they have, creating flexible, end-user friendly policies for both security and compliance outcomes and using more automation and intelligence.
+This takes over many of the difficult or tedious tasks involved in a DLP migration project:
 
-## Getting Started
+* In traditional migration scenario, you need to perform feasibility analysis between source & target DLP platforms, map features, migrate policies manually, and test and tweak DLP policies. Your migrated DLP policies can be up and running within minutes of starting the M365 DMA process.
 
-Before jumping into the various sections detailing the deployment, there are some planning and prerequisite items that should be addressed. These include general prerequisites, such as scheduling and recommended attendance of meetings, and support and communication planning. We will touch on these items and provide some general guidance based on what we have seen help customers succeed in deployments of Microsoft Information Protection & Compliance.
+* With this, you can scale up your migration project quickly from moving a single policy manually to multiple policies at the same time.
 
-While these tips are meant to help guide you on your deployment journey, please keep in mind that these items will vary widely depending on the size, regulatory requirements, and complexity of your organization.
+* This automatically identifies Sensitive Information Types (SITs) or Data Identifiers in source policies and creates Custom SITs in your Microsoft tenant moving over all your custom regular expressions and keywords in a few clicks.
 
-## DAGs By Feature
+* This detects which conditions, exclusions & actions are currently being used in source policies and automatically creates new rules with the same conditions, exclusions & actions.
 
-* [Compliance Manager](../dag/cm/)
-* [Microsoft Compliance Configuration Analyzer (MCCA)](../dag/mcca/)
-* [Insider Risk Management and Communication Compliance](../dag/ir-cc/)
-* [Microsoft Information Governance and Records Management](../dag/mig-rm/)
-* [Microsoft Information Protection and Data Loss Prevention](../dag/mip-dlp/)
+* This provides you with a detailed migration report with policy wise migration status and recommendations.
 
+* This ensures that your DLP policy migration project is completely private and takes place within the boundaries of your organization.
+
+* This supports policy migration from Symantec Data Loss Prevention 15.7 or earlier.
+
+### How does this works?
+
+![image](https://user-images.githubusercontent.com/52564314/138813155-645a8179-ec31-4f7c-ba71-81f921715642.png)
+
+During a given instance of migration, the M365 DLP Migration Assistant works in **five** phases:
+
+1. **Input**: This ingests one or more Symantec DLP policy XML files.
+
+1. **Analyze**: This interprets the files & identifies Symantec DLP policy constructs.
+
+1. **Rationalize**: This maps the identified Symantec DLP policy constructs to Unified DLP capabilities. It performs validations for Unified DLP platform limitations.
+
+1. **Migrate**: This executes PowerShell scripts for the DLP scenarios identified & supported by the UDLP platform.
+
+1. **Reporting**: This provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
+
+## Download Process
+
+Use the [GitHub link](https://aka.ms/downloadTool) to download the tool and follow instructions for how to install, run and configure the tool.
+
+## Provide Feedback & Report Bugs
+
+Please report errors, share feedback & any feature requests with us by opening a new issue in this [Github repository](https://github.com/OfficeDev/DLPMigrationAssistant/issues).
