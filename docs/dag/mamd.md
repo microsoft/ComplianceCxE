@@ -1,5 +1,5 @@
 
-       ** The new version of the tool is in Public Preview. Please find the latest release  [**here**](https://aka.ms/downloadTool)
+       ** The new version of the tool is in Public Preview. Please find the latest release [here](https://aka.ms/downloadTool)
 
 # Microsoft Purview Data Loss Prevention migration assistant for Symantec (preview)
 
