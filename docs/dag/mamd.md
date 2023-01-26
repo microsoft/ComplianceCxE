@@ -1,5 +1,4 @@
 
-       ** The new version of the tool is in Public Preview. Please find the latest release [here](https://aka.ms/downloadTool)
 
 # Microsoft Purview Data Loss Prevention migration assistant for Symantec (preview)
 
@@ -30,8 +29,6 @@ This takes over many of the difficult or tedious tasks involved in a DLP migrati
 
 ### How does this works?
 
-![image](https://user-images.githubusercontent.com/52564314/138813155-645a8179-ec31-4f7c-ba71-81f921715642.png)
-
 During a given instance of migration, the M365 DLP Migration Assistant works in **five** phases:
 
 1. **Input**: This ingests one or more Symantec DLP policy XML files.
@@ -43,6 +40,17 @@ During a given instance of migration, the M365 DLP Migration Assistant works in 
 1. **Migrate**: This executes PowerShell scripts for the DLP scenarios identified & supported by the UDLP platform.
 
 1. **Reporting**: This provides the user with a detailed migration report about which policies were migrated successfully, partially and/or not migrated. It also provides recommendations to improve the migration fidelity further.
+
+
+## Resources
+
+The migration assistant is in preview ([blog](https://aka.ms/DLPMigrationAssistantBlog)). You can learn more about the migration assistant using the following resources:
+
+o     [Learn more about the migration assistant](https://go.microsoft.com/fwlink/?linkid=2221301)
+
+o	[Get started with migrating DLP policies](https://go.microsoft.com/fwlink/?linkid=2220871)
+
+o	[Use the migration assistant to migrate policies from Symantec](https://go.microsoft.com/fwlink/?linkid=2221302)
 
 ## Download Process
 
