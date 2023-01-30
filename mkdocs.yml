@@ -26,7 +26,7 @@ nav:
       - Getting Started: dag.md
       - Compliance Manager: dag/cm.md
       - Microsoft Compliance Configuration Analyzer (MCCA): dag/mcca.md
-      - Migration Assistant for Microsoft Purview DLP: dag/mamd.md
+      - DLP Migration Assistant: dag/DLPMigrationAssistant.md
       - eDiscovery and Audit: dag/aed-audit.md
       - Insider Risk Management and Communication Compliance: dag/ir-cc.md
       - Data Lifecycle Management and Records Management: dag/mig-rm.md
