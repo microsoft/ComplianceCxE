@@ -26,15 +26,12 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `January 23, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `February 8, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `⭐ Available in private preview` 
 
 - Emails inherit the highest sensitivity from their attachments
 - Ability to assign different labels to users between Files and Emails
-
-`📅 Coming Soon to private preview` 
-
 - Sensisitivy bar in Outlook
 - Block, Warn, Justify before sending emails based on sensitivity labels
 
