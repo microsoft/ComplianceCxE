@@ -19,6 +19,7 @@ Together, the combination of feature roadmap and change-management effort can he
     see [Manage sensitivity labels in Office apps](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide).
 
 ### Feature Roadmap
+
 The following categories help you identify the support status for Add-in functionality available in built-in labeling.
 
 | Migration Readiness | Time Horizon |
@@ -31,6 +32,7 @@ The following categories help you identify the support status for Add-in functio
 | `🟢 Not Needed`<br>Items that are only needed to workaround limitations of an add-in; not needed for built-in labeling. | NA |
 
 ### Change Management Insights
+
 Use the ranking scheme below to help you assess how much effort you can expect to transition users to the replacement built-in feature. 
 
 | Migration Effort |
@@ -45,6 +47,7 @@ Use the ranking scheme below to help you assess how much effort you can expect t
 -----
 
 ## Azure Information Protection Add-in Scenarios
+
 Review the list of scenarios and their availability in built-in labeling below. Where available, references to additional resources are provided.
 
 | Scenario Reference | Migration Readiness | Migration Effort | 
@@ -53,9 +56,9 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Choose a labeling client for Office<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows) | `✅ Supported` | `🟠🟠🟠⚪⚪` | 
 | Labeling for modern Office files in Open XML format (e.g. docx) <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)| `✅ Supported` | `🟠⚪⚪⚪⚪` |  
 | View and apply sensitivity labels in government cloud | `✅ Supported` | `⚪⚪⚪⚪⚪` |
-| Admin can scope labels independently for files and emails | `🔷 In Development`<br>[📅 M365 Roadmap 99939](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939) | `🟠🟠🟠⚪⚪` |  
-| Labeling for legacy Office files in Microsoft Office 97-2003 format (e.g. doc) <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)| `⚫ Not Planned` | `🟠🟠🟠🟠⚪`| 
-| Support for labeling using Office perpetual <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps)| `⚫ Not Planned`| `🟠🟠🟠🟠🟠` | 
+| Admin can scope labels independently for files and emails | `⭐ In Preview`<br>[📅 M365 Roadmap 99939](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=99939) | `🟠🟠🟠⚪⚪` |  
+| Labeling for legacy Office files in Microsoft Office 97-2003 format (e.g. doc) <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#office-file-types-supported)| `⚫ Not Planned` | `🟠🟠🟠🟠⚪`| 
+| Support for labeling using Office perpetual <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps#labeling-client-for-desktop-apps)| `⚫ Not Planned`| `🟠🟠🟠🟠🟠` |
 | | |
 | 🧑‍💻 **Labeling User Experience**  | | | 
 | Sensitivity Status <br> - Support: [🧑‍💻 User](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
@@ -65,44 +68,44 @@ Review the list of scenarios and their availability in built-in labeling below. 
 | Label Colors | `⭐ In Preview`<br>[📅 M365 Roadmap 93217](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=93217) | `⚪⚪⚪⚪⚪` | 
 | | | |
 | ⚠️ **Labeling Enforcement** | | | | 
-| Manual labeling <br>- Support: [🧑‍💻 User](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
+| Manual labeling (no enforcement)<br>- Support: [🧑‍💻 User](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
 | Mandatory labeling: Enforce at file-save<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do) |  `✅ Supported`| `🟠🟠⚪⚪⚪` | 
 | Mandatory labeling: Files vs. Emails <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#outlook-specific-options-for-default-label-and-mandatory-labeling) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
 | Downgrade Justification <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do), [🧑‍💻 User](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
-| Manual Labeling: Preselect default sublabel<br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-default-sublabel-for-a-parent-label) | `🟨 In Planning` <br>📅  Roadmap `Coming soon`| `🟠🟠⚪⚪⚪` | 
-| Mandatory labeling: Enforcement at app close [➡️ Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling) | `🟨 In Planning` <br>📅  Roadmap `Coming soon`| `🟠⚪⚪⚪⚪` | 
+| Manual Labeling: Assign a sublabel by default when applying parent label<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#specify-a-default-sublabel-for-a-parent-label) | `⭐ In Preview` <br>[📅 M365 Roadmap 115481](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=115481)| `🟠🟠⚪⚪⚪` | 
+| Mandatory labeling: Enforcement at app close [➡️ Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-not-now-for-documents-when-you-use-mandatory-labeling) | `🔷 In Development` <br>📅  Roadmap `Coming soon`| `🟠⚪⚪⚪⚪` |
 | | |
 | ⚡ **Labeling Automation** | | | 
 | Default Labeling: Files<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do)| `✅ Supported` | `🟠🟠⚪⚪⚪` | 
 | Default Labeling: Emails <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#outlook-specific-options-for-default-label-and-mandatory-labeling)| `✅ Supported` | `🟠🟠⚪⚪⚪` | 
 | Automatic or recommended labeling of files and emails with sensitive information types <br>- Support:[👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically?view=o365-worldwide) | `✅ Supported` | `🟠🟠⚪⚪⚪` | 
-| Automatic or recommended labeling of emails based on attachment labels <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) | `🔷 In Development`<br> [📅 M365 Roadmap 100490](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100490) | `🟠🟠⚪⚪⚪` | 
+| Automatic or recommended labeling of emails based on attachment labels <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) | `⭐ In Preview`<br> [📅 M365 Roadmap 100490](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100490) | `🟠🟠⚪⚪⚪` | 
 | | |
 | 🔒 **Encryption as an outcome for labeling** | | | 
 | Admin-defined permissions <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#assign-permissions-now) | `✅ Supported` | `🟠🟠🟠⚪⚪` | 
 | User-defined permissions: Files restricted to users and groups <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#let-users-assign-permissions) | `✅ Supported` | `🟠🟠🟠⚪⚪` | 
 | User-defined permissions: Do Not Forward for emails <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails) | `✅ Supported` | `🟠🟠🟠⚪⚪`| 
 | User-defined permissions: Files restricted to domain names <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#support-for-organization-wide-custom-permissions) | `⭐ In Preview`<br>[📅 M365 Roadmap 98131](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98131) | `🟠⚪⚪⚪⚪` | 
-| S/MIME for emails <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)| `⭐ In Preview`<br>[📅 M365 Roadmap 100062](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100062) | `🟠🟠⚪⚪⚪` | 
+| S/MIME for emails <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)| `✅ Supported`<br>[📅 M365 Roadmap 100062](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100062) | `🟠🟠⚪⚪⚪` | 
 | Double Key Encryption <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/microsoft-365/compliance/double-key-encryption-overview?view=o365-worldwide#can-i-use-double-key-encryption-with-microsoft-office-built-in-sensitivity-labeling)| `🟨 In Planning` <br>📅  Roadmap `Coming soon`| `🟠🟠🟠⚪⚪` | 
 | Document Tracking & Revocation for Compliance Admins <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/track-and-revoke-admin)| `🟨 In Planning` <br>📅  Roadmap `Coming soon`| `🟠🟠🟠⚪⚪` | 
 | Document Revocation for End-Users <br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/revoke-access-user#revoke-access-from-microsoft-office-apps)| `🟨 In Planning` <br>📅  Roadmap `Coming soon`| `🟠🟠🟠⚪⚪` | 
 | | |
-| 📨 **Collaboration with labeled content** | | | 
+| 📨 **Collaboration with labeled content** | | |
 | Multi-user editing of encrypted files<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-coauthoring) | `✅ Supported` | `🟠🟠🟠⚪⚪` | 
-| Block/warn/justify before sending emails<br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) | `🔷 In Development`<br>[📅 M365 Roadmap 100255](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100255) | `🟠🟠🟠⚪⚪` | 
+| Block/warn/justify before sending emails<br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) | `⭐ In Preview`<br>[📅 M365 Roadmap 100255](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=100255) | `🟠🟠🟠⚪⚪` | 
 | | |
-| 🏷️ **Content Marking** | | | 
+| 🏷️ **Content Marking** | | |
 | Headers, footers, watermark<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide#what-sensitivity-labels-can-do) | `✅ Supported` | `🟠🟠⚪⚪⚪` | 
 | Dynamic markings<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables) | `✅ Supported` | `🟠🟠⚪⚪⚪` | 
 | Per app visual marking<br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) | `✅ Supported` | `🟠🟠⚪⚪⚪` | 
 | | |
-| 📊 **Reporting and Analytics** | | | 
+| 📊 **Reporting and Analytics** | | |
 | Disable Auditing<br>- Support: [👮 Admin](https://review.learn.microsoft.com/en-us/powershell/module/exchange/set-labelpolicy?view=exchange-ps#-advancedsettings) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
 | Auditing labeling activities <br>- Support: [👮 Admin](https://learn.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#sensitivity-label-activities) | `✅ Supported` | `🟠⚪⚪⚪⚪` | 
-| Auditing Protection Properties  | `🔷 In Development`<br>[📅 M365 Roadmap 98135](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135) | `🟠⚪⚪⚪⚪` | 
+| Auditing Protection Properties  | `⭐ In Preview`<br>[📅 M365 Roadmap 98135](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=98135) | `🟠⚪⚪⚪⚪` | 
 | | |
-| 🔀 **Migrate from alternative labeling clients** | | | 
+| 🔀 **Migrate from alternative labeling clients** | | |
 | Label by custom properties<br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) | `⚫ Not Planned` | `🟠🟠🟠🟠⚪` |
 | Remove external markings<br>- Support: [➡️ AIP Reference](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions) | `⚫ Not Planned` | `🟠🟠🟠🟠⚪` | 
 |  | ~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~ | 
