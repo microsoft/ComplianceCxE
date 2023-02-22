@@ -26,18 +26,17 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `February 8, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `February 22, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `⭐ Available in private preview` 
 
 - Emails inherit the highest sensitivity from their attachments
 - Ability to assign different labels to users between Files and Emails
-- Sensisitivy bar in Outlook
 - Block, Warn, Justify before sending emails based on sensitivity labels
 
 `✳️ Graduated to public preview` 
 
-- Sensitivity bar in Word, Excel, and PowerPoint. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
+- Sensitivity bar in Word, Excel, PowerPoint, and Outlook. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
 - AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
 - Users can restrict access to domain names when using user-defined permissions
 
