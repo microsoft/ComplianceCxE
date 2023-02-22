@@ -38,13 +38,14 @@ As of `February 22, 2023`, the following features are available in the private p
 
 - Sensitivity bar in Word, Excel, PowerPoint, and Outlook. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
 - AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
-- Users can restrict access to domain names when using user-defined permissions
+- Specify a default sublabel for a parent label [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#specify-a-default-sublabel-for-a-parent-label)
 
 
 `✅ Graduated to general availability` 
 
 - Protect PDFs with sensitivity labels in Word, Excel, and PowerPoint. [Learn more](https://insider.office.com/en-us/blog/apply-sensitivity-labels-to-pdfs-created-with-office-apps)
 - S/MIME encryption as an outcome of labeling. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)
+- Users can restrict access to domain names when using user-defined permissions [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#support-for-organization-wide-custom-permissions)
 
 
 #### Program Requirements
