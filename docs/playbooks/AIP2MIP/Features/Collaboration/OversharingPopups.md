@@ -53,6 +53,7 @@ Once deployed, users see this warn popup on send:
 ### 2. Justify Popup with Trusted Domains
 
 Follow all steps and replace step 20 with the following:
+
 20. Select **Allow overrides from M365 services** and **Require a business justification to override**. (optional) To show the acknowledgement option, select **Require the end user to explicitly acknowledge the override**.
 
 Once deployed, users see this justify popup (with optional acknowledgement option) on send:
