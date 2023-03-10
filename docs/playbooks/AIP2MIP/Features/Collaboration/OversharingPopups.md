@@ -63,7 +63,7 @@ Once deployed, users see this justify popup (with optional acknowledgement optio
 
 Follow all steps.
 
-Once deployed, users see this justify popup on send:
+Once deployed, users see this block popup on send:
 ![image](https://user-images.githubusercontent.com/25543918/224189075-3e2e32fd-64ca-4720-88ea-718b9cfb953e.png)
 
 !!! info
