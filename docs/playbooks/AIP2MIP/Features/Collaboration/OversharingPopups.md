@@ -79,7 +79,7 @@ To configure a new DLP policy:
 
 ```PS C:\> New-DlpCompliancePolicy -Name <DLP Policy Name> -ExchangeLocation All```
 
-The sample DLP policy is scoped to all users in your organization. Scope your DLP Policies using -ExchangeSenderMemberOf and -ExchangeSenderMemberOfException.
+The sample DLP policy is scoped to all users in your organization. Scope your DLP Policies using ```-ExchangeSenderMemberOf``` and ```-ExchangeSenderMemberOfException```.
 
 |Parameter|Configuration|
 |-----------------|-----------------|
@@ -113,7 +113,7 @@ To configure a new DLP rule:
 In DLP Rule configuration, select “Customize the policy tip text” and enter the custom text option.
 ![image](https://user-images.githubusercontent.com/25543918/224189143-744a276d-4c0d-481e-b742-edde5558e11d.png)
 
-Localize your custom policy tips with Set-DlpComplianceRule cmdlet and [-NotifyPolicyTipCustomTextTranslations](https://learn.microsoft.com/powershell/module/exchange/new-dlpcompliancerule#-notifypolicytipcustomtexttranslations) in Security & Compliance PowerShell.
+Localize your custom policy tips with ```Set-DlpComplianceRule cmdlet``` and [-NotifyPolicyTipCustomTextTranslations](https://learn.microsoft.com/powershell/module/exchange/new-dlpcompliancerule#-notifypolicytipcustomtexttranslations) in Security & Compliance PowerShell.
 
 ### Customize Compliance URL for “Learn More”
 
