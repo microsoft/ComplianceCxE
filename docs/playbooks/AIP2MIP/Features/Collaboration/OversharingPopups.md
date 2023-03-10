@@ -2,12 +2,13 @@
 
 ## Introduction
 
-Labeled emails contain sensitive information to your organization to be shared with intended recipients only. Oversharing popups enables an admin to configure popups that ensure the end-user sending a labeled email or attachment is aware of your organization’s policies. These policies can be configured to warn the user before send, request business justification input from the user or block send of the sensitive labeled content. Previously available in AIP add-in, oversharing popups is now available in MIP built-in labeling for private preview. For more information about custom settings in AIP Add-in, view our [admin guide](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+Labeled emails contain sensitive information to your organization to be shared with intended recipients only. Oversharing popups enables an admin to configure popups that ensure the end-user sending a labeled email or attachment is aware of your organization’s policies. These policies can be configured to warn the user before send, request business justification input from the user or block send of the sensitive labeled content. Previously available in AIP add-in, oversharing popups is now available in MIP built-in labeling for preview. For more information about custom settings in AIP Add-in, view our [admin guide](https://learn.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 ## Scenarios in Scope
 
-Get a list of existing Oversharing Popup settings
-To determine whether your organization’s current configuration of oversharing popups in AIP add-in is available for private preview, please run the following PowerShell cmdlets. You will need an administrator email with Compliance administrator or Global administrator role and the `<policy name>` that is configured with oversharing popups.
+### Get a list of existing Oversharing Popup settings
+
+To determine whether your organization’s current configuration of oversharing popups in AIP add-in is available for preview, please run the following PowerShell cmdlets. You will need an administrator email with Compliance administrator or Global administrator role and the `<policy name>` that is configured with oversharing popups.
 
 1.	Connect to Security & Compliance PowerShell using an administrator email (Link)
 2.	Once you have connected to the Security & Compliance PowerShell, get the label policy configuration:
@@ -18,7 +19,7 @@ The PowerShell terminal will show the label policy configuration that includes a
 
 ### Scenarios in-scope for preview
 
-Oversharing popups configurations are available for migration from AIP add-in in two phases. To determine if your organization’s configuration is eligible for private preview of the current phase, map your Oversharing Popup settings (from the previous step) to one or more of the configuration options listed below. If your scenarios are not part of the current private preview, they will be available in phase two.
+Oversharing popups configurations are available for migration from AIP add-in in two phases. To determine if your organization’s configuration is eligible for preview of the current phase, map your Oversharing Popup settings (from the previous step) to one or more of the configuration options listed below. If your scenarios are not part of the current preview, they will be available in phase two.
 
 Phase 1: Labeled email and attachments for warn, justify, and block popups.
 
