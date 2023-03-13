@@ -26,12 +26,10 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `February 22, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `March 13, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `⭐ Available in private preview` 
 
-- Emails inherit the highest sensitivity from their attachments
-- Ability to assign different labels to users between Files and Emails
 - Block, Warn, Justify before sending emails based on sensitivity labels
 
 `✳️ Graduated to public preview` 
@@ -39,6 +37,8 @@ As of `February 22, 2023`, the following features are available in the private p
 - Sensitivity bar in Word, Excel, PowerPoint, and Outlook. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
 - AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
 - Specify a default sublabel for a parent label [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#specify-a-default-sublabel-for-a-parent-label)
+- Emails inherit the highest sensitivity from their attachments
+- Ability to assign different labels to users between Files and Emails
 
 
 `✅ Graduated to general availability` 
