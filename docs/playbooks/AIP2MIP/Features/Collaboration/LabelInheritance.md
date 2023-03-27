@@ -1,4 +1,4 @@
-# Oversharing Popups Playbook
+# Label Inheritance Playbook
 
 ## Introduction
 
