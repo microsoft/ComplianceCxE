@@ -19,11 +19,14 @@ Users may be attaching labeled documents with sensitivity content to emails.  Ad
 ### PowerShell Cmdlet (Advanced)
 Alternatively, you can already create or update a label policy using the New-LabelPolicy or Set-LabelPolicy cmdlet in PowerShell using the “AdvancedSettings” parameter.
 
-```PS C:\> Set-LabelPolicy -Identity <policy> -AdvancedSettings @{AttachmentAction="Automatic"}```
-
+```powershell
+Set-LabelPolicy -Identity <policy> -AdvancedSettings @{AttachmentAction="Automatic"}
+```
 OR
 
-```PS C:\> Set-LabelPolicy -Identity <policy> -AdvancedSettings @{AttachmentAction="Recommended"}```
+```powershell
+Set-LabelPolicy -Identity <policy> -AdvancedSettings @{AttachmentAction="Recommended"}
+```
 
 ## Testing
 
