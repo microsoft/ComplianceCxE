@@ -26,15 +26,12 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `March 13, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
-
-`📅 Coming soon to private preview` 
-
-- Double-Key Encryption as an outcome of labeling in Word, Excel, PowerPoint, Outlook
+As of `April 3, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `⭐ Available today in private preview` 
 
 - Block, Warn, Justify before sending emails based on sensitivity labels
+- Double-Key Encryption as an outcome of labeling in Word, Excel, PowerPoint, Outlook
 
 `✳️ Graduated to public preview` 
 
