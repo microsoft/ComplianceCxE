@@ -80,7 +80,7 @@ You can review full list of public preview features, please visit [Sensitivity l
 
 <p align="center"><a href="https://insider.office.com/en-us/business/explore" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195403244-ddfd1b3d-cf9e-4e3e-8586-49e16fef1df2.png" alt="Join Beta Preview"/></a></p>
 
-### 3. General Avaialbility Preview
+### 3. General Availability Preview
 
 The [Current Channel (CC)](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#preview-upcoming-new-features-of-current-channel) and [Semi-Annual Enterprise Channel (SAEC)](https://learn.microsoft.com/en-us/deployoffice/overview-update-channels#preview-upcoming-new-features-of-semi-annual-enterprise-channel) offer previews of functionality that's staged for general availability release. This is ideal for large pilots of enabling the built-in labeling experience, allowing at-scale validation across day-to-day scenarios and line-of-business apps.
 
