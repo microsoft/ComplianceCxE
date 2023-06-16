@@ -298,3 +298,12 @@ Determines whether users or admins can configure the default labeling experience
     * [ ] Praesent sed risus massa
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
+
+![RedSolid](https://github.com/microsoft/ComplianceCxE/assets/43501191/8a259a2e-b95b-4474-aea5-68f43249433f)
+![RedHollow](https://github.com/microsoft/ComplianceCxE/assets/43501191/cea6531c-0ba1-4754-a64f-9d8f0a46a679)
+![GreenSolid](https://github.com/microsoft/ComplianceCxE/assets/43501191/1c0dd3ca-0189-4ef9-bf39-4196ad303fdd)
+![GreenHollow](https://github.com/microsoft/ComplianceCxE/assets/43501191/211180cb-f718-4227-b8e7-59ebd58d5136)
+![GraySolid](https://github.com/microsoft/ComplianceCxE/assets/43501191/f8bce861-9221-415b-adde-70ae6d433ce4)
+![GrayHollow](https://github.com/microsoft/ComplianceCxE/assets/43501191/c74fbb45-5965-4788-8f1d-d626cb65bba8)
+
+![Frame 64 (2)](https://github.com/microsoft/ComplianceCxE/assets/43501191/40fb239f-2e13-4843-8ad6-0dba900eb46e)
