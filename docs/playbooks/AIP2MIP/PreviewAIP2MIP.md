@@ -29,11 +29,13 @@ This is ideal for limited testing by your information protection team who are co
 As of `July 11, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `📅 Coming Soon to private preview` 
+
 - Mandatory Labeling: Allow users to defer enforcement to FileClose instead of FileSave (`PostponeMandatoryBeforeSave` advanced setting)
 - Sensitivity toolbar added to File/SaveAs
 - Tracking and revocation of encrypted documents 
 
 `⭐ Available today in private preview` 
+
 - None
 
 
