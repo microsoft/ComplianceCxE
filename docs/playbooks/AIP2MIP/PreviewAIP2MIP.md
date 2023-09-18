@@ -30,9 +30,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 
 `📅 Coming Soon to private preview` 
 
-- Mandatory Labeling: Allow users to defer enforcement to FileClose instead of FileSave (`PostponeMandatoryBeforeSave` advanced setting)
 - Sensitivity toolbar added to File/SaveAs
-- Tracking and revocation of encrypted documents 
 
 `⭐ Available today in private preview` 
 
@@ -41,12 +39,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 
 `✳️ Graduated to public preview` 
 
-- Sensitivity bar in Word, Excel, PowerPoint, and Outlook. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
-- AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
-- Specify a default sublabel for a parent label [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#specify-a-default-sublabel-for-a-parent-label)
-- Emails inherit the highest sensitivity from their attachments
-- Ability to assign different labels to users between Files and Emails
-- Double-Key Encryption as an outcome of labeling in Word, Excel, PowerPoint, Outlook
+- Tracking and revocation of encrypted documents 
 
 
 `✅ Graduated to general availability` 
@@ -55,7 +48,12 @@ As of `July 11, 2023`, the following features are available in the private previ
 - S/MIME encryption as an outcome of labeling. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#configure-a-label-to-apply-smime-protection-in-outlook)
 - Users can restrict access to domain names when using user-defined permissions [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#support-for-organization-wide-custom-permissions)
 - Block, Warn, Justify before sending emails based on sensitivity labels
-
+- Sensitivity bar in Word, Excel, PowerPoint, and Outlook. [Learn more](https://insider.office.com/en-us/blog/sensitivity-bar-in-office-for-windows)
+- AIP Add-in disabled by default. [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-aip?view=o365-worldwide#how-to-configure-newer-versions-of-office-to-enable-the-aip-add-in)
+- Specify a default sublabel for a parent label [Learn more](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#specify-a-default-sublabel-for-a-parent-label)
+- Emails inherit the highest sensitivity from their attachments
+- Ability to assign different labels to users between Files and Emails
+- Double-Key Encryption as an outcome of labeling in Word, Excel, PowerPoint, Outlook
 
 #### Program Requirements
 
