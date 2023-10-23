@@ -35,6 +35,10 @@ Sensitivity labels are at their basic level a tag, that is customizable, persist
 ## Auto-Labeling Overview
 There are multiple methods for automatically applying a label to emails and documents based on their content in Microsoft 365, two of the key ones are:
 
+**Default SharePoint document library labels:** When SharePoint is enabled for sensitivity labels, you can configure a default label for document libraries. Then, any new files uploaded to that library, or existing files edited in the library will have that label applied if they don't already have a sensitivity label, or they have a sensitivity label but with lower priority.
+
+**Label API:** Label API is a pay per use API that can label up to 75k files a day. It can be used to override manual labeled files.
+
 **[Client-side auto-labeling:](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide)** Client-side auto-labeling happens on the client workstation as the user creates or edits a document or email using Word, Excel, PowerPoint, Outlook, and Office web applications (OWA). Depending on the content detected, the label is applied automatically or recommended to the users based on the properties of the label. A default label can also be assigned to documents and emails. This form of client-side labeling does not evaluate document content based on conditions defined on a global policy, but it is based on properties defined for each label.
 
 **Service-side auto-labeling:** Service-side auto-labeling is sometimes referred to as *auto-labeling for data at rest and data in transit*. Unlike client-side auto-labeling, service side auto labeling does not depend on the client to analyze the document content while it is being created. Instead, service-side auto-labeling reviews content that is stored (at-rest) in SharePoint or OneDrive document libraries, or that is "in-flight" or being sent within Exchange. For instance, when a message is submitted to transport. All policy review and application are done within the service. Service-side auto-labeling policies are created and configured from the Information Protection section of the Compliance Center under the Auto-labeling policy tab. Auto-labeling policies don't support recommended labeling because the user doesn't interact with the labeling process. Instead, the administrator runs the policies in simulation mode to help ensure the correct labeling of content before applying the label. 
@@ -46,7 +50,7 @@ The table below provides a comparison of Service-side, Client-side, and Defender
 |---|---|---|---|
 |  **Application support**  |  SharePoint, OneDrive and Exchange Online  |  Word, PowerPoint, Excel or Outlook Microsoft 365 apps, or AIP plugin for Office  |  SharePoint, OneDrive and third-party services supported by Defender for cloud apps  |
 | **File types supported**  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats  |  .docx, .xlsx, .pptx and related formats, PDF  |
-| **Policy scoping**  |  By site, group or user  |  By label  |  By service, site, folder  |
+| **Policy scoping**  |  By site, group or user, admin units  |  By label  |  By service, site, folder  |
 | **Classification options**  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching Trainable classifiers (in private preview)| Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers  |  Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers; Fingerprint; Regular Expression  |
 | **Labeling conditions**  |  Sensitive content; Content is shared; Recipient properties; Sender properties; Email subject; Document title; Attachment extension; Attachment can't be scanned; Attachment is encrypted; Email headers| Sensitive content in document or email body; Sensitive content in attachment  |  Sensitive content; Access level; App;  Content is shared; Creation time; File ID; File type; File owner; MIME type; Parent folder; Quarantine status; Existing sensitivity label; Document title; File extension  |
 | **Interaction with users**  | Label visible after user opens document | Automatic labeling: user can override; Recommended label: user can accept or dismiss |  Label visible after user opens document. Content markings are applied on save |
@@ -69,6 +73,9 @@ A principle we have is that client/end user provided labels always overrides ser
 | |  Client-side auto labeling  |  No action. Manually applied label takes precedence  |
 | |  Service-side auto labeling  |  No action. Manually applied label takes precedence  |
 |  **Content has default label applied (Label policy)**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
+| |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
+| |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
+|  **Content has default SPO doc library label applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
 | |  Client-side auto labeling  |  Apply new label if higher sensitivity  | 
 | |  Service-side auto labeling  |  Apply new label if higher sensitivity  |
 |  **Content has auto label applied**  |  Client-side recommendation  |  Recommend new label if higher sensitivity  |
@@ -152,13 +159,13 @@ Auto labeling is a built-in Microsoft service that triggers off sensitive conten
 ## Protecting Sensitive Information in SharePoint/OneDrive
 Sensitive files are automatically detected and labeled at rest.
 
-- Office files for Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) are supported.
+- PDF documents and Office files for Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) are supported.
     - These files can be auto-labeled at rest before or after the auto-labeling policies are created. Files cannot be auto-labeled if they are part of an open session (the file is open).
     - Currently, attachments to list items aren't supported and won't be auto-labeled.
 
-- Maximum of 25,000 automatically labeled files in your tenant per day.
+- Maximum of 25,000 automatically labeled files in your tenant per day. Requests to increase labeling speed can be made via support ticket with business justification and financial impact to Microsoft. Please note that Microsoft has final approval of requests and approved limit increase will take 6-8 weeks to take effect.
 
-- Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 sites (SharePoint or OneDrive) when they are specified individually. You can also specify all sites, and this configuration is exempt from the 100 sites maximum.
+- Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 locations (SharePoint sites or OneDrive individual users or groups) when you specify specific locations by using the Included or Excluded options. If you keep the default configuration of All, this configuration is exempt from the 100 locations maximum.
 
 - Existing values for modified, modified by, and the date are not changed because of auto-labeling policies—for both simulation mode and when labels are applied.
 - When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the account that last modified the file. If this account is no longer in Azure Active Directory, the label won't be applied because these values can't be set.
@@ -177,25 +184,31 @@ Sensitive emails are automatically detected and labeled in transit/ as they are 
 
 - Email that has IRM encryption with no label will be replaced by a label with any encryption settings when there is a match by using auto-labeling.
 
-- Incoming email is labeled when there is a match with your auto-labeling conditions:
-
-- If the label is configured for [encryption](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide), that encryption isn't applied.
-
-- If the label is configured to apply [dynamic markings](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide#dynamic-markings-with-variables), be aware that this configuration can result in the names of people outside your organization.
+- Incoming email is labeled when there is a match with your auto-labeling conditions. For this outcome to apply to senders outside your organization, the Exchange location must be set to All included and None excluded. If the label is configured for encryption:
+	- That encryption is always applied when the sender is from your organization.
+	- By default, that encryption isn't applied when the sender is outside your organization but can be applied by configuring Additional settings for email and specifying a Rights Management owner.
 
 - When the label applies encryption, the [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is the person who sends the email. There currently isn't a way to set a Rights Manager owner for all incoming email messages that are automatically encrypted.
 
 ## Requirements for configuring Service-side Auto-labeling
 * Simulation mode:
     - Auditing for Microsoft 365 must be turned on. If you need to turn on auditing or you're not sure whether auditing is already on, see [Turn audit log search on or off](https://docs.microsoft.com/en-us/microsoft-365/compliance/turn-audit-log-search-on-or-off?view=o365-worldwide).
-
+* To view file or email contents in the source view, you must have the Data Classification Content Viewer role, which is included in the Content Explorer Content Viewer role group, or Information Protection and Information Protection Investigators role groups. Without the required role, you don't see the preview pane when you select an item from the Items to review tab. Global admins don't have this role by default.
 * To auto-label files in SharePoint and OneDrive:
     - You have [enabled sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files?view=o365-worldwide).
     - At the time the auto-labeling policy runs, the file mustn't be open by another process or user. A file that's checked out for editing falls into this category.
+* If you plan to use sensitive information types:
+  	- The sensitive information types you select will apply only to content that's created or modified after these information types are created or modified. This restriction applies to all custom sensitive information types and any new built-in information types.
+  	- To test new custom sensitive information types, create them before you create your auto-labeling policy, and then create new documents with sample data for testing.
+  	- If you plan to use document properties as a condition (Document property is), this option uses SharePoint managed properties. The preparation for DLP policies equally applies for when you use this condition with auto-labeling policies
 
-* If you plan to use [custom sensitive information types](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-learn-about?view=o365-worldwide) rather than the built-in sensitivity types:
-    - Custom sensitivity information types apply only to content that is added or modified in SharePoint or OneDrive after the custom sensitivity information types are created.
-    - To test new custom sensitive information types, create them before you create your auto-labeling policy, and then create new documents with sample data for testing.
+
+* One or more sensitivity labels created and published (to at least one user) that you can select for your auto-labeling policies. For these labels:
+    - It doesn't matter if the auto-labeling in Office apps label setting is turned on or off, because that label setting supplements auto-labeling policies, as explained in the introduction.
+    - If the labels you want to use for auto-labeling are configured to use visual markings (headers, footers, watermarks), note that these aren't applied to documents.
+* If the labels apply encryption
+    - When the auto-labeling policy includes locations for SharePoint or OneDrive, the label must be configured for the Assign permissions now setting, and User access to content expires must be set to Never.
+    - When the auto-labeling policy is just for Exchange, the label can be configured for either Assign permissions now or Let users assign permissions (for the Do Not Forward or Encrypt-Only options). You can't auto-apply a label that's configured to apply S/MIME protection.
 
 ## Creating a MIP auto-labeling policy
 
@@ -303,16 +316,18 @@ Another option is trainable classifiers where we use machine learning, to unders
 
 These different classifier types are not mutually exclusive to each other. You can and in fact we encourage you to try out combinations of different types of classifiers. For example, you can use a sensitive information type (SIT) for PII together with named entity recognition for person's names in a policy trying to detect large amounts of identity information in a table, or you can use trainable classifiers together with a custom SIT to detect invoices above a certain amount. You can also use EDM as an exclusion to a rule based on a regular SIT to avoid identifying employee PII as potential customer PII, etc.
 
+Our advanced classifiers allow you to protect found credentials in files and intellectual property and other important business documents with trainable classifiers. 
+
+In addition
+
 1. Pick your scope:
 
-    * **Option 1:** ALL – SharePoint sites, OneDrive accounts and Email users
+    * **Option 1:** ALL – SharePoint sites, OneDrive users/groups and Email users
     
     * **Option 2**: Subset of sites or accounts – can use PowerShell for longer lists
     
-        !!! note "Roadmap Note"
-            We are working to support OneDrive groups
 
-1. Select a label to use for auto-labeling, but note:
+2. Select a label to use for auto-labeling, but note:
 
     * This label will not go into effect until you turn on your policy from simulation mode.
     
@@ -321,7 +336,7 @@ These different classifier types are not mutually exclusive to each other. You c
     * The protections of the label you select will then apply to every document automatically labeled. 
 
 ### Step 3: Simulate
-After 12 hours, you can analyze the results of our auto-labeling simulation. You will be shown files and emails that match your auto-labeling policy configurations that would be labeled if your policy was turned on. Review these matches to make sure they match with what you are expecting. 
+After 12 hours, you can analyze the results of our auto-labeling simulation. You will be shown files and emails that match your auto-labeling policy configurations that would be labeled if your policy was turned on. Review these matches to make sure they match with what you are expecting. Try simulating different variations of your policies (higher/lower confidence, different combination of conditions, higher/lower instance counts) to find the right configuration for your organization.
 
 ### Step 4: Refine Policy 
 
@@ -330,7 +345,7 @@ After 12 hours, you can analyze the results of our auto-labeling simulation. You
 If you are seeing high amounts of false positives, fine-tune your policy with the following recommendations:
 
 * Increase the thresholds of sensitive information types found to determine severity
-    - It is okay to use different thresholds for individual classifiers
+    - It is okay to use different thresholds for individual classifiers (higher or lower the instance counts)
 
 * Understand confidence levels and how they are defined
     - Low confidence may be good!
@@ -348,6 +363,9 @@ If you are seeing high amounts of false positives, fine-tune your policy with th
         <figcaption>Figure 9: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
     </figure>
 
+* Leverage our trainable classifiers to help lower false positives
+* Combine different conditions: mix content contains sensitive info type with other contextual conditions like document is created by or document is shared externally
+  
 #### Advanced refinement
 More advanced refinement strategies if the above don’t work:
 
@@ -365,6 +383,73 @@ More advanced refinement strategies if the above don’t work:
 When you are confident in the matches you see in simulation, turn on your policy from simulation mode so that we can start auto labeling the files and emails in your organization. You can see what’s getting labeled through activity explorer. 
 
 ## Auto labeling use cases from our customers
+
+New scenarios leveraging contextual conditions
+
+1.	Migrating from a 3rd party to Microsoft labels
+If your third party like Titus write their labels into document properties, you can leverage Document property is to read those 3rd party labels and automatically map it to your Purview sensitivity labels. 
+
+	How to configure:
+
+	This predicate requires additional configuration before the policy can even be created if used on OneDrive or SharePoint locations. Please refer to this DLP documentation: Create a DLP policy to protect documents - Microsoft Purview (compliance) | 	Microsoft Learn to learn how to create a managed property to use for “Document property is”. 
+	This predicate can be configured both in advanced or common rules. 
+
+	How to test:
+	We recommend following the above steps to ensure proper configuration and testing this predicate first in DLP with a small subset of files to make sure it’s accurately detecting the document property you’re looking for. Then test with auto-labeling in 	simulation to verify the results match. 
+
+	Limitations:
+	After the managed schema is configured as a property in SharePoint and OneDrive, the policy will only be able to detect content that’s been indexed (the content is newly uploaded or if that content is old but edited after managed schema was configured).
+	Custom document properties aren’t crawled for labels with encryption. Remove the encryption and the crawled property will show up. 
+	There is an option to re-index a whole site, but this can cause massive load on the search system and does not have a defined SLA for re-indexing as SharePoint and OneDrive will re-index files as they can to ensure the system isn’t throttled. 
+
+2.	Apply a default label to files at rest
+Leverage the contextual condition of “File extension is” to label all labelable files at rest. In addition, you can combine with “file size is greater than” to cover files that are too large for classification (we can classify up to 150 MB) or you can use this to protect spreadsheets or PowerPoint decks sent externally.
+
+	How to configure:
+
+	Applies label to documents and email attachments that have specific file extensions. This predicate can be configured both in advanced or common rules. 
+
+	How to test:
+	You can scope to all file types applicable to extend default labels for data at rest.
+	In simulation mode, you can customize columns to show file type for testing. 
+
+	Limitations:
+	Note that SharePoint and OneDrive will only label files with docx, .xlsx, .pptx, or .pdf  extensions. Additional file extensions you include will only apply to attachments.
+
+3.	Label and protect large files
+Leverage the contextual condition of “Document size equals or is greater than” to ensure large files are protected when sent externally or if they can’t be classified due to size limitation.
+	
+ 	How to configure:
+
+	Applies label to Word, Excel, PowerPoint, and PDF files that are a specific size or larger. If you added the condition 'Content contains > Sensitive info types', the label will only be applied to files that are 150 MB or less.
+
+	How to test:
+	You can use auto-labeling to:
+	-	label large files that can’t be classified (150MB or greater) 
+	-	large files sent externally
+	-	large files with detected sensitive information types
+
+4.	Protect files pertaining to specific projects or that contain the word Confidential
+Leverage the contextual condition of “Document name contains words or phrases” to protect and label all documents that mention HR/ a specific department or project or include the word Confidential.
+
+	How to configure:
+
+	Applies label to attachments or documents where the file name contains any of the words or phrases you specify.
+
+	How to test:
+	You can use auto-labeling to:
+	-	label all files that have the word confidential or other label name 
+	-	label files that mention specific project names
+
+5.	Automatically label files created by C-suite or someone who’s submitted their notice
+Leverage the contextual condition of “Document created by” to protect and label all documents created by select users. This condition is only available in advanced rules.
+
+	How to test:
+	You can use auto-labeling to:
+	-	label all files created by someone in the C-Suite
+	-	label files created by someone who has submitted their notice
+
+Standard scenarios for protecting sensitive information
 
 ### Scenario 1: Protecting payment information of customers
 A lot of customers have an interest in protecting their financial data surrounding payment data to comply with financial regulations. This usually entails a combination of bank account numbers, PII (Personal Identifiable Information) of customers, credit card numbers and account information. 
