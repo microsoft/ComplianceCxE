@@ -299,7 +299,7 @@ Get started with auto-labeling with our default auto-labeling policy protecting 
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture7.png"/> 
-    <figcaption>Figure 8: Different types of classifiers that can be used in auto-labeling policy: sensitive information types, named entities (in private preview), exact data match, and trainable classifiers (coming in 2022)</figcaption>
+    <figcaption>Figure 8: Different types of classifiers that can be used in auto-labeling policy: sensitive information types, named entities, exact data match, optical character recognition, trainable classifiers, credentials, and context based classification</figcaption>
 </figure>
 
 You want to protect the sensitive data in your organization. What is sensitive in your organization? Start with our sensitive information types. We have 200+ out of the box sensitive information types that we help detect in your organization. Check content explorer to see which sensitive information types we are finding. 
@@ -308,7 +308,7 @@ So, what information is there? Do you detect a lot of sensitive information that
 
 If you are unsure of what data to protect or how to get started, look at our provided Financial, Medical and Health, and Privacy templates. These provide a great baseline of sensitive information types to protect given different regulations and industries. You can customize these templates to add more sensitive information types you are concerned with.
 
-Named entities recognition (NER), which is something we are doing right now in private preview, allows you to be able to identify entities like physical address, names, and more with other sensitive information types to be more confident that it is something you are looking for. This works great to reduce false positives.
+Named entities recognition (NER) allows you to be able to identify entities like physical address, names, and more with other sensitive information types to be more confident that it is something you are looking for. This works great to reduce false positives.
 
 As you get more advanced or have more business use cases, you can also explore things like exact data matching which looks at your specific customer data that you are passing in detects and labels for this customer's information. This is a more complex process that requires more time to configure and execute but can bring your false positive rates to near zero allowing you to be more assertive with auto-labeling policies. 
 
