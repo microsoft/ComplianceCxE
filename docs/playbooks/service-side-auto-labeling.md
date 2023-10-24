@@ -382,7 +382,7 @@ More advanced refinement strategies if the above don’t work:
 ### Step 5: Enforce
 When you are confident in the matches you see in simulation, turn on your policy from simulation mode so that we can start auto labeling the files and emails in your organization. You can see what’s getting labeled through activity explorer. 
 
-## Auto labeling use cases from our customers
+## **Auto labeling use cases from our customers**
 
 New scenarios leveraging contextual conditions
 
@@ -449,7 +449,7 @@ Leverage the contextual condition of “Document created by” to protect and la
 	-	label all files created by someone in the C-Suite
 	-	label files created by someone who has submitted their notice
 
-Standard scenarios for protecting sensitive information
+## Standard scenarios for protecting sensitive information
 
 ### Scenario 1: Protecting payment information of customers
 A lot of customers have an interest in protecting their financial data surrounding payment data to comply with financial regulations. This usually entails a combination of bank account numbers, PII (Personal Identifiable Information) of customers, credit card numbers and account information. 
