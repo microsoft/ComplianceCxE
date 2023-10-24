@@ -508,7 +508,7 @@ Similarly, we have seen an interest in protecting the personal data of both cust
     - Confidential Label Priority (2nd highest parent label)
     - Internal Only
 
-#### Advanced Scenario
+**Advanced Scenario**
 
 Consider using [exact data matching (EDM)](https://docs.microsoft.com/en-us/microsoft-365/compliance/sit-modify-edm-schema-configurable-match) to identify patient healthcare data.
 
