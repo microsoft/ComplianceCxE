@@ -249,7 +249,7 @@ You will only see this option if you have not set up labeling, in-app labeling r
 
 Get started with auto-labeling with our default auto-labeling policy protecting credit card numbers on SharePoint, OneDrive, and Exchange
 
-#### If you already have your labels set up but have not create any auto-labeling policies
+**If you already have your labels set up but have not create any auto-labeling policies**
 
 1. In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?linkid=2077149), navigate to sensitivity labels:
     - **Solutions** > **Information protection**
@@ -272,7 +272,7 @@ Get started with auto-labeling with our default auto-labeling policy protecting 
     If you have already set up an auto-labeling policy you will not be shown this banner but can configure our default auto-labeling policy on your own:
     [Learn about the default labels and policies for Microsoft Information Protection - Microsoft 	365 Compliance | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials?view=o365-worldwide#service-side-auto-labeling).
 
-#### Extend DLP policies covering Exchange to auto-labeling 
+**Extend DLP policies covering Exchange to auto-labeling** 
 
 1. In the [Microsoft 365 compliance center](https://go.microsoft.com/fwlink/p/?linkid=2077149), navigate to sensitivity labels:
 
@@ -295,7 +295,7 @@ Get started with auto-labeling with our default auto-labeling policy protecting 
         <figcaption>Figure 7: Select your existing Exchange Online DLP policy to convert to auto-labeling simulation</figcaption>
     </figure>
 
-#### Create your own auto-labeling policy
+**Create your own auto-labeling policy**
 
 <figure>
     <img src="../../playbooks/img/ss-auto-labeling/Picture7.png"/> 
@@ -340,7 +340,7 @@ After 12 hours, you can analyze the results of our auto-labeling simulation. You
 
 ### Step 4: Refine Policy 
 
-#### Fine tuning your policy
+**Fine tuning your policy**
 
 If you are seeing high amounts of false positives, fine-tune your policy with the following recommendations:
 
@@ -366,7 +366,7 @@ If you are seeing high amounts of false positives, fine-tune your policy with th
 * Leverage our trainable classifiers to help lower false positives
 * Combine different conditions: mix content contains sensitive info type with other contextual conditions like document is created by or document is shared externally
   
-#### Advanced refinement
+**Advanced refinement**
 More advanced refinement strategies if the above don’t work:
 
 * Switch this policy to be for client-side auto labeling, since false positives are much less problematic with client-side since the user can take care of the "mistake" with one click
@@ -459,7 +459,7 @@ A lot of customers have an interest in protecting their financial data surroundi
     <figcaption>Figure 10: Out of the box financial templates you can use for auto-labeling</figcaption>
 </figure>
 
-#### Recommendation
+**Recommendation**
 
 * Use our U.S. Gramm-Leach Bliley Act (GLBA) Enhanced template
 
@@ -478,7 +478,7 @@ Another field that we’ve seen a lot of interest in protecting is health care d
     <figcaption>Figure 11: Out of the box healthcare templates you can use for auto-labeling and the grouping of sensitive information types they protect </figcaption>
 </figure>
 
-#### Recommendation
+**Recommendation**
 
 * Use our U.S. Health Insurance Act (HIPPA) Enhanced template
 
@@ -497,7 +497,7 @@ Similarly, we have seen an interest in protecting the personal data of both cust
     <figcaption>Figure 12: Out of the box privacy templates you can use for auto-labeling</figcaption>
 </figure>
 
-#### Recommendation
+**Recommendation**
 
 * Use our U.S. PII Data Enhanced or GDPR Enhanced template
 
