@@ -29,10 +29,10 @@ Previously available in AIP add-in, administrators can now use DLP to show popup
 |OutlookWarnUntrustedCollaborationLabel / OutlookWarnTrustedDomains|#1 Warn Popup and Trusted Domains|
 |OutlookJustifyUntrustedCollaborationLabel / OutlookJustifyTrustedDomains|#2 Justify Popup and Trusted Domains|
 |OutlookBlockUntrustedCollaborationLabel / OutlookBlockTrustedDomains|#3 Block Popup and Trusted Domains|
-|OutlookUnlabeledCollaborationAction|Unlabeled emails and attachments| #4 Unlabeled Content Predicate for any Popup|
-|OutlookOverrideUnlabeledCollaborationExtensions|File extension allow list| #5 File Extension Predicate for any Popup|
+|OutlookUnlabeledCollaborationAction|Unlabeled emails and attachments|#4 Unlabeled Content Predicate for any Popup|
+|OutlookOverrideUnlabeledCollaborationExtensions|File extension allow list|#5 File Extension Predicate for any Popup|
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|Unlabeled emails without attachments| Not supported|
-|OutlookCollaborationRule|Customized popup messages| #6 Customized popups|
+|OutlookCollaborationRule|Customized popup messages|#6 Customized popups|
 
 ## General guidance for DLP Configuration:
 Create and deploy a [data loss prevention policy](https://learn.microsoft.com/purview/dlp-create-deploy-policy)
