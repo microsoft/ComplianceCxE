@@ -144,27 +144,6 @@ Sensitivity labels can be used to protect data not only in documents and emails,
 
 This helps protect your Teams and SharePoint sites holistically and not just individual files within those sites. There are various control options available in the M365 compliance center to enable various group settings and to restrict sharing of sensitive information via chat or by sharing the files. The sensitivity labels are then available to a user who is creating a new Team.
 
-### Scoping of Teams-DLP policy:
-
-Teams DLP policy scoping are different from other location such as Exchange, SharePoint, etc.  The policy is scoped on the types of chats based on the user or groups chosen.  M365 Groups are used to scope public (standard channel and shared channel) chats.  Users, Security Groups, or Distribution Groups are used to scope non-public (1:1/n and private channel) chats. Refer [here](https://learn.microsoft.com/purview/dlp-microsoft-teams#scope-of-dlp-protection) on the latest scoping definition.  
-
-#### Example - Exclude chats from specific Teams channels:
-
-There are cases when there is a need to exclude a certain channel from oversharing, such a a Sales channel to handle credit card information.  In the Microsoft 365 compliance center, select All users and groups and check the Exclude users and groups checkbox and then add the desired M365 Group.
-<figure>
-    ![image](https://github.com/microsoft/ComplianceCxE/assets/49501412/c1011a81-e794-423b-a414-030fdba87d8c)
-    <figcaption>Figure: Scoping a policy by selecting a M365Group to excluding channels associated with the group in your organization.</figcaption>
-</figure>
-
-#### Example - Exclude all chats for a group of users:
-There are cases when there is a need to customize a policy such as allowing support ops department to handle credential information. In the Microsoft 365 compliance center, select Specific users and groups and then add the desired M365 Group.  Make sure to add _both_ a security group and a M365 Group into the policy.
-<figure>
-    ![image](https://github.com/microsoft/ComplianceCxE/assets/49501412/de573416-6b03-4045-9de6-e36e7272ecab)
-    <figcaption>Figure: Scoping a policy by selecting both a M365Group _AND_ security group to exclude all chats for specific members in your organization.</figcaption>
-</figure>
-To ensure the policy are updated as group membership changes, it is important to consider synchronizing the M365Group and security gropus regularly.  See the article [Syncing Security Groups with Microsoft Teams](https://github.com/microsoft/ComplianceCxE/assets/49501412/27bb7151-134f-4fdf-ad00-91d403201f0c) to automate the group membership syncrhonization.  This will allow configuring policies for geo-specific targeting, department scoping, or other functional unit specialization.
-
-
 ## Teams and Guest Access
 **Guest** is a user type in Microsoft Teams which is included with Office 365 licenses. With guest access, you can provide access to teams, documents within channels, resources, chats, and applications for people external to your organization. 
 
