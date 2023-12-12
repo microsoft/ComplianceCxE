@@ -19,25 +19,30 @@ The PowerShell terminal will show the label policy configuration that includes a
 
 ### Scenarios in-scope for preview
 
-Oversharing popups configurations are available for migration from AIP add-in in two phases. To determine if your organization’s configuration is eligible for preview of the current phase, map your Oversharing Popup settings (from the previous step) to one or more of the configuration options listed below. If your scenarios are not part of the current preview, they will be available in phase two.
-
-Phase 1: Labeled email and attachments for warn, justify, and block popups.
+Previously available in AIP add-in, administrators can now use DLP to show popup messages to end users in Outlook desktop for windows for the scenarios below:
+1)	Warning messages that prompt users to verify the content that they're sending
+2)	Emails that require justification or explicit acknowledgement before they can be sent (DLP override)
+3)	Blocked emails that cannot be sent out
 
 |AIP Add-In Custom Setting|Configuration Scenario|
 |------------------|------------------|
 |OutlookWarnUntrustedCollaborationLabel / OutlookWarnTrustedDomains|#1 Warn Popup and Trusted Domains|
 |OutlookJustifyUntrustedCollaborationLabel / OutlookJustifyTrustedDomains|#2 Justify Popup and Trusted Domains|
 |OutlookBlockUntrustedCollaborationLabel / OutlookBlockTrustedDomains|#3 Block Popup and Trusted Domains|
+|OutlookUnlabeledCollaborationAction|Unlabeled emails and attachments| #4 Unlabeled Content Predicate for any Popup|
+|OutlookOverrideUnlabeledCollaborationExtensions|File extension allow list| #5 File Extension Predicate for any Popup|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|Unlabeled emails without attachments| Not supported|
+|OutlookCollaborationRule|Customized popup messages| #6 Customized popups|
 
-Scenarios out-of-scope for phase 1
-If the label policy contains any of the custom settings listed below, you will have to wait for Phase 2.
+## General guidance for DLP Configuration:
+Create and deploy a [data loss prevention policy](https://learn.microsoft.com/purview/dlp-create-deploy-policy)
+1.	Choose what you want to monitor
+2.	Choose the Policy Scoping(preview)
+3.	Choose where you want to monitor
+4.	Choose the conditions that must be matched for a policy to be applied to an item
+5.	Choose the action to take when the policy conditions are met
+For PowerShell configuration, refer to the [PowerShell reference](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps)
 
-|AIP Add-In Custom Setting|Configuration Scenario|
-|------------------|------------------|
-|OutlookUnlabeledCollaborationAction|Unlabeled emails and attachments|
-|OutlookOverrideUnlabeledCollaborationExtensions|File extension allow list|
-|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|Unlabeled emails without attachments|
-|OutlookCollaborationRule|Customized popup messages|
 
 ## Configuration Steps
 
@@ -72,6 +77,37 @@ Once deployed, users see this block popup on send:
 
 !!! info
     In Outlook, untrusted recipients are listed in the policy tip while the email is drafted. Previously in AIP, untrusted recipients were shown in the popup dialogue.
+
+### 4. Unlabeled Content Predicate for any Popup
+UX instructions
+a.	Choose “Content is not labeled”
+b.	Choose the target scope for this predicate evaluation –
+iv.	Message & attachment (default): It helps detect if the entire email envelope is unlabeled.
+v.	Message only: It helps detect if message body is unlabeled.
+vi.	Attachment only: It helps detect if any of the attachments is unlabeled.
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/1a448e7b-e3da-43f5-9d28-63c436d4395c)
+
+PowerShell instructions:
+- Set-DlpComplianceRule -MessageIsNotLabeled $true
+- Set-DlpComplianceRule -AttachmentIsNotLabeled $true
+- Set-DlpComplianceRule -ContentIsNotLabeled $true 
+
+### 5. File Extension Predicate for any Popup
+UX instructions
+a.	Choose “File extension is”
+b.	Input the extensions you wish to detect or exempt.
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/36e6a51a-0a6f-45dd-b9c2-2eae690ba6be)
+
+### 6. Customized Popups
+Create a JSON file with content for the customized popups:
+
+ ![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/48a9f7b6-e2ef-4f63-92c4-3216021a9841)
+
+The above content could be uploaded for DLP using below steps:
+$content = Get-Content "path to the file" | Out-String
+New/Set-DlpComplianceRule -Name <Rule_name> -Policy <Policy_name> -NotifyPolicyTipCustomDialog $content -NotifyPolicyTipDisplayOption Dialog 
+
+When the above cmdlet is executed, there will be some validation checks on the content passed for the -AdvancedSettings like char limit, formatting, mandatory presence of 1 default language, etc and the admin will be notified of any errors for correction.
 
 ## PowerShell Instructions (Advanced)
 
@@ -141,4 +177,26 @@ If “Require a business justification to override” is selected, the business 
 In Outlook, the acknowledgement option requires the user to explicitly check the box to enable send:
 
 ![image](https://user-images.githubusercontent.com/25543918/224189240-399005f0-2a99-41ac-a4e2-d09dd0fdcac7.png)
+
+## Additional existing features supported by DLP Oversharing for E5 users
+- Top DLP Predicates
+- Content contains Sensitive Info Types (Works for email and unencrypted Microsoft 365 and PDF files)
+- Content contains sensitivity labels (Works for email and Office & PDF file types)
+- Content is not labeled
+- Content is shared
+- Sender is
+- Sender is member of (Only Distribution lists, Azure-based Dynamic Distribution groups, and email-enabled Security groups are supported.)
+- Sender domain is
+- Recipient is
+- Recipient is a member of (Only Distribution lists, Azure-based Dynamic Distribution groups, and email-enabled Security groups are supported.)
+- Recipient domain is
+- Subject contains words
+- Advanced classifiers like Named Entities, Exact Data Match, Trainable Classifiers, Cred scan 
+
+## Known limitations for Private Preview
+- OOB template with EXO workload would not have the Message contains and Attachment contains predicates available
+- For the four new predicates (Message is not labeled/Attachment is not labeled/Message contains/Attachment contains) with per component eval turned ON, the matched conditions might not be accurate in the GIR/Audit/end user email/Activity Explorer/Alert.
+- Content contains SITs with per component evaluation ON will not support Trainable Classifiers
+- For the new 2 predicates Message contains & Attachment contains (irrespective of per component eval), Trainable Classifiers will not be supported
+
 
