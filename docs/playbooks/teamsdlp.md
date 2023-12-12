@@ -151,6 +151,7 @@ Teams DLP policy scoping are different from other location such as Exchange, Sha
 There are cases when there is a need to exclude certain channels from oversharing, such as the channels for Sales in Teams to handle credit card information. In the Microsoft 365 compliance center, select All users and groups and check the Exclude users and groups checkbox and then add the desired M365 Group.
 
 <figure>
+    <img src="../../M365GroupExclusion.jpg" align="left"/> 
     <figcaption>Scoping a policy by selecting a M365Group to excluding channels associated with the group in your organization.  In this example, the policy will exclude the standard and shared channels under the Sales Teams team.
 </figure>
         
@@ -158,6 +159,7 @@ There are cases when there is a need to exclude certain channels from oversharin
 There are cases when there is a need to customize a policy such as allowing support and operations department to handle credential information. In the Microsoft 365 compliance center, select Specific users and groups and then add the desired security group _and_ a M365 Group into the policy.
 
 <figure>
+    <img src="../../UserAndM365GroupExclusion.jpg" align="left"/> 
     <figcaption>Scoping a policy by selecting both a M365Group _AND_ security group to exclude all chats for specific members in your organization.  In this example, Support SG and Operations M365 Group have the same set of members.
 </figure>
 
