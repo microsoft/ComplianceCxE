@@ -111,6 +111,42 @@ The above content could be uploaded for DLP using below steps:
 
 When the above cmdlet is executed, there will be some validation checks on the content passed through the JSON like char limit, formatting, mandatory presence of 1 default language, etc and the admin will be notified of any errors for correction.
 
+#### Outlook desktop – custom pop-up visualization 
+
+Based on the JSON file uploaded by the admin, Outlook will display the oversharing pop-up when users click on the (1) override link next to the policy tip or by clicking on (1) send. Some aspects of the dialog will vary depending on whether the matched rule was configured as a block or warn, also if there were overrides set. 
+
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/9b41c43d-9344-4de0-870b-c71b4bec72a6)
+
+#### Features and limitations of the dialog 
+
+1. The title and the body and override justifications options can be customized using the JSON file. Basic text formatting is allowed: bold, underline, italic and line break. Justification options can be up to 3 plus an option for free-text input.
+2. Text is not customizable for Acknowledgement and False positive overrides
+3. In the JSON file, a default language must be included along with other required languages.
+4. Matched recipients, labels and attachment names can be shown in the dialog by entering specific tokens into the JSON file.
+   - Recipients: %%MatchedRecipientsList%%
+   - Labels: %%MatchedLabelName%%
+   - Attachment name: %%MatchedAttachmentName%%  
+
+#### Custom Popup Example #1: Block users from sending emails with override options. Display matched recipients
+Popup Dialog
+
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/8b015f37-652f-4bf3-8454-466e918608b1)
+
+JSON File
+
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/9302d9a8-09c9-4b51-bd48-3b68031f4b05)
+
+
+#### Custom Popup Example #2: Warn users from sending emails with override options. Display matched recipients, label and attachment names.
+Popup Dialog
+
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/65ea10bc-2189-4d84-a555-b1431f513f36)
+
+JSON File
+
+![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/66db49f9-ca72-4343-8529-115e1e5af970)
+
+
 ## PowerShell Instructions (Advanced)
 
 DLP policies and rules can also be configured in PowerShell. To configure oversharing popups using PowerShell, first create a DLP policy and add DLP rules for each warn, justify or block popup type.
