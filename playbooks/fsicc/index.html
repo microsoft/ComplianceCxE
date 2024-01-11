@@ -1,0 +1,3310 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/ComplianceCxE/playbooks/fsicc/">
+      
+      
+        <link rel="prev" href="../etr2dlp/">
+      
+      
+        <link rel="next" href="../../jumpstarts/">
+      
+      
+      <link rel="icon" href="../../img/scm-shield.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Microsoft Communication Compliance - Playbook for Financial Services Industry - Microsoft Purview Customer Experience Engineering (CxE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/cookie-consent.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Analytics via Clarity - https://clarity.microsoft.com/ -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "7uxkeubafp");
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <!-- Meta tag for Google Search Console ownership verification-->
+    <meta name="google-site-verification" content="u3PbXeNid7oDmoMKcK77g3P5k9BUVJpow_pdJIbykow" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+      class="md-header__inner md-grid"
+      aria-label="header.title"
+    >
+  
+      <!-- Link to home -->
+      <a
+        href="../.."
+        title="Microsoft Purview Customer Experience Engineering (CxE)"
+        class="md-header__button md-logo"
+        aria-label="Microsoft Purview Customer Experience Engineering (CxE)"
+        data-md-component="logo"
+      >
+        
+  <img src="../../img/scm-shield.png" alt="logo">
+
+      </a>
+  
+      <!-- Button to open drawer -->
+      <label class="md-header__button md-icon" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      </label>
+  
+      <!-- Header title -->
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Microsoft Purview Customer Experience Engineering (CxE)
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+              
+                Microsoft Communication Compliance - Playbook for Financial Services Industry
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Color palette -->
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+        </form>
+      
+  
+      <!-- Site language selector -->
+      
+  
+      <!-- Button to open search modal -->
+      
+  </header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  Notes from the Field
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dag/" class="md-tabs__link">
+          
+  
+  DAGs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Playbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jumpstarts/" class="md-tabs__link">
+          
+  
+  Jump Starts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enduser/sensitivity/" class="md-tabs__link">
+          
+  
+  End User Training
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../webinars/" class="md-tabs__link">
+          
+  
+  Webinars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sbd/" class="md-tabs__link">
+          
+  
+  Scenario Based Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../previews/" class="md-tabs__link">
+          
+  
+  Previews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Microsoft Purview Customer Experience Engineering (CxE)" class="md-nav__button md-logo" aria-label="Microsoft Purview Customer Experience Engineering (CxE)" data-md-component="logo">
+      
+  <img src="../../img/scm-shield.png" alt="logo">
+
+    </a>
+    Microsoft Purview Customer Experience Engineering (CxE)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/ComplianceCxE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/ComplianceCxE
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Stop Shop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/aed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management/Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes from the Field
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes from the Field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP/DLP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP/DLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/mip-dlp-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Creating IP and DLP Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/DLP-policy-externalshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preventing external sharing with DLP policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/SPOblockUpload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocking upload of files with higher sensitivity label to SPO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/audit-log-management-activity-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Purview Audit (Premium) Log Activities via the O365 Management API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/ComplianceEdu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance in K-12 Education
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DAGs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DAGs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mcca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Compliance Configuration Analyzer (MCCA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/DLPMigrationAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP Migration Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/aed-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/ir-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management and Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mig-rm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mip-dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection and Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/dag-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Information Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-side-auto-labeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sourceCodePlaybook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting Source Code Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Loss Prevention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teamsdlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etr2dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy DLP Policies (ETR) to DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Communication Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geopolitical-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geopolitical Uncertainty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intended-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intended Audience
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#financial-service-industry-regulations-on-electronic-communications-supervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Service Industry Regulations on Electronic Communications Supervision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-relevant-lexicons-custom-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Relevant Lexicons (Custom Dictionaries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-communication-supervision-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Communication Supervision Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-compliance-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Compliance Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-electronic-communications-requiring-supervision-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Electronic Communications Requiring Supervision Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-of-review-for-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method of Review for Communications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-of-the-review-of-communications-compliance-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency of the Review of Communications' Compliance Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-of-the-review-of-communications-and-collecting-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation of the Review of Communications and Collecting Evidence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-compliance-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMMUNICATION COMPLIANCE USE CASES
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMMUNICATION COMPLIANCE USE CASES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#policy-configuration-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Configuration and Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-digital-communication-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptable Digital Communication Channels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulfilling-supervisory-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fulfilling Supervisory Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexicons-and-custom-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEXICONS AND CUSTOM DICTIONARIES
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LEXICONS AND CUSTOM DICTIONARIES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-lexicon-or-custom-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Your Lexicon or Custom Dictionary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Your Lexicon or Custom Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-communication-compliance-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your Communication Compliance Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://aka.ms/mipc/mipcOSS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💬 Submit CxE Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Jump Starts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jump Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Lifecycle Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auto-apply Labels
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Auto-apply Labels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/kql-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KQL Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adaptive Policy Scopes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adaptive Policy Scopes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/adaptive-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    End User Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            End User Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/sensitivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/retention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retention Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/dlpenduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP User Education & User Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Webinars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webinars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Scenario Based Demos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scenario Based Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E01 - Series Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E02 - Data Discovery Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E03 - Security vs Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E04 - AIP Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E05 - Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E06 - Label Behaviors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E07 - Container Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E08 - Client-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E09 - Service-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10 - MEM/Intune and MIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11 - MEM/Intune and MIP Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/SBDinPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 SBD in PDF  - Summary of SBD in pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Previews
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Previews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../previews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join Private Previews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geopolitical-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geopolitical Uncertainty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intended-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intended Audience
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#financial-service-industry-regulations-on-electronic-communications-supervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Service Industry Regulations on Electronic Communications Supervision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-relevant-lexicons-custom-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Relevant Lexicons (Custom Dictionaries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-communication-supervision-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Communication Supervision Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-compliance-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Compliance Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-electronic-communications-requiring-supervision-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Electronic Communications Requiring Supervision Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-of-review-for-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method of Review for Communications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-of-the-review-of-communications-compliance-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency of the Review of Communications' Compliance Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-of-the-review-of-communications-and-collecting-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation of the Review of Communications and Collecting Evidence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-compliance-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMMUNICATION COMPLIANCE USE CASES
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMMUNICATION COMPLIANCE USE CASES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#policy-configuration-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Configuration and Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-digital-communication-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptable Digital Communication Channels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulfilling-supervisory-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fulfilling Supervisory Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexicons-and-custom-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEXICONS AND CUSTOM DICTIONARIES
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LEXICONS AND CUSTOM DICTIONARIES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-lexicon-or-custom-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Your Lexicon or Custom Dictionary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Your Lexicon or Custom Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-communication-compliance-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your Communication Compliance Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+    <!-- Edit button -->
+    
+        <a
+        href="/ComplianceCxE/how-to-contribute/"
+        title="How to Contribute"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18h-2v-2h2v2m0-3h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5m9-3c0 5.18-3.95 9.45-9 9.95v-2.01c3.95-.49 7-3.86 7-7.94s-3.05-7.45-7-7.94V2.05c5.05.5 9 4.77 9 9.95M11 2.05v2.01c-1.46.18-2.8.76-3.91 1.62L5.67 4.26C7.15 3.05 9 2.25 11 2.05M4.06 11H2.05c.2-2 1-3.85 2.21-5.33L5.68 7.1A7.902 7.902 0 0 0 4.06 11M11 19.94v2.01c-2-.2-3.85-.99-5.33-2.21l1.42-1.42c1.11.86 2.45 1.44 3.91 1.62M2.05 13h2.01c.18 1.46.76 2.8 1.62 3.91l-1.42 1.42A10.013 10.013 0 0 1 2.05 13Z"/></svg>
+        </a>        
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/edit/public/docs/playbooks/fsicc.md"
+        title="edit.link.title"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+        </a>
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A⚠%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20tracking%0A%0APage%20Path%3A%20[https://microsoft.github.io/ComplianceCxE/playbooks/fsicc/](https://microsoft.github.io/ComplianceCxE/playbooks/fsicc/)"
+        title="Submit Feedback as an Issue"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+    
+
+    <!--
+        Hack: check whether the content contains a h1 headline. If it
+        doesn't, the page title (or respectively site name) is used
+        as the main headline.
+    -->
+    
+        <h1 style="text-align: left;">Financial Services Industry Playbook</h1>
+    
+
+    <!-- Markdown content -->
+    <div class="admonition note">
+<p class="admonition-title">How to use this guide</p>
+<p>Please use this guide as a starting point for monitoring and protecting your communication in Microsoft Communication Compliance. All links and references should be up to date, however, if you have a question about the correctness of any information in this document, please reach out to our <a href="https://aka.ms/askmipteam">yammer group</a>.</p>
+<p>All screenshots in this guide contain the proper configuration settings according to the best practices at the time of publication. Please ensure that your configurations mirror those used in this guide. Please refer to the Microsoft documentation online at docs for the latest updates</p>
+<p>Though the name of this document is shown as a play book, it can be equally considered a deployment guide. This document will be updated as and when new features are introduced to Microsoft Communication Compliance. </p>
+<p>This document covers in detail various use cases that can be achieved using Communication Compliance.</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>Microsoft's Communication Compliance Playbook for the Financial Services Industry is intended to help Compliance Officers, and Auditors better understand their ability to manage current regulatory requirements regarding communication supervision and the controls needed to manage the risks associated thereof. This understanding can, in turn, help identify potential strategies and solutions designed to protect you, your firm, your personnel, and your clients. The Playbook can be used as a set of guiding principles and best practice use cases for Microsoft Communication Compliance. Additionally, this guide focuses on the regulatory drivers, i.e., the SEC 17A-4, and what internal and external auditors in the Financial Services Industry can use as auditable evidence in substantiating communication supervision controls. This Playbook will be updated when new features are introduced to Microsoft Communication Compliance or when additional FSI regulatory controls and processes are required. </p>
+<div class="admonition note">
+<p class="admonition-title">Please note</p>
+<p>This document focuses on and covers various use cases that can be achieved using <strong>Communication Compliance for the Financial Services Industries</strong>. This is only a guide and should not be interpreted as a guarantee of compliance. It is up to you to evaluate and validate the effectiveness of customer controls per your regulatory environment. </p>
+</div>
+<h3 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">⚓︎</a></h3>
+<p>This document provides specific details of how customers can deploy and manage Microsoft Communication Compliance and provide guidance on satisfying internal and external compliance and auditor's requirements for communication supervision controls. </p>
+<p>In summary, this Playbook will help to:</p>
+<ul>
+<li>Understand the typical Communication Compliance use cases for the Financial Services Industry.</li>
+<li>Develop a strategy for ensuring Communication Compliance can meet internal and external auditor requirements and regulatory mandates.</li>
+<li>Define the compliance controls and validate communication supervision controls.</li>
+<li>Focus on enforcement and examinations,  including an emphasis on cybersecurity, communication/collaboration insights, and risk mitigants.</li>
+</ul>
+<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">⚓︎</a></h3>
+<p>This Playbook helps plan for a successful deployment and use of Communication Compliance and serves as a user guide to mitigating the risk of exchanging crucial data while communicating over chat, email or other collaboration solutions. </p>
+<p>Digital Communication Governance and Controls. Compliance professionals face an increased focus by regulators on governance and accountability for communication supervision processes and controls. Organizations should continually monitor their reporting, identification, and escalation processes, as well as internal audit and risk management controls. </p>
+<h3 id="geopolitical-uncertainty">Geopolitical Uncertainty<a class="headerlink" href="#geopolitical-uncertainty" title="Permanent link">⚓︎</a></h3>
+<p>Companies, especially those with global footprints and regulatory demands, face increased geopolitical risks. Regulators worldwide have implemented communication supervision regulations, including 17A-4, GDPR, and MiFID II, and are taking other steps that may focus on future communication supervision regulatory requirements. Organizations should map their regulatory rules to their  controls, evaluate ongoing regulatory changes, and formalize risk analysis and issue management processes to address these added risks. Organizations who are using Microsoft 365 can also look at utilizing Compliance Manager to stay on top of all the different compliance regulations impacting your industry and/or location and use these as a guide to help you stay compliant with this ever changing environment. More on Compliance <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide#:~:text=%20Compliance%20Manager%20helps%20simplify%20compliance%20and%20reduce,suggested%20improvement%20actions%20to%20help%20you...%20More%20">Manager Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<h3 id="intended-audience">Intended Audience<a class="headerlink" href="#intended-audience" title="Permanent link">⚓︎</a></h3>
+<p>Compliance officers, IT administrator staff, partners, and auditors.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
+<p><strong>Communication Compliance </strong>is a risk management solution in Microsoft 365 that helps minimize communication risks by helping you detect, capture, and act on inappropriate messages in your organization. Pre-defined and custom policies allow you to scan internal and external communications for policy matches so designated reviewers can examine them. Reviewers can investigate scanned email, Microsoft Teams, Yammer, or third-party communications in your organization and take appropriate actions to make sure they're compliant with your organization's message standards.</p>
+<h3 id="financial-service-industry-regulations-on-electronic-communications-supervision">Financial Service Industry Regulations on Electronic Communications Supervision<a class="headerlink" href="#financial-service-industry-regulations-on-electronic-communications-supervision" title="Permanent link">⚓︎</a></h3>
+<p>The Securities Exchange Act requires broker-dealers to create certain records, retain them for various lengths of time, and keep them in specified formats. <strong>FINRA Rules 3110 and 3120</strong> govern supervisory systems and supervisory procedures as they relate to, among other things, electronic communications. These rules require the documentation and ongoing review, testing, and validation of these systems and procedures. In analyzing the enforcement associated with electronic communications, three top trends emerge for which firms should implement best practices:</p>
+<ol>
+<li>Written supervisory procedures</li>
+<li>Relevant lexicons (Keywords)</li>
+<li>Testing supervisory controls</li>
+</ol>
+<h3 id="using-relevant-lexicons-custom-dictionaries">Using Relevant Lexicons (Custom Dictionaries)<a class="headerlink" href="#using-relevant-lexicons-custom-dictionaries" title="Permanent link">⚓︎</a></h3>
+<p>Compliance-driven organizations can use a lexicon-based (Keyword) approach to electronic communication supervision by ensuring or evaluating those lexicons that are being used are relevant to the business. As a result, and through this approach, specific risks associated with communication and other collaboration solutions are identified, investigated, and mitigated through Communication Compliance policies. By utilizing Microsoft's Communication Compliance solution, control processes can be put in place to periodically review lexicons and update them based on new regulations or specific risks to the organization.  Whether an organization develops their own Lexicons, uses Machine-learning (Trainable Classifiers) or uses those developed by third-party vendors, it is extremely important to address the regulatory activity and internal risks specific to the firm and regulatory mandates. </p>
+<p>A best-practice approach includes ensuring the lexicons being used have context around them rather than using standalone words, such as guarantee, cash, or complain. This will ensure they are targeted and focused on the risk activity trying to be detected.  Having context around lexicons will also help minimize false positives and unnecessary reviews, which place a considerable burden on time and resources. Lastly, organizations should develop a plan to revisit lexicons, at a minimum, annually to ensure they are current and specific to the business's risk activity.</p>
+<h3 id="testing-communication-supervision-controls">Testing Communication Supervision Controls<a class="headerlink" href="#testing-communication-supervision-controls" title="Permanent link">⚓︎</a></h3>
+<p>Regular testing of the digital communication supervision process should be conducted to ensure appropriate controls are operationally effective. Testing supervisory controls must include, but are not limited to the following:</p>
+<ol>
+<li>Investigating or handling policy matches and regulatory violations </li>
+<li>Proactively detecting whether their overall process and controls are effective.</li>
+<li>Create formal testing plans and perform regularly scheduled testing of the policies to ensure processes are being followed and gaps are quickly identified and addressed.</li>
+<li>
+<p>Sample randomly flagged messages to ensure:</p>
+<ul>
+<li>Lexicons accuracy.</li>
+<li>Detect messages that did not flag but should have flagged for review.</li>
+</ul>
+</li>
+</ol>
+<p>The application of specific business risk lexicons and a well-thought-out testing strategy ensures the ability to enforce policies associated with electronic communication supervision.</p>
+<h3 id="communication-compliance-policies">Communication Compliance Policies<a class="headerlink" href="#communication-compliance-policies" title="Permanent link">⚓︎</a></h3>
+<p>Communication Compliance policies must be clear, enforceable, and updated as necessary to address regulatory requirements. Compliance officers and auditors should have "quick and easy" access to the policies and alerts, and there should be very specific guidance regarding what are (and are not) permissible "electronic communication mechanisms." 
+ 
+Policies should provide specific language explaining to employees using communication and collaboration tools, such as Microsoft Teams, the potential consequences of non-compliance, and appropriate training (on a regular and "as-needed" basis).</p>
+<h3 id="types-of-electronic-communications-requiring-supervision-policies">Types of Electronic Communications Requiring Supervision Policies<a class="headerlink" href="#types-of-electronic-communications-requiring-supervision-policies" title="Permanent link">⚓︎</a></h3>
+<p><strong>External Communications.</strong> From a compliance perspective, organizations must establish communication supervision policies regarding the forms of electronic communications that they permit employees to use when conducting business with the public and take reasonable steps to monitor compliance with such policies and regulatory requirements. More specifically, FINRA expects communication supervision policies to prohibit communications with the public for business purposes from employees' own electronic communications devices (including, for example, home computers) unless the organization is capable of properly supervising, receiving, and retaining such communications. </p>
+<p><strong>Internal Communications</strong>. Financial Services firms may use "risk-based principles" to decide the extent to which internal communications will be reviewed. In connection with reaching a risk-based assessment, the guidance suggests areas that firms should consider, including assessing information barriers' effectiveness.  In addition, firms may view "various relevant existing processes," such as steps taken to reduce, manage, or eliminate potential conflicts of interest; and reviews of internal electronic communications that occur in connection with internal and/or regulatory examinations, transaction reviews, internal disciplinary reviews, and reviews relating to customer complaints or arbitration.</p>
+<h3 id="method-of-review-for-communications">Method of Review for Communications<a class="headerlink" href="#method-of-review-for-communications" title="Permanent link">⚓︎</a></h3>
+<p>As a general matter, regardless of what review method is used, organizations should alert their reviewers about the issues to be raised and material to be examined, including acceptable content. (Note: Certain SRO rules, such as NASD Rule 2210, prescribe content standards for specified types of communications.) Firms should also develop communication compliance policies for other key and relevant areas of concern, such as the use of confidential, proprietary, and insider trading information, anti-money laundering issues; gifts and gratuities; private securities transactions; customer complaints; conflicts of interest, front-running; and rumor spreading.</p>
+<p>In addition, where financial services firms permit the use and receipt of encrypted electronic communications, they must monitor and supervise those communications in a controlled and compliant manner. Firms must also be able to review electronic correspondence in all languages to conduct business with the public. Moreover, under certain circumstances (e.g., when a specific problem has been identified), organizations should have their legal and/or compliance departments operate as a reviewer of communication compliance policies and pending alerts. </p>
+<p>This playbook focuses on two methods of review - "lexicon-based" reviews (those based on sensitive words or phrases) and "random" reviews (which employ a reasonable percentage sampling technique, whereby some percentage of the electronic communications generated by the firm is reviewed), and identifies areas of consideration with each method.
+Organizations in highly regulated industries are encouraged to consider "complementary review techniques," which would entail the use of some combination of lexicon-based and random reviews. Moreover, "to best assure the effectiveness over time of any system, firms should incorporate ongoing evaluation procedures to identify and address any 'loopholes' or other issues that may arise, as the means of transmitting sensitive information 'under the regulatory radar' becomes more sophisticated and difficult to capture."</p>
+<h3 id="frequency-of-the-review-of-communications-compliance-controls">Frequency of the Review of Communications' Compliance Controls<a class="headerlink" href="#frequency-of-the-review-of-communications-compliance-controls" title="Permanent link">⚓︎</a></h3>
+<p>This playbook considers the frequency of communications review may vary depending on the nature of the firm's business and should be related to factors as the regulatory requirements, types of business conducted, the type of customers involved, the scope of the activities, the geographical location of the activities, the disciplinary record of covered persons, and the volume of the communications subject to review. With those considerations in mind, firms should prescribe reasonable timeframes within which supervisors are expected to complete their reviews and the tools, i.e., Microsoft Communication Compliance, used.</p>
+<h3 id="documentation-of-the-review-of-communications-and-collecting-evidence">Documentation of the Review of Communications and Collecting Evidence<a class="headerlink" href="#documentation-of-the-review-of-communications-and-collecting-evidence" title="Permanent link">⚓︎</a></h3>
+<p>Compliance-driven organizations must audit their reviews and reasonably demonstrate reviews were conducted, ensure data and artifacts have the greatest level of auditor-reliance while being compliant with the regulatory requirements. This would entail, at a minimum, developed policies, lexicon-based datasets, alerting and disposition strategies, clear identification of the reviewer, the communication that was reviewed, the date of review, and the steps taken as a result of any significant regulatory issues identified during the examination. FINRA adds that "merely opening the communication will not be deemed a sufficient review and will not satisfy auditable evidence requirements." In the event the evidence of the required documentation cannot be achieved, trainable classifiers can be used for organizational communication policy requirements, but depending on your compliance requirements, they may not provide enough evidence of due diligence If this is the case, you should use dictionary-based policies.</p>
+<h2 id="communication-compliance-use-cases">COMMUNICATION COMPLIANCE USE CASES<a class="headerlink" href="#communication-compliance-use-cases" title="Permanent link">⚓︎</a></h2>
+<h3 id="policy-configuration-and-management">Policy Configuration and Management<a class="headerlink" href="#policy-configuration-and-management" title="Permanent link">⚓︎</a></h3>
+<p>Organizations can use communication compliance policies to monitor, enforce, and take action on user communications.  Users must comply with acceptable use, ethical standards, and other policies in all their business-related communications. Organizations can develop their communication compliance policies to detect and investigate abusive language, insider trading risks, conflicts of interest, unauthorized sharing of sensitive information, and corrective actions to help respond and recover from incidents. Other examples include reviewing broker-dealer communications within the firm to safeguard against potential collusion or bribery activities.</p>
+<p>17A-4 requires financial services firms to implement a supervisory or oversight process for communication that is appropriate. The FINRA Rule 3110 is an example of a requirement for organizations to have supervisory procedures to scan user communications and the types of businesses it engages. Microsoft Communication Compliance policies can help organizations meet these requirements by providing a process to both scan and report on corporate communications.  </p>
+<h3 id="acceptable-digital-communication-channels">Acceptable Digital Communication Channels<a class="headerlink" href="#acceptable-digital-communication-channels" title="Permanent link">⚓︎</a></h3>
+<p>FINRA <a href="https://www.finra.org/rules-guidance/key-topics/books-records">emphasizes that the digital communications of regulated firms meet the record-keeping requirements of Exchange Act rules 17a-3 and 17a-4, as well as FINRA Rule Series 4510</a>. </p>
+<p>Financial Services Firms are responsible for conducting due diligence to comply with FINRA rules, securities laws and follow up on potential violations of those rules related to employee communication and collaboration applications.</p>
+<p>Effective practices recommended include the following:</p>
+<ul>
+<li>
+<p>Establish a comprehensive governance program for digital communication channels. Manage the organization's decisions about which digital communication channels are permitted and define each digital channel's compliance processes. Firms are also required to monitor the rapidly changing landscape of digital communication channels and keep compliance processes up to date.</p>
+</li>
+<li>
+<p>Clearly define and control permissible digital channels. Define both approved and prohibited digital channels. Block or restrict the use of prohibited digital channels or prohibited features within digital channels that limit the firm's ability to comply with records management and supervisory requirements.</p>
+</li>
+<li>
+<p>Provide training for digital communications. Implement mandatory training programs before granting access to approved digital channels. Training helps clarify an organization's expectations for business and personal digital communications, and it guides users through using permitted features of each channel in a compliant manner.</p>
+</li>
+</ul>
+<h3 id="risk-management">Risk Management<a class="headerlink" href="#risk-management" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Using communication compliance policies helps identify and manage potential legal exposure and reduces the risk of damaging corporate reputation. For example, organizations can scan messages for unauthorized communications and conflicts of interest about confidential projects such as upcoming acquisitions, mergers, earnings disclosures, reorganizations, or leadership team changes.</li>
+</ul>
+<h3 id="fulfilling-supervisory-requirements">Fulfilling Supervisory Requirements<a class="headerlink" href="#fulfilling-supervisory-requirements" title="Permanent link">⚓︎</a></h3>
+<p>Using the built-in remediation workflows, companies can quickly identify and act on messages with policy matches. The following features increase efficiency for investigation and remediation activities:</p>
+<ul>
+<li>Pausing Communication Compliance Policies (Preview): Pausing a policy will enable an administrator to suspend evaluations of communications manually.</li>
+<li>Copying Communication Compliance Policies (Preview): Copying a policy will allow an administrator to make an exact copy of a policy to duplicate an existing working  policy to scope to different individuals, groups or applications.</li>
+<li>Investigating and Remediation: The ability to un-resolve a message and highlighting messages that have been tagged.</li>
+<li>Monitor and Manage Teams Attachments: <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=In%20development&amp;searchterms=82084">(Coming Soon)</a> Analyze the content of documents shared in chat for potential policy match.</li>
+<li>Monitor and manage Teams Conversations:  Analyze teams conversation and even remove inappropriate messages.</li>
+<li>Team Conversation Context: Get 5 messages before and 5 message after the flagged conversation to be able to quickly see context. </li>
+<li>Flexible remediation workflow: New remediation workflow helps you quickly act on policy matches, including new options to escalate messages to other reviewers and to send email notifications to users with policy matches.</li>
+<li>Conversation threading: Messages are now visually grouped by original message and all associated reply messages, giving you better context during investigation and remediation actions.</li>
+<li>Keyword highlighting: Terms matching policy conditions are highlighted in the message text view to help reviewers quickly locate and remediate policy alerts.</li>
+<li>Exact and near-duplicate detection: In addition to scanning for exact terms matching communication compliance policies, near-duplicate detection groups textually similar terms and messages together to help speed up your review process.</li>
+<li>Optical character recognition (OCR): Scan, detect and investigate printed and handwritten text within images embedded or attached to an email or Microsoft Teams chat messages.</li>
+<li>New Filters: Investigate and remediate policy alerts faster with message filters for several fields, including sender, recipient, date, domains, and many more.</li>
+<li>Improved message views: Investigation and remediation actions are now quicker with new message source, text, and annotation views. Message attachments are now viewable to provide full context when taking remediation actions.</li>
+<li>User history view: Historical view of all user message remediation activities, such as past notifications and escalations for policy matches, now provides reviewers with more context during the remediation workflow process. First-time or repeat instances of policy matches for users are now archived and easily viewable.</li>
+<li>Pattern detected notification: Many harassing and bullying actions occur over time and involve reoccurring instances of the same user behavior. The new pattern detected notification to display in alert details helps raise attention to these alerts and behavior types.</li>
+<li>Show Translate view: Quickly investigate message details by automatically converting alert message text to the language configured in the displayed language setting in the Microsoft 365 subscription for each reviewer. This supports more then 90 languages provided by <a href="https://www.microsoft.com/translator/business/languages/">Microsoft Translator Languages</a>.</li>
+</ul>
+<h2 id="lexicons-and-custom-dictionaries">LEXICONS AND CUSTOM DICTIONARIES<a class="headerlink" href="#lexicons-and-custom-dictionaries" title="Permanent link">⚓︎</a></h2>
+<p>Organizations can configure custom keyword dictionaries (or lexicons) to provide simple management of keywords specific to your organization or industry. Keyword dictionaries support up to 1 MB of terms (post-compression) in the dictionary and support any language. The tenant limit is also 1 MB after compression. 1 MB of post compression limit means that all dictionaries combined across a tenant can have close to 1 million characters. If needed, you can apply multiple custom keyword dictionaries to a single policy or have a single keyword dictionary per policy. These dictionaries are assigned to a communication compliance policy and can be sourced from a file (such as a .csv or .txt list) or a list you can <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-keyword-dictionary?view=o365-worldwide">Import in the Compliance Center</a>. Use custom dictionaries when you need to support terms or languages specific to your organization and policies.</p>
+<h3 id="create-your-lexicon-or-custom-dictionary">Create Your Lexicon or Custom Dictionary<a class="headerlink" href="#create-your-lexicon-or-custom-dictionary" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide#custom-keyword-dictionaries">How to create a custom Sensitive Information type using a keyword dictionary</a></p>
+<p>In the Microsoft Compliance Center at <a href="https://compliance.microsoft.com">compliance.microsoft.com</a> click on the <strong>Data Classification</strong>, and then click on <strong>Sensitive Info Types</strong> and <strong>Create sensitive info type</strong> to create the SIT.  </p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture1.png" align="left"/> 
+    <figcaption>Figure 1: Microsoft Sensitive Info Types</figcaption>
+</figure>
+
+<p>From here, you want to name your SIT and provide a description. These are both mandatory fields. When done click <strong>Next</strong>.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture2.png" align="left"/> 
+    <figcaption>Figure 2: Name your sensitive info type</figcaption>
+</figure>
+
+<p>Every sensitive information type entity is defined by these fields:</p>
+<ul>
+<li><strong>Name:</strong> how the sensitive information type is referred to</li>
+<li><strong>Description:</strong> describes what the sensitive information type is looking for</li>
+<li><strong>Pattern:</strong> a pattern defines what a sensitive information type detects. It consists of the following components</li>
+<li><strong>Primary element</strong> – the main element that the sensitive information type is looking for. It can be a regular expression with or without a checksum validation, a keyword list, a keyword dictionary, or a function.<ul>
+<li><strong>Supporting element</strong> – elements that act as supporting evidence that help in increasing the confidence of the match. For example, keyword “SSN” in proximity of an SSN number. It can be a regular expression with or without a checksum validation, keyword list, keyword dictionary function or a group of elements. Using these can help you get very precise when building a custom sensitive information type. </li>
+<li><strong>Confidence Level</strong> - confidence levels (high, medium, low) reflect how much supporting evidence was detected along with the primary element. The more supporting evidence an item contains, the higher the confidence that a matched item contains the sensitive info you're looking for.</li>
+<li><strong>Proximity</strong> – When the primary element is matched, any supporting elements will match only when found within this proximity to the primary element. The closer the primary and supporting elements are to each other, the more likely the detected content is going to be what you're looking for. You also have an option to find the supporting elements anywhere in the document. </li>
+</ul>
+</li>
+</ul>
+<p>Next, define the pattern for your SIT, as shown below.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture3.png" align="left"/> 
+    <figcaption>Figure 3: New SIT pattern</figcaption>
+</figure>
+
+<p>Note, the following mandatory fields must be completed:</p>
+<ul>
+<li>Confidence Level (Low, Medium, High)</li>
+<li>Primary Element (Regular Expression, Keyword List, Keyword Dictionary, Functions)</li>
+</ul>
+<p>The following fields are Optional but can help cut down on false positives by providing additional supporting evidence when looking at a your primary elements.</p>
+<ul>
+<li>Set your character proximity or keep the default value</li>
+<li>Add any additional supporting elements</li>
+<li>Add any additional checks</li>
+</ul>
+<h4 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-learn-about?view=o365-worldwide">Learn about sensitive information types</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-custom-sensitive-information-type?view=o365-worldwide">Get Started with Custom Sensitive Information Types</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-a-keyword-dictionary?view=o365-worldwide">Create a Keyword Dictionary</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/what-the-dlp-functions-look-for?view=o365-worldwide">Functions</a></p>
+</li>
+<li>
+<p><a href="https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/">Regular Expressions</a> - M365 sensitive information types uses the Boost.RegEx 5.1.3 engine.</p>
+</li>
+</ul>
+<p>In this case we have a large list of terms so we care going to use a Custom Keyword Dictionary (Lexicon) by uploading the CSV or TXT file. Note you have other options when creating your elements based on your needs.</p>
+<p>We will select <strong>Keyword dictionary</strong>:</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture4.png" align="left"/> 
+    <figcaption>Figure 4: Select Keyword Dictionary</figcaption>
+</figure>
+
+<p>This will open a new window which we are required to upload our csv or txt file and name our dictionary.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture5.png" align="left"/> 
+    <figcaption>Figure 5: Upload Keyword Dictionary file</figcaption>
+</figure>
+
+<figure>
+    <img src="../../playbooks/img/fsi/picture6.png" align="left"/> 
+    <figcaption>Figure 6: Select csv or txt file</figcaption>
+</figure>
+
+<p>The following keyword(s) or phrases will be added to the UI as illustrated:</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture7.png" align="left"/> 
+    <figcaption>Figure 7: Add Keyword dictionary</figcaption>
+</figure>
+
+<p>Provide a name for the Lexicon/keyword dictionary and click <strong>done</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">This is the minimum requirements for a custom SIT but as mentioned above you might want to provide other supporting elements and conditions to cut down on the false positives.</p>
+</div>
+<figure>
+    <img src="../../playbooks/img/fsi/picture8.png" align="left"/> 
+    <figcaption>Figure 8: New pattern with custom dictionary</figcaption>
+</figure>
+
+<p>Once you are complete with your pattern click <strong>Create</strong>. If you would like you can add additional patterns to this sensitive info type (SIT) for example you might have a Low, Medium and High pattern in the same SIT. Your low might be just find a keyword while a High is finding a keyword with supporting elements. </p>
+<p>Once you are done with the patterns click on <strong>Next</strong>. </p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture9.png" align="left"/> 
+    <figcaption>Figure 9: Define patterns for this sensitive info type</figcaption>
+</figure>
+
+<p>Choose the recommend confidence level for the policy. If you only have one then you should match this. </p>
+<div class="admonition notes">
+<p class="admonition-title">To learn more about confidence levels check out this video- <a href="https://www.microsoft.com/en-us/videoplayer/embed/RE4Hx60">Confidence Level Video</a></p>
+</div>
+<p>In our case we choose high so we will choose high here.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture10.png" align="left"/> 
+    <figcaption>Figure 10: Choose the recommended confidence level</figcaption>
+</figure>
+
+<p>Review your settings and continue.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture11.png" align="left"/> 
+    <figcaption>Figure 11: Review settings</figcaption>
+</figure>
+
+<h3 id="create-your-communication-compliance-policy">Create your Communication Compliance Policy<a class="headerlink" href="#create-your-communication-compliance-policy" title="Permanent link">⚓︎</a></h3>
+<p>Now that we have created our custom keyword dictionary we will switch over to the Communication Compliance solution to create a new Communication Compliance Policy. </p>
+<p>Once in the Communication Compliance solution click on <strong>Create policy</strong> and select <strong>Custom Policy</strong>.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture12.png" align="left"/> 
+    <figcaption>Figure 12: Customer Communication Compliance Policy</figcaption>
+</figure>
+
+<p>You need to provide a Name for your Communication Compliance policy (required field) and add a description if you would like to your custom policy. When done click <strong>Next</strong>.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture13.png" align="left"/> 
+    <figcaption>Figure 13: Name and describe your policy</figcaption>
+</figure>
+
+<p>Define what users and/or groups you want to supervise communications for and who the reviews should be for this policy. Click <strong>Next</strong>.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture14.png" align="left"/> 
+    <figcaption>Figure 14: Choose supervised users and reviewers</figcaption>
+</figure>
+
+<p>Choose locations you wish to monitor communications. Click <strong>Next</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">If you have any <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide">data connectors</a> to 3rd party sources such as Slack or Bloomberg Message, etc you will also see those here.</p>
+</div>
+<figure>
+    <img src="../../playbooks/img/fsi/picture15.png" align="left"/> 
+    <figcaption>Figure 15: Choose locations to monitor communications</figcaption>
+</figure>
+
+<p>On the "Choose conditions and review percentage" page. Choose the direction you want to monitor communication. You have tree options here:</p>
+<ul>
+<li>
+<p>Inbound Detects communications sent to supervised users from external and internal senders, including other supervised users in this policy.</p>
+</li>
+<li>
+<p>Outbound Detects communications sent from supervised users to external and internal recipients, including other supervised users in this policy.</p>
+</li>
+<li>
+<p>Internal Detects communications between the supervised users or groups in this policy.</p>
+</li>
+</ul>
+<p>Choose your conditions. </p>
+<p>In our case we are going to be selecting the custom keyword dictionary that we created earlier using <strong>content contains any of the sensitive info types</strong>. There are several options to pick from and you can find more details here - <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance-feature-reference?view=o365-worldwide&amp;source=docs#policy-settings">Communication compliance feature reference - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture16.png" align="left"/> 
+    <figcaption>Figure 16: Choose content contains any of these sensitive info types</figcaption>
+</figure>
+
+<figure>
+    <img src="../../playbooks/img/fsi/picture17.png" align="left"/> 
+    <figcaption>Figure 17: Select the custom keyword dictionary</figcaption>
+</figure>
+
+<p>After selecting the custom SIT we created before we click <strong>Add</strong>. </p>
+<p>If you wish to add any additional conditions or exceptions to your policy you can do that now. In our case we are just looking for the words in our custom keyword dictionary. So we are not going to add any more conditions. </p>
+<p>You also have additional options such as if you want to capture optical character recognition (OCR) where we will search for these words on images or hard written notes. </p>
+<p>You also want to make sure you specify what percentage of matches you want to capture. This can be anywhere from 1-100%. You can use this to capture all messages or a sample of the messages based on your organization requirements. </p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture18.png" align="left"/> 
+    <figcaption>Figure 18: Optical Character Recognition</figcaption>
+</figure>
+
+<p>When you are done click <strong>Next</strong> to go to the review settings screen.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture19.png" align="left"/> 
+    <figcaption>Figure 19: Review and finish the policy</figcaption>
+</figure>
+
+<p>Review the settings and if everything looks correct then click <strong>create policy</strong> to create the new policy. Otherwise you can go back and make any required changes.</p>
+<figure>
+    <img src="../../playbooks/img/fsi/picture20.png" align="left"/> 
+    <figcaption>Figure 20: Policy Created</figcaption>
+</figure>
+
+<p>Once this is complete you will have a Communication Compliance policy using a custom Lexicon set of keywords.  </p>
+<div class="admonition notes">
+<p class="admonition-title">Please take the following note:</p>
+<p>If simple dictionary matches are not enough for a particular scenario an organization needs to detect, multiple keyword lists can be combined via more complex logic (e.g. one word from list A near a word from list B but without the presence of a word from list C) by <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoft-365%2Fcompliance%2Fcreate-a-custom-sensitive-information-type%3Fview%3Do365-worldwide&amp;data=04%7C01%7Cv-jasayl%40microsoft.com%7C7ab6a33f6b53467802a408d8fa3ffaf4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534500071852224%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=r7DjiJ6GWhwErBQ8hAZWvB1FNunsMSD50fg2ugSh%2BaI%3D&amp;reserved=0">creating a custom Sensitive Information Type in the Compliance Center</a> or <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoft-365%2Fcompliance%2Fcreate-a-custom-sensitive-information-type-in-scc-powershell%3Fview%3Do365-worldwide&amp;data=04%7C01%7Cv-jasayl%40microsoft.com%7C7ab6a33f6b53467802a408d8fa3ffaf4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534500071852224%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=bGEV2FEH5mj%2F2gqALPkesII1Q%2BG4hfKuT%2BmsRBfglFg%3D&amp;reserved=0">via PowerShell using a custom XML file</a>.</p>
+</div>
+<h2 id="implementation-strategy">Implementation Strategy<a class="headerlink" href="#implementation-strategy" title="Permanent link">⚓︎</a></h2>
+<p>See <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/productivity-illustrations?view=o365-worldwide">Microsoft 365 productivity illustrations</a> for guidance on implementing all M365 capabilities with a focus on cross technologies.</p>
+<p>Based on experience, a solid implementation strategy follows these three phases:</p>
+<p><strong>Crawl</strong> -The first stage is about starting to evaluate your organization's security and compliance with your goal of defining a strategic direction for your company. For example, you can create test policies with basic dictionaries that include the words directly associated with the scenarios one wants to detect (e.g. for bribes words like award, payment, reward, bonus, “on us”, complimentary, etc.) and monitor communications using these, especially to detect false positives. For each false positive, take note of the words in those messages that you could use to identify the topics where the target words alone would cause a false positive. In the walk phase, you can implement more complex rules that use the learnings from the first phase to more precisely target the right messages. </p>
+<p><strong>Walk</strong> -The second stage builds the foundation for a successful, scale, and sustainable deployment. In this phase, you plan the details of your implementation and build the solution. You may also run a pilot or proof of concept with a select group of users or locations.</p>
+<p><strong>Run</strong> -The last stage is about optimizing the solution for Microsoft 365. In this phase, you will set up an automated, scalable approach for each solution.  In the run phase you could include enable OCR in the policies, adding foreign terms (if appropriate for a multinational company) and enable automatic translation, create Power Automate flows, etc. </p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/communication-compliance?view=o365-worldwide">Learn about communication compliance - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<p><a href="https://docs.microsoft.com/en-us/microsoftteams/communication-compliance">Communication compliance with Microsoft Teams - Microsoft Teams | Microsoft Docs</a></p>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-entity-definitions?view=o365-worldwide">Sensitive information type entity definitions - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/classifier-get-started-with?view=o365-worldwide">Get started with trainable classifiers - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-security-and/trainable-classifier-auto-labeling-with-sensitivity-labels/ba-p/1247424">Trainable classifier auto-labeling with sensitivity labels webinar - Microsoft Tech Community</a></p>
+
+    <!-- Last update of source file -->
+    
+        
+    
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/microsoft/ComplianceCxE/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://aka.ms/MIPC/AskMIPTeam" target="_blank" rel="noopener" title="aka.ms" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../scripts/extlinks.js"></script>
+      
+        <script src="../../scripts/cookie-consent.js"></script>
+      
+        <script src="../../scripts/consent-init.js"></script>
+      
+    
+  </body>
+</html>

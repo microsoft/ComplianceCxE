@@ -1,0 +1,3559 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/ComplianceCxE/dag/aed-audit/">
+      
+      
+        <link rel="prev" href="../DLPMigrationAssistant/">
+      
+      
+        <link rel="next" href="../ir-cc/">
+      
+      
+      <link rel="icon" href="../../img/scm-shield.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>eDiscovery and Audit - Microsoft Purview Customer Experience Engineering (CxE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/cookie-consent.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Analytics via Clarity - https://clarity.microsoft.com/ -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "7uxkeubafp");
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <!-- Meta tag for Google Search Console ownership verification-->
+    <meta name="google-site-verification" content="u3PbXeNid7oDmoMKcK77g3P5k9BUVJpow_pdJIbykow" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#your-deployment-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+      class="md-header__inner md-grid"
+      aria-label="header.title"
+    >
+  
+      <!-- Link to home -->
+      <a
+        href="../.."
+        title="Microsoft Purview Customer Experience Engineering (CxE)"
+        class="md-header__button md-logo"
+        aria-label="Microsoft Purview Customer Experience Engineering (CxE)"
+        data-md-component="logo"
+      >
+        
+  <img src="../../img/scm-shield.png" alt="logo">
+
+      </a>
+  
+      <!-- Button to open drawer -->
+      <label class="md-header__button md-icon" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      </label>
+  
+      <!-- Header title -->
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Microsoft Purview Customer Experience Engineering (CxE)
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+              
+                eDiscovery and Audit
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Color palette -->
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+        </form>
+      
+  
+      <!-- Site language selector -->
+      
+  
+      <!-- Button to open search modal -->
+      
+  </header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  Notes from the Field
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  DAGs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../playbooks/" class="md-tabs__link">
+          
+  
+  Playbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jumpstarts/" class="md-tabs__link">
+          
+  
+  Jump Starts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enduser/sensitivity/" class="md-tabs__link">
+          
+  
+  End User Training
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../webinars/" class="md-tabs__link">
+          
+  
+  Webinars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sbd/" class="md-tabs__link">
+          
+  
+  Scenario Based Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../previews/" class="md-tabs__link">
+          
+  
+  Previews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Microsoft Purview Customer Experience Engineering (CxE)" class="md-nav__button md-logo" aria-label="Microsoft Purview Customer Experience Engineering (CxE)" data-md-component="logo">
+      
+  <img src="../../img/scm-shield.png" alt="logo">
+
+    </a>
+    Microsoft Purview Customer Experience Engineering (CxE)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/ComplianceCxE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/ComplianceCxE
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Stop Shop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/aed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management/Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes from the Field
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes from the Field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP/DLP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP/DLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/mip-dlp-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Creating IP and DLP Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/DLP-policy-externalshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preventing external sharing with DLP policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/SPOblockUpload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocking upload of files with higher sensitivity label to SPO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/audit-log-management-activity-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Purview Audit (Premium) Log Activities via the O365 Management API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/ComplianceEdu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance in K-12 Education
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DAGs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DAGs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Compliance Configuration Analyzer (MCCA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DLPMigrationAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP Migration Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-ediscovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced eDiscovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced eDiscovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-location-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Location Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preservation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preservation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hold-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hold Notifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Themes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attorney-client-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attorney-Client Privilege
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#review-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custodian-audit-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custodian Audit Activity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-compliance-story-with-microsoft-365-advanced-ediscovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      One compliance story with Microsoft 365 Advanced eDiscovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Audit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix - Additional Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix - Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-ediscovery-license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced eDiscovery License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-audit-license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Audit License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management and Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mig-rm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mip-dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection and Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dag-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Information Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/service-side-auto-labeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/sourceCodePlaybook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting Source Code Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Loss Prevention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/teamsdlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/etr2dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy DLP Policies (ETR) to DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Communication Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/fsicc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://aka.ms/mipc/mipcOSS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💬 Submit CxE Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Jump Starts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jump Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Lifecycle Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auto-apply Labels
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Auto-apply Labels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/kql-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KQL Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adaptive Policy Scopes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adaptive Policy Scopes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/adaptive-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    End User Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            End User Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/sensitivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/retention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retention Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/dlpenduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP User Education & User Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Webinars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webinars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Scenario Based Demos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scenario Based Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E01 - Series Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E02 - Data Discovery Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E03 - Security vs Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E04 - AIP Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E05 - Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E06 - Label Behaviors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E07 - Container Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E08 - Client-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E09 - Service-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10 - MEM/Intune and MIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11 - MEM/Intune and MIP Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/SBDinPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 SBD in PDF  - Summary of SBD in pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Previews
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Previews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../previews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join Private Previews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-ediscovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced eDiscovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced eDiscovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-location-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Location Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preservation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preservation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hold-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hold Notifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Themes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attorney-client-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attorney-Client Privilege
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#review-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custodian-audit-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custodian Audit Activity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-compliance-story-with-microsoft-365-advanced-ediscovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      One compliance story with Microsoft 365 Advanced eDiscovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Audit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix - Additional Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix - Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-ediscovery-license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced eDiscovery License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-audit-license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Audit License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+    <!-- Edit button -->
+    
+        <a
+        href="/ComplianceCxE/how-to-contribute/"
+        title="How to Contribute"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18h-2v-2h2v2m0-3h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5m9-3c0 5.18-3.95 9.45-9 9.95v-2.01c3.95-.49 7-3.86 7-7.94s-3.05-7.45-7-7.94V2.05c5.05.5 9 4.77 9 9.95M11 2.05v2.01c-1.46.18-2.8.76-3.91 1.62L5.67 4.26C7.15 3.05 9 2.25 11 2.05M4.06 11H2.05c.2-2 1-3.85 2.21-5.33L5.68 7.1A7.902 7.902 0 0 0 4.06 11M11 19.94v2.01c-2-.2-3.85-.99-5.33-2.21l1.42-1.42c1.11.86 2.45 1.44 3.91 1.62M2.05 13h2.01c.18 1.46.76 2.8 1.62 3.91l-1.42 1.42A10.013 10.013 0 0 1 2.05 13Z"/></svg>
+        </a>        
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/edit/public/docs/dag/aed-audit.md"
+        title="edit.link.title"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+        </a>
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A⚠%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20tracking%0A%0APage%20Path%3A%20[https://microsoft.github.io/ComplianceCxE/dag/aed-audit/](https://microsoft.github.io/ComplianceCxE/dag/aed-audit/)"
+        title="Submit Feedback as an Issue"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+    
+
+    <!--
+        Hack: check whether the content contains a h1 headline. If it
+        doesn't, the page title (or respectively site name) is used
+        as the main headline.
+    -->
+    
+        <h1 style="text-align: left;">eDiscovery and Audit</h1>
+    
+
+    <!-- Markdown content -->
+    <p><em>Last updated: 05/11/2021</em></p>
+<p>How can <a href="#advanced-ediscovery">Advanced eDiscovery</a> and <a href="#advanced-audit">Advanced Audit</a> support your organization in responding to legal, regulatory, and compliance obligations? It starts with discovering the data that is relevant without the need to export this data out of Microsoft 365. The ability to natively search for data in Teams, Yammer, SharePoint Online, OneDrive for Business, Exchange Online leveraging conversations reconstruction, along with support other file types using 3rd party connectors, enhances your collection prowess.</p>
+<p><a href="#advanced-ediscovery">Advanced eDiscovery</a> allows you to manage the workflows in solution reducing the amount of data intelligently through the use of ML mapping unique and share data resources of custodians, and reporting or using analytics prior to data collection before your review. </p>
+<p><a href="#advanced-audit">Advanced Audit</a> supports your organizations requirements in assessing the scope of compromise during a data breach or to give you an efficient way to go back to historical data without holding large volumes of data. Using forensic investigations and responding to legal requests leverages the audit logs to define the scope of a data breach and determine the length of an investigation.</p>
+<h2 id="your-deployment-plan">Your Deployment Plan<a class="headerlink" href="#your-deployment-plan" title="Permanent link">⚓︎</a></h2>
+<p>The objective is to create a deployment plan that follows the progression of crawl-walk-run methodology while highlighting the user and administrator experience at each stage. Your focus should be on the end user result and the security controls you achieve with each implemented stage. Solutions or tools covered in this guide for deployment consideration are:</p>
+<ul>
+<li>
+<p><a href="../cm/">Compliance Manager</a></p>
+</li>
+<li>
+<p><a href="../mcca/">Microsoft Compliance Configuration Analyzer (MCCA)</a></p>
+</li>
+<li>
+<p><a href="#advanced-ediscovery">Advanced eDiscovery</a></p>
+</li>
+<li>
+<p><a href="#advanced-audit">Advanced Audit</a></p>
+</li>
+</ul>
+<p>The DAG is not inclusive of all requirements or architectures needed for successful implementation of Microsoft 365’ but rather a focus on security and compliance as it relates to solutions included as part of Microsoft information Protection &amp; Compliance licenses.</p>
+<p>See <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/productivity-illustrations?view=o365-worldwide">Microsoft 365 productivity illustrations</a> for guidance on implementation of all M365 capabilities with focus on cross technologies.</p>
+<p><strong>Crawl Stage</strong> - The first stage is about starting to evaluate where your organization is today regarding the information security and compliance with your goal of defining a strategic direction for your organization. Using this strategy to foster adoption of a solution by gathering the requirements of supporting systems, impact on end users, and skillset needed for each role owner. The crawl phase describes steps you should do at the beginning of any deployment, whether your requirements are basic or advanced. It includes steps for product education, defining requirements, and evaluation or testing.</p>
+<p><strong>Walk Stage</strong> - The second stage builds the foundation for a successful, scalable, and sustainable deployment. In this phase, you plan the details of your implementation and to build the solution. You may also run a pilot or a proof of concept with a selected group of users or locations.</p>
+<p><strong>Run Stage</strong> - The last stage is about optimizing the solution for Microsoft 365. In this phase you will set up an automated scalable approach for each solution. 
+Following the above approach will lead to successful adoption and deployment of each solution while providing workflows that respond to needs of investigations in an efficient, repeatable, and defensible manner.</p>
+<h2 id="advanced-ediscovery">Advanced eDiscovery<a class="headerlink" href="#advanced-ediscovery" title="Permanent link">⚓︎</a></h2>
+<p>The Advanced eDiscovery solution provides customers with the ability to identify, preserve, collect, process, analyze, review and product content that's responsive to your organization's internal and external investigations. Discovering and managing data is challenging. To help solve these challenges, we provide customers with tools that enable them to do more in-place eDiscovery in Microsoft 365, thereby reducing risks associated with either creating multiple copies or exporting content outside of your security and compliance boundaries. Using Advanced eDiscovery, you can reduce the content in-place and only export matter relevant content. </p>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">⚓︎</a></h3>
+<p>To help frame the Advanced eDiscovery solution, it is important to note that our capabilities align with the eDiscovery Reference Model (EDRM) workflow as shown in figure 1.</p>
+<figure>
+    <img src="..\images\aed-fig1.png"/>
+    <figcaption>Figure 1: Microsoft eDiscovery solutions aligned with eDiscovery Reference Model (EDRM)</figcaption>
+</figure>
+
+<p>Within Advanced eDiscovery, we have enhanced identification, preservation, and collection from core eDiscovery with things like custodian management and advanced indexing. On top of this, to further cull and reduce data intelligently, in Advanced eDiscovery, provides capabilities to process, review and analyze your data so that what you export is minimized. See figure 2 below for a suggested linear workflow.</p>
+<h4 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">⚓︎</a></h4>
+<figure>
+    <img src="..\images\aed-fig2.png"/>
+    <figcaption>Figure 2: Linear Advanced eDiscovery Workflow</figcaption>
+</figure>
+
+<p>In the suggested workflows below you have the ability to hit the ground running in implementing Advanced eDiscovery in your tenant.</p>
+<h4 id="basic-workflow">Basic Workflow<a class="headerlink" href="#basic-workflow" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><a href="#case-management">Create a case</a> in Advanced eDiscovery.</li>
+<li>Identify your custodial and non-custodial source locations and <a href="#source-location-management">add to case</a> for advanced indexing. </li>
+<li><a href="#collection">Create a search</a> on identified source locations</li>
+<li>Add your results to a Review Set </li>
+<li>Further <a href="#review">reduce content</a> in your review set using the Analytics to find near duplicates and thread messages</li>
+<li><a href="#production">Export</a> out of AeD </li>
+</ul>
+<h4 id="advanced-workflow">Advanced Workflow<a class="headerlink" href="#advanced-workflow" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><a href="#case-management">Create a case</a> in Advanced eDiscovery.</li>
+<li>Identify your custodial and non-custodial source locations and <a href="#source-location-management">add to case</a> for advanced indexing. </li>
+<li><a href="#processing">Remediate</a> any processing errors</li>
+<li><a href="#hold-notifications">Create and send legal hold notifications</a> to custodians</li>
+<li><a href="#collection">Create and run a search</a> on identified source locations</li>
+<li>Add your results to a review set. Select the <a href="#collection">options</a> to include modern attachments as well as contextual conversation review. </li>
+<li>Further reduce using <a href="#analyze">Analyze</a> to group together near duplicates and email threads, and identify content that is <a href="#attorney-client-privledge">potentially privileged</a>. </li>
+<li><a href="#review-set">Review</a> the content within your review set for responsiveness using tags. </li>
+<li>Annotate and Redact documents</li>
+<li><a href="#production">Export</a> out only case relevant content </li>
+</ul>
+<h4 id="next-steps-workflow">Next Steps Workflow<a class="headerlink" href="#next-steps-workflow" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Set up <a href="#attorney-client-privledge">attorney-client privilege</a>    </li>
+<li><a href="#custodian-audit-activity">Custodian Audit Activity</a></li>
+<li><a href="#themes">Themes</a></li>
+</ul>
+<h3 id="case-management">Case Management<a class="headerlink" href="#case-management" title="Permanent link">⚓︎</a></h3>
+<p>When navigating to the compliance center, you will see an overview of all cases in Advanced eDiscovery. Think of a case as the container for your legal matter. The case will include all searches, holds, hold notifications, reviews, and exports. Note that the name of your case cannot be changed later, careful thought should be used in creating a naming convention that allows all in your organization to follow and understand. If connecting to a matter management tool, please ensure that you use the same naming convention. </p>
+<p>When creating a new case, you have the opportunity to adjust your analytics settings, enable OCR, adjust your settings for Themes, configure Ignore text, and add any additional members to the case. </p>
+<ul>
+<li>
+<p>As mentioned below in considerations, the similarity threshold is set to 65% by default. This means that when running the analytics job, the application will group together items that are within 65% similar to another document. You can enhance it if you need.</p>
+</li>
+<li>
+<p>The Themes functionality analyzes documents with text in a review set to parse out common clusters or themes that appear across all the documents in the review set. Consider selecting Adjust Maximum Number Of Themes Dynamically to ensure that you can still take advantage of the feature even if there are not enough documents to create the desired number of themes. </p>
+</li>
+<li>
+<p>There are situations where certain text will diminish the quality of analytics, such as lengthy disclaimers that get added to email messages regardless of the content of the email. If you know of text that should be ignored, you can exclude it from analytics by specifying the text string and the analytics functionality (Near-duplicates, Email threading, Themes, and Relevance) that the text should be excluded for. Using regular expressions (RegEx) as ignored text is also supported.</p>
+</li>
+<li>
+<p>OCR processing will be run on image files when sources are added to a case during the advanced indexing job. This means that text in image files that matches the search criteria will be returned in a collection search.</p>
+</li>
+</ul>
+<h3 id="source-location-management">Source Location Management<a class="headerlink" href="#source-location-management" title="Permanent link">⚓︎</a></h3>
+<p>A user is so much more than their mailbox and their OneDrive site. They are able to collaborate in Teams, Yammer and SharePoint. They use <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide">third party</a> tools like Bloomberg, Facebook and more. When using Advanced eDiscovery, you can associate other data locations to a custodian beyond their mailbox and OneDrive site alone. </p>
+<p>Once your legal team has identified a custodian, you can use the Data Sources tab in Advanced eDiscovery to manage the following:</p>
+<ul>
+<li>
+<p>User mailbox</p>
+</li>
+<li>
+<p>User OneDrive site</p>
+</li>
+<li>
+<p>Any Teams that they are currently a member of</p>
+</li>
+<li>
+<p>Any Yammer networks (in native mode)</p>
+</li>
+<li>
+<p>SharePoint sites a custodian may have accessed or contributed to </p>
+</li>
+</ul>
+<p>Custodians and source locations can be added on-by-one in the user interface using the picker or they can be added in bulk using the Import Custodian feature. If your legal team has given you a list of custodians, consider using the <a href="https://scc.azureedge.net/ediscovery/static/resources/ImportCustodian.csv">custodian template</a> to import your custodial locations. For tips on how to populate the .csv, please follow our guidance found <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/bulk-add-custodians?view=o365-worldwide#custodian-csv-file">here</a>. </p>
+<p>The Data Sources tab within an Advanced eDiscovery case contains a list of all custodians that have been added to the case. After you add custodians to a case, details about each custodian are automatically collected from Azure Active Directory and are viewable in Advanced eDiscovery.</p>
+<p>You may have additional data locations located within Microsoft 365 that do not need to be associated with a custodian. These locations are typically group mailboxes or SharePoint sites. You can still <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/non-custodial-data-sources?view=o365-worldwide">add these non-custodial data sources</a> to your case in order to take advantage of the advanced indexing, search, preservation, analytics and review. </p>
+<p>Not all documents that you need to analyze in Advanced eDiscovery are located within Microsoft 365. You can also upload items that are not located in Microsoft 365 later in the workflow directly into a review set. This would be content like on-premises exchange data or local files. Keep in mind that custodians must be added to the case before you can upload and associate non-Microsoft 365 data to them. Non-Microsoft 365 data must be a file type that is supported by Advanced eDiscovery. For more information, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/supported-filetypes-ediscovery20?view=o365-worldwide">Supported file types in Advanced eDiscovery</a>.</p>
+<h3 id="processing">Processing<a class="headerlink" href="#processing" title="Permanent link">⚓︎</a></h3>
+<p>Once a source location has been added to a case, any content that is partially indexed will be processed. Content can be partially indexed for a number of reasons including the existence of images, unsupported file types or when indexing file size limits are encountered. All items (including the content and metadata) are re-indexed so that all data in the review set is fully searchable during the review of the case data. Re-indexing the data results in thorough and fast searches when you search the data in the review set during the case investigation.</p>
+<p>After the indexing job is complete, you can see a report of the effectiveness of the job. The graph will give you the number of items that were added to the hybrid index where Advanced eDiscovery stores the reprocessed content. You will also have the opportunity to <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/processing-data-for-case?view=o365-worldwide">remediate any errors</a> including decryption of content that was encrypted using third party encryption tools. </p>
+<h3 id="preservation">Preservation<a class="headerlink" href="#preservation" title="Permanent link">⚓︎</a></h3>
+<p>Using the Advanced eDiscovery hold capabilities, you can place a hold on custodial data including their collaborative data sources. When you place content locations on hold, content is held until you release the custodian, remove a specific data location, or delete the hold policy entirely.</p>
+<p>Custodian hold policies are managed when adding locations as a source in your case. When adding a custodial data source, you will have the opportunity to decide whether you would like the locations placed on hold. </p>
+<p>As mentioned in the Helpful Resources section below, Channel conversations that are part of a Microsoft Teams channel are stored in the mailbox that is associated with the Team. Similarly, files that team members share in a channel are stored on the team's SharePoint site. Therefore, you have to place the Microsoft Team mailbox and SharePoint site on hold to retain conversations and files in a channel. Conversations that are part of the Chat list in Microsoft Teams are stored in the mailbox of the users who participate in the chat. Files that a user shares in Chat conversations are stored in the OneDrive for Business site of the user who shares the file. Therefore, you have to place the individual user mailboxes and OneDrive for Business sites on hold to retain conversations and files in the Chat list.</p>
+<p>If you the need to place a Microsoft 365 Group or Microsoft Team on hold for a specific custodian, consider mapping the group site and group mailbox to the custodian. If the Microsoft 365 Group or Microsoft Team is not attributable to a single custodian, consider adding the source to a non-custodial hold. </p>
+<h4 id="hold-notifications">Hold Notifications<a class="headerlink" href="#hold-notifications" title="Permanent link">⚓︎</a></h4>
+<p>Once a custodian is added to a case in Advanced eDiscovery, your legal team can create and customize their legal hold notification workflow. The custodian communications tool lets legal teams configure the following notices and workflows:</p>
+<ul>
+<li>
+<p>Issuance notice: A legal hold notice is issued (or initiated) by a notification from the legal department to custodians who may have relevant information about the case matter. This notice instructs the custodians to preserve any information that may be needed for discovery.</p>
+</li>
+<li>
+<p>Re-Issuance notice: During a case, custodians may be required to preserve additional content (or less content) than was previously requested. For this scenario, you can update the existing hold notice and re-issue it to custodians.</p>
+</li>
+<li>
+<p>Release notice: Once a matter is resolved and the custodian is no longer subject to a preservation requirement, the custodian can be released from the case. Additionally, you can notify the custodian that they are no longer required to preserve content and provide instructions about how to resume their normal work activity with regard to their data.</p>
+</li>
+<li>
+<p>Reminders and escalations: In some instances, just issuing a notice is not enough to satisfy legal discovery requirements. With each notification, legal teams can schedule a set of reminder and escalation workflows to automatically follow up with unresponsive custodians.</p>
+<ul>
+<li>
+<p>Reminders: After a legal hold notice has been issued or re-issued to a set of custodians, an organization can set up reminders to alert unresponsive custodians.</p>
+</li>
+<li>
+<p>Escalations: In some cases, if a custodian remains unresponsive even after a set of reminders over a period of time, the legal team can set up an escalation workflow to notify unresponsive custodians and their manager.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>After you've defined the contents of the hold notice, you can set up the workflows around <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-hold-notification?view=o365-worldwide">sending and managing the notification process</a>. Notifications are email messages that are sent to notify and follow up with custodians. Every custodian added to the communication will receive the same notification. To set up and send a hold notice, you must include Issuance, Re-Issuance, and Release notifications.</p>
+<h3 id="collection">Collection<a class="headerlink" href="#collection" title="Permanent link">⚓︎</a></h3>
+<p>Using Searches in Advanced eDiscovery, you can collect case data from your Microsoft 365 data source locations. This includes the source content that was previously processed in the above step or any additional content source locations. When creating a search, you will define the source location as well as your query. Consider reducing the amount of data you collect by using the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/keyword-queries-and-search-conditions?view=o365-worldwide">available query conditions</a>. </p>
+<p>Once your search is complete, you will need to add the results to a review set. This job copies the data from its source location to a static Azure Blob storage container so that you can review the content from within your data boundaries. Upon initiating this job, you will need to name your review set and decide which additional settings are required for this specific review:</p>
+<ul>
+<li>
+<p>Include All Document Versions From SharePoint: This setting will ingest all versions of the item from SharePoint or OneDrive. Only select this if there is a specific requirement to review all versions of a specific item. </p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/conversation-review-sets?view=o365-worldwide">Contextual conversation review</a>: Teams chats and conversations are stored as individual messages in the associated user or group mailbox. When selecting the option to include contextual conversation review, the Advanced eDiscovery solution will thread the messages together into a conversation format to provide full context. </p>
+</li>
+<li>
+<p>Enable Retrieval For Modern Attachments: With modern attachments, you can check a box to auto collect all cloud attachments to your users Teams, Yammer and Exchange conversations. This is familiar to your current process for reviewing regular attachments as families or email sets. If there are downstream processes that rely on these relationships, we ensure that we are able to preserve these relationships in the load file</p>
+</li>
+</ul>
+<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">⚓︎</a></h3>
+<p>Using the analytics and machine learning capabilities in Advanced eDiscovery, you can reduce the amount of data to review. </p>
+<h4 id="analyze">Analyze<a class="headerlink" href="#analyze" title="Permanent link">⚓︎</a></h4>
+<p>The first step you will take after your search results are added to your review set will be to run the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/analyzing-data-in-review-set?view=o365-worldwide#analytics-report">analytics job</a>.  Analyze allows for the identification and grouping of exact and near-duplicate files. It also identifies and organizes emails into hierarchically structured groups of <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/email-threading-in-advanced-ediscovery?view=o365-worldwide">email Threads</a>, based on the progressive inclusiveness of the emails. Sets of <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/near-duplicate-detection-in-advanced-ediscovery?view=o365-worldwide">near duplicates (ND)</a> documents are grouped together in an ND Set. For a document to join an ND Set, there must be at least one document in the ND Set with a level of resemblance exceeding the similarity. </p>
+<h4 id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">⚓︎</a></h4>
+<p>Themes is a content-analytics application that identifies themes and thematic relationships across file collections. The application to identify interdependencies between themes allows users to browse associatively across the collection, navigating intuitively from theme to related theme. By generating meaningful labels for each thematic group, Themes provides an immediate snapshot of a file collection. In early case assessment and investigations, Themes enables litigators and analysts to intuitively acquire an informed and rapid overview of the data set. </p>
+<p>Keep in mind that increasing the “Number of themes” can affect the ability of a theme to generalize. The higher the number of themes, the more granular they are. For example, if a set of 50 themes produces themes such as “Basketball, Spurs, Clippers, Lakers”, a set of 300 themes may include separate themes such as “Spurs”, “Clippers”, “Lakers”. If the user had no awareness of the theme “Basketball” and uses this feature for Early Case Assessment (ECA), seeing the theme “Basketball” could be useful. If the clustering is too granular (too many themes), the user may never see the word “Basketball” and may not know that Spurs and Clippers are good Basketball themes to review rather than items that go on boots and are used for hair. </p>
+<h4 id="attorney-client-privilege">Attorney-Client Privilege<a class="headerlink" href="#attorney-client-privilege" title="Permanent link">⚓︎</a></h4>
+<p>When <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/attorney-privilege-detection?view=o365-worldwide">attorney-client privilege detection</a> is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you analyze the data in the review set. The model uses machine learning to determine the likelihood that a document contains content that is legal in nature. When setting up attorney-client privilege detection, you will need to submit a list of attorneys for your organization. The model will compare the participants of the document with the attorney list to determine if any attorneys are participants.</p>
+<h4 id="relevance">Relevance<a class="headerlink" href="#relevance" title="Permanent link">⚓︎</a></h4>
+<p>The relevance module identifies and ranks files by relevance, which assists with early case assessment, document culling and review. Once the trained sample of files are reviewed and tagged by a human expert as Relevant or Not Relevant, the model will rank the relevance of all files in your case. There will be more information on the Relevance module in next version of this document. </p>
+<h3 id="review">Review<a class="headerlink" href="#review" title="Permanent link">⚓︎</a></h3>
+<p>The review portion of the eDiscovery process can be the most time consuming and costly step. Using Advanced eDiscovery, you can cull the data in order to only produce the relevant data. A review set is simply a static set of documents that you can analyze, query, tag, and export. </p>
+<h4 id="review-set">Review set<a class="headerlink" href="#review-set" title="Permanent link">⚓︎</a></h4>
+<p>Advanced eDiscovery allows you to further query and filter data within a review set so that you can focus on a subset of documents. You can build a query by using a combination of keywords, properties, and conditions in the Keywords condition. You can also group conditions as a block (called a condition group) to build a more complex query. For a list and description of metadata properties that you can search, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/document-metadata-fields-in-advanced-ediscovery?view=o365-worldwide">Document metadata fields in Advanced eDiscovery</a>.</p>
+<p>Once you are ready to review the case data, Advanced eDiscovery displays content via several viewers each with different purposes. The various viewers can be used by clicking on any document within a review set. Above the content viewing pane, you will be able to view metadata for each document within your review set. </p>
+<ul>
+<li>
+<p>The Native viewer displays the richest view of a document. It supports hundreds of file types and is meant to display the truest to native experience possible. </p>
+</li>
+<li>
+<p>The Text viewer provides a view of the extracted text of a file. It ignores any embedded images and formatting but is very effective if you are trying to understand the content quickly. </p>
+</li>
+<li>
+<p>The Annotate view provides features that allow users to apply markup on a document. When reviewing documents, you can annotate and redact documents to hide confidential information. You can preserve these markings during the export process.</p>
+</li>
+</ul>
+<p>During review, you may want to further <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/tagging-documents?view=o365-worldwide">tag documents</a> based on criteria like responsive vs non-responsive. Tags are customizable to meet the needs of your review process. You can also use the annotation tool to annotate and redact content in documents. Content with redactions and annotations will be exported in PDF form. </p>
+<h4 id="custodian-audit-activity">Custodian Audit Activity<a class="headerlink" href="#custodian-audit-activity" title="Permanent link">⚓︎</a></h4>
+<p>Need to find if a user viewed a specific document or purged an item from their mailbox? Advanced eDiscovery is now integrated with the existing audit log search tool in the M365 compliance center. Using this embedded experience, you can use the Advanced eDiscovery custodian management tool to facilitate your investigation by easily accessing and searching the activity for custodians within your case.</p>
+<p>Audit has access to a broad and rich set of information around user activities across 30 Microsoft services send user and admin activity to Audit.</p>
+<p>This can help answer questions during a legal investigation like:</p>
+<ul>
+<li>
+<p>What SharePoint files did this custodian view or share? </p>
+</li>
+<li>
+<p>Did the custodian read this message? </p>
+</li>
+</ul>
+<p>While we cover Advanced Audit in more depth below, there is great benefit in understanding how a custodian interacts with data in the context of a legal investigation. </p>
+<h3 id="production">Production<a class="headerlink" href="#production" title="Permanent link">⚓︎</a></h3>
+<p>Once your review is complete, you can export content from your Advanced eDiscovery case. You will need to consider where the data goes after exported out of Microsoft 365 to determine the export options that fit your needs. </p>
+<p>Currently, you can export files out in two formats:</p>
+<ul>
+<li>
+<p>Loose files and PSTs (email is added to PSTs when possible) - Files are exported in a format that resembles the original directory structure seen by users in their native applications. For more information, see the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/export-documents-from-review-set?view=o365-worldwide#loose-files-and-pst-export-structure">Loose files and PST export structure</a> section.</p>
+</li>
+<li>
+<p>Native files within the condensed directory structure - Files are exported in their native format along with a load file containing mapping and metadata for each file.</p>
+</li>
+</ul>
+<p>Consider whether you require conversations to be exported as Conversation Files. These messages will be threaded together and exported in PDF format. </p>
+<p>Once export is complete, you will need to use AzCopy to download the results. </p>
+<p>While if you implement all the recommendations above you are set for a successful deployment of AeD, the process to implement is equally important. We highly recommend a “Crawl-Walk-Run” approach, in which the technology is introduced in stages, focusing on steps that allow you to learn the end-to-end process with minimal disruptions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. </p>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>The M365 compliance center provides two out-of-box role groups, eDiscovery Manager and eDiscovery Administrator, that include the required roles to complete eDiscovery tasks. An eDiscovery Manager will only have access to cases that they create or are assigned to. An eDiscovery Administrator can access all eDiscovery cases. You can create and define custom role groups in order to manage a subset of eDiscovery tasks. <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/assign-ediscovery-permissions?view=o365-worldwide">Assign eDiscovery permissions in the Security &amp; Compliance Center - Microsoft 365 Compliance</a></p>
+</li>
+<li>
+<p>Consider using <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/set-up-compliance-boundaries?view=o365-worldwide">Compliance Boundaries</a> to control the content locations (such as mailboxes, OneDrive locations or SharePoint sites) that your eDiscovery Manager is able to search. They can also be used to control access to eDiscovery cases used to manage the legal, HR or other investigations within your organization. The need for compliance boundaries is often necessary for multi-national corporations that have to respect geographical boarders and regulations and for governments, which are often divided into different agencies. </p>
+</li>
+<li>
+<p>The analytics similarity threshold is set to 65% by default. When creating your case, discuss the expected similarity threshold with your legal team to ensure the value is correct. This setting cannot be changed once Analytics are run on the case data.</p>
+</li>
+<li>
+<p>When applying a hold to a custodian, an in-place hold is placed on their mailbox. This differs from a Litigation Hold in that it can be query based. There is also no limit to the number of in-place holds that can be applied to a mailbox or site. The holds within Advanced eDiscovery should be used for legal preservation and <strong>not for overall governance in your organization</strong>. If you require additional governance policies, please use the Microsoft 365 Retention policies. </p>
+</li>
+<li>
+<p>When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you analyze the data in the review set. The model uses machine leaning to determine the likelihood that the content is legal in nature. It will also compare the participants of the document against the pre-submitted list of attorneys for your organization. </p>
+</li>
+<li>
+<p>To leverage the export option to produce the redacted PDFs instead of files in their native format, you must first use the action to convert all redacted files to PDF within your review set</p>
+</li>
+<li>
+<p>When uploading non-Microsoft 365 data into your review set, all custodians that you will be associating the data with still require the appropriate license. </p>
+</li>
+<li>
+<p>Microsoft 365 eDiscovery tools now incorporate decryption of encrypted files that are attached to email messages and sent in Exchange Online. Additionally, encrypted documents stored in SharePoint Online and OneDrive for Business are decrypted in Advanced eDiscovery. You can review and query the decrypted file in the review set. For more information, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/ediscovery-decryption?view=o365-worldwide">Decryption in Microsoft 365 eDiscovery tools</a>.</p>
+</li>
+<li>
+<p>Advanced eDiscovery supports double-byte character set languages (these include Simplified Chinese, Traditional Chinese, Japanese, and Korean, which are collectively known as CJK languages) when querying the data within a review set, tagging the data within a review set and when analyzing the data. At the current time, we do not support OCR of CJK characters from image files. Query based holds and the relevance module do not support CJK languages.</p>
+</li>
+<li>
+<p>The goal of the APIs is to reduce some of the risk with repetitive processes that can be error prone. At the current time, four out of the eight eDiscovery APIs are available in Beta. The APIs are set up to deliver on 2 scenarios. Automating common processes and task by taking jobs that are repeatable and creating an application. Consider things like kicking off an email once the review set creation job is complete or automatically searching all Teams that a custodian is currently a member of. Integration with existing systems, whether they be custom or a common industry tool. </p>
+</li>
+</ul>
+<h3 id="helpful-resources">Helpful Resources<a class="headerlink" href="#helpful-resources" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>Understanding how and what types of content is stored in a mailbox is key to a successful eDiscovery posture. An exchange mailbox stores so much more than just email messages. Your calendar items, tasks, Skype messages, Teams messages, Voicemails, Forms, Sway, To-Do, Yammer conversations and so much more are stored in either user or group mailboxes. </p>
+</li>
+<li>
+<p>An understanding of where content is stored in SharePoint based on the type of hold can be key during an investigation. Consider reading this <a href="https://techcommunity.microsoft.com/t5/microsoft-security-and/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228">blog</a> that covers the lifecycle of an item in SharePoint. </p>
+</li>
+<li>
+<p>Teams 1:1 and 1:N chats are stored in the user mailbox. Teams conversations are stored in the Team Group mailbox. </p>
+</li>
+<li>
+<p>Items that are uploaded to chats are stored in the user OneDrive location. Items that are uploaded to conversations are stored in the Team SharePoint site. </p>
+</li>
+<li>
+<p>eDiscovery of messages and files in <a href="https://docs.microsoft.com/en-us/microsoftteams/private-channels">private channels</a> works differently than in standard channels. To learn more, see <a href="https://docs.microsoft.com/en-us/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels">eDiscovery of private channels</a>.</p>
+</li>
+<li>
+<p>Teams chat content that is associated with a guest user is stored in a cloud-based storage location and can be searched for using eDiscovery. This includes searching for content in 1:1 and 1:N chat conversations in which a guest user is a participant with other users in your organization. You can also search for private channel messages in which a guest user is a participant and search for content in guest:guest chat conversations where the only participants are guest users.</p>
+</li>
+<li>
+<p>You can add inactive mailboxes, Microsoft Teams, Yammer Groups, Office 365 Groups, and distribution groups to the list of mailboxes to search. Dynamic distribution groups are not supported. If you add Microsoft Teams, Yammer Groups, or Office 365 Groups, the group or team mailbox is searched; the mailboxes of the group members are not searched.</p>
+</li>
+<li>
+<p>Cloud links or modern attachments are items attached to messages in either Teams or Exchange. Cloud links differ from legacy attachments in that a copy of the item is not stored along with the message. Cloud attachments are a pointer to the location (in either OneDrive or SharePoint) that the item is stored. </p>
+</li>
+<li>
+<p>Contextual conversation review enables you to review a single message that matches your query within the context of the conversation. </p>
+</li>
+<li>
+<p>At the current time, 4/8 of the <a href="https://docs.microsoft.com/en-us/graph/api/resources/ediscoveryapioverview?view=graph-rest-beta">eDiscovery APIs in Microsoft Graph</a> are available in beta. The APIs can be used to automate or customize your workflow to reduce redundant tasks. For instance, you can create a PowerBI Dashboard that will give you real time case statistics or custodian reports. </p>
+</li>
+</ul>
+<h3 id="one-compliance-story-with-microsoft-365-advanced-ediscovery">One compliance story with Microsoft 365 Advanced eDiscovery<a class="headerlink" href="#one-compliance-story-with-microsoft-365-advanced-ediscovery" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p><a href="ir">Insider risk management</a> is a compliance solution in Microsoft 365 that helps minimize internal risks by enabling you to detect, investigate, and act on malicious and inadvertent activities in your organization. Insider risk policies allow you to define the types of risks to identify and detect in your organization, including acting on cases and escalating cases to Microsoft Advanced eDiscovery if needed. The content identified for escalation from IRM is automatically added to a review set in a case within Advanced eDiscovery. For the IRM or CC admin to have visibility to the case in Advanced eDiscovery, it is essential for them to be a member of the eDiscovery Manager role group in the Security and Compliance center. </p>
+</li>
+<li>
+<p><a href="cc">Communication compliance</a> is an insider risk solution in Microsoft 365 that helps minimize communication risks by helping you detect, capture, and act on inappropriate messages in your organization. Should you need to further investigate messages identified by your communication compliance policy, you can use the Escalate for Investigation control to create a new Advanced eDiscovery case. You will provide a name and notes for the new case, and user who sent the message matching the policy is automatically assigned as the case custodian. The content identified for escalation from CC is automatically added to a review set within a case in Advanced eDiscovery. For CC admin to have visibility to the case in Advanced eDiscovery, it is essential for them to be a member of the eDiscovery Manager role group in the Security and Compliance center. </p>
+</li>
+<li>
+<p>Having a strong <a href="mig">information governance</a> and <a href="rm">records management</a> posture ensures that content that needs to be retained is retained in-place and content that does not need to be retained is deleted. The downstream effects of a strong information governance and records management posture should be considered for your eDiscovery strategy. Less data means less risk and lower litigation costs. </p>
+</li>
+<li>
+<p>Microsoft eDiscovery tools support items encrypted with Microsoft encryption technologies. These technologies include Office Message Encryption, Azure Rights Management, and <a href="mig">Microsoft Information Protection</a> (specifically sensitivity labels). If a file that is encrypted with a Microsoft encryption technology is attached to an email message or located on a SharePoint or OneDrive account, those encrypted items are decrypted when the search results are prepared for preview, added to a review set in Advanced eDiscovery, and exported. This allows eDiscovery managers to view the content of encrypted email attachments and site documents when previewing search results, and review them after they have been added to a review set in Advanced eDiscovery.</p>
+</li>
+</ul>
+<h2 id="advanced-audit">Advanced Audit<a class="headerlink" href="#advanced-audit" title="Permanent link">⚓︎</a></h2>
+<p>Advanced Audit aims to expand on the capabilities of the Microsoft 365 unified auditing capabilities by offering additional features.</p>
+<ul>
+<li>
+<p>The retention of audit logs for Exchange, SharePoint, and Azure Active Directory activities for each licensed user can be extended from 90 days to 1 year, by default. </p>
+</li>
+<li>
+<p>You can now create custom audit log retention policies for the services mentioned, allowing you to target records generated in the other services that are not covered by the default retention policy for periods up to 1 year.   </p>
+</li>
+<li>
+<p>There are additional Exchange Online and SharePoint Online events captured which are crucial for conducting forensic and compliance investigations. These new events help investigators understand if mail items were accessed through the mail sync and mail bind operation. This is extremely helpful to organizations with regulatory obligations that require breach notifications because now they have the ability to scope mail items that may have been compromised to reduce fines and penalties.</p>
+</li>
+<li>
+<p>Customers will receive additional bandwidth when accessing audit data through the Office 365 Management Activity API based on the new tenant-level bandwidth quota.</p>
+</li>
+</ul>
+<p>When you are conducting an investigation, it is not just about the content. You may need to investigate an individual user’s behavior and activity more deeply. These activities can be reviewed through the unified audit log. </p>
+<h3 id="best-practices_1">Best Practices<a class="headerlink" href="#best-practices_1" title="Permanent link">⚓︎</a></h3>
+<p>While the advanced audit features are going to be key for many of our customers to address their compliance requirements, it is also important for all customers to start with a basic understanding of the unified audit log.</p>
+<ul>
+<li>
+<p>Many organizations consider the information contained in the audit logs to be sensitive in nature. As such, formulate a plan and execute how you will manage access to view those logs. </p>
+</li>
+<li>
+<p>That access is granted through the View-Only Audit Logs or Audit Logs roles in Exchange Online. These roles are managed in the Exchange admin center (EAC) and not in the M365 compliance center.</p>
+</li>
+<li>
+<p>Before you start, please check that the audit log is enabled by navigating to the Audit solution in the M365 compliance center. If you see a banner stating that auditing needs to be turned on, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/turn-audit-log-search-on-or-off?view=o365-worldwide">link</a>.</p>
+</li>
+<li>
+<p>Make sure your staff knows how to search and export the audit logs using the UI. There are reference links in the appendix to point them to resources that can help guide them.</p>
+</li>
+<li>
+<p>Follow the steps in the Helpful Resources section below to enable mailbox audit logging for all users.</p>
+</li>
+</ul>
+<p>Once you have the basics down, it is time to plan how you will implement the advanced audit features.</p>
+<ul>
+<li>
+<p>If your organization has decided not to license all your users with one of the E5 licenses that enable the advanced features, you will need to identify the population that warrants the additional oversight and longer-term retention of their activities to assign them E5 licenses.</p>
+</li>
+<li>
+<p>Decide if the default advanced retention policy works for you. By default, the audit records for Exchange, SharePoint, and Azure Active Directory are kept for one year. You may require that those records be kept for a shorter or longer period of time.</p>
+</li>
+<li>
+<p>Decide on the length of your audit retention for the activities in the other services not covered by the default policy mentioned above. Create a retention policy to retain your data for the appropriate amount of time. You can use an audit log retention policy to modify the default retention policy, or keep other data for longer than 90 days, up to 1 year. Additionally, an Audit add-on license for 10-year retention can allow records to be stored for long-term retention.</p>
+</li>
+<li>
+<p>Conduct forensic and compliance investigations by providing access to crucial events such as when mail items were accessed, when mail items were replied to and forwarded, and when and what a user searched for in Exchange Online and SharePoint Online.</p>
+</li>
+<li>
+<p>If you have a need to export data or integrate with a Security Information Event Management (SIEM) solution, you will need staff that are familiar with APIs or work with a partner.</p>
+</li>
+<li>
+<p>If you have a need to automate some of your audit search activities or need to perform very large searches, we recommend having resources that are comfortable using PowerShell cmdlets in Exchange Online and M365 compliance center.</p>
+</li>
+</ul>
+<h3 id="considerations_1">Considerations<a class="headerlink" href="#considerations_1" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>To manage audit log retention policies, you will need to be assigned the Organization Configuration role in the M365 compliance center.</p>
+</li>
+<li>
+<p>You can have a maximum of 50 audit log retention policies in your organization.</p>
+</li>
+<li>
+<p>To benefit from user-level Advanced Audit capabilities, a user needs to be assigned an E5 license.</p>
+</li>
+<li>
+<p>The higher bandwidth access to the API does not change the standard documented latencies for activities.</p>
+</li>
+<li>
+<p>When performing a search in the Audit solution that spans a timeframe longer than 90 days, you will receive a warning indicating that only users that have the proper licensing applied will return activities beyond the 90 day window.</p>
+</li>
+<li>
+<p>While not directly related to Advanced Audit, it is important to note that audit logging for Power BI isn't enabled by default. To search for Power BI activities in the audit log, you must enable auditing in the Power BI admin portal.</p>
+</li>
+</ul>
+<h3 id="helpful-resources_1">Helpful Resources<a class="headerlink" href="#helpful-resources_1" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>A list of the additional events included with Advanced Audit as well as an explanation of each can be found <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide#access-to-crucial-events-for-investigations">here</a>.</p>
+</li>
+<li>
+<p>For details on creating and managing your audit retention policies, please use this <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/audit-log-retention-policies?view=o365-worldwide">link</a>.</p>
+</li>
+<li>
+<p>For more information on the high-bandwidth access to the Office 365 Management Activity API you can read about it <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide#high-bandwidth-access-to-the-office-365-management-activity-api">here</a>.</p>
+</li>
+<li>
+<p>For instructions on how to enable Power BI logs see the "Audit logs" section in <a href="https://docs.microsoft.com/en-us/power-bi/service-admin-portal#audit-logs">Power BI admin portal</a>.</p>
+</li>
+<li>
+<p>This <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#requirements-to-search-the-audit-log">article</a> includes a table indicating the time it takes for corresponding records to be returned for the different services in Office 365.</p>
+</li>
+<li>
+<p>Follow the steps outlined <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/enable-mailbox-auditing?view=o365-worldwide#more-information">here</a> to enable mailbox audit logging for user without an E5 licenses.</p>
+</li>
+</ul>
+<h2 id="appendix-additional-resources">Appendix - Additional Resources<a class="headerlink" href="#appendix-additional-resources" title="Permanent link">⚓︎</a></h2>
+<p>This section contains links to the information regarding license requirements and provides additional links to additional information related to Advanced eDiscovery.</p>
+<h3 id="advanced-ediscovery-license-requirements">Advanced eDiscovery License Requirements<a class="headerlink" href="#advanced-ediscovery-license-requirements" title="Permanent link">⚓︎</a></h3>
+<p>Before you get started with Advanced eDiscovery, you should confirm your Microsoft 365 subscriptions and any add-ons. To access and use Advanced eDiscovery, your organization must have one of the following subscriptions or add-ons:</p>
+<ul>
+<li>Microsoft 365 E5 subscription </li>
+<li>Microsoft 365 E3 subscription + the Microsoft 365 E5 Compliance add-on</li>
+<li>Microsoft 365 E3 subscription + the Microsoft 365 E5 eDiscovery &amp; Audit add-on</li>
+<li>Microsoft 365 A5 subscription </li>
+<li>Microsoft 365 A3 subscription + the Microsoft 365 A5 Compliance add-on</li>
+<li>Microsoft 365 A3 subscription + the Microsoft 365 A5 Discovery &amp; Audit add-on</li>
+<li>Microsoft 365 G5 subscription </li>
+<li>Microsoft 365 G5 subscription + the Microsoft 365 G5 Compliance add-on</li>
+<li>Microsoft 365 G5 subscription + the Microsoft 365 G5 Discovery &amp; Audit add-on</li>
+<li>Office 365 Enterprise E5 subscription </li>
+<li>Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)</li>
+</ul>
+<h3 id="advanced-audit-license-requirements">Advanced Audit License Requirements<a class="headerlink" href="#advanced-audit-license-requirements" title="Permanent link">⚓︎</a></h3>
+<p>Before you get started with Advanced Audit, you should confirm your Microsoft 365 subscription and any add-ons. To access and use Advanced Audit, your organization must have one of the following subscriptions or add-ons:</p>
+<ul>
+<li>Microsoft 365 E5 subscription </li>
+<li>Microsoft 365 E3 subscription + the Microsoft 365 E5 Compliance add-on</li>
+<li>Microsoft 365 E3 subscription + the Microsoft 365 E5 eDiscovery &amp; Audit add-on</li>
+<li>Microsoft 365 A5 subscription </li>
+<li>Microsoft 365 A3 subscription + the Microsoft 365 A5 Compliance add-on</li>
+<li>Microsoft 365 A3 subscription + the Microsoft 365 A5 Discovery &amp; Audit add-on</li>
+<li>Microsoft 365 G5 subscription </li>
+<li>Microsoft 365 G5 subscription + the Microsoft 365 G5 Compliance add-on</li>
+<li>Microsoft 365 G5 subscription + the Microsoft 365 G5 Discovery &amp; Audit add-on</li>
+<li>Office 365 Enterprise E5 subscription </li>
+<li>Office 365 Enterprise E3 subscription + the Office 365 Advanced Compliance add-on (no longer available for new subscriptions)</li>
+</ul>
+
+    <!-- Last update of source file -->
+    
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/microsoft/ComplianceCxE/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://aka.ms/MIPC/AskMIPTeam" target="_blank" rel="noopener" title="aka.ms" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../scripts/extlinks.js"></script>
+      
+        <script src="../../scripts/cookie-consent.js"></script>
+      
+        <script src="../../scripts/consent-init.js"></script>
+      
+    
+  </body>
+</html>

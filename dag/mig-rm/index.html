@@ -1,0 +1,3295 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/ComplianceCxE/dag/mig-rm/">
+      
+      
+        <link rel="prev" href="../ir-cc/">
+      
+      
+        <link rel="next" href="../mip-dlp/">
+      
+      
+      <link rel="icon" href="../../img/scm-shield.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Data Lifecycle Management and Records Management - Microsoft Purview Customer Experience Engineering (CxE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/cookie-consent.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Analytics via Clarity - https://clarity.microsoft.com/ -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "7uxkeubafp");
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <!-- Meta tag for Google Search Console ownership verification-->
+    <meta name="google-site-verification" content="u3PbXeNid7oDmoMKcK77g3P5k9BUVJpow_pdJIbykow" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#your-deployment-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+      class="md-header__inner md-grid"
+      aria-label="header.title"
+    >
+  
+      <!-- Link to home -->
+      <a
+        href="../.."
+        title="Microsoft Purview Customer Experience Engineering (CxE)"
+        class="md-header__button md-logo"
+        aria-label="Microsoft Purview Customer Experience Engineering (CxE)"
+        data-md-component="logo"
+      >
+        
+  <img src="../../img/scm-shield.png" alt="logo">
+
+      </a>
+  
+      <!-- Button to open drawer -->
+      <label class="md-header__button md-icon" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      </label>
+  
+      <!-- Header title -->
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Microsoft Purview Customer Experience Engineering (CxE)
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+              
+                Data Lifecycle Management and Records Management
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Color palette -->
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+        </form>
+      
+  
+      <!-- Site language selector -->
+      
+  
+      <!-- Button to open search modal -->
+      
+  </header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  Notes from the Field
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  DAGs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../playbooks/" class="md-tabs__link">
+          
+  
+  Playbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jumpstarts/" class="md-tabs__link">
+          
+  
+  Jump Starts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enduser/sensitivity/" class="md-tabs__link">
+          
+  
+  End User Training
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../webinars/" class="md-tabs__link">
+          
+  
+  Webinars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sbd/" class="md-tabs__link">
+          
+  
+  Scenario Based Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../previews/" class="md-tabs__link">
+          
+  
+  Previews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Microsoft Purview Customer Experience Engineering (CxE)" class="md-nav__button md-logo" aria-label="Microsoft Purview Customer Experience Engineering (CxE)" data-md-component="logo">
+      
+  <img src="../../img/scm-shield.png" alt="logo">
+
+    </a>
+    Microsoft Purview Customer Experience Engineering (CxE)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/ComplianceCxE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/ComplianceCxE
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Stop Shop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/aed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management/Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes from the Field
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes from the Field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP/DLP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP/DLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/mip-dlp-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Creating IP and DLP Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/DLP-policy-externalshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preventing external sharing with DLP policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/SPOblockUpload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocking upload of files with higher sensitivity label to SPO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/audit-log-management-activity-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Purview Audit (Premium) Log Activities via the O365 Management API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/ComplianceEdu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance in K-12 Education
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DAGs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DAGs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Compliance Configuration Analyzer (MCCA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DLPMigrationAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP Migration Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aed-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management and Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-information-governance-and-records-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Information Governance and Records Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft Information Governance and Records Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retention Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-record-and-regulatory-labels-and-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention, Record, and Regulatory labels and policies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Governance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Records Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mip-dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection and Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dag-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Information Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/service-side-auto-labeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/sourceCodePlaybook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting Source Code Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Loss Prevention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/teamsdlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/etr2dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy DLP Policies (ETR) to DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Communication Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/fsicc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://aka.ms/mipc/mipcOSS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💬 Submit CxE Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Jump Starts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jump Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Lifecycle Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auto-apply Labels
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Auto-apply Labels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/kql-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KQL Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adaptive Policy Scopes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adaptive Policy Scopes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/adaptive-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    End User Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            End User Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/sensitivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/retention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retention Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/dlpenduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP User Education & User Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Webinars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webinars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Scenario Based Demos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scenario Based Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E01 - Series Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E02 - Data Discovery Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E03 - Security vs Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E04 - AIP Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E05 - Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E06 - Label Behaviors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E07 - Container Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E08 - Client-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E09 - Service-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10 - MEM/Intune and MIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11 - MEM/Intune and MIP Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/SBDinPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 SBD in PDF  - Summary of SBD in pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Previews
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Previews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../previews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join Private Previews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-information-governance-and-records-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Information Governance and Records Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft Information Governance and Records Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retention Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-record-and-regulatory-labels-and-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention, Record, and Regulatory labels and policies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Governance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Records Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-file-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced (File Plan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Simple (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-label-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced (Label Deployment)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+    <!-- Edit button -->
+    
+        <a
+        href="/ComplianceCxE/how-to-contribute/"
+        title="How to Contribute"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18h-2v-2h2v2m0-3h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5m9-3c0 5.18-3.95 9.45-9 9.95v-2.01c3.95-.49 7-3.86 7-7.94s-3.05-7.45-7-7.94V2.05c5.05.5 9 4.77 9 9.95M11 2.05v2.01c-1.46.18-2.8.76-3.91 1.62L5.67 4.26C7.15 3.05 9 2.25 11 2.05M4.06 11H2.05c.2-2 1-3.85 2.21-5.33L5.68 7.1A7.902 7.902 0 0 0 4.06 11M11 19.94v2.01c-2-.2-3.85-.99-5.33-2.21l1.42-1.42c1.11.86 2.45 1.44 3.91 1.62M2.05 13h2.01c.18 1.46.76 2.8 1.62 3.91l-1.42 1.42A10.013 10.013 0 0 1 2.05 13Z"/></svg>
+        </a>        
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/edit/public/docs/dag/mig-rm.md"
+        title="edit.link.title"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+        </a>
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A⚠%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20tracking%0A%0APage%20Path%3A%20[https://microsoft.github.io/ComplianceCxE/dag/mig-rm/](https://microsoft.github.io/ComplianceCxE/dag/mig-rm/)"
+        title="Submit Feedback as an Issue"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+    
+
+    <!--
+        Hack: check whether the content contains a h1 headline. If it
+        doesn't, the page title (or respectively site name) is used
+        as the main headline.
+    -->
+    
+        <h1 style="text-align: left;">Data Lifecycle Management and Records Management</h1>
+    
+
+    <!-- Markdown content -->
+    <p><em>Last updated: 05/10/2021</em></p>
+<p>What is information governance and why should you worry about governing your data?  The technical definition that you can find on the web is usually one that a records manager or compliance risk officer may read and say sure, but for some of us we still leave wanting a level 100 explanation. At a basic level, the goal is to balance the risk holding onto information presents with the value the information provides to the organization. You also need to consider which decisions are within your control as a company and which are driven by regulatory or industry requirements. It is important to remember that this is a strategy across all your information.  That strategy should define who has the authority to make information related decisions. These individuals will be heavily involved in your retention policy, label taxonomy and file plan discussions.  It also needs to account for how you will handle change management for your policies governing information as well as communication of your plan and training your users.  Your information governance strategy should also establish the “what”, the requirements or how long, before actions need to be taken to retain or delete information, the “how”, by the technologies that will be used. In our case, the retention polices, and labels deployed through <a href="#microsoft-information-governance">Microsoft Information Governance</a> and <a href="#records-management">Records Management</a>. </p>
+<h2 id="your-deployment-plan">Your Deployment Plan<a class="headerlink" href="#your-deployment-plan" title="Permanent link">⚓︎</a></h2>
+<p>The objective is to create a deployment plan that follows the progression of crawl-walk-run methodology while highlighting the user and administrator experience at each stage. Your focus should be on the end user result and the security controls you achieve with each implemented stage. Solutions or tools covered in this guide for deployment consideration are:</p>
+<ul>
+<li><a href="../mip-dlp/#data-loss-prevention">Data Loss Prevention (DLP)</a></li>
+<li><a href="../cm/">Compliance Manager</a></li>
+<li><a href="../mcca/">Microsoft Compliance Configuration Analyzer (MCCA)</a></li>
+<li>Azure Information Protection (AIP) Scanner</li>
+<li>Microsoft Cloud App Security (MCAS)</li>
+<li><a href="../mip-dlp/#microsoft-information-protection">Microsoft Information Protection (MIP)</a></li>
+<li><a href="#overview">Microsoft Information Governance (MIG) and Records Management (RM)</a></li>
+<li><a href="../ir-cc/#communication-compliance">Communication Compliance</a></li>
+<li><a href="../ir-cc/#insider-risk-management">Insider Risk Management</a></li>
+<li><a href="../aed-audit/#advanced-ediscovery">Advanced eDiscovery</a></li>
+<li><a href="../aed-audit/#advanced-audit">Advanced Audit</a></li>
+</ul>
+<p>The DAG is not inclusive of all requirements or architectures needed for successful implementation of Microsoft 365 but rather a focus on security and compliance as it relates to solutions included as part of Microsoft information Protection &amp; Compliance licenses.</p>
+<p>See <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/productivity-illustrations?view=o365-worldwide">Microsoft 365 productivity illustrations</a> for guidance on implementation of all M365 capabilities with focus on cross technologies.</p>
+<p><strong>Crawl Stage</strong> - The first stage is about starting to evaluate where your organization is today regarding the information security and compliance with your goal of defining a strategic direction for your organization. Using this strategy to foster adoption of a solution by gathering the requirements of supporting systems, impact on end users, and skillset needed for each role owner. The crawl phase describes steps you should do at the beginning of any deployment, whether your requirements are basic or advanced. It includes steps for product education, defining requirements, and evaluation or testing.</p>
+<p><strong>Walk Stage</strong> - The second stage builds the foundation for a successful, scalable, and sustainable deployment. In this phase, you plan the details of your implementation and to build the solution. You may also run a pilot or a proof of concept with a selected group of users or locations.</p>
+<p><strong>Run Stage</strong> - The last stage is about optimizing the solution for Microsoft 365. In this phase you will set up an automated scalable approach for each solution. </p>
+<p>Following the above approach will lead to successful adoption and deployment of each solution while governing your data by deciding what to keep, what to delete, what is a regulatory requirement, and using a workflow to manage the lifecycle.</p>
+<h2 id="microsoft-information-governance-and-records-management">Microsoft Information Governance and Records Management<a class="headerlink" href="#microsoft-information-governance-and-records-management" title="Permanent link">⚓︎</a></h2>
+<p>Microsoft Information Governance (MIG) provides capabilities to manage the lifecycle of your content and govern your data for compliance or regulatory requirements. Records management (RM) manages high-value content for legal, business, or regulatory obligations, and adds advanced capabilities such as disposition review and file plans. Some organizations may have simple retention and deletion requirements were applying broad policies using the MIG features will meet your needs. Other organizations may have strict recordkeeping requirements including a formal file plan, disposition, or retention trigged by events which can be accomplished using the RM features.</p>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">⚓︎</a></h3>
+<p>The information governance needs from one organization to the next can differ greatly. While one organization has one simple retention policy that emails must be kept for 3 years, another can exist in a highly regulated industry and therefore have multiple requirements they need to meet based on different types of data. The approach below aims to provide guidance on how to approach deployment of the features available through information governance and records management, whether you have those basic needs or the more complex capabilities we offer.</p>
+<p>Let’s establish some of the preparation that goes into being ready to start the execution of deploying retention policies, labels, and using your file plan to manage your records.</p>
+<p>Make sure that you understand the functions available in MIG and RM and what your requirements are so they may be aligned to drive the configuration during deployment. That should drive the plan whether it is a formal File Plan to be used in RM or simply a retention schedule that will categorize your information into retention and deletion periods. That plan will drive the number of labels you may need and their settings as well as the retention and publishing policies. Below are some questions to drive the conversation during this planning period.</p>
+<ul>
+<li>
+<p>Will the built-in role groups covered in the <a href="#considerations">considerations section</a> align to your access governance or will you need to create custom role groups? If granular control is needed you can use the <a href="https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center#roles-in-the-security--compliance-center">Security and Compliance center</a> to create your custom role groups.</p>
+</li>
+<li>
+<p>Do you need to apply retention and deletion to broad buckets, such as all Teams chats and conversations or all Exchange email mailboxes? This is a good use case for retention policies. </p>
+</li>
+<li>
+<p>Do you store documents that may have different retention requirements in the same location such as a document library in SharePoint? This is a good use case for retention labels because they can be applied at the item level.</p>
+</li>
+<li>
+<p>Do you require a <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/disposition?view=o365-worldwide">disposition</a> review process at the end of the retention period? There is an option to require disposition of content when creating a label from the File Plan in RM.</p>
+</li>
+<li>
+<p>Do you need to trigger retention or deletion based on an event, such as the end of a fiscal year or employment end date or the end of a contract? When creating a label from the File Plan in RM you can choose one of the built-in <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/event-driven-retention?view=o365-worldwide">event types</a> or choose to create your own.</p>
+</li>
+<li>
+<p>If you need to manage content as formal records or have even stricter requirements for immutability, look at the information about <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/declare-records?view=o365-worldwide">declaring records with retention labels</a>.</p>
+</li>
+<li>
+<p>Develop a solid test plan that defines what your scenarios and successful test outcomes will be. We recommend testing in a lower environment first to validate outcomes with shorter time periods for both the basic and more advanced configurations.</p>
+</li>
+<li>
+<p>Determine how long it will take to test all your scenarios and what approvals are needed and the timing of those to work backwards to set a deployment timeline and what your milestones will be. Such as deploying a simple retention policy to all of Exchange or having your file plan ready for import into Records Management.</p>
+</li>
+</ul>
+<p>Now that we have touched on the preparation for deployment, below we outline the deployment and configurations when creating retention policies, creating and publishing retention labels, as well as creating labels through the file plan in records management to require stricter controls and reviews.</p>
+<h3 id="retention-policies">Retention Policies<a class="headerlink" href="#retention-policies" title="Permanent link">⚓︎</a></h3>
+<p>Retention policies are best suited when targeting a location or container of information. Those locations can be one of the following in the list below, however Teams and Yammer locations need their own policies and cannot be combined with the other locations.</p>
+<ul>
+<li>Exchange email</li>
+<li>SharePoint site</li>
+<li>OneDrive accounts</li>
+<li>Microsoft 365 groups</li>
+<li>Skype for Business</li>
+<li>Exchange public folders</li>
+<li>Teams channel messages</li>
+<li>Teams chats</li>
+<li>Yammer community messages</li>
+<li>Yammer private messages</li>
+</ul>
+<p>Creation and management of policies will require that you log into the <a href="https://compliance.microsoft.com/">compliance center</a> with an account that has the necessary Retention Management permissions which we discussed in the considerations section earlier.</p>
+<p>It is a good idea to start with the basic scenarios before moving on to the more advanced ones to gain a comfort level with the process and ensure you get the desired outcomes. In each example there are 3 consistent steps of the policy creation outlined below. With the common steps established we will focus how each example differs during the creation of the policy.</p>
+<ul>
+<li>
+<p>You will need to give your policy a name and description that is meaningful for your organization. Note this name cannot be changed.</p>
+</li>
+<li>
+<p>You will need to choose if you want to retain content, delete it, or both and whether that should be based on created or modified date.</p>
+</li>
+<li>
+<p>The last step is to review your settings and create the policy. Once your policy is created after service completes the mechanisms policy engine in the various environments (Exchange Online, SharePoint Online, OneDrive, Yammer, Teams, etc..) it will take affect without any additional steps. Our experience is this completes in 7 days or sooner.</p>
+</li>
+</ul>
+<h4 id="start-simple">Start Simple<a class="headerlink" href="#start-simple" title="Permanent link">⚓︎</a></h4>
+<p>Deployment of a basic policy that sets the same retention settings to apply to the entire location(s).
+This approach is very straightforward.</p>
+<ul>
+<li>After the steps to name your policy and set retention settings above, you will choose the locations you want this policy to apply to. A basic policy will usually target an entire location and does not have inclusions or exclusions set. You will ensure that the location is toggle On and set to All. Remember that Teams and Yammer cannot be combined with the other locations.</li>
+</ul>
+<h4 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">⚓︎</a></h4>
+<p>Next, we cover deploying a policy that has inclusions or exclusions based on a need to apply different retention periods to content in the same location types such as different mailbox users, or SharePoint sites as an example.</p>
+<ul>
+<li>Choose the locations you want this policy to apply to. In this scenario you will ensure the status of the location is toggled On and then use the links to select specific recipients, sites, etc. to include or exclude in this policy. You will be required to know and enter the full path for SharePoint or OneDrive locations. Refer to the <a href="#considerations">considerations section</a> for policy limitations in this scenario.</li>
+</ul>
+<h4 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">⚓︎</a></h4>
+<p>An advanced retention policy configuration is more suited for those that have a need to apply it based on what is in the content to target specific documents, such as sensitive information. </p>
+<ul>
+<li>
+<p>Choose to Use Advanced Retention Settings. You can now either apply to content based on sensitive information present in the item using one of the built-in or custom sensitive information types (SITs), or you can apply to content that contains specific words or phrases.</p>
+</li>
+<li>
+<p>The choice to use the advanced settings above is going to limit the locations that you have as options to Exchange, SharePoint, and OneDrive. It will also default the Exchange location to include All. This cannot be changed.</p>
+</li>
+</ul>
+<h4 id="retention-record-and-regulatory-labels-and-policies">Retention, Record, and Regulatory labels and policies<a class="headerlink" href="#retention-record-and-regulatory-labels-and-policies" title="Permanent link">⚓︎</a></h4>
+<p>When you have a need to retain and delete content at the item level, use a retention label. Retention labels also provide some other capabilities that retention policies do not.</p>
+<ul>
+<li>Retention labels travel with the content as it moves within your tenant.</li>
+<li>They allow you to start the retention based on when the item is labeled.</li>
+<li>You can start the retention based on when an event occurs.</li>
+<li>An item can be automatically labeled based on a trainable classifier.</li>
+<li>An item can be labeled automatically if it matches a keyword query you create.</li>
+<li>You can set a default label on SharePoint lists and libraries.</li>
+<li>A disposition review can be required before something is permanently deleted.</li>
+<li>Labels allow you to mark content as a record or regulatory record.</li>
+</ul>
+<p>As you can see retention labels provide greater flexibility for when the retention period starts, what happens when the retention period ends, how that label is applied, and what can be done with the content once it has been labeled. These options allow for both a basic deployment strategy and a more advanced one. Many of the more advanced options also require the use of the File Plan feature in RM to create the labels. We will start with the label and policy creation from within the MIG solution, and then move to those that require using RM and the File Plan feature to create the more advanced labels and policies.</p>
+<h3 id="information-governance">Information Governance<a class="headerlink" href="#information-governance" title="Permanent link">⚓︎</a></h3>
+<p>Creating labels and policies in Information Governance will require that you log into the compliance center with an account that has the necessary Retention Management permissions which we discussed in the considerations section earlier. </p>
+<p>In each example below we will be referring to the same steps to create a label that applies the retention period based on when an item is labeled.</p>
+<p>Label creation steps:
+* You will give your label a name based on your taxonomy and enter descriptions for both admins and your users that is meaningful for your organization. Remember this name cannot be changed.</p>
+<ul>
+<li>
+<p>Toggle the Retention on and then choose whether you want to retain content, delete it, or both. In this example unique to labels, we will choose to take those actions based on When The Content Is Labeled. You are free to choose when created or modified as well.</p>
+</li>
+<li>
+<p>Review your settings and create the label. The label will now need a policy to publish the label to be manually applied by users, or to automatically apply it to content.</p>
+</li>
+</ul>
+<p>When creating a policy to publish or apply the label, you should start with a simple approach and then add complexity. All policy creation has common steps to name the policy and review your settings. Each example will differ based on the locations we publish the label to or how that label is applied to content.</p>
+<p>Policy name and review steps:</p>
+<ul>
+<li>
+<p>Give the policy a name and description that is meaningful. Remember, this name cannot be changed.</p>
+</li>
+<li>
+<p>Review your settings and either click publish labels or auto-apply to save your settings depending on the scenario.</p>
+</li>
+<li>
+<p>It can take up to 7 days for labels to appear and only for those mailboxes that have 10MB of data or more as noted above in the considerations.</p>
+</li>
+</ul>
+<h4 id="start-simple_1">Start Simple<a class="headerlink" href="#start-simple_1" title="Permanent link">⚓︎</a></h4>
+<p>In the basic example we will be publishing our label to all users and locations for them to apply manually.</p>
+<ul>
+<li>This publishing policy is very straightforward. Simply choose the default to publish this policy to all locations in the Choose Locations page within the Publish to users and groups step.</li>
+</ul>
+<h4 id="next-steps_1">Next Steps<a class="headerlink" href="#next-steps_1" title="Permanent link">⚓︎</a></h4>
+<p>You may also have a need to create a label that needs to be published to a specific set of users or locations due to a department’s unique requirements. When we create the policy to publish the label, we will be specifying inclusions or exclusions.</p>
+<ul>
+<li>In this scenario instead of all in the Choose Locations page, you will choose specific locations by ensuring the Status of the location is toggled On and then use the links to select specific recipients, sites, etc. to include or exclude in the policy. Refer to the <a href="#considerations">considerations</a> section for policy limitations in this scenario.</li>
+</ul>
+<p>During preparation you identify that you have a need to proactively address content that may have sensitive information in it. To avoid relying on your users to consistently label this content with a publish policy, you can choose to Auto-apply A Label instead based on SITs which are contained in the same list of templates as when you create a data loss prevention (DLP) policy. </p>
+<ul>
+<li>
+<p>Make sure Apply Label To Content That Contains Sensitive Info is selected and pick one of the built-in templates or choose custom to either specify individual (SITs) or your own custom SIT.</p>
+</li>
+<li>
+<p>The SITs will have default instance count and match accuracy settings. If you would like to view them to confirm or modify, you will need to use the Edit button.</p>
+</li>
+<li>
+<p>You can also choose whether you want this policy to apply to All locations or specific locations. Using specific inclusions or exclusions here will also have the same policy limitation considerations mentioned above.</p>
+</li>
+</ul>
+<h4 id="advanced_1">Advanced<a class="headerlink" href="#advanced_1" title="Permanent link">⚓︎</a></h4>
+<p>If your organization has a mature information architecture in SharePoint online, you may want to leverage that data to use the condition Apply Label To Content That Contains Specific Words Or Phrases, Or Properties.</p>
+<ul>
+<li>
+<p>The query-based auto-apply policies use the same search index as eDiscovery content search which means you can use any of the pre-defined SharePoint online managed properties as your criteria which are documented in the <a href="#helpful-resources">helpful resources</a> section.</p>
+</li>
+<li>
+<p>You may want to start with out of the box properties first such as filetype or modified by before targeting your custom properties that have been mapped to a managed property.</p>
+</li>
+<li>
+<p>Once you have your criteria take care to enter it into the Keyword Query Editor correctly as it will not tell you if your query has bad syntax or is invalid. We also recommend always including the (AND, OR) operators to ensure that your query is interpreted correctly if you are combing more than one condition.</p>
+</li>
+</ul>
+<p>During your planning for deployment of not only the MIG or RM solutions, but also Microsoft Information Protection (MIP) and Communications Compliance (CC), you may have decided that our trainable classifiers capability adds a lot of value based on your data estate. If that is the case, then you can create a policy with the condition Apply Label To Content That Matches A Trainable Classifier.</p>
+<ul>
+<li>
+<p>You can find more information on trainable classifiers in the <a href="../dag-resources/#one-compliance-story">creating one compliance story</a> section.</p>
+</li>
+<li>
+<p>Even if you have not built your own custom trainable classifier you can choose a built-in one from the list such as Source Code or Resumes.</p>
+</li>
+<li>
+<p>Trainable classifiers can label new and modified items and existing items from the last six months.</p>
+</li>
+</ul>
+<h3 id="records-management">Records Management<a class="headerlink" href="#records-management" title="Permanent link">⚓︎</a></h3>
+<p>Some may consider the concept of records management intimidating. The thought of having to categorize all your data and get agreement from the business on how long each category of information needs to be retained or how soon it needs to go can be daunting. We believe that both those already well down the path of the records management journey and those just getting started can take advantage of the features we offer in our solution. </p>
+<p>Unlike the information governance examples above where the progression of basic to advanced configurations usually involve how the label is applied, in records management the real power is in the information the label can have and what happens when the label is applied. This next section will touch on those configuration examples by starting with using File plan tool and the options we have when creating a label.</p>
+<p>When following the guidance below make sure that you log into the compliance center with an account that has the necessary Records Management permissions which we discussed in the considerations section earlier. </p>
+<h4 id="start-simple-file-plan">Start Simple (File Plan)<a class="headerlink" href="#start-simple-file-plan" title="Permanent link">⚓︎</a></h4>
+<p>During planning you should determine if you have an existing retention schedule. Even if you do not have an existing retention schedule or a file plan, you can start to build one by creating your labels from within File Plan. The creation of the label using File Plan is similar to the steps from Information Governance. However, using File Plan provides the ability to add descriptors to your label.</p>
+<ul>
+<li>
+<p>Start by adding your descriptors to provide additional information about each label, such as the business department the label is for, or the provision or citation that drives the configuration settings of the label. As you build your labels out you will be able to export this list to a .csv file which will contain the settings as well as those descriptors.</p>
+</li>
+<li>
+<p>You can pick from a list of values or create your own. If you create your own make sure the spelling and format is correct as you will not be able to modify or remove it once you save your changes.</p>
+</li>
+</ul>
+<h4 id="next-steps-file-plan">Next Steps (File Plan)<a class="headerlink" href="#next-steps-file-plan" title="Permanent link">⚓︎</a></h4>
+<p>You can also use the File Plan import option or the Export mentioned above to create your labels from the .csv file. This could be an empty template before any labels are created, or after some initial labels have been created to provide examples. </p>
+<ul>
+<li>
+<p>This file can be used for planning and execution. </p>
+</li>
+<li>
+<p>We find this is extremely helpful for customers who prefer to fill the template out and then create their labels in bulk to save time.</p>
+</li>
+<li>
+<p>This method can also be used to bulk-modify existing labels.</p>
+</li>
+</ul>
+<h4 id="advanced-file-plan">Advanced (File Plan)<a class="headerlink" href="#advanced-file-plan" title="Permanent link">⚓︎</a></h4>
+<p>Your organization may already have retention schedule in place which includes a formal file plan. If so, the File Plan import can be used to download a blank template to import that plan and create your labels.</p>
+<ul>
+<li>
+<p>You will need to map your current file plan to the fields available in the template. Each field can only have 64 characters.</p>
+</li>
+<li>
+<p>There is a validation during the import and if there are errors it will provide the line and row numbers that are causing issues.</p>
+</li>
+<li>
+<p>Keep in mind this import will create the labels only and those labels will have no impact until you create a policy to publish or automatically apply those labels.</p>
+</li>
+</ul>
+<p>When creating your labels from File Plan you will notice there are some differences in the experiences as you step through each of the screens. While the retention settings are the same as in Information governance, the way they are presented may differ. All the examples below drive what settings are chosen from the Define Retention Settings screen.</p>
+<ul>
+<li>For label creation instructions please follow the steps <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-apply-retention-labels?view=o365-worldwide">here</a>.</li>
+</ul>
+<h4 id="start-simple-label-deployment">Start Simple (Label Deployment)<a class="headerlink" href="#start-simple-label-deployment" title="Permanent link">⚓︎</a></h4>
+<p>We mentioned above with records management, the power is in the label, one example of that is the option to require disposition when creating your label. You may identify certain information that may have a similar duration of retention as other material, but you need someone to formally review those items before they are removed. This is where disposition comes into play. We are covering this under records management because that solution contains the Disposition tab where the reviewers will go to evaluate the content that has reached its retention end date. Disposition can be required by selecting Trigger A Disposition Review under the At The End Of The Retention Period section.</p>
+<ul>
+<li>
+<p>When choosing this option, you will need to select the users that you want to perform the review of the content. We recommend selecting more than one user. Mail-enabled security groups are supported. Microsoft 365 groups are not. Specifying a user here will not add them to the Disposition Management role, which is the minimum permissions needed.</p>
+</li>
+<li>
+<p>Content in Exchange, SharePoint, OneDrive, and Microsoft 365 groups is only deleted after a reviewer chooses to permanently delete the content. There is no undo button in the disposition workflow once that selection is made. Disposition for Exchange content requires that the target mailbox has at least 10MB of data.</p>
+</li>
+<li>
+<p>A reviewer can only use the link in the location column to view the content if they have permissions to that location and the content.</p>
+</li>
+<li>
+<p>If you have a need for the owners of the content to participate in the disposition process you can export the list of items needing review to a .csv file.</p>
+</li>
+</ul>
+<h4 id="next-steps-label-deployment">Next Steps (Label Deployment)<a class="headerlink" href="#next-steps-label-deployment" title="Permanent link">⚓︎</a></h4>
+<p>Disposition of content is a common requirement when declaring an item as a record. If your organization has identified certain types of information that are considered a record, you can apply the additional protections by choosing Mark Items As A Record during label creation.</p>
+<ul>
+<li>
+<p>When this option is selected and the label is applied to emails, users will not be able to edit or delete those emails.</p>
+</li>
+<li>
+<p>Versioning is still possible by unlocking a record. The previous version is still considered a record and cannot be modified or deleted.</p>
+</li>
+<li>
+<p>When content labeled as a record in a SharePoint site or OneDrive is unlocked, a special <em>Records</em> folder is created in the Preservation Hold Library (PHL).</p>
+</li>
+<li>
+<p>Site Collection Administrators can still remove a record label from an item. Take that into consideration when evaluating who has those rights on your SharePoint site collections.</p>
+</li>
+<li>
+<p>The removal of a label as well as the lock and unlocking of a record are all activities that you can search for and view in the Audit solution.</p>
+</li>
+<li>
+<p>If an item was marked as a record and required disposition you will be able to provide a proof of records deletion.</p>
+</li>
+</ul>
+<h4 id="advanced-label-deployment">Advanced (Label Deployment)<a class="headerlink" href="#advanced-label-deployment" title="Permanent link">⚓︎</a></h4>
+<p>A common scenario we see is that organizations have a need to consider certain artifacts a record, but only after a certain event occurs such as the end of a customer engagement. Other organizations do not necessarily have the record requirement but have a need to keep certain information for a specific amount of time only after an event, like when an employee leaves the company. This can be accomplished by selecting one of the built-in event types or creating your own under the <em>Start The Retention Period Based On</em> option.</p>
+<ul>
+<li>
+<p>Using this approach does take some planning. It requires that the items that have this label applied have the AssetID (SharePoint and OneDrive) populated by the user when they apply the label, or in the case of Exchange, have a consistent set of Keywords present in the email.</p>
+</li>
+<li>
+<p>Your organization may have other unique properties that you already apply to the documents related to your event type. For example, you may have an engagement number or contract number required for these documents.  This can be used in place of the ComplianceAssetID property as long as it is entered in property:value pair format in the AssetID area when you create an event. Content search can be used to find the content that meets these criteria to validate which items will have their retention triggered.</p>
+</li>
+<li>
+<p>Because the labels are associated with event types, and the events you create are what trigger the retention, it is important to understand that the keywords and Asset ID values specified are what uniquely identify which set of labeled items the system should trigger the retention period on.</p>
+</li>
+<li>
+<p>It is important to understand that if you do not specify an asset ID or keywords for an event, all content with a retention label of that event type will have its retention period triggered by the event.</p>
+</li>
+<li>
+<p>If you plan to use labels that will trigger based on events, we highly recommend you consider automating this process. For more information on event types and how to automate this process please read <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/event-driven-retention?view=o365-worldwide">Start retention when an event occurs</a>.</p>
+</li>
+</ul>
+<p>There are certain regulations that require strict immutability when it come to the content. While our existing Record capabilities satisfy most of our customer’s needs, we did heard feedback from our highly regulated customers that we need to provide even stricter controls. In response, we have recently introduced a new option under Define Retention Settings when creating a label in Records Management to Mark Items As A Regulatory Record. The restrictions put in place once applied block any modification to the content.</p>
+<ul>
+<li>
+<p>Careful thought and consideration need to go into determining if this is truly needed. Once applied the only actions that are allowed are read, copy, and move within container. Reference this <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/records-management?view=o365-worldwide#compare-restrictions-for-what-actions-are-allowed-or-blocked">table</a> for a full breakdown.</p>
+</li>
+<li>
+<p>Once a regulatory record is applied to content, not even a global administrator, can remove the label.</p>
+</li>
+<li>
+<p>Because of these restrictions and irreversible actions, the option to Mark Items as a regulatory record is not available by default. <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/declare-records?view=o365-worldwide">You will first have to run the commands outline in Declare records by using retention labels</a>. Once available you will also receive a warning when selecting this option.</p>
+</li>
+<li>
+<p>A label that marks content as a regulatory record cannot be applied automatically to content. We also recommend a strong education campaign for those users you publish these labels to.</p>
+</li>
+</ul>
+<p>While if you implement all the recommendations above you are set for a successful deployment of MIG and RM, the process to implement is equally important. We highly recommend a “Crawl-Walk-Run” approach, in which the technology is introduced in stages, focusing on things that cause minimal disruption initially. </p>
+<p>You can also introduce these changes in waves across your organization, focusing on limited sets of end users first and expanding to broader audiences. This will allow you to deploy quickly without causing disruption, and help you get a baseline of user behavior before introducing tight restrictions. It will also help you identify early potential conflicts or compatibility issues between different tools so you can address them before they have significant impact. </p>
+<p>Now that we have covered the different basic to advanced deployment scenarios and best practices, take a minute to make sure you read the rest of this guide to understand how retention and records management integrate with the other compliance solutions and how they complement each other. We also provide you with some important considerations to keep in mind when it comes to your environment and how they may affect your deployment. There are some helpful resources as well that will point you to other articles, blog posts, or videos that provide important context or supplement the documentation for MIG and RM. </p>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>To manage retention policies and labels, you will need to be added to the Compliance Administrator role group or for more targeted permissions, a new or existing role group can be assigned the Retention Management role. You can also grant read-only rights through the View-Only Retention Management role which can be added to a new or existing role group.</p>
+</li>
+<li>
+<p>Those responsible for records management in the organization should be added to the Records Management role group or for a read-only role, add the View-Only Record Management role to a new or existing role group.</p>
+</li>
+<li>
+<p>Important, when creating retention policies and labels, ensure that you are confident in your naming taxonomy.  Once you create a policy or label it cannot be renamed.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide#only-one-retention-label-at-a-time">Only one retention label</a> can be applied to content at any given time. If an item already has a label applied, automated labeling policies will not replace the existing label on the item.</p>
+</li>
+<li>
+<p>When creating a retention label or policy, be aware there is not a test mode or simulation mode as there is when creating a new MIP sensitivity label.</p>
+</li>
+<li>
+<p>Retention labels will only be available for users in Outlook client and Outlook web if their mailboxes have at least 10MB of data in them.</p>
+</li>
+<li>
+<p>Retention policies do not support list items, if you have a need to apply retention to items within lists you must use retention labels.</p>
+</li>
+<li>
+<p>Retention policies with specific inclusions or exclusions are subject to <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-retention-policies?view=o365-worldwide#a-policy-with-specific-inclusions-or-exclusions">limits</a> which you should be aware of.</p>
+</li>
+<li>
+<p>If you configure a retention policy with specific includes and then remove the last one, the configuration reverts to All for the location. Make sure this is the configuration that you intend before you save the policy.</p>
+</li>
+<li>
+<p>When considering applying retention or deletion policies to Teams channel messages, it is important to remember that private channel conversations are not included. Reactions to Teams messages are also not included.</p>
+</li>
+<li>
+<p>To retain content associated with a Team created from a Microsoft 365 group that is stored in the respective SharePoint site, a separate policy must also be applied to the related Microsoft 365 Group location.</p>
+</li>
+<li>
+<p>To retain email messages for Yammer you will also need a retention policy that applies to the Microsoft 365 groups location. You will also need a policy that targets the related SharePoint site or users OneDrive locations to retain the files shared in Yammer messages.</p>
+</li>
+<li>
+<p>When using retention policies for SharePoint sites, the settings do not apply to organization structures, system lists, or other items used to manage the system.</p>
+</li>
+<li>
+<p>Yammer items are retained and deleted for community messages and private messages but not reaction emoticons.</p>
+</li>
+<li>
+<p>Data Connectors can allow for the archival of third-party data which is stored in a users’ Exchange Online mailbox and can have retention and records management applied to that data. (more here)</p>
+</li>
+</ul>
+<h3 id="helpful-resources">Helpful Resources<a class="headerlink" href="#helpful-resources" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>This <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide#compare-capabilities-for-retention-policies-and-retention-labels">list of retention policy and retention label capabilities</a> can help you determine whether to use a retention policy or retention label to meet your requirements.</p>
+</li>
+<li>
+<p>It is important to understand the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/what-is-stored-in-exo-mailbox?view=o365-worldwide">content that can be stored in an Exchange Online mailbox</a> and the impact a retention policy applied to a mailbox may have on that data.  It is also important to note that not all data will be preserved when a policy is applied at the mailbox level, such as Teams or Skype data. Those require their own policy specific to that workload.</p>
+</li>
+<li>
+<p>When content in an Exchange Online (EXO) mailbox is modified in some way and there is a retention policy targeting that mailbox or a label applied to the email, the original item is stored in a special location called the Recoverable Items folder for the mailbox. Where it is goes depends on the action taken and that is why we encourage you to have a good understanding of how the <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder">Recoverable items folder in Exchange Online</a> works.</p>
+</li>
+<li>
+<p>This list of <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/archiving-third-party-data?view=o365-worldwide#third-party-data-connectors">Third-party data connectors</a> provides a table which indicates which third-party data can have retention and records management applied to it.</p>
+</li>
+<li>
+<p>SharePoint Online also has a special location to store items subject to retention called the Preservation Hold Library. There are also a 1st stage and 2nd stage recycle bin that come into play. To learn more about what happens to an item that someone deletes or reaches the end of its retention or deletion period, read <a href="https://techcommunity.microsoft.com/t5/microsoft-security-and/lifecycle-of-an-item-in-sharepoint-where-does-it-go/ba-p/1751228">Lifecycle of an item in SharePoint: Where does it go</a>?</p>
+</li>
+<li>
+<p>In the scenario where more than one retention policy and label may be applied to content, it is important to understand the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide#the-principles-of-retention-or-what-takes-precedence">principles of retention</a> to gain insight into the outcome.</p>
+</li>
+<li>
+<p>Read U<a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/auto-apply-retention-labels-scenario?view=o365-worldwide">se retention labels to manage document lifecycles</a> to understand how to leverage SharePoint information architecture to automatically apply retention labels to content.</p>
+</li>
+<li>
+<p>When targeting SharePoint locations for auto-apply labels, only the pre-defined managed properties are supported in the KQL query. See the list of <a href="https://docs.microsoft.com/en-us/SharePoint/technical-reference/crawled-and-managed-properties-overview">crawled and managed properties in SharePoint server</a>.</p>
+</li>
+<li>
+<p>Now that you can <a href="https://docs.microsoft.com/en-us/MicrosoftTeams/tmr-meeting-recording-change">Use OneDrive for Business and SharePoint for Teams meeting recordings</a> we have added support for you to use our automatic labeling capabilities to apply retention periods or immutability to those files. Read our <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-retention-labels-automatically?view=o365-worldwide#microsoft-teams-meeting-recordings">online documentation</a> for instructions regarding those recordings.</p>
+</li>
+<li>
+<p>You can use the steps for <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/file-plan-manager?view=o365-worldwide#import-retention-labels-into-your-file-plan">import retention labels into your file plan</a> to guide you on how to map your existing retention schedule to the template to import into our Records Management solution.</p>
+</li>
+<li>
+<p>For a deeper understanding of the new Regulatory Record label for records management you can check out this <a href="https://techcommunity.microsoft.com/t5/video-hub/manage-regulatory-records-in-a-defensible-and-immutable-way-with/m-p/1688007">video</a>.</p>
+</li>
+<li>
+<p>While this guide focuses on the administrator activities for deployment, it is important to also train your end users to drive adoption. Use <a href="../../enduser/retention/">End User Training for Retention Labels in M365</a> as a good starting point.</p>
+</li>
+</ul>
+
+    <!-- Last update of source file -->
+    
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/microsoft/ComplianceCxE/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://aka.ms/MIPC/AskMIPTeam" target="_blank" rel="noopener" title="aka.ms" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../scripts/extlinks.js"></script>
+      
+        <script src="../../scripts/cookie-consent.js"></script>
+      
+        <script src="../../scripts/consent-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3981 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/ComplianceCxE/playbooks/service-side-auto-labeling/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../sourceCodePlaybook/">
+      
+      
+      <link rel="icon" href="../../img/scm-shield.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>🆕 Service Side Auto-labeling - Microsoft Purview Customer Experience Engineering (CxE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/cookie-consent.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Analytics via Clarity - https://clarity.microsoft.com/ -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "7uxkeubafp");
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <!-- Meta tag for Google Search Console ownership verification-->
+    <meta name="google-site-verification" content="u3PbXeNid7oDmoMKcK77g3P5k9BUVJpow_pdJIbykow" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#service-side-auto-labeling-playbook" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+      class="md-header__inner md-grid"
+      aria-label="header.title"
+    >
+  
+      <!-- Link to home -->
+      <a
+        href="../.."
+        title="Microsoft Purview Customer Experience Engineering (CxE)"
+        class="md-header__button md-logo"
+        aria-label="Microsoft Purview Customer Experience Engineering (CxE)"
+        data-md-component="logo"
+      >
+        
+  <img src="../../img/scm-shield.png" alt="logo">
+
+      </a>
+  
+      <!-- Button to open drawer -->
+      <label class="md-header__button md-icon" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      </label>
+  
+      <!-- Header title -->
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Microsoft Purview Customer Experience Engineering (CxE)
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+              
+                🆕 Service Side Auto-labeling
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Color palette -->
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+        </form>
+      
+  
+      <!-- Site language selector -->
+      
+  
+      <!-- Button to open search modal -->
+      
+  </header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  Notes from the Field
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dag/" class="md-tabs__link">
+          
+  
+  DAGs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Playbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jumpstarts/" class="md-tabs__link">
+          
+  
+  Jump Starts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enduser/sensitivity/" class="md-tabs__link">
+          
+  
+  End User Training
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../webinars/" class="md-tabs__link">
+          
+  
+  Webinars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sbd/" class="md-tabs__link">
+          
+  
+  Scenario Based Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../previews/" class="md-tabs__link">
+          
+  
+  Previews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Microsoft Purview Customer Experience Engineering (CxE)" class="md-nav__button md-logo" aria-label="Microsoft Purview Customer Experience Engineering (CxE)" data-md-component="logo">
+      
+  <img src="../../img/scm-shield.png" alt="logo">
+
+    </a>
+    Microsoft Purview Customer Experience Engineering (CxE)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/ComplianceCxE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/ComplianceCxE
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Stop Shop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/aed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management/Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes from the Field
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes from the Field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP/DLP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP/DLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/mip-dlp-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Creating IP and DLP Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/DLP-policy-externalshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preventing external sharing with DLP policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/SPOblockUpload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocking upload of files with higher sensitivity label to SPO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/audit-log-management-activity-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Purview Audit (Premium) Log Activities via the O365 Management API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/ComplianceEdu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance in K-12 Education
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DAGs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DAGs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mcca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Compliance Configuration Analyzer (MCCA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/DLPMigrationAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP Migration Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/aed-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/ir-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management and Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mig-rm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/mip-dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection and Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dag/dag-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Information Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mip-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIP Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-labeling-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-Labeling Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mip-service-auto-labeling-in-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIP Service Auto-Labeling in depth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-information-in-sharepointonedrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Information in SharePoint/OneDrive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-information-in-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Information in Exchange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-for-configuring-service-side-auto-labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements for configuring Service-side Auto-labeling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-mip-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a MIP auto-labeling policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a MIP auto-labeling policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-publish-sensitivity-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and publish sensitivity labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-an-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create an auto-labeling policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-simulate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Simulate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-refine-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Refine Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-enforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Enforce
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-labeling-use-cases-from-our-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto labeling use cases from our customers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-scenarios-for-protecting-sensitive-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard scenarios for protecting sensitive information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard scenarios for protecting sensitive information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-protecting-payment-information-of-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Protecting payment information of customers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-complying-with-hippa-regulations-on-health-care-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Complying with HIPPA regulations on health care data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-protecting-personal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Protecting personal data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reports
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-finetune-for-false-positives" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I finetune for false positives?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-do-if-i-have-over-1-million-matched-files-and-cannot-enforce-my-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-changing-label-protections-affect-auto-labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does changing label protections affect auto-labeling?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-if-i-need-to-change-my-label-schema-after-enforcing-an-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens if I need to change my label schema after enforcing an auto-labeling policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-simulation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is simulation mode?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-i-turn-on-a-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens when I turn on a policy?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abbreviations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abbreviations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sourceCodePlaybook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting Source Code Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Loss Prevention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teamsdlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etr2dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy DLP Policies (ETR) to DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Communication Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fsicc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://aka.ms/mipc/mipcOSS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💬 Submit CxE Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Jump Starts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jump Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Lifecycle Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auto-apply Labels
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Auto-apply Labels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/kql-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KQL Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adaptive Policy Scopes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adaptive Policy Scopes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/adaptive-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    End User Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            End User Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/sensitivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/retention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retention Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/dlpenduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP User Education & User Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Webinars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webinars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Scenario Based Demos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scenario Based Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E01 - Series Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E02 - Data Discovery Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E03 - Security vs Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E04 - AIP Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E05 - Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E06 - Label Behaviors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E07 - Container Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E08 - Client-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E09 - Service-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10 - MEM/Intune and MIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11 - MEM/Intune and MIP Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/SBDinPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 SBD in PDF  - Summary of SBD in pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Previews
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Previews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../previews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join Private Previews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mip-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIP Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-labeling-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-Labeling Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mip-service-auto-labeling-in-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIP Service Auto-Labeling in depth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-information-in-sharepointonedrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Information in SharePoint/OneDrive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-information-in-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protecting Sensitive Information in Exchange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-for-configuring-service-side-auto-labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements for configuring Service-side Auto-labeling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-mip-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a MIP auto-labeling policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a MIP auto-labeling policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-publish-sensitivity-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and publish sensitivity labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-an-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create an auto-labeling policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-simulate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Simulate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-refine-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Refine Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-enforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Enforce
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-labeling-use-cases-from-our-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto labeling use cases from our customers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-scenarios-for-protecting-sensitive-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard scenarios for protecting sensitive information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard scenarios for protecting sensitive information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-protecting-payment-information-of-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Protecting payment information of customers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-complying-with-hippa-regulations-on-health-care-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Complying with HIPPA regulations on health care data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-protecting-personal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Protecting personal data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reports
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-finetune-for-false-positives" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I finetune for false positives?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-do-if-i-have-over-1-million-matched-files-and-cannot-enforce-my-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-changing-label-protections-affect-auto-labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does changing label protections affect auto-labeling?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-if-i-need-to-change-my-label-schema-after-enforcing-an-auto-labeling-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens if I need to change my label schema after enforcing an auto-labeling policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-simulation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is simulation mode?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-i-turn-on-a-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens when I turn on a policy?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abbreviations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abbreviations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+    <!-- Edit button -->
+    
+        <a
+        href="/ComplianceCxE/how-to-contribute/"
+        title="How to Contribute"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18h-2v-2h2v2m0-3h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5m9-3c0 5.18-3.95 9.45-9 9.95v-2.01c3.95-.49 7-3.86 7-7.94s-3.05-7.45-7-7.94V2.05c5.05.5 9 4.77 9 9.95M11 2.05v2.01c-1.46.18-2.8.76-3.91 1.62L5.67 4.26C7.15 3.05 9 2.25 11 2.05M4.06 11H2.05c.2-2 1-3.85 2.21-5.33L5.68 7.1A7.902 7.902 0 0 0 4.06 11M11 19.94v2.01c-2-.2-3.85-.99-5.33-2.21l1.42-1.42c1.11.86 2.45 1.44 3.91 1.62M2.05 13h2.01c.18 1.46.76 2.8 1.62 3.91l-1.42 1.42A10.013 10.013 0 0 1 2.05 13Z"/></svg>
+        </a>        
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/edit/public/docs/playbooks/service-side-auto-labeling.md"
+        title="edit.link.title"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+        </a>
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A⚠%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20tracking%0A%0APage%20Path%3A%20[https://microsoft.github.io/ComplianceCxE/playbooks/service-side-auto-labeling/](https://microsoft.github.io/ComplianceCxE/playbooks/service-side-auto-labeling/)"
+        title="Submit Feedback as an Issue"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+    
+
+    <!--
+        Hack: check whether the content contains a h1 headline. If it
+        doesn't, the page title (or respectively site name) is used
+        as the main headline.
+    -->
+    
+
+    <!-- Markdown content -->
+    <h1 id="service-side-auto-labeling-playbook">Service-side Auto-Labeling Playbook<a class="headerlink" href="#service-side-auto-labeling-playbook" title="Permanent link">⚓︎</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>Microsoft Information Protection (MIP) is a built-in, intelligent, unified, and extensible solution to protect sensitive data across your enterprise – in Microsoft 365 cloud services, on-premises, third-party SaaS applications, and more. MIP provides a unified set of capabilities to know your data, protect your data, and protect against data loss across Microsoft 365 apps (e.g., Word, PowerPoint, Excel, Outlook) and services (e.g., Microsoft Teams, SharePoint, and Exchange).</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture1.png"/> 
+    <figcaption>Figure 1: MIP life cycle</figcaption>
+</figure>
+
+<p>Some of the key MIP capabilities include Sensitive information types (SIT), Trainable classifiers, Data classification, Sensitivity labels, Data loss prevention, Endpoint data loss prevention etc. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information: <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/information-protection?view=o365-worldwide">Microsoft Information Protection in Microsoft 365 - Microsoft 365 Compliance | Microsoft Docs</a></p>
+</div>
+<h2 id="mip-overview">MIP Overview<a class="headerlink" href="#mip-overview" title="Permanent link">⚓︎</a></h2>
+<p>The foundation of MIP is the ability to classify data by our Data Classification Service, please see the MIP constellation below to view how the MIP functionalities all work together.  </p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture2.png"/> 
+    <figcaption>Figure 2: How MIP functionalities work together</figcaption>
+</figure>
+
+<p>Identifying and classifying sensitive items that are under your organization's control is the first step in the Information Protection discipline. Foundational to Microsoft are its classification capabilities—from out-of-the-box sensitive information types to machine learning trainable classifiers to automatically finding and classifying sensitive content at scale. Sensitive Information Types are pattern-based classifiers which detect sensitive information like social security, credit card or bank account numbers within a tenant, and help customers to identify, evaluate, and protect their data. Data Classification Service and specifically Sensitive Information Types allow customers to define and identify what information is considered sensitive in their environments. Once you identify what sensitive content is important to you, you can leverage this data classification across your Microsoft 365 Compliance features including, but not limited to: Data Loss Prevention, Communication Compliance, Insider Risk Management, Auto-Labeling, Retention, and Sensitivity Labels. </p>
+<p>We announced several key enhancements to the intelligence and built-in capabilities of MIP across Microsoft 365 applications and services. These capabilities help organizations reduce the number of false positives as they accurately classify ever-increasing amounts of data. These capabilities also increase the coverage of classified data as they go across Microsoft 365 services and workloads.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information: <a href="https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-information-protection-announcing-enhanced-automatic/ba-p/2871144">Microsoft Information Protection: Announcing Enhanced Automatic Classification Capabilities! - Microsoft Tech Community</a>.</p>
+</div>
+<p>Per the scope of this playbook, we’ll focus on auto-labeling overview with some basic understanding of the capabilities:</p>
+<p>Sensitivity labels are at their basic level a tag, that is customizable, persistent, accessible to applications, and visible to users. Labels once applied to documents and email become the basis for enforcing data protection policies throughout the tenants’ digital estate. When a label is applied to a file or email it is persisted as document metadata. When a label is applied to a SharePoint site or OneDrive for business the label persists as container metadata.</p>
+<h2 id="auto-labeling-overview">Auto-Labeling Overview<a class="headerlink" href="#auto-labeling-overview" title="Permanent link">⚓︎</a></h2>
+<p>There are multiple methods for automatically applying a label to emails and documents based on their content in Microsoft 365, two of the key ones are:</p>
+<p><strong>Default SharePoint document library labels:</strong> When SharePoint is enabled for sensitivity labels, you can configure a default label for document libraries. Then, any new files uploaded to that library, or existing files edited in the library will have that label applied if they don't already have a sensitivity label, or they have a sensitivity label but with lower priority.</p>
+<p><strong>Label API:</strong> Label API is a pay per use API that can label up to 75k files a day. It can be used to override manual labeled files.</p>
+<p><strong><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-office-apps?view=o365-worldwide">Client-side auto-labeling:</a></strong> Client-side auto-labeling happens on the client workstation as the user creates or edits a document or email using Word, Excel, PowerPoint, Outlook, and Office web applications (OWA). Depending on the content detected, the label is applied automatically or recommended to the users based on the properties of the label. A default label can also be assigned to documents and emails. This form of client-side labeling does not evaluate document content based on conditions defined on a global policy, but it is based on properties defined for each label.</p>
+<p><strong>Service-side auto-labeling:</strong> Service-side auto-labeling is sometimes referred to as <em>auto-labeling for data at rest and data in transit</em>. Unlike client-side auto-labeling, service side auto labeling does not depend on the client to analyze the document content while it is being created. Instead, service-side auto-labeling reviews content that is stored (at-rest) in SharePoint or OneDrive document libraries, or that is "in-flight" or being sent within Exchange. For instance, when a message is submitted to transport. All policy review and application are done within the service. Service-side auto-labeling policies are created and configured from the Information Protection section of the Compliance Center under the Auto-labeling policy tab. Auto-labeling policies don't support recommended labeling because the user doesn't interact with the labeling process. Instead, the administrator runs the policies in simulation mode to help ensure the correct labeling of content before applying the label. </p>
+<p><strong>Comparison of auto-labeling solutions:</strong>
+The table below provides a comparison of Service-side, Client-side, and Defender for cloud apps auto-labeling solutions that can help you identify when a particular solution is appropriate for labeling needs.</p>
+<table>
+<thead>
+<tr>
+<th>Capabilities</th>
+<th>Service side</th>
+<th>Client side</th>
+<th>Defender for cloud apps (MCAS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Application support</strong></td>
+<td>SharePoint, OneDrive and Exchange Online</td>
+<td>Word, PowerPoint, Excel or Outlook Microsoft 365 apps, or AIP plugin for Office</td>
+<td>SharePoint, OneDrive and third-party services supported by Defender for cloud apps</td>
+</tr>
+<tr>
+<td><strong>File types supported</strong></td>
+<td>.docx, .xlsx, .pptx and related formats</td>
+<td>.docx, .xlsx, .pptx and related formats</td>
+<td>.docx, .xlsx, .pptx and related formats, PDF</td>
+</tr>
+<tr>
+<td><strong>Policy scoping</strong></td>
+<td>By site, group or user, admin units</td>
+<td>By label</td>
+<td>By service, site, folder</td>
+</tr>
+<tr>
+<td><strong>Classification options</strong></td>
+<td>Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching Trainable classifiers (in private preview)</td>
+<td>Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers</td>
+<td>Standard Sensitive Info Types; Custom Sensitive Info Types (incl. dictionaries); Exact Data Matching; Trainable Classifiers; Fingerprint; Regular Expression</td>
+</tr>
+<tr>
+<td><strong>Labeling conditions</strong></td>
+<td>Sensitive content; Content is shared; Recipient properties; Sender properties; Email subject; Document title; Attachment extension; Attachment can't be scanned; Attachment is encrypted; Email headers</td>
+<td>Sensitive content in document or email body; Sensitive content in attachment</td>
+<td>Sensitive content; Access level; App;  Content is shared; Creation time; File ID; File type; File owner; MIME type; Parent folder; Quarantine status; Existing sensitivity label; Document title; File extension</td>
+</tr>
+<tr>
+<td><strong>Interaction with users</strong></td>
+<td>Label visible after user opens document</td>
+<td>Automatic labeling: user can override; Recommended label: user can accept or dismiss</td>
+<td>Label visible after user opens document. Content markings are applied on save</td>
+</tr>
+<tr>
+<td><strong>Applied to</strong></td>
+<td>New and existing documents (including simulation mode); New emails</td>
+<td>Content that's created or edited by users</td>
+<td>New and existing documents (file policy); Content being downloaded; Content being uploaded</td>
+</tr>
+<tr>
+<td><strong>Behaviors</strong></td>
+<td>Label is applied; Outbound email is protected; Outbound attachment is protected (Office and PDF documents); Protection is applied to document; Content markings are applied after user opens document and saves it</td>
+<td>Label is applied; Document is protected; Email is protected; Attachment is protected (Office attachment only); Content marking is applied</td>
+<td>Label is applied; Protection is applied; Content markings are applied after user opens document and saves it</td>
+</tr>
+<tr>
+<td><strong>Label external incoming emails</strong></td>
+<td>Yes</td>
+<td>On reply or forward</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Labeling limits</strong></td>
+<td>25k documents labeled per day</td>
+<td>None</td>
+<td>100 documents labeled per day (can be extended upon request)</td>
+</tr>
+</tbody>
+</table>
+<p>For more information on the comparison of client vs. service auto-labeling, we have documentation here: <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically?view=o365-worldwide#compare-auto-labeling-for-office-apps-with-auto-labeling-policies">Automatically apply a sensitivity label to content in Microsoft 365 - Microsoft 365 Compliance | Microsoft Docs</a></p>
+<p><strong>How does client and service side labeling work in different labeling scenarios?</strong>
+A principle we have is that client/end user provided labels always overrides service basedservice-based ones. In addition, label priority is used in determining when and how an automatic label will be applied. The following table lists some common labeling scenarios, the label setting (i.e., auto or recommended label) and the expected outcome or behavior. </p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Label Setting</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content has no label</strong></td>
+<td>Client-side recommendation</td>
+<td>Recommend new label</td>
+</tr>
+<tr>
+<td></td>
+<td>Client-side auto labeling</td>
+<td>Apply new label</td>
+</tr>
+<tr>
+<td></td>
+<td>Service-side auto labeling</td>
+<td>Apply new label</td>
+</tr>
+<tr>
+<td><strong>Content has label manually applied</strong></td>
+<td>Client-side recommendation</td>
+<td>Recommend new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Client-side auto labeling</td>
+<td>No action. Manually applied label takes precedence</td>
+</tr>
+<tr>
+<td></td>
+<td>Service-side auto labeling</td>
+<td>No action. Manually applied label takes precedence</td>
+</tr>
+<tr>
+<td><strong>Content has default label applied (Label policy)</strong></td>
+<td>Client-side recommendation</td>
+<td>Recommend new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Client-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Service-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+<tr>
+<td><strong>Content has default SPO doc library label applied</strong></td>
+<td>Client-side recommendation</td>
+<td>Recommend new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Client-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Service-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+<tr>
+<td><strong>Content has auto label applied</strong></td>
+<td>Client-side recommendation</td>
+<td>Recommend new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Client-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+<tr>
+<td></td>
+<td>Service-side auto labeling</td>
+<td>Apply new label if higher sensitivity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="licensing-requirements">Licensing Requirements<a class="headerlink" href="#licensing-requirements" title="Permanent link">⚓︎</a></h2>
+<p>To understand your licensing requirements and options for MIP, see the Information Protection section from the <a href="https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-sensitivity-labeling">Microsoft 365 licensing documentation</a>. Below is the sensitivity labeling licensing info for your quick reference, however, we encourage you to reference the M365 licensing documentation for up-to-date information.</p>
+<p>For <strong>manual sensitivity labeling</strong>, the following licenses provide user rights:</p>
+<ul>
+<li>
+<p>Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium</p>
+</li>
+<li>
+<p>Enterprise Mobility + Security E3/E5</p>
+</li>
+<li>
+<p>Office 365 E5/A5/E3/A3/F3</p>
+</li>
+<li>
+<p>AIP Plan 1</p>
+</li>
+<li>
+<p>AIP Plan 2</p>
+</li>
+</ul>
+<p>For both <strong>client and service-side automatic sensitivity labeling</strong>, the following licenses provide user rights:</p>
+<ul>
+<li>
+<p>Microsoft 365 E5/A5/G5</p>
+</li>
+<li>
+<p>F5 Compliance</p>
+</li>
+<li>
+<p>F5 Security &amp; Compliance</p>
+</li>
+<li>
+<p>Microsoft 365 E5/A5/G5 Information Protection and Governance</p>
+</li>
+<li>
+<p>Office 365 E5</p>
+</li>
+</ul>
+<p>For <strong>client-side automatic sensitivity labeling only</strong>, the following license provides user rights:</p>
+<ul>
+<li>
+<p>Enterprise Mobility + Security E5/A5/G5</p>
+</li>
+<li>
+<p>AIP Plan 2</p>
+</li>
+</ul>
+<p>To <strong>apply and view sensitivity labels in Power BI and to protect data when it's exported from Power BI to Excel, PowerPoint, or PDF</strong>, the following licenses provide user rights:</p>
+<ul>
+<li>
+<p>Microsoft 365 E5/A5/G5/E3/A3/G3/F1/F3/Business Premium</p>
+</li>
+<li>
+<p>Enterprise Mobility + Security E3/E5</p>
+</li>
+<li>
+<p>AIP Plan 1</p>
+</li>
+<li>
+<p>AIP Plan 2</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>G3 and G5 are the Office 365 services/plans for Government organizations.
+For feature-level licensing requirements please refer to <a href="https://go.microsoft.com/fwlink/?linkid=2139145">Licensing PDF file</a>.</p>
+</div>
+<h2 id="role-requirements">Role Requirements<a class="headerlink" href="#role-requirements" title="Permanent link">⚓︎</a></h2>
+<p>Sensitivity labels from the MIP solution let you classify and protect your organization's data, while making sure that user productivity and their ability to collaborate isn't hindered. Members of your compliance team who will create sensitivity labels need permissions to the Microsoft 365 compliance center.</p>
+<p>By default, <strong>Global Administrators</strong> for your tenant have access to this admin center and can give compliance officers and other people access, without giving them all the permissions of a tenant admin. For this delegated limited admin access, add users to the <strong>Compliance Data Administrator, Compliance Administrator, or Security Administrator</strong> role group.</p>
+<p>Alternatively, using the default roles, you can create a new role group and add either <strong>Sensitivity Label Administrator or Organization Configuration</strong> roles to this group. For a read-only role, use <strong>Sensitivity Label Reader</strong>.</p>
+<p>These permissions are required only to create and configure sensitivity labels and their label policies. They are not required to apply the labels in apps or services. If additional permissions are needed for specific configurations that relate to sensitivity labels, those permissions will be listed in their respective documentation instructions.</p>
+<p>To be able to review matched items we find while in simulation mode (process before deployment that allows you to verify what items we will help you label if you turn on the policy), make sure you have the following permissions:</p>
+<ul>
+<li>
+<p><strong>Content Explorer List viewer:</strong> Membership in this role group allows you to see each item and its location in list view. The <em>data classification list viewer</em> role has been pre-assigned to this role group.</p>
+</li>
+<li>
+<p><strong>Content Explorer Content viewer:</strong> Membership in this role group allows you to view the contents of each item in the list. The data classification content viewer role has been pre-assigned to this role group.</p>
+</li>
+</ul>
+<p>For instructions to add users to the default roles or create your own role groups, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center-permissions?view=o365-worldwide">Permissions in the Microsoft 365 compliance center</a>.</p>
+<p>The basic flow for deploying and applying sensitivity labels:</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture3.png"/> 
+    <figcaption>Figure 3:Labeling flow from admin configuration and end user interaction to protection enforcement</figcaption>
+</figure>
+
+<h2 id="mip-service-auto-labeling-in-depth">MIP Service Auto-Labeling in depth<a class="headerlink" href="#mip-service-auto-labeling-in-depth" title="Permanent link">⚓︎</a></h2>
+<p>Auto labeling is a built-in Microsoft service that triggers off sensitive content found in files in SharePoint Online, OneDrive for Business and emails in Exchange Online. Define what sensitive information you want us to protect using regulatory templates, 200+ out of box sensitive info or custom types, named entities, Exact Data Match and ML models in an auto labeling policy. We will simulate what files are detected that match your auto-labeling policy in our simulation mode, so you can review and be confident in our matches before agreeing to allow us to automatically label those documents.</p>
+<h2 id="protecting-sensitive-information-in-sharepointonedrive">Protecting Sensitive Information in SharePoint/OneDrive<a class="headerlink" href="#protecting-sensitive-information-in-sharepointonedrive" title="Permanent link">⚓︎</a></h2>
+<p>Sensitive files are automatically detected and labeled at rest.</p>
+<ul>
+<li>
+<p>PDF documents and Office files for Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) are supported.</p>
+<ul>
+<li>These files can be auto-labeled at rest before or after the auto-labeling policies are created. Files cannot be auto-labeled if they are part of an open session (the file is open).</li>
+<li>Currently, attachments to list items aren't supported and won't be auto-labeled.</li>
+</ul>
+</li>
+<li>
+<p>Maximum of 25,000 automatically labeled files in your tenant per day. Requests to increase labeling speed can be made via support ticket with business justification and financial impact to Microsoft. Please note that Microsoft has final approval of requests and approved limit increase will take 6-8 weeks to take effect.</p>
+</li>
+<li>
+<p>Maximum of 100 auto-labeling policies per tenant, each targeting up to 100 locations (SharePoint sites or OneDrive individual users or groups) when you specify specific locations by using the Included or Excluded options. If you keep the default configuration of All, this configuration is exempt from the 100 locations maximum.</p>
+</li>
+<li>
+<p>Existing values for modified, modified by, and the date are not changed because of auto-labeling policies—for both simulation mode and when labels are applied.</p>
+</li>
+<li>When the label applies encryption, the <a href="https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner">Rights Management issuer and Rights Management owner</a> is the account that last modified the file. If this account is no longer in Azure Active Directory, the label won't be applied because these values can't be set.</li>
+</ul>
+<h2 id="protecting-sensitive-information-in-exchange">Protecting Sensitive Information in Exchange<a class="headerlink" href="#protecting-sensitive-information-in-exchange" title="Permanent link">⚓︎</a></h2>
+<p>Sensitive emails are automatically detected and labeled in transit/ as they are sent. For Exchange, it does not include emails at rest (mailboxes).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Emails detected in simulation mode will not be labeled when the policy is turned on, as we only label emails in transit and those emails were sent before the policy was enforced.</p>
+</div>
+<ul>
+<li>
+<p>Unlike manual labeling or auto-labeling with Office apps, PDF attachments as well as Office attachments are also scanned for the conditions you specify in your auto-labeling policy. When there is a match, the email is labeled but not the attachment.</p>
+<ul>
+<li>For PDF files, if the label applies encryption, these files are encrypted by using <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide">Office 365 Message Encryption (OME)</a> when your tenant is <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/ome-faq?view=o365-worldwide#are-pdf-file-attachments-supported-">enabled for PDF attachments</a>.</li>
+<li>For these Office files, Word, PowerPoint, and Excel are supported. If the label applies encryption, they are encrypted by using <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/ome?view=o365-worldwide">Office 365 Message Encryption (OME)</a>.</li>
+</ul>
+</li>
+<li>
+<p>If you have Exchange mail flow rules or data loss prevention (DLP) policies that apply IRM encryption: When content is identified by these rules or policies and an auto-labeling policy, the label is applied. If that label applies encryption, the IRM settings from the Exchange mail flow rules or DLP policies are ignored. However, if that label doesn't apply encryption, the IRM settings from the mail flow rules or DLP policies are applied in addition to the label.</p>
+</li>
+<li>
+<p>Email that has IRM encryption with no label will be replaced by a label with any encryption settings when there is a match by using auto-labeling.</p>
+</li>
+<li>
+<p>Incoming email is labeled when there is a match with your auto-labeling conditions. For this outcome to apply to senders outside your organization, the Exchange location must be set to All included and None excluded. If the label is configured for encryption:</p>
+<ul>
+<li>That encryption is always applied when the sender is from your organization.</li>
+<li>By default, that encryption isn't applied when the sender is outside your organization but can be applied by configuring Additional settings for email and specifying a Rights Management owner.</li>
+</ul>
+</li>
+<li>
+<p>When the label applies encryption, the <a href="https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner">Rights Management issuer and Rights Management owner</a> is the person who sends the email. There currently isn't a way to set a Rights Manager owner for all incoming email messages that are automatically encrypted.</p>
+</li>
+</ul>
+<h2 id="requirements-for-configuring-service-side-auto-labeling">Requirements for configuring Service-side Auto-labeling<a class="headerlink" href="#requirements-for-configuring-service-side-auto-labeling" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Simulation mode:<ul>
+<li>Auditing for Microsoft 365 must be turned on. If you need to turn on auditing or you're not sure whether auditing is already on, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/turn-audit-log-search-on-or-off?view=o365-worldwide">Turn audit log search on or off</a>.</li>
+</ul>
+</li>
+<li>To view file or email contents in the source view, you must have the Data Classification Content Viewer role, which is included in the Content Explorer Content Viewer role group, or Information Protection and Information Protection Investigators role groups. Without the required role, you don't see the preview pane when you select an item from the Items to review tab. Global admins don't have this role by default.</li>
+<li>To auto-label files in SharePoint and OneDrive:<ul>
+<li>You have <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files?view=o365-worldwide">enabled sensitivity labels for Office files in SharePoint and OneDrive</a>.</li>
+<li>At the time the auto-labeling policy runs, the file mustn't be open by another process or user. A file that's checked out for editing falls into this category.</li>
+</ul>
+</li>
+<li>
+<p>If you plan to use sensitive information types:</p>
+<ul>
+<li>The sensitive information types you select will apply only to content that's created or modified after these information types are created or modified. This restriction applies to all custom sensitive information types and any new built-in information types.</li>
+<li>To test new custom sensitive information types, create them before you create your auto-labeling policy, and then create new documents with sample data for testing.</li>
+<li>If you plan to use document properties as a condition (Document property is), this option uses SharePoint managed properties. The preparation for DLP policies equally applies for when you use this condition with auto-labeling policies</li>
+</ul>
+</li>
+<li>
+<p>One or more sensitivity labels created and published (to at least one user) that you can select for your auto-labeling policies. For these labels:</p>
+<ul>
+<li>It doesn't matter if the auto-labeling in Office apps label setting is turned on or off, because that label setting supplements auto-labeling policies, as explained in the introduction.</li>
+<li>If the labels you want to use for auto-labeling are configured to use visual markings (headers, footers, watermarks), note that these aren't applied to documents.</li>
+</ul>
+</li>
+<li>If the labels apply encryption<ul>
+<li>When the auto-labeling policy includes locations for SharePoint or OneDrive, the label must be configured for the Assign permissions now setting, and User access to content expires must be set to Never.</li>
+<li>When the auto-labeling policy is just for Exchange, the label can be configured for either Assign permissions now or Let users assign permissions (for the Do Not Forward or Encrypt-Only options). You can't auto-apply a label that's configured to apply S/MIME protection.</li>
+</ul>
+</li>
+</ul>
+<h2 id="creating-a-mip-auto-labeling-policy">Creating a MIP auto-labeling policy<a class="headerlink" href="#creating-a-mip-auto-labeling-policy" title="Permanent link">⚓︎</a></h2>
+<h3 id="step-1-create-and-publish-sensitivity-labels">Step 1: Create and publish sensitivity labels<a class="headerlink" href="#step-1-create-and-publish-sensitivity-labels" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>One or more sensitivity labels <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide">created and published</a> (to at least one user) that you can select for your auto-labeling policies. For these labels:</p>
+<ul>
+<li>
+<p>It does not matter if the auto-labeling in Office apps label setting is turned on or off, because that label setting supplements auto-labeling policies</p>
+</li>
+<li>
+<p>If the labels you want to use for auto-labeling are configured to use visual markings (headers, footers, watermarks), note that these are not applied to documents.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We recommend that you have your label taxonomy and hierarchy defined in a label policy applied to all users to help them get started with manual labeling from the information worker side. </p>
+</li>
+<li>
+<p>[Optional] While it is important to have your label taxonomy mostly defined, this does not include the need to define protection actions like encyrption. Encryption can be added to the label properties after the fact. Since protections are checked every time a document is opened, changes in protections to labels will be enforced. </p>
+</li>
+<li>
+<p>If the labels apply <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide">encryption</a>:
+        - When the auto-labeling policy includes locations for SharePoint or OneDrive, the label must be configured for the <strong>Assign permissions now</strong> setting.
+        - When the auto-labeling policy is just for Exchange, the label can be configured for either <strong>Assign permissions now</strong> or <strong>Let users assign permissions</strong> (for the Do Not Forward or Encrypt-Only options).</p>
+<ul>
+<li>In defining your labels, you can set up in-app auto-labeling recommendations, where you define what sensitive information you are concerned about, and information workers will see a banner that says that recommends them to label this document with that label if your defined sensitive information is found in the document they are working with. </li>
+<li>You can define a default label in your label policy that is automatically applied to files and emails in use that have not been manually labeled. </li>
+</ul>
+</li>
+</ul>
+<p>You can easily get started with all things labeling by using our easy set-up of default label schema, label policy, and auto-labeling policy.</p>
+<ol>
+<li>
+<p>In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149">Microsoft 365 compliance center</a>, navigate to sensitivity labels:</p>
+<ul>
+<li><strong>Solutions</strong> &gt; <strong>Information protection</strong></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't immediately see this option, first select <strong>Show all</strong>.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Overview</strong> tab you should see the following banner:</p>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
+    <figcaption>Figure 4: Banner for easy set-up of default policies located on the MIP overview page</figcaption>
+</figure></p>
+</li>
+<li>
+<p><strong>Activate recommended features</strong> to set up our default policy configurations designed to protect credit card numbers. 
+You will only see this option if you have not set up labeling, in-app labeling recommendation, auto-labeling policy, Teams DLP, or DLP for devices. If you have already set up an auto-labeling policy, you will not be shown this banner but can configure our default auto-labeling policy on your own: <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials?view=o365-worldwide#service-side-auto-labeling">Learn about the default labels and policies for Microsoft Information Protection - Microsoft 365 Compliance | Microsoft Docs</a></p>
+</li>
+</ol>
+<h3 id="step-2-create-an-auto-labeling-policy">Step 2: Create an auto-labeling policy<a class="headerlink" href="#step-2-create-an-auto-labeling-policy" title="Permanent link">⚓︎</a></h3>
+<p>Get started with auto-labeling with our default auto-labeling policy protecting credit card numbers on SharePoint, OneDrive, and Exchange</p>
+<p><strong>If you already have your labels set up but have not create any auto-labeling policies</strong></p>
+<ol>
+<li>
+<p>In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149">Microsoft 365 compliance center</a>, navigate to sensitivity labels:</p>
+<ul>
+<li><strong>Solutions</strong> &gt; <strong>Information protection</strong></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't immediately see this option, first select <strong>Show all</strong>.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Overview</strong> tab you should see the following banner:</p>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture4.png"/> 
+    <figcaption>Figure 5: Banner for easy set-up of default policies located on the MIP overview page</figcaption>
+</figure></p>
+</li>
+<li>
+<p><strong>Activate recommended features</strong> to set up our default policy configurations designed to protect credit card numbers.</p>
+</li>
+<li>
+<p>You will be asked to pick two of your existing labels to use in the auto-labeling policy in simulation mode. We recommend using a “Confidential” like sublabel for both, with the higher count auto-labeling credit card policy having more protections than the low count. </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have already set up an auto-labeling policy you will not be shown this banner but can configure our default auto-labeling policy on your own:
+<a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/mip-easy-trials?view=o365-worldwide#service-side-auto-labeling">Learn about the default labels and policies for Microsoft Information Protection - Microsoft   365 Compliance | Microsoft Docs</a>.</p>
+</div>
+<p><strong>Extend DLP policies covering Exchange to auto-labeling</strong> </p>
+<ol>
+<li>
+<p>In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149">Microsoft 365 compliance center</a>, navigate to sensitivity labels:</p>
+</li>
+<li>
+<p><strong>Solutions</strong> &gt; <strong>Data Loss Prevention</strong> </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't immediately see this option, first select <strong>Show all</strong>.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Overview</strong> tab you should see the following banner:</p>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture5.png"/> 
+    <figcaption>Figure 6: Extend Exchange Online DLP policy to auto-labeling</figcaption>
+</figure></p>
+</li>
+<li>
+<p>Extend your Exchange DLP policy to an auto-labeling policy in simulation mode.</p>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture6.png"/> 
+    <figcaption>Figure 7: Select your existing Exchange Online DLP policy to convert to auto-labeling simulation</figcaption>
+</figure></p>
+</li>
+</ol>
+<p><strong>Create your own auto-labeling policy</strong></p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture7.png"/> 
+    <figcaption>Figure 8: Different types of classifiers that can be used in auto-labeling policy: sensitive information types, named entities, exact data match, optical character recognition, trainable classifiers, credentials, and context based classification</figcaption>
+</figure>
+
+<p>You want to protect the sensitive data in your organization. What is sensitive in your organization? Start with our sensitive information types. We have 200+ out of the box sensitive information types that we help detect in your organization. Check content explorer to see which sensitive information types we are finding. </p>
+<p>So, what information is there? Do you detect a lot of sensitive information that needs to be protected with labeling?</p>
+<p>If you are unsure of what data to protect or how to get started, look at our provided Financial, Medical and Health, and Privacy templates. These provide a great baseline of sensitive information types to protect given different regulations and industries. You can customize these templates to add more sensitive information types you are concerned with.</p>
+<p>Named entities recognition (NER) allows you to be able to identify entities like physical address, names, and more with other sensitive information types to be more confident that it is something you are looking for. This works great to reduce false positives.</p>
+<p>As you get more advanced or have more business use cases, you can also explore things like exact data matching which looks at your specific customer data that you are passing in detects and labels for this customer's information. This is a more complex process that requires more time to configure and execute but can bring your false positive rates to near zero allowing you to be more assertive with auto-labeling policies. </p>
+<p>Another option is trainable classifiers where we use machine learning, to understand what content in your organization looks like from business files like resumes to source code and protect that information.</p>
+<p>These different classifier types are not mutually exclusive to each other. You can and in fact we encourage you to try out combinations of different types of classifiers. For example, you can use a sensitive information type (SIT) for PII together with named entity recognition for person's names in a policy trying to detect large amounts of identity information in a table, or you can use trainable classifiers together with a custom SIT to detect invoices above a certain amount. You can also use EDM as an exclusion to a rule based on a regular SIT to avoid identifying employee PII as potential customer PII, etc.</p>
+<p>Our advanced classifiers allow you to protect found credentials in files and intellectual property and other important business documents with trainable classifiers. </p>
+<p>In addition</p>
+<ol>
+<li>
+<p>Pick your scope:</p>
+<ul>
+<li>
+<p><strong>Option 1:</strong> ALL – SharePoint sites, OneDrive users/groups and Email users</p>
+</li>
+<li>
+<p><strong>Option 2</strong>: Subset of sites or accounts – can use PowerShell for longer lists</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select a label to use for auto-labeling, but note:</p>
+<ul>
+<li>
+<p>This label will not go into effect until you turn on your policy from simulation mode.</p>
+</li>
+<li>
+<p>You can always simulate the policy. Check the matches, and then go back and edit the label used for the policy. </p>
+</li>
+<li>
+<p>The protections of the label you select will then apply to every document automatically labeled. </p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-3-simulate">Step 3: Simulate<a class="headerlink" href="#step-3-simulate" title="Permanent link">⚓︎</a></h3>
+<p>After 12 hours, you can analyze the results of our auto-labeling simulation. You will be shown files and emails that match your auto-labeling policy configurations that would be labeled if your policy was turned on. Review these matches to make sure they match with what you are expecting. Try simulating different variations of your policies (higher/lower confidence, different combination of conditions, higher/lower instance counts) to find the right configuration for your organization.</p>
+<h3 id="step-4-refine-policy">Step 4: Refine Policy<a class="headerlink" href="#step-4-refine-policy" title="Permanent link">⚓︎</a></h3>
+<p><strong>Fine tuning your policy</strong></p>
+<p>If you are seeing high amounts of false positives, fine-tune your policy with the following recommendations:</p>
+<ul>
+<li>
+<p>Increase the thresholds of sensitive information types found to determine severity</p>
+<ul>
+<li>It is okay to use different thresholds for individual classifiers (higher or lower the instance counts)</li>
+</ul>
+</li>
+<li>
+<p>Understand confidence levels and how they are defined</p>
+<ul>
+<li>Low confidence may be good!</li>
+<li>Try using a low confidence with high threshold or a higher confidence level</li>
+</ul>
+</li>
+<li>
+<p>Group like information types together </p>
+<ul>
+<li>Combine multiple SITs to detect combinations that matter (e.g. a Social Security Number on its own may not be relevant without a person associated, but an SSN together with an account number, a person's name or a medical condition may be).</li>
+<li>Switch from looking for “Any of these” to “All of these”</li>
+</ul>
+</li>
+<li>
+<p>Use Boolean operators to combine groups</p>
+<ul>
+<li>Look for SSN AND Driver’s License instead of SSN OR driver’s License </li>
+</ul>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
+    <figcaption>Figure 9: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
+</figure></p>
+</li>
+<li>
+<p>Leverage our trainable classifiers to help lower false positives</p>
+</li>
+<li>Combine different conditions: mix content contains sensitive info type with other contextual conditions like document is created by or document is shared externally</li>
+</ul>
+<p><strong>Advanced refinement</strong>
+More advanced refinement strategies if the above don’t work:</p>
+<ul>
+<li>
+<p>Switch this policy to be for client-side auto labeling, since false positives are much less problematic with client-side since the user can take care of the "mistake" with one click</p>
+</li>
+<li>
+<p>Use EDM to eliminate false positives by matching only known sensitive information (ex. actual customer PII)</p>
+</li>
+<li>
+<p>Clone and modify the built-in SITs to include additional conditions, such as keywords, more stringent matching of values or stronger formatting requirements. </p>
+</li>
+<li>
+<p>Modify a custom SIT to exclude known prefixes, suffixes or patterns. For example, a custom SIT to detect phone numbers might trigger for every email if your email signatures or document headers include your offices phone numbers. Excluding the sequences common to your company's phones as prefixes to your custom SIT can prevent the rule from triggering for every email or document. </p>
+</li>
+<li>
+<p>Include additional dictionary-based SITs as conditions to narrow down the matches to those that talk about the relevant topics. ex. a rule for matching patient diagnostics may be enhanced by requiring the presence of words like diagnostic, diagnosis, condition, symptom, patient, etc.</p>
+</li>
+</ul>
+<h3 id="step-5-enforce">Step 5: Enforce<a class="headerlink" href="#step-5-enforce" title="Permanent link">⚓︎</a></h3>
+<p>When you are confident in the matches you see in simulation, turn on your policy from simulation mode so that we can start auto labeling the files and emails in your organization. You can see what’s getting labeled through activity explorer. </p>
+<h2 id="auto-labeling-use-cases-from-our-customers"><strong>Auto labeling use cases from our customers</strong><a class="headerlink" href="#auto-labeling-use-cases-from-our-customers" title="Permanent link">⚓︎</a></h2>
+<p>New scenarios leveraging contextual conditions</p>
+<ol>
+<li>
+<p>Migrating from a 3rd party to Microsoft labels
+If your third party like Titus write their labels into document properties, you can leverage Document property is to read those 3rd party labels and automatically map it to your Purview sensitivity labels. </p>
+<p>How to configure:</p>
+<p>This predicate requires additional configuration before the policy can even be created if used on OneDrive or SharePoint locations. Please refer to this DLP documentation: Create a DLP policy to protect documents - Microsoft Purview (compliance) |     Microsoft Learn to learn how to create a managed property to use for “Document property is”. 
+This predicate can be configured both in advanced or common rules. </p>
+<p>How to test:
+We recommend following the above steps to ensure proper configuration and testing this predicate first in DLP with a small subset of files to make sure it’s accurately detecting the document property you’re looking for. Then test with auto-labeling in     simulation to verify the results match. </p>
+<p>Limitations:
+After the managed schema is configured as a property in SharePoint and OneDrive, the policy will only be able to detect content that’s been indexed (the content is newly uploaded or if that content is old but edited after managed schema was configured).
+Custom document properties aren’t crawled for labels with encryption. Remove the encryption and the crawled property will show up. 
+There is an option to re-index a whole site, but this can cause massive load on the search system and does not have a defined SLA for re-indexing as SharePoint and OneDrive will re-index files as they can to ensure the system isn’t throttled. </p>
+</li>
+<li>
+<p>Apply a default label to files at rest
+Leverage the contextual condition of “File extension is” to label all labelable files at rest. In addition, you can combine with “file size is greater than” to cover files that are too large for classification (we can classify up to 150 MB) or you can use this to protect spreadsheets or PowerPoint decks sent externally.</p>
+<p>How to configure:</p>
+<p>Applies label to documents and email attachments that have specific file extensions. This predicate can be configured both in advanced or common rules. </p>
+<p>How to test:
+You can scope to all file types applicable to extend default labels for data at rest.
+In simulation mode, you can customize columns to show file type for testing. </p>
+<p>Limitations:
+Note that SharePoint and OneDrive will only label files with docx, .xlsx, .pptx, or .pdf  extensions. Additional file extensions you include will only apply to attachments.</p>
+</li>
+<li>
+<p>Label and protect large files
+Leverage the contextual condition of “Document size equals or is greater than” to ensure large files are protected when sent externally or if they can’t be classified due to size limitation.</p>
+<p>How to configure:</p>
+<p>Applies label to Word, Excel, PowerPoint, and PDF files that are a specific size or larger. If you added the condition 'Content contains &gt; Sensitive info types', the label will only be applied to files that are 150 MB or less.</p>
+<p>How to test:
+You can use auto-labeling to:
+-   label large files that can’t be classified (150MB or greater) 
+-   large files sent externally
+-   large files with detected sensitive information types</p>
+</li>
+<li>
+<p>Protect files pertaining to specific projects or that contain the word Confidential
+Leverage the contextual condition of “Document name contains words or phrases” to protect and label all documents that mention HR/ a specific department or project or include the word Confidential.</p>
+<p>How to configure:</p>
+<p>Applies label to attachments or documents where the file name contains any of the words or phrases you specify.</p>
+<p>How to test:
+You can use auto-labeling to:
+-   label all files that have the word confidential or other label name 
+-   label files that mention specific project names</p>
+</li>
+<li>
+<p>Automatically label files created by C-suite or someone who’s submitted their notice
+Leverage the contextual condition of “Document created by” to protect and label all documents created by select users. This condition is only available in advanced rules.</p>
+<p>How to test:
+You can use auto-labeling to:
+-   label all files created by someone in the C-Suite
+-   label files created by someone who has submitted their notice</p>
+</li>
+</ol>
+<h2 id="standard-scenarios-for-protecting-sensitive-information">Standard scenarios for protecting sensitive information<a class="headerlink" href="#standard-scenarios-for-protecting-sensitive-information" title="Permanent link">⚓︎</a></h2>
+<h3 id="scenario-1-protecting-payment-information-of-customers">Scenario 1: Protecting payment information of customers<a class="headerlink" href="#scenario-1-protecting-payment-information-of-customers" title="Permanent link">⚓︎</a></h3>
+<p>A lot of customers have an interest in protecting their financial data surrounding payment data to comply with financial regulations. This usually entails a combination of bank account numbers, PII (Personal Identifiable Information) of customers, credit card numbers and account information. </p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture9.png"/> 
+    <figcaption>Figure 10: Out of the box financial templates you can use for auto-labeling</figcaption>
+</figure>
+
+<p><strong>Recommendation</strong></p>
+<ul>
+<li>
+<p>Use our U.S. Gramm-Leach Bliley Act (GLBA) Enhanced template</p>
+</li>
+<li>
+<p>On ALL locations (SharePoint, OneDrive, Exchange)</p>
+</li>
+<li>
+<p>Label guidance on which to apply:</p>
+<ul>
+<li>Label published to all users</li>
+<li>Confidential Label Priority (2nd highest parent label)</li>
+<li>Internal Only</li>
+</ul>
+</li>
+</ul>
+<h3 id="scenario-2-complying-with-hippa-regulations-on-health-care-data">Scenario 2: Complying with HIPPA regulations on health care data<a class="headerlink" href="#scenario-2-complying-with-hippa-regulations-on-health-care-data" title="Permanent link">⚓︎</a></h3>
+<p>Another field that we’ve seen a lot of interest in protecting is health care data information to comply with HIPPA regulations.</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture10.png"/> 
+    <figcaption>Figure 11: Out of the box healthcare templates you can use for auto-labeling and the grouping of sensitive information types they protect </figcaption>
+</figure>
+
+<p><strong>Recommendation</strong></p>
+<ul>
+<li>
+<p>Use our U.S. Health Insurance Act (HIPPA) Enhanced template</p>
+</li>
+<li>
+<p>On ALL locations (SharePoint, OneDrive, Exchange)</p>
+</li>
+<li>
+<p>Label guidance on which to apply:</p>
+<ul>
+<li>Label published to all users</li>
+<li>Confidential Label Priority (2nd highest parent label)</li>
+<li>Internal Only</li>
+</ul>
+</li>
+</ul>
+<h3 id="scenario-3-protecting-personal-data">Scenario 3: Protecting personal data<a class="headerlink" href="#scenario-3-protecting-personal-data" title="Permanent link">⚓︎</a></h3>
+<p>Similarly, we have seen an interest in protecting the personal data of both customers and employees. We have auto-labeling templates to protect U.S. Personally Identifiable Information (PII) Data, General Data Protection Regulation (GDPR), and more.</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture11.png"/> 
+    <figcaption>Figure 12: Out of the box privacy templates you can use for auto-labeling</figcaption>
+</figure>
+
+<p><strong>Recommendation</strong></p>
+<ul>
+<li>
+<p>Use our U.S. PII Data Enhanced or GDPR Enhanced template</p>
+</li>
+<li>
+<p>On ALL locations (SharePoint, OneDrive, Exchange)</p>
+</li>
+<li>
+<p>Label guidance on which to apply:</p>
+<ul>
+<li>Label published to all users</li>
+<li>Confidential Label Priority (2nd highest parent label)</li>
+<li>Internal Only</li>
+</ul>
+</li>
+</ul>
+<p><strong>Advanced Scenario</strong></p>
+<p>Consider using <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/sit-modify-edm-schema-configurable-match">exact data matching (EDM)</a> to identify patient healthcare data.</p>
+<h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">⚓︎</a></h2>
+<p>Simulation results showing number of files and emails matched in how which locations are available when you click on the auto-labeling policy for more details.</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture12.png"/> 
+    <figcaption>Figure 13: Example of simulation mode showing number of files matched for review</figcaption>
+</figure>
+
+<p>After an auto-labeling policy is enabled, you can view the labeling activity in Activity Explorer:</p>
+<figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture13.png"/> 
+    <figcaption>Figure 14: Activity Explorer showcases auto labeling activities </figcaption>
+</figure>
+
+<h2 id="implementation-strategy">Implementation Strategy<a class="headerlink" href="#implementation-strategy" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>If you do not have labels set up yet, <a href="#step-1-create-and-publish-sensitivity-labels">set up all things labeling with our default policies and configurations</a>.</p>
+</li>
+<li>
+<p>If you have labels, and an Exchange DLP policy, <a href="#extend-dlp-policies-covering-exchange-to-auto-labeling">extend your Exchange DLP policy to auto-labeling</a>.</p>
+</li>
+<li>
+<p>If you have client-side auto-labeling set up, but no service side auto-labeling policy:</p>
+<ul>
+<li>Use client-side auto labeling or recommendations and service-side auto labeling in combination, with the same conditions but with different thresholds, ex. use high confidence matches for service-side auto labeling and use low or medium confidence for a client-side recommendation, which gives the user an option to dismiss the label if it isn't appropriate for the content and apply a different label.</li>
+</ul>
+</li>
+<li>
+<p>If you have labels set up, but no service side auto-labeling policy:</p>
+<ol>
+<li>
+<p><a href="#get-started-with-auto-labeling-with-our-default-auto-labeling-policy-protecting-credit-card-numbers-on-sharepoint-onedrive-and-exchange">Get started with auto-labeling with our default auto-labeling policy</a></p>
+</li>
+<li>
+<p><a href="#auto-labeling-use-cases-from-our-customers">Create custom auto-labeling policy using a template</a> </p>
+</li>
+<li>
+<p>Create auto labeling policies that trigger for different confidence levels of the SITs with different counts (ex. one high confidence count or multiple medium confidence count) to avoid false positives without risking leakage of large amounts of sensitive data that may not meet the most stringent conditions of higher confidence.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use content explorer to understand where data is present that may need to be included in an auto-labeling policy. </p>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">⚓︎</a></h2>
+<h3 id="how-should-i-finetune-for-false-positives">How should I finetune for false positives?<a class="headerlink" href="#how-should-i-finetune-for-false-positives" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>Increase the thresholds of sensitive information types found to determine severity</p>
+<ul>
+<li>It is okay to use different thresholds for individual classifiers</li>
+</ul>
+</li>
+<li>
+<p>Understand confidence levels and how they are defined</p>
+<ul>
+<li>Low confidence may be good!</li>
+<li>Try using a low confidence with high threshold or a higher confidence level</li>
+</ul>
+</li>
+<li>
+<p>Group like information types together </p>
+<ul>
+<li>Switch from looking for “Any of these” to “All of these”</li>
+</ul>
+</li>
+<li>
+<p>Use Boolean operators to combine groups</p>
+<ul>
+<li>Look for SSN AND Driver’s License instead of SSN OR driver’s License </li>
+</ul>
+<p><figure>
+    <img src="../../playbooks/img/ss-auto-labeling/Picture8.png"/> 
+    <figcaption>Figure 15: Example of how to use Boolean operators to combine groups of sensitive information</figcaption>
+</figure></p>
+</li>
+<li>
+<p>Advanced method: </p>
+<ul>
+<li>Use Exact Data Matching to only look for a specific set of data like your specific customer information (this is a more complex process that takes time to configure)</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-do-i-do-if-i-have-over-1-million-matched-files-and-cannot-enforce-my-auto-labeling-policy">What do I do if I have over 1 million matched files and cannot enforce my auto-labeling policy?<a class="headerlink" href="#what-do-i-do-if-i-have-over-1-million-matched-files-and-cannot-enforce-my-auto-labeling-policy" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>Since we have a <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically">limit of 25,000 files being labeled a day on SharePoint/OneDrive</a>, we want to make sure it does not take us that long to label all the matches from your policy.</p>
+</li>
+<li>
+<p>First check to make sure all the matches are accurate. If not, please <a href="#step-4-refine-policy">finetune the policy</a> for false positives.</p>
+</li>
+<li>
+<p>If the matches all look accurate but the matches still exceed 1 million, scope your policies to a smaller subset of locations first and enforce that policy. Then go in and create another identical policy scoped to the remaining locations.</p>
+</li>
+</ul>
+<h3 id="how-does-changing-label-protections-affect-auto-labeling">How does changing label protections affect auto-labeling?<a class="headerlink" href="#how-does-changing-label-protections-affect-auto-labeling" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>For SharePoint and OneDrive, when a file is open, we retrieve the updated protection actions of the labels. Therefore, any updates to the label protections will be reflected on the document the next time it is opened.</p>
+</li>
+<li>
+<p>For Exchange, emails are stamped with the label and associated protections at the time of the email being sent. If a label protection is modified, previously labeled emails with that label will retain the old permissions, but any new emails sent will have the new label protections. </p>
+</li>
+</ul>
+<h3 id="what-happens-if-i-need-to-change-my-label-schema-after-enforcing-an-auto-labeling-policy">What happens if I need to change my label schema after enforcing an auto-labeling policy?<a class="headerlink" href="#what-happens-if-i-need-to-change-my-label-schema-after-enforcing-an-auto-labeling-policy" title="Permanent link">⚓︎</a></h3>
+<p>We recommend that you have your established label schema in place before continuing to auto-labeling, but understand that sometimes minds change and revisions are needed.</p>
+<ol>
+<li>
+<p>Decide what your new label schema is</p>
+</li>
+<li>
+<p>Create the new label schema. Edit existing labels if possible to fit the new label hierarchy, but do not delete any old labels yet.</p>
+</li>
+<li>
+<p>Determine if the label you used for auto-labeling is still appropriate?</p>
+<ol>
+<li>
+<p>If so, you are all set.</p>
+</li>
+<li>
+<p>If not, determine the replacement label you would like to use.</p>
+<ol>
+<li>
+<p>Make sure the replacement label has a higher label priority than the original label. </p>
+</li>
+<li>
+<p>Edit the auto-labeling policy to use the new label with higher label priority</p>
+</li>
+<li>
+<p><a href="#step-3-simulate">Simulate the policy</a></p>
+</li>
+<li>
+<p><a href="#step-5-enforce">Enforce the policy</a></p>
+</li>
+<li>
+<p>Delete original label if no longer part of your new label schema</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="what-is-simulation-mode">What is simulation mode?<a class="headerlink" href="#what-is-simulation-mode" title="Permanent link">⚓︎</a></h3>
+<p>Simulation mode is a process between configuring the policy and enforcing it. It allows you to see what matches we find that match your policy configuration that will be labeled if you enforced your policy. No labeling is done in simulation mode. It serves as a reassurance assessment of our sensitive information type detection before we apply any labels for you automatically. </p>
+<h3 id="what-happens-when-i-turn-on-a-policy">What happens when I turn on a policy?<a class="headerlink" href="#what-happens-when-i-turn-on-a-policy" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>Files and emails will start getting labeled according to your auto-labeling policy. You can view what is being labeled in activity explorer.</p>
+</li>
+<li>
+<p>We have a <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/apply-sensitivity-label-automatically">limit of 25,000 files being labeled a day on SharePoint/OneDrive</a>, so labeling might span the course of several days depending on how many matched files we found in simulation mode.</p>
+</li>
+</ul>
+<h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Acronym</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EDM</strong></td>
+<td>Exact Data Match</td>
+</tr>
+<tr>
+<td><strong>EXO</strong></td>
+<td>Exchange Online</td>
+</tr>
+<tr>
+<td><strong>MIP</strong></td>
+<td>Microsoft Information Protection</td>
+</tr>
+<tr>
+<td><strong>NER</strong></td>
+<td>Named Entity Recognition</td>
+</tr>
+<tr>
+<td><strong>ODB</strong></td>
+<td>OneDrive for Business</td>
+</tr>
+<tr>
+<td><strong>OWA</strong></td>
+<td>Office Web Applications</td>
+</tr>
+<tr>
+<td><strong>PII</strong></td>
+<td>Personally Identifiable Information</td>
+</tr>
+<tr>
+<td><strong>SIT</strong></td>
+<td>Sensitive Information Type</td>
+</tr>
+<tr>
+<td><strong>SPO</strong></td>
+<td>SharePoint Online</td>
+</tr>
+<tr>
+<td><strong>TC</strong></td>
+<td>Trainable Classifiers</td>
+</tr>
+</tbody>
+</table>
+
+    <!-- Last update of source file -->
+    
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/microsoft/ComplianceCxE/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://aka.ms/MIPC/AskMIPTeam" target="_blank" rel="noopener" title="aka.ms" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../scripts/extlinks.js"></script>
+      
+        <script src="../../scripts/cookie-consent.js"></script>
+      
+        <script src="../../scripts/consent-init.js"></script>
+      
+    
+  </body>
+</html>

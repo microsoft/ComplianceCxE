@@ -1,0 +1,4105 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/ComplianceCxE/dag/cm/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../mcca/">
+      
+      
+      <link rel="icon" href="../../img/scm-shield.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Compliance Manager - Microsoft Purview Customer Experience Engineering (CxE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/cookie-consent.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Analytics via Clarity - https://clarity.microsoft.com/ -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "7uxkeubafp");
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <!-- Meta tag for Google Search Console ownership verification-->
+    <meta name="google-site-verification" content="u3PbXeNid7oDmoMKcK77g3P5k9BUVJpow_pdJIbykow" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#your-deployment-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav
+      class="md-header__inner md-grid"
+      aria-label="header.title"
+    >
+  
+      <!-- Link to home -->
+      <a
+        href="../.."
+        title="Microsoft Purview Customer Experience Engineering (CxE)"
+        class="md-header__button md-logo"
+        aria-label="Microsoft Purview Customer Experience Engineering (CxE)"
+        data-md-component="logo"
+      >
+        
+  <img src="../../img/scm-shield.png" alt="logo">
+
+      </a>
+  
+      <!-- Button to open drawer -->
+      <label class="md-header__button md-icon" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      </label>
+  
+      <!-- Header title -->
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Microsoft Purview Customer Experience Engineering (CxE)
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+              
+                Compliance Manager
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Color palette -->
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+        </form>
+      
+  
+      <!-- Site language selector -->
+      
+  
+      <!-- Button to open search modal -->
+      
+  </header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  Notes from the Field
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  DAGs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../playbooks/" class="md-tabs__link">
+          
+  
+  Playbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jumpstarts/" class="md-tabs__link">
+          
+  
+  Jump Starts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enduser/sensitivity/" class="md-tabs__link">
+          
+  
+  End User Training
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../webinars/" class="md-tabs__link">
+          
+  
+  Webinars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sbd/" class="md-tabs__link">
+          
+  
+  Scenario Based Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../previews/" class="md-tabs__link">
+          
+  
+  Previews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Microsoft Purview Customer Experience Engineering (CxE)" class="md-nav__button md-logo" aria-label="Microsoft Purview Customer Experience Engineering (CxE)" data-md-component="logo">
+      
+  <img src="../../img/scm-shield.png" alt="logo">
+
+    </a>
+    Microsoft Purview Customer Experience Engineering (CxE)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/ComplianceCxE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/ComplianceCxE
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Stop Shop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/aed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/cm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management/Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/mip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes from the Field
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes from the Field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP/DLP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP/DLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/mip-dlp-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Creating IP and DLP Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/DLP-policy-externalshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preventing external sharing with DLP policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/SPOblockUpload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocking upload of files with higher sensitivity label to SPO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/mip-dlp/audit-log-management-activity-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Purview Audit (Premium) Log Activities via the O365 Management API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/ComplianceEdu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compliance in K-12 Education
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DAGs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DAGs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Compliance Manager
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-manager-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Manager Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior to Deployment Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Deployment Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-your-current-organizational-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding your current organizational landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key personas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admins:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executives:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crawl-core-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crawl: Core Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crawl: Core Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-this-service-for-your-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to enable this service for your organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-permissions-and-adding-users-to-role-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure permissions and adding users to role groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-users-to-compliance-manager-administrator-role-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add users to Compliance Manager administrator role group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-role-group-for-auditors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a custom role group for auditors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-service-elements-features-and-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key service elements, features and capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-your-data-protection-baseline-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding your data protection baseline score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-automated-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up automated testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      User history
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#walk-working-with-an-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Walk: Working with an assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Walk: Working with an assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-a-pre-built-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a pre-built assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assessment-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessment Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-know-when-working-with-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to know when working with groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-built Assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-an-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up an assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-and-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment and tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation and testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-the-assessment-actions-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping the assessment actions update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-track-your-way-to-become-compliant" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to track your way to become compliant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-score-based-on-microsoft-365-data-protection-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial score based on Microsoft 365 data protection baseline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuously-assesses-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuously assesses controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-types-and-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action types and points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-and-non-technical-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical and non-technical actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-how-technical-and-non-technical-actions-are-scored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of how technical and non-technical actions are scored
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#score-value-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score Value Determination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-and-discretionary-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory and discretionary actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventative-detective-and-corrective-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventative, detective, and corrective actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-customize-and-expand-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run: Customize and Expand Assessments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run: Customize and Expand Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extend-pre-built-assessment-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extend pre-built assessment templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-maintain-your-own-custom-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create and maintain your own custom assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting-your-template-with-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting your template with Excel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template tab (required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlfamily-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      ControlFamily tab (Required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions tab (Required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-tab-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions tab (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-your-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain your Assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helpful Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledgebase-from-customer-experience-engineering-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledgebase from Customer Experience Engineering Team
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Compliance Configuration Analyzer (MCCA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DLPMigrationAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP Migration Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aed-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eDiscovery and Audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insider Risk Management and Communication Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mig-rm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management and Records Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mip-dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Protection and Data Loss Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dag-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Information Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/service-side-auto-labeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 Service Side Auto-labeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/sourceCodePlaybook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting Source Code Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Loss Prevention
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Loss Prevention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/teamsdlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/etr2dlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy DLP Policies (ETR) to DLP Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Communication Compliance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Communication Compliance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playbooks/fsicc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Financial Services Industry Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://aka.ms/mipc/mipcOSS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💬 Submit CxE Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Jump Starts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jump Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Lifecycle Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Lifecycle Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Auto-apply Labels
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Auto-apply Labels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/kql-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KQL Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adaptive Policy Scopes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adaptive Policy Scopes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jumpstarts/adaptive-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchange Workload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    End User Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            End User Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/sensitivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/retention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retention Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enduser/dlpenduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP User Education & User Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Webinars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webinars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webinars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Scenario Based Demos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scenario Based Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E01 - Series Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E02 - Data Discovery Concept
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E03 - Security vs Compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E04 - AIP Scanner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E05 - Sensitivity Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E06 - Label Behaviors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E07 - Container Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E08 - Client-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E09 - Service-side Autolabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10 - MEM/Intune and MIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/sbd-ep11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11 - MEM/Intune and MIP Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sbd/SBDinPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🆕 SBD in PDF  - Summary of SBD in pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Previews
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Previews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../previews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join Private Previews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-manager-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Manager Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior to Deployment Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Deployment Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-your-current-organizational-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding your current organizational landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key personas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admins:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executives:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crawl-core-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crawl: Core Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crawl: Core Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-this-service-for-your-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to enable this service for your organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-permissions-and-adding-users-to-role-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure permissions and adding users to role groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-users-to-compliance-manager-administrator-role-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add users to Compliance Manager administrator role group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-role-group-for-auditors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a custom role group for auditors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-service-elements-features-and-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key service elements, features and capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-your-data-protection-baseline-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding your data protection baseline score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-automated-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up automated testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      User history
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#walk-working-with-an-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Walk: Working with an assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Walk: Working with an assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-a-pre-built-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a pre-built assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assessment-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessment Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-know-when-working-with-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to know when working with groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-built-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-built Assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-an-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up an assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-and-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment and tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation and testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-the-assessment-actions-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping the assessment actions update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-track-your-way-to-become-compliant" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to track your way to become compliant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-score-based-on-microsoft-365-data-protection-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial score based on Microsoft 365 data protection baseline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuously-assesses-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuously assesses controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-types-and-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action types and points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-and-non-technical-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical and non-technical actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-how-technical-and-non-technical-actions-are-scored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of how technical and non-technical actions are scored
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#score-value-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score Value Determination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-and-discretionary-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory and discretionary actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventative-detective-and-corrective-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventative, detective, and corrective actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-customize-and-expand-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run: Customize and Expand Assessments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run: Customize and Expand Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extend-pre-built-assessment-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extend pre-built assessment templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-maintain-your-own-custom-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create and maintain your own custom assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting-your-template-with-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting your template with Excel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template tab (required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlfamily-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      ControlFamily tab (Required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-tab-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions tab (Required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-tab-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions tab (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-your-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain your Assessments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helpful Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledgebase-from-customer-experience-engineering-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledgebase from Customer Experience Engineering Team
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+    <!-- Edit button -->
+    
+        <a
+        href="/ComplianceCxE/how-to-contribute/"
+        title="How to Contribute"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18h-2v-2h2v2m0-3h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5m9-3c0 5.18-3.95 9.45-9 9.95v-2.01c3.95-.49 7-3.86 7-7.94s-3.05-7.45-7-7.94V2.05c5.05.5 9 4.77 9 9.95M11 2.05v2.01c-1.46.18-2.8.76-3.91 1.62L5.67 4.26C7.15 3.05 9 2.25 11 2.05M4.06 11H2.05c.2-2 1-3.85 2.21-5.33L5.68 7.1A7.902 7.902 0 0 0 4.06 11M11 19.94v2.01c-2-.2-3.85-.99-5.33-2.21l1.42-1.42c1.11.86 2.45 1.44 3.91 1.62M2.05 13h2.01c.18 1.46.76 2.8 1.62 3.91l-1.42 1.42A10.013 10.013 0 0 1 2.05 13Z"/></svg>
+        </a>        
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/edit/public/docs/dag/cm.md"
+        title="edit.link.title"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+        </a>
+        <a
+        href="https://github.com/microsoft/ComplianceCxE/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A⚠%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20tracking%0A%0APage%20Path%3A%20[https://microsoft.github.io/ComplianceCxE/dag/cm/](https://microsoft.github.io/ComplianceCxE/dag/cm/)"
+        title="Submit Feedback as an Issue"
+        class="md-content__button md-icon"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+    
+
+    <!--
+        Hack: check whether the content contains a h1 headline. If it
+        doesn't, the page title (or respectively site name) is used
+        as the main headline.
+    -->
+    
+        <h1 style="text-align: left;">Compliance Manager</h1>
+    
+
+    <!-- Markdown content -->
+    <p><em>Last updated: 06/21/2021</em></p>
+<p>We can all agree that protecting customer's data is of critical importance, but with an average of 222 updates per day from 1000 regulatory bodies, the task of safeguarding your organization’s compliance posture in such a rapidly evolving landscape can feel insurmountable at times. </p>
+<p>Compliance Manager is an end to end information compliance management solution in the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide">Microsoft 365 compliance center</a> that helps you understand your organization's compliance posture. Compliance Manager uses the inventory of data protection risk allowing you to manage the complexities of controls, adhering to regulations and certifications along with reporting needed for auditors.</p>
+<h2 id="your-deployment-plan">Your Deployment Plan<a class="headerlink" href="#your-deployment-plan" title="Permanent link">⚓︎</a></h2>
+<p>The objective is to create a deployment plan that follows the progression of crawl-walk-run methodology while highlighting the user and administrator experience at each stage. Your focus should be on the end user result and the security controls you achieve with each implemented stage. Solutions or tools covered in this guide for deployment consideration are:</p>
+<p>•   <a href="../cm/">Compliance Manager</a></p>
+<p>•   <a href="../mcca/">Microsoft Compliance Configuration Analyzer (MCCA)</a></p>
+<p>•   <a href="../ir-cc/#communication-compliance">Communication Compliance</a></p>
+<p>•   <a href="../ir-cc/#insider-risk-management">Insider Risk Management</a></p>
+<p>The DAG is not inclusive of all requirements or architectures needed for successful implementation of Microsoft 365 but rather a focus on security and compliance as it relates to solutions included as part of Microsoft information Protection &amp; Compliance licenses.</p>
+<p>See <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/productivity-illustrations?view=o365-worldwide">Microsoft 365 productivity illustrations</a> for guidance on implementation of all M365 capabilities with focus on cross technologies.</p>
+<p><strong>Crawl Stage</strong> - The first stage is about starting to evaluate where your organization is today regarding the information security and compliance with your goal of defining a strategic direction for your organization. Using this strategy to foster adoption of a solution by gathering the requirements of supporting systems, impact on end users, and skillset needed for each role owner. The crawl phase describes steps you should do at the beginning of any deployment, whether your requirements are basic or advanced. It includes steps for product education, defining requirements, and evaluation or testing.</p>
+<p><strong>Walk Stage</strong> - The second stage builds the foundation for a successful, scalable, and sustainable deployment. In this phase, you plan the details of your implementation and to build the solution. You may also run a pilot or a proof of concept with a selected group of users or locations.</p>
+<p><strong>Run Stage</strong> - The last stage is about optimizing the solution for Microsoft 365. In this phase you will set up an automated scalable approach for each solution. </p>
+<p>Following the above approach will lead to successful adoption and deployment of each solution while governing your data by deciding what to keep, what to delete, what is a regulatory requirement, and using a workflow to manage the lifecycle.</p>
+<h2 id="compliance-manager-overview">Compliance Manager Overview<a class="headerlink" href="#compliance-manager-overview" title="Permanent link">⚓︎</a></h2>
+<p>Compliance Manager allows your organization to simplify compliance and start reducing risk by completing pre-built assessments targeting industries, standards, regulations or leveraging a custom assessment created by you and your organization. In addition to the assessments, this tool provides step-by-step guidance on open actions and displays a score for measuring your compliance posture. The tool focuses on identifying gaps and controls that need to be addressed and provides suggestions on how to improve these items, drawing elements from standard Information Security and Compliance frameworks like GDPR, NIST etc.  </p>
+<p>Compliance Manager provides:  </p>
+<ul>
+<li>
+<p>Built in assessments for common industry and regional standards and regulations, or custom assessments to meet your unique compliance needs.</p>
+</li>
+<li>
+<p>Flagged issues with detailed step-by-step guidance on suggested improvement actions to help you comply with the standards and regulations that are most relevant for your organization.    </p>
+</li>
+<li>
+<p>Automated testing and validation to help you stay compliant with various regulations.    </p>
+</li>
+<li>
+<p>An overall risk-based compliance score to help understand your compliance posture by measuring your progress in completing improvement actions. </p>
+</li>
+<li>
+<p>Frequent updates ensures that if a regulation or control changes, you are made aware of it to help you to continue to stay compliant.  </p>
+</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">⚓︎</a></h2>
+<p>Below is a list of best practices we have gathered to help you take advantage of what Compliance Manager brings to your organization.  </p>
+<ul>
+<li>Updates to an action propagate tenant wide. Our recommendation is to accept the updates so that you get the latest guidance and improvement actions to meet a requirement.    </li>
+<li>
+<p>Use correctly formatted Excel files when working with Compliance Manager to prevent errors with the import process. </p>
+</li>
+<li>
+<p>Export any existing assessment before deleting it in case you need to add it back through the import process. </p>
+</li>
+<li>
+<p>If you reassign an action that has a pending update, the direct link to the action in the reassignment email will break if the update is accepted after reassignment. You can fix this by reassigning the action to the user after the update is accepted.  </p>
+</li>
+</ul>
+<h2 id="prior-to-deployment-plan">Prior to Deployment Plan<a class="headerlink" href="#prior-to-deployment-plan" title="Permanent link">⚓︎</a></h2>
+<h3 id="understanding-your-current-organizational-landscape">Understanding your current organizational landscape<a class="headerlink" href="#understanding-your-current-organizational-landscape" title="Permanent link">⚓︎</a></h3>
+<p>Before starting your compliance journey, it is important to understand what current regulations your organization needs to comply with so that you know what regulations you need to track and monitor your progress against. Compliance Manager offers over 330 regulation assessments that you can use to help your organization stay compliant.</p>
+<p>Most organizations are using some method to track these regulations, either with other tools or Excel spreadsheets. It is important to understand how your organization is managing this today, as Compliance Manager can standardize and centralize all of these into one location. If you are currently using other methods to track regulations, you can even bring your own controls into Compliance Manager. One of the primary values of using Compliance Manager is that we can provide actions items, assess, update, test and stay current with changes happening to the regulations. The pre-built assessments are being updated as regulations or technology changes, so that Microsoft can provide you the most up to date data in a central location.  </p>
+<p>When thinking about compliance for your organization it is important to make sure you have the right stakeholders or technical decision makers (TDM) involved in your Compliance Manager journey. For most organizations this is not just the IT department, although they might have a role to play in the implementation of some of the action items. Below is a list of key personas we see using and being involved in Compliance Manager discussions.  </p>
+<h3 id="key-personas">Key personas<a class="headerlink" href="#key-personas" title="Permanent link">⚓︎</a></h3>
+<p>Compliance Manager personas at high level can be put into one of these categories:  </p>
+<h4 id="assessors">Assessors:<a class="headerlink" href="#assessors" title="Permanent link">⚓︎</a></h4>
+<p>Assessors are compliance, security, privacy, and risk officers (Officers).  They ensure that their organizational assets are compliant with applicable regulations, data is protected as per standards, and compliance / technology risks are managed as per their organizational policies. Assessors can also be auditors who maintain independent audit of assessment work performed by officers listed above. </p>
+<p>How assessors normally interact with Compliance Manager:    </p>
+<ul>
+<li>
+<p>They are most likely personas who create assessments as per their organizational compliance management needs. </p>
+</li>
+<li>
+<p>They will work with admins to ensure that assessment actions are implemented, tested, and completed.   </p>
+</li>
+<li>
+<p>They will review assessment progress, compliance metrics, and risks with executive personas.    </p>
+</li>
+</ul>
+<h4 id="admins">Admins:<a class="headerlink" href="#admins" title="Permanent link">⚓︎</a></h4>
+<p>Admins are security, compliance, process, and IT administrators.  These personas have the ability to make configurational changes to implement actions / controls.  They are typically the people who need to pull evidence to showcase that actions / controls have been implemented and performing effectively.  </p>
+<p>How admins normally interact with Compliance Manager:    </p>
+<ul>
+<li>
+<p>Admins will review actions assigned to them, implement these actions using S-C-M (security, compliance and management) solutions, and collect evidence for closing actions assigned to them. </p>
+</li>
+<li>
+<p>They may create IT risk / data protection related assessment on their own, as per their org maturity around IT / Technology risk management.  </p>
+</li>
+<li>
+<p>They may participate in executive reviews.   </p>
+</li>
+</ul>
+<h4 id="executives">Executives:<a class="headerlink" href="#executives" title="Permanent link">⚓︎</a></h4>
+<p>Chief Compliance, IT, Information Security, Privacy, Finance, HR and Risk officers.  Depending upon how compliance, security, privacy, and risk management functions are structured within an organization, these executives have overall responsibility for compliance and risk management. </p>
+<p>How executives normally interact with Compliance Manager:    </p>
+<ul>
+<li>
+<p>Set overall compliance and risk management policies and objectives for their organization.  This will influence type and number of assessments created within Compliance Manager. </p>
+</li>
+<li>
+<p>They may review Compliance Manager dashboard on ongoing basis to track compliance management progress, blockers, and risks. </p>
+</li>
+</ul>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">⚓︎</a></h3>
+<p>Compliance Manager is enabled in your tenant but only individuals with the right access can view scores, add assessments and work with the actions. </p>
+<ul>
+<li>
+<p>Users will need at least the Compliance Manager reader role or Azure AD global reader role to access Compliance Manager. The Microsoft 365 global administrator for your organization will likely be the first user to access Compliance Manager. We recommend the global admin sign in and set user permissions as outlined below when visiting Compliance Manager for the first time. </p>
+</li>
+<li>
+<p>Additional details about permissions and role type are available here: <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-setup?view=o365-worldwide#where-to-set-permissions">https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-setup?view=o365-worldwide#where-to-set-permissions</a> </p>
+</li>
+</ul>
+<h2 id="deployment-plan">Deployment Plan<a class="headerlink" href="#deployment-plan" title="Permanent link">⚓︎</a></h2>
+<p>This document offers guidance and steps that customer compliance executive and IT teams can utilize to adopt the service. This document is divided into three sections offering an overview approach for service adoption using General Data Protection Regulation (GDPR) as the assessment of choice. The sections are designed to represent the recommended deployment approach crawl-walk-run for Microsoft 365 Compliance Manager. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GDPR assessment has been chosen as the assessment of choice to demonstrate the walk approach; however, you can choose any other regulatory assessment that is relevant to your organization.   </p>
+</div>
+<h3 id="crawl-core-service">Crawl: Core Service<a class="headerlink" href="#crawl-core-service" title="Permanent link">⚓︎</a></h3>
+<p>This is where you should start your compliance journey. This will set the foundation for using Compliance Manager to help your organization become and stay compliant.  This will include tasks like: </p>
+<ul>
+<li>
+<p>Becoming familiar with Compliance Manager, settings, and how to enable this service for your organization.  </p>
+</li>
+<li>
+<p>Going through key service features and capabilities. </p>
+</li>
+<li>
+<p>Understanding your data protection baseline score.   </p>
+</li>
+<li>
+<p>Setup automated testing and scoring</p>
+</li>
+<li>
+<p>Using the user history to audit who has what actions and reassign actions if needed.</p>
+</li>
+</ul>
+<h4 id="how-to-enable-this-service-for-your-organization">How to enable this service for your organization<a class="headerlink" href="#how-to-enable-this-service-for-your-organization" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager comes enabled by default for your organization. An initial score will be provided based on the Microsoft 365 data protection baseline. This baseline is a set of controls that includes key regulations and standards for data protection and general data governance. A great way to get started is to use this score to understand where your organization baseline is and ways to improve this by reviewing and taking actions outlined in your improvement actions. Also consider the concepts and process you use to correct and work with data baseline actions is the same process and concepts that apply to any other prebuilt or custom assessment you add to Compliance Manager.  </p>
+<h4 id="configure-permissions-and-adding-users-to-role-groups">Configure permissions and adding users to role groups<a class="headerlink" href="#configure-permissions-and-adding-users-to-role-groups" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager uses a role-based access control (RBAC) permission model. Only users who are assigned a role may access Compliance Manager, and the actions allowed by each user are restricted by <strong>role type</strong>. Permissions can be configured in two (2) places: </p>
+<ul>
+<li>
+<p>Azure Active Directory which allows you the ability to use PIMs (privileged identity management). There are four roles that can be used with Azure AD. The benefit of using PIMs is that you can enable just in time access. The drawback to this method is that currently, the available permission is not as granular as the permission in the security and compliance center.</p>
+</li>
+<li>
+<p>Security and Compliance center (Compliance Center). There are five roles that can be used to set permissions for Compliance Manager. You have the ability to be a bit more granular here when assigning access via roles, but this is standing access to the users added to the roles.   </p>
+<ul>
+<li>Customers in US Government Community (GCC) High and Department of Defense (DoD) environments can only set user permissions and roles for Compliance Manager in Azure AD. See below for Azure AD instructions and role type definitions. </li>
+</ul>
+</li>
+</ul>
+<h4 id="role-types">Role Types<a class="headerlink" href="#role-types" title="Permanent link">⚓︎</a></h4>
+<p>Users will need at least the Compliance Manager reader role, or Azure AD global reader role to access Compliance Manager. </p>
+<p><strong><div align="center">ROLE TYPES</strong></div></p>
+<table>
+<thead>
+<tr>
+<th><strong>User can:</strong></th>
+<th><strong>Compliance Manager role</strong></th>
+<th><strong>Azure AD role</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Read but not edit data</strong></td>
+<td>Compliance Manager Reader</td>
+<td>Azure AD Global reader, Security reader</td>
+</tr>
+<tr>
+<td><strong>Edit data</strong></td>
+<td>Compliance Manager Contribution</td>
+<td>Compliance Administrator</td>
+</tr>
+<tr>
+<td><strong>Edit test results</strong></td>
+<td>Compliance Manager Assessor</td>
+<td>Compliance Administrator</td>
+</tr>
+<tr>
+<td><strong>Manage assessments, and template and tenant data</strong></td>
+<td>Compliance Manager Administration</td>
+<td>Compliance Administrator, Compliance Data Administrator, Security Administrator</td>
+</tr>
+<tr>
+<td><strong>Assign users</strong></td>
+<td>Global Administrator</td>
+<td>Global Administrator</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-users-to-compliance-manager-administrator-role-group">Add users to Compliance Manager administrator role group<a class="headerlink" href="#add-users-to-compliance-manager-administrator-role-group" title="Permanent link">⚓︎</a></h4>
+<p>A <strong>role group</strong> is a set of roles that allows users to perform their job across the Security &amp; Compliance Center. For example, the <strong>Compliance Administrator</strong> role group includes (among other roles) the roles for Case Management, Content Search, and Organization Configuration (plus others), because someone who is a compliance admin will need the permissions for those tasks to perform their job. You can add role groups and achieve separation of roles and responsibilities by simply adding individual users as members to the <strong>role group</strong>.  </p>
+<p>The role groups you want to create help to apply principle of least privilege by delegating tasks and functions that you'll need to assign users to.  </p>
+<h4 id="create-a-custom-role-group-for-auditors">Create a custom role group for auditors<a class="headerlink" href="#create-a-custom-role-group-for-auditors" title="Permanent link">⚓︎</a></h4>
+<p>You can directly add users to a specific role group or create custom role groups to expand the portfolio of the team responsible for managing compliance in an organization. One of these custom groups you should consider is the <strong>compliance auditors</strong>. These are users who can review the compliance posture of your organization with read only access to Compliance Manager by using the <strong>Compliance Manager Reader role</strong>. </p>
+<h4 id="key-service-elements-features-and-capabilities">Key service elements, features and capabilities<a class="headerlink" href="#key-service-elements-features-and-capabilities" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager uses several data elements to help you manage your compliance activities. As you use Compliance Manager to assign, test, and monitor compliance activities, it’s helpful to have a basic understanding of the key elements: controls, assessments, templates, and improvement actions. </p>
+<ul>
+<li><strong>Controls</strong>: A control is a requirement of a regulation, standard, or policy. It defines how you assess and manage system configuration, organizational process, and people responsible for meeting a specific requirement of a regulation, standard, or policy. <ul>
+<li>Compliance Manager tracks the following types of controls:  <ul>
+<li><strong>Microsoft managed controls</strong>: controls for Microsoft cloud services, which Microsoft is responsible for implementing. </li>
+<li><strong>Your controls</strong>: sometimes referred to as customer managed controls, these are controls implemented and managed by your organization. </li>
+<li><strong>Shared Controls</strong>: sometimes referred to as customer managed controls, these are controls implemented and managed by your organization.  <ul>
+<li>Compliance Manager automatically scans through your Microsoft 365 environment and detects your system settings, continuously and automatically updating your technical action status. Microsoft Secure Score is the underlying engine that performs the monitoring. Your action status is updated on your dashboard every 24 hours. Once you follow a recommendation to implement a control, you’ll typically see the control status updated the next day. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Assessments</strong>: An assessment is a grouping of controls from a specific regulation, standard, or policy. Completing the actions within an assessment help you meet the requirements of a standard, regulation, or law.   </p>
+<ul>
+<li>
+<p>Assessments have several components:  </p>
+</li>
+<li>
+<p><strong>In-scope services</strong>: the specific set of Microsoft services applicable to the assessment </p>
+</li>
+<li>
+<p><strong>Controls</strong>: Microsoft managed, your controls and shared controls   </p>
+<ul>
+<li><strong>Assessment score</strong>: shows your progress in achieving total possible points from actions within the assessment that are managed by your organization and by Microsoft. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Templates</strong>: Templates to help you quickly create assessments. You can modify templates to create an assessment optimized for your needs. You can also build a custom assessment by creating a template with your own controls and actions (We will cover this in the Run section). </p>
+<ul>
+<li>Included and Premium Templates:  <ul>
+<li><strong>Included templates</strong> are available for use as part of your organization’s licensing agreement.  </li>
+<li><strong>Premium templates</strong> must be purchased to create assessments from them. Once purchased, you may create as many assessments from a template as needed. You can also try these templates out before you buy them. (In the Appendix section we’ll cover how to sign up for a trial.) </li>
+<li>Active and inactive templates   </li>
+<li>A template is considered <strong>active</strong> once you create an assessment from that template. Your assessment page has a counter near the top which displays the number of templates in use vs the number of assessments you are licensed to use. For example, if you see 2/5 that means you have 2 active templates out of 5 that you are licensed for. If you see 5/2 this means you have exceeded the limits you are licensed for, and you need to remove or purchase more license.<br />
+</li>
+<li>A template is considered inactive if your organization isn’t using it for an assessment. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Improvement actions</strong>:  Improvement actions help centralize your compliance activities. Each improvement action provides recommended guidance that’s intended to help you align with data protection regulations and standards. Improvement actions can be assigned to users in your organization to perform implementation and testing work. You can also store documentation, notes, and record status updates within the improvement action. </p>
+</li>
+<li>
+<p><strong>Groups</strong>:  When creating assessments, you’ll assign them to a group. You can configure groups in whatever way is most logical for your organization. For example, you may group assessments by audit year, region, solution, teams within your organization, or some other way. Once you create groups, you can filter your Compliance Manager dashboard to view your score by one or more groups. It is important to note that the same action, if tenant scoped, can be in multiple groups. If this is the case, the action can be updated in one of the groups and it would be replicated to all groups that contain that action. For example, take MFA being required on Admin accounts. If this is enabled, it would be enabled for all groups that contain this action.  </p>
+</li>
+</ul>
+<h4 id="understanding-your-data-protection-baseline-score">Understanding your data protection baseline score<a class="headerlink" href="#understanding-your-data-protection-baseline-score" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager by default creates a data protection baseline that can be used to implement data protection controls and measure the control effectiveness against this baseline. It helps to establish and maintain technical, procedural, and people control for your organization. Data protection baseline is built by leveraging leading standards for data protection, information security, and privacy. Using guidance provided by data protection baseline, you can protect your data against insider, and malicious threats. By implementing actions that are part of data protection baseline, you can get ahead of compliance by being better prepared for new regulations coming. Setting up a good baseline also builds a strong foundation before adding additional regulatory specific assessments.  </p>
+<h4 id="set-up-automated-testing">Set up automated testing<a class="headerlink" href="#set-up-automated-testing" title="Permanent link">⚓︎</a></h4>
+<p>Some improvement actions in Compliance Manager are also monitored by Microsoft Secure Score. You can set up automated testing of actions that are jointly monitored, which means that when an action is tested and updated in Secure Score, those results sync with the same actions in Compliance Manager and count toward your compliance score. </p>
+<p>Automatic testing is turned on by default for organizations new to Compliance Manager. When you first deploy Microsoft 365 or Office 365, it takes approximately seven days for Secure Score to fully collect data and factor it into your compliance score. When automated testing is turned on, the action’s test date won’t be updated, but its test status will update. When new assessments are created, scores automatically include Microsoft control scores and Secure Score integration.</p>
+<p>If you want to change these setting it can be done by a global administrator at any time. You can turn off automated testing for common improvement actions or turn it on for individual actions.  </p>
+<h4 id="user-history">User history<a class="headerlink" href="#user-history" title="Permanent link">⚓︎</a></h4>
+<p>User history helps you quickly identify which users have worked with improvement actions in Compliance Manager. The identifiable user data associated with improvement actions includes any implementation and testing work done, documents uploaded, and any notes entered. Understanding and retrieving this type of data may be necessary for your organization’s own compliance needs. You can use the search button to find a user who you are looking for, which can be useful when working with many users.  </p>
+<p>You might find it useful to be able to export the data to an Excel file which will contain a list of improvement actions currently assigned to a user and any evidence files uploaded by that user. This information can help you reassign open improvement actions. It is important to note that the report reflects the improvement action’s status as of its creation date. It’s not a historical report of all previous changes to its status or assignment.  </p>
+<p>If a user leaves the organization or their role changes, you might be required to reassign improvement actions from one user to another. This is possible to do in the Compliance Manager user history section. It is important to note that when you reassign an action, the document upload history doesn't change, but the name of the user who originally uploaded the documentation no longer appears within the improvement action. </p>
+<h3 id="walk-working-with-an-assessment">Walk: Working with an assessment<a class="headerlink" href="#walk-working-with-an-assessment" title="Permanent link">⚓︎</a></h3>
+<p>The Walk phase builds upon the components of the crawl phase and looks to add one or more regulatory assessments for your organization, such as GDPR.  </p>
+<p>This would include tasks like: 
+* How to choose a pre-built assessment
+* How to read and understand your score
+* How to read, implement, and test your improvement actions
+* Assigning tasks and managing controls
+* How to track your way to become compliant
+* Keeping the assessment actions updated</p>
+<p>The most important data elements for configuring Compliance Manager are Assessment Templates and Assessments. Compliance Manager provides a rich library of over 330 assessment templates, each of which represents a specific regulation, certification, or standard that aligns to an industrial, regional, and common data protection standard, such as GDPR or ISO 27001. These assessment templates contain all the control families and controls from the regulation or standard, and a set of actions that are mapped to these controls. These actions include both improvement actions for helping you meet the requirements of that regulation or standard, and Microsoft actions that have already been taken by Microsoft. Each action has points associated with it and these help determine your compliance score.</p>
+<h4 id="choose-a-pre-built-assessment">Choose a pre-built assessment<a class="headerlink" href="#choose-a-pre-built-assessment" title="Permanent link">⚓︎</a></h4>
+<p>To get started quickly, you can pick from one of over 330 assessments already set up and available to you in Compliance Manager. There is a wide selection of templates for regulations and certifications that align to industries, regions, and common data protection standards, such as GDPR and ISO 27001. Templates contain the controls and improvement actions for helping you meet the requirements of a particular certification. For a full list of templates available check out - Microsoft Compliance Manager templates list - Microsoft 365 Compliance | Microsoft Docs.  Adding a pre-built assessment allows you to immediately begin to review actions items, make the required changes, test, and complete the action item. Within a few minutes, you can add multiple regulations that are important to your organization and start tracking your progress against meeting these regulations.  </p>
+<h4 id="assessment-types">Assessment Types<a class="headerlink" href="#assessment-types" title="Permanent link">⚓︎</a></h4>
+<p>Assessment templates are added to Compliance Manager as new laws and regulations are enacted. Compliance Manager updates its templates when the underlying laws or regulations change.  </p>
+<p>Compliance Manager classifies assessment into two (2) categories.  </p>
+<ul>
+<li>Included templates are templates included as part of your organization's licensing agreement.</li>
+<li>Premium templates display additional templates your organization may choose to obtain on additional credits</li>
+</ul>
+<p>Below is the included templates for the M365 A5/E5/G5 license. Visit the Compliance Manager templates list for the most up-to-date information on assessments. <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-templates-list?view=o365-worldwide">Microsoft Compliance Manager templates list - Microsoft 365 Compliance | Microsoft Docs</a> </p>
+<ul>
+<li>Microsoft Data Protection Baseline </li>
+<li>European Union GDPR (Microsoft 365, Office 365, Intune) </li>
+<li>ISO 27001:2013 </li>
+<li>NIST 800-53 Rev.4 </li>
+<li>NIST 800-53 Rev.5 </li>
+<li>Cybersecurity Maturity Model Certification (CMMC) Levels 1 through 5 (G5 Only)  </li>
+</ul>
+<h4 id="understand-groups">Understand groups<a class="headerlink" href="#understand-groups" title="Permanent link">⚓︎</a></h4>
+<p>Before you create or modify assessments, it’s important to understand how groups work. When you create an assessment, you’ll need to assign it to a group during the process. This is an important step to plan out before you create assessments. Groups are containers that you can use to organize your assessments that are logical to you. Some examples might be by year, regulation, department, or geographies.  </p>
+<p>An example of this might be:</p>
+<ul>
+<li>
+<p>Assessments 2020</p>
+<ul>
+<li>FFIEC IS</li>
+<li>GDPR</li>
+</ul>
+</li>
+<li>
+<p>US 2020</p>
+<ul>
+<li>FFIEC IS</li>
+<li>FISMA</li>
+<li>United States of America Privacy Act</li>
+</ul>
+</li>
+<li>
+<p>Ohio 2021</p>
+<ul>
+<li>Ohio Data Protection Act 2018</li>
+</ul>
+</li>
+<li>
+<p>EU 2020</p>
+<ul>
+<li>GDPR</li>
+<li>Directive 2006/24/EC</li>
+</ul>
+</li>
+</ul>
+<p>It is important to understand how improvement actions work within a group and across groups. When two different assessments in the same group share improvement actions that are managed by you, any updates you make to an action's implementation details or status will automatically synchronize to the same action in any other assessment in the group. This synchronization allows you to implement one improvement action and meet several requirements across multiple regulations. If the improvement action is a tenant action, for example require MFA, there will only be one action for all groups. So, completing this in one group will apply the same status to all groups that have this action.  </p>
+<p>While working within a group you can see all the actions for that group and a breakdown of the score for the group you are working on. While you can always see the score for the tenant, it is sometimes easier to focus in on a particular group.  </p>
+<h4 id="what-to-know-when-working-with-groups">What to know when working with groups<a class="headerlink" href="#what-to-know-when-working-with-groups" title="Permanent link">⚓︎</a></h4>
+<p>There are some additional guidelines when working with groups that you should be aware of.  </p>
+<ul>
+<li>Group names must be unique within your organization. At this time, groups cannot be deleted but they can be reused. </li>
+<li>Groups don't have security properties. All permissions are associated with assessments. </li>
+<li>Once you add an assessment to a group, the grouping can't be changed. 
+ Related assessment controls in different assessments within the same group automatically update when completed. </li>
+<li>If you add a new assessment to an existing group, common information from assessments in that group are copied to the new assessment. </li>
+<li>Groups can contain assessments for the same certification or regulation, but each group can only contain one assessment for a specific product-certification pair. For example, a group can't contain two assessments for Office 365 and NIST CSF. A group can contain multiple assessments for the same product only if the corresponding certification or regulation for each one is different. </li>
+<li>Deleting an assessment breaks the relationship between that assessment and the group. </li>
+<li>When a change is made to an improvement that appears in multiple groups, that change is reflected in all instances of that improvement action. </li>
+</ul>
+<h4 id="pre-built-assessments">Pre-built Assessments<a class="headerlink" href="#pre-built-assessments" title="Permanent link">⚓︎</a></h4>
+<p>Now that you know how to configure groups, it’s time to get started by picking from one of the more than 330 assessments Compliance Manager offers out of the box. You’ll be asked to choose an assessment template when you start building an assessment. You can also create your own custom assessment template, which we will cover in the run phase. It can be quick and easy to use the templates we have built for you which also update automatically. </p>
+<p>Below is an example of the assessments page. It lists the assessments you select to track for your organization and your compliance score denominator is determined by all your tracked assessments. Thus, the more assessments you add, the more improvement actions you see on your improvement actions page, and the higher your score denominator is. </p>
+<p><img alt="" src="../images/cm-fig1.png" /></p>
+<h4 id="setting-up-an-assessment">Setting up an assessment<a class="headerlink" href="#setting-up-an-assessment" title="Permanent link">⚓︎</a></h4>
+<p>There are two starting points for creating an assessment from a Compliance Manager template. </p>
+<ul>
+<li>You can begin the process from your assessments page by selecting the Add assessment button and then working through the assessment creation wizard.  </li>
+<li>You can also start from your assessment templates page by finding the template you want and selecting it from the list to arrive at its details page. On the template details page, select Create assessment. You’ll then enter the wizard with your template already selected. </li>
+</ul>
+<h4 id="assignment-and-tracking">Assignment and tracking<a class="headerlink" href="#assignment-and-tracking" title="Permanent link">⚓︎</a></h4>
+<p>Improvement actions centralize your compliance activities. Each improvement action provides detailed implementation guidance to help you align with data protection regulations and standards. It is common that the Compliance Manager administrator is not always the person preforming the actions to implement the controls. Compliance Manager allows actions to be assigned to users in your organization to perform implementation and testing work. When you assign an action to someone, they get notified that they have been assigned and if they have the right permissions, they are able to see details about the action. </p>
+<ul>
+<li>Emails are not currently sent if you are in GCC High or a DOD environment </li>
+</ul>
+<h4 id="implementation-and-testing">Implementation and testing<a class="headerlink" href="#implementation-and-testing" title="Permanent link">⚓︎</a></h4>
+<p>The person or team who is assigned an action then uses the details of the action item to complete the work, conduct testing, upload evidence, and change the status of the action item. Once that has been completed, it is assigned to an assessor for validation. The assessor validates the work, examines the documentation, and selects the appropriate test status. </p>
+<p><strong>If test status is set to “Passed”</strong>: the action is complete, and the points achieved shows the maximum points achieved. The points are then counted toward your overall compliance score. </p>
+<p><strong>If test status is set to “Failed”</strong>: the action doesn't meet the requirements, and the assessor can update the notes and assign it back to the appropriate user for additional work. </p>
+<h4 id="keeping-the-assessment-actions-update">Keeping the assessment actions update<a class="headerlink" href="#keeping-the-assessment-actions-update" title="Permanent link">⚓︎</a></h4>
+<p>One of the many values of Compliance Manager is that it is continuously updated to keep up with regulatory changes and changes in M365. When you see a pending update label next to its name on the improvement actions page and on the details page of its related assessments, you can either accept the update or defer it to a later date. You can get more details about the update before accepting it or deferring it. </p>
+<p>Updates normally occur on a quarterly cycle. An update occurs when there are changes related to scoring, automation, and/or scope. Changes may involve new guidance for improvement actions based on regulatory changes or could be because of product changes. Only the improvement actions managed by your organizations receive update notifications. We do not provide updates to the Microsoft managed actions. </p>
+<p>Accepting updates helps ensure that you have the most updated guidance on using solutions and taking appropriate improvement actions to help you meet the requirements of the certification at hand. There are times when you might want to defer an update if you’re in the middle of completing an assessment that includes the improvement action. You may want to ensure you’ve finished work on it before you accept the update.  </p>
+<p>Accepted changes are permanent. When you accept an update to an action, you’re also accepting updates to any other versions or instances of this action. Updates will propagate tenant-wide for technical actions and will propagate group-wide for non-technical actions. </p>
+<h4 id="how-to-track-your-way-to-become-compliant">How to track your way to become compliant<a class="headerlink" href="#how-to-track-your-way-to-become-compliant" title="Permanent link">⚓︎</a></h4>
+<p>The Compliance Manager dashboard displays an overall compliance score. This score measures progress in completing recommended improvement actions within controls. </p>
+<p>Compliance score can help in understanding your current compliance posture. It can also help prioritize actions based on their potential to reduce risk. </p>
+<p>A score value is assigned at three (3) levels: </p>
+<ol>
+<li>
+<p>Improvement action score: each action has a different impact on your score depending on the potential risk involved. </p>
+</li>
+<li>
+<p>Control score: this score is the sum of points earned by completing improvement actions within the control. This sum is applied in its entirety to your overall compliance score when the control meets both of the following conditions:</p>
+<ul>
+<li>
+<p><strong>Implementation Status</strong> equals <strong>Implemented</strong> or <strong>Alternative Implementation</strong>, and</p>
+</li>
+<li>
+<p><strong>Test Result</strong> equals <strong>Passed</strong>. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Assessment score</strong>: this score is the sum of your control scores. It is calculated using action scores. Each Microsoft action and each improvement action managed by your organization is counted once, regardless of how often it is referenced in a control. </p>
+</li>
+</ol>
+<p>The overall compliance score is calculated using action scores, where each Microsoft action is counted once, each technical action you manage is counted once, and each non-technical action you manage is counted once per group. This logic is designed to provide the most accurate accounting of how actions are implemented and tested in your organization. You may notice that this can cause your overall compliance score to differ from the average of your assessment scores. Read more below about  <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide#action-types-and-points">how actions are scored</a>. </p>
+<h4 id="initial-score-based-on-microsoft-365-data-protection-baseline">Initial score based on Microsoft 365 data protection baseline<a class="headerlink" href="#initial-score-based-on-microsoft-365-data-protection-baseline" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager gives you an initial score based on the <strong>Microsoft 365 data protection baseline</strong>. This baseline is a set of controls that includes key regulations and standards for data protection and general data governance. This baseline draws elements primarily from the National Institute of Standards and Technology Cybersecurity Framework (<strong>NIST CSF</strong>) and International Organization for Standardization (<strong>ISO</strong>), as well as from Federal Risk and Authorization Management Program (<strong>FedRAMP</strong>) and General Data Protection Regulation of the European Union (<strong>GDPR</strong>). </p>
+<p>Your initial score is calculated according to the default Data Protection Baseline assessment provided to all organizations. Upon your first visit, Compliance Manager is already collecting signals from your Microsoft 365 solutions. You will be able to see how your organization is performing relative to key data protection standards and regulations. You will be also able to see suggested improvement actions to take. </p>
+<p>Because every organization has specific needs, Compliance Manager relies on you to set up and manage assessments to help minimize and mitigate risk as comprehensively as possible. </p>
+<h4 id="continuously-assesses-controls">Continuously assesses controls<a class="headerlink" href="#continuously-assesses-controls" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager automatically scans through your Microsoft 365 environment and detects your system settings, continuously and automatically updating your technical action status. Microsoft Secure Score is the underlying engine that performs the monitoring. 
+Your action status is updated on your dashboard every 24 hours. Once you follow a recommendation to implement a control, you’ll typically see the control status updated the next day. </p>
+<p>For example, if you turn on multi-factor authentication (MFA) in the Azure AD portal, Compliance Manager detects the setting and reflects it in the control access solution details. Conversely, if you didn’t turn on MFA, Compliance Manager flags that as a recommended action for you to take. </p>
+<p>Learn more about  <a href="https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide">Secure Score and how it works</a>. </p>
+<h4 id="action-types-and-points">Action types and points<a class="headerlink" href="#action-types-and-points" title="Permanent link">⚓︎</a></h4>
+<p>Compliance Manager tracks two types of actions: </p>
+<ol>
+<li><strong>Your improvement actions</strong>: actions that your organization manages. </li>
+<li><strong>Microsoft actions</strong>: actions that Microsoft manages. 
+Both types of actions have points that count toward your overall score when completed.</li>
+</ol>
+<h4 id="technical-and-non-technical-actions">Technical and non-technical actions<a class="headerlink" href="#technical-and-non-technical-actions" title="Permanent link">⚓︎</a></h4>
+<p>Actions are grouped by whether they are technical or non-technical in nature. The scoring impact of each action differs by type. </p>
+<ul>
+<li>
+<p><strong>Technical actions</strong> are implemented by interacting with the technology of a solution (for example, changing a configuration). The points for technical actions are granted once per action, regardless of how many groups it belongs to. </p>
+</li>
+<li>
+<p><strong>Non-technical actions</strong> are managed by your organization and implemented in ways other than working with the technology of a solution. There are two types of non-technical actions: <strong>documentation</strong> and <strong>operational</strong>. The points for these actions are applied to your compliance score at a group level. This means that if an action exists in multiple groups, you will receive the action's point value each time you implement it within a group. </p>
+</li>
+</ul>
+<h4 id="example-of-how-technical-and-non-technical-actions-are-scored">Example of how technical and non-technical actions are scored<a class="headerlink" href="#example-of-how-technical-and-non-technical-actions-are-scored" title="Permanent link">⚓︎</a></h4>
+<p>For example, you have a technical action worth 3 points that exists in 5 groups, and you have a non-technical action worth 3 points that exists in the same 5 groups. </p>
+<p>If you successfully implement the technical action, the total number of points you receive is 3. This is because you only need to implement the action once for your tenant. The implementation and test status for the technical action will show the same in all instances of that action, in every group it belongs to. </p>
+<p>This scoring logic is designed to provide the most accurate accounting of how actions are implemented and tested in your organization. </p>
+<h4 id="score-value-determination">Score Value Determination<a class="headerlink" href="#score-value-determination" title="Permanent link">⚓︎</a></h4>
+<p>Actions are assigned a score value based on whether they’re mandatory or discretionary, and whether they’re preventative, detective, or corrective. </p>
+<h4 id="mandatory-and-discretionary-actions">Mandatory and discretionary actions<a class="headerlink" href="#mandatory-and-discretionary-actions" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Mandatory actions can't be bypassed, either intentionally or accidentally. An example of a mandatory action is a centrally managed password policy that sets requirements for password length, complexity, and expiration. Users must follow these requirements to access the system. </li>
+<li>Discretionary actions rely upon users to understand and adhere to a policy. For example, a policy requiring users to lock their computer when they leave it is a discretionary action because it relies on the user. </li>
+</ul>
+<h4 id="preventative-detective-and-corrective-actions">Preventative, detective, and corrective actions<a class="headerlink" href="#preventative-detective-and-corrective-actions" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Preventative actions address specific risks. For example, protecting information at rest using encryption is a preventative action against attacks and breaches. Separation of duties is a preventative action to manage conflict of interest and guard against fraud. </li>
+<li>Detective actions actively monitor systems to identify irregular conditions or behaviors that represent risk, or that can be used to detect intrusions or breaches. Examples include system access auditing and privileged administrative actions. Regulatory compliance audits are a type of detective action used to find process issues. </li>
+<li>Corrective actions try to keep the adverse effects of a security incident to a minimum, take corrective action to reduce the immediate effect, and reverse the damage if possible. Privacy incident response is a corrective action to limit damage and restore systems to an operational state after a breach. </li>
+</ul>
+<p>Each action has an assigned value in Compliance Manager based on the risk it represents: </p>
+<p><img alt="" src="../images/cm-fig2.png" /></p>
+<h3 id="run-customize-and-expand-assessments">Run: Customize and Expand Assessments<a class="headerlink" href="#run-customize-and-expand-assessments" title="Permanent link">⚓︎</a></h3>
+<p>Now that you have a strong foundation in Compliance Manager and you have worked with an out of box assessment template, we’ll look at how you can build on this to create your own assessments, expand on the prebuilt assessments, or use Compliance Manager to assess 3rd party platforms or applications. This can really drive home the value of having a centrally managed location to track all your compliance management needs. We see customers using a mix of out of box assessment and adding their own custom assessments or expanding on the out of box assessments to meet their company’s needs. This allows for a lot of flexibility.  </p>
+<p>We know that most organizations, in addition to Microsoft software, will have presence of heterogenous software, multiple on-prem services either commercially purchased on home grown, and multiple SaaS services such as Salesforce, ServiceNow or others. For an organization, it is important to have compliance to assessments for all Microsoft &amp; Non-Microsoft services. Let’s look at how you can leverage Compliance Manager to complete 3rd party assessments or build bring-your own assessments to cover your entire organizational scope. </p>
+<p>This section will focus on how you can leverage Compliance Manager to expand and cover your entire organizational scope by taking advantage of:  </p>
+<ul>
+<li>Extending a prebuilt assessment by adding your own controls and improvements  </li>
+<li>How to create your own custom assessment  </li>
+</ul>
+<h4 id="extend-pre-built-assessment-templates">Extend pre-built assessment templates<a class="headerlink" href="#extend-pre-built-assessment-templates" title="Permanent link">⚓︎</a></h4>
+<p>First you might want to take what we give you with a prebuilt assessment and modify it to fit your organizational needs. You can do this by taking an out of the box assessment template and adding your own controls and improvement actions to the assessment template. This process is called “<strong>extending a Microsoft template</strong>” in Compliance Manager. When you extend an out of the box assessment template, it will continue to receive any updates released by Microsoft, which may happen when there are changes to the related regulation or product.  </p>
+<p>The nice benefit of this is you can customize what we have given to you as a template to meet your organizational needs or expand to assess your 3rd party platforms. An example of this might be GDPR regulation that you need to take some type of action on your on-prem environment. You could use the GDPR template to monitor and track everything inside of O365 but then have additional actions to track items that need to happen with your on-prem environment. This keeps everything under the GDPR Assessment score and when looking at the actions to stay compliant it is all in one location.  </p>
+<p>Let’s discuss how this process works. You first need to assemble a specially formatted Excel spreadsheet to import the necessary template data. There are specific requirements for the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-templates?view=o365-worldwide#formatting-your-template-data-with-excel">formatted Excel files used</a> in the extension process and some points to be aware of to prevent errors in the import process: </p>
+<ul>
+<li>Your spreadsheet should contain only the actions and controls you want to add to the assessment. </li>
+<li>The spreadsheet can not contain any of the controls or actions that already exist in the assessment you want to modify. </li>
+<li>Consider including “extension” in your template’s title, for example, “GDPR – [your company name] extension”. This makes it easier to identify in the list on your <strong>assessment templates</strong> page as distinct from the standard Microsoft-provided template or a custom template with a similar name. </li>
+</ul>
+<h4 id="create-and-maintain-your-own-custom-assessments">Create and maintain your own custom assessments<a class="headerlink" href="#create-and-maintain-your-own-custom-assessments" title="Permanent link">⚓︎</a></h4>
+<p>If expanding an existing template does not meet your needs, or you already have an assessment template you manage in excel or another platform, you can build your own assessments from scratch. We call this creating a custom assessment and this capability is available at the A5/E5/G5 SKUS. Creating a custom assessment in Compliance Manager requires you to create your own template. To create your own template, you’ll first assemble a formatted Excel spreadsheet to import the necessary template data. A sample template can be found here: <a href="https://go.microsoft.com/fwlink/?linkid=2124865">https://go.microsoft.com/fwlink/?linkid=2124865</a>.  </p>
+<p>Begin by formatting your template data into an Excel spreadsheet using <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-templates?view=o365-worldwide#formatting-your-template-data-with-excel">these instructions</a>.  </p>
+<h4 id="formatting-your-template-with-excel">Formatting your template with Excel<a class="headerlink" href="#formatting-your-template-with-excel" title="Permanent link">⚓︎</a></h4>
+<p>When you start with the Excel spreadsheet you will notice it contains four (4) tabs, three (3) of which are required: </p>
+<ul>
+<li>Template (required) </li>
+<li>ControlFamily (required) </li>
+<li>Actions (required) </li>
+<li>Dimensions (optional) </li>
+</ul>
+<h4 id="template-tab-required">Template tab (required)<a class="headerlink" href="#template-tab-required" title="Permanent link">⚓︎</a></h4>
+<p>The <strong>Template</strong> tab is required. The information in this tab provides metadata about the template. There are four (4) required columns. The columns must retain the order on the Excel sheet as listed below. You can add your own column after the four (4) columns to provide your own dimensions. If you do this, be sure to add them to the Dimensions tab using the instructions below. </p>
+<ul>
+<li><strong>title</strong>: This is the title for your template which must be unique. It can't share a name with another template you have in Compliance Manager, including your own templates or an out of the box template. </li>
+<li><strong>product</strong>: This is a required dimension. List the product associated with the template. </li>
+<li><strong>certification</strong>: This is the regulation you're using for the template. </li>
+<li><strong>inScopeServices</strong>: These are the services within the product that this assessment addresses (for example, if you listed Office 365 as the product, Microsoft Teams could be an in-scope service). You can list multiple services separated by two (2) semi-colons.     </li>
+</ul>
+<h4 id="controlfamily-tab-required">ControlFamily tab (Required)<a class="headerlink" href="#controlfamily-tab-required" title="Permanent link">⚓︎</a></h4>
+<p>The <strong>ControlFamily</strong> tab is required. The required columns in this tab, which must follow the order provided in the sample spreadsheet, are: </p>
+<ul>
+<li><strong>controlName</strong>: This is the control name from the certification, standard, or regulation, which is typically some type of ID. Control names must be unique within a template. You can't have multiple controls with the same name in the spreadsheet. </li>
+<li><strong>controlFamily</strong>: Provide a word or phrase for the controlFamily, which identifies a broad grouping of controls. A controlFamily doesn't have to be unique; it can be listed more than once in a spreadsheet. The same controlFamily can also be listed in multiple templates, though they have no relation to each other. Every controlFamily must be mapped to at least one control. </li>
+<li><strong>controlTitle</strong>: Provide a title for the control. Whereas the controlName is a reference code, the title is a rich text format typically seen in the regulations. </li>
+<li><strong>controlDescription</strong>: Provide a description of the control. </li>
+<li><strong>controlActionTitle</strong>: This is the title of an action that you want to relate to this control. You can add multiple actions by separating with two semi-colons with no space in between. Every control you list must include at least one action, and the action must exist (which means you can list an action that you list on the Actions tab of the same spreadsheet, an action that exists in a different template, or an action created by Microsoft). Different controls can reference the same action. </li>
+</ul>
+<h4 id="actions-tab-required">Actions tab (Required)<a class="headerlink" href="#actions-tab-required" title="Permanent link">⚓︎</a></h4>
+<p>The <strong>Actions</strong> tab is required. It designates improvement actions managed by your organization and not those of Microsoft, which already exist in Compliance Manager. The required columns for this tab, which must follow the order provided in the sample spreadsheet, are: </p>
+<ul>
+<li><strong>actionTitle</strong>: This is the title for your action and is a required field. The title you provide must be unique. 
+    <strong>Important note:</strong> 
+    if you reference an action that you own which already exists (such as in another template) and you modify any of its elements in the subsequent columns, those changes will propagate to the same action in other templates. </li>
+<li><strong>implementationType</strong>: In this required field, list one of the three implementation types below: </li>
+<li><strong>Operational</strong> - actions implemented by people and processes to protect the confidentiality, integrity, and availability of organizational systems, assets, data, and personnel (example: security awareness and training) </li>
+<li><strong>Technical</strong> - actions completed using technology and mechanisms contained in the hardware, software, or firmware components of the information system to protect the confidentiality, integrity, and availability of organizational systems and data (example: multi-factor authentication) </li>
+<li><strong>Documentation</strong> - actions implemented through documented policies and procedures establishing and defining the controls required to protect the confidentiality, integrity, and availability of organizational systems, assets, data, and personnel (example: an information security policy) <ul>
+<li><strong>ActionScore</strong>: Provide a score for the action between 1 and 99 – you may only use whole numbers. </li>
+<li><strong>ActionDescription</strong>: Provide a description of the action, which will be shown under “How to Implement” for the action’s page in Compliance Manager. </li>
+<li><strong>(Optional) Dimension fields</strong> – use syntax dimension-yourdimensionkey. Add any additional dimensions you wish to use to describe this action – if you are using a new DimensionKey or DimensionValue, you need to provide it in the Dimensions Tab, described in the next section below. </li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../images/cm-fig5.png" /></p>
+<h4 id="dimensions-tab-optional">Dimensions tab (Optional)<a class="headerlink" href="#dimensions-tab-optional" title="Permanent link">⚓︎</a></h4>
+<p>The Dimensions tab is optional. However, if you reference a dimension elsewhere, you need to specify it here if it does not exist in the template, you've already created or in a Microsoft template. The columns for this tab are listed below: </p>
+<ul>
+<li><strong>dimensionKey</strong>: list as "product", "certifications," "action purpose" </li>
+<li><strong>dimensionValue</strong>: examples: Office 365, HIPPA, Preventative, Detective </li>
+</ul>
+<p>You can view your existing dimensions by exporting an existing template. The exported spreadsheet will have the Dimensions tab, which lists all the dimensions used in the template. </p>
+<h4 id="maintain-your-assessments">Maintain your Assessments<a class="headerlink" href="#maintain-your-assessments" title="Permanent link">⚓︎</a></h4>
+<p>Over time you might need to modify or change the template you created. You can modify the template you created or extended. To start this process, you need to export the template to an Excel file. To export your template, go to your template details page and select the Export to Excel button. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When exporting a template you extended from a Compliance Manager template, the exported file will only contain the attributes you added to the template. The exported file won’t include the original template data provided by Microsoft. To get such a report, you will need to export an assessment report.  </p>
+</div>
+<p>If you need to modify a template you’ve already created, such as to add controls or to add or remove improvement actions, the process is like the template creation process. You’ll need to upload a formatted Excel file with your template data; however, there are details to be aware of as you format your file with changes to existing template data. We recommend you review <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-templates?view=o365-worldwide#modify-a-template">these instructions</a> carefully to ensure you don’t overwrite any existing data that you want to retain. Before starting it is always a good idea to have a backup/gold copy of the current assessment template before you make any changes.  </p>
+<h4 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Using Compliance Manger is not a check mark or a guarantee that if the recommendations are followed, your organization is compliant.  </li>
+<li>Use this guide along with the Compliance Manager quickstart guide to follow guidance on what items to do first to use the tool to its fullest. </li>
+<li>Compliance Manager leverages key elements in its management of activities. We recommend understanding controls, risk assessments, and grouping the controls into an assessment. We recommend that you start with deploying the built-in assessments before modifying to create a custom assessment.  </li>
+<li>Compliance Manager auto scans the environment to update technical action status with the dashboard every 24 hours. For example, if you implement a control, the update will be visible the following day. </li>
+<li>When you open Compliance Manager for the first time you will see a baseline score for your organization. For further details on your score, review how your compliance score is calculated. </li>
+</ul>
+<h2 id="helpful-resources">Helpful Resources<a class="headerlink" href="#helpful-resources" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>Compliance manager official Documentation - <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide">Microsoft Compliance Manager - Microsoft 365 Compliance | Microsoft Docs</a> </p>
+</li>
+<li>
+<p>Microsoft Compliance Manager One stop shop - <a href="../../resources/cm/">Microsoft Compliance Manager One Stop Shop Resource Page</a> </p>
+</li>
+<li>
+<p><strong>Microsoft 365 Roadmap Website</strong>- has public details about when new features are in development and when the features are targeted to launch or are available. To see details about a particular product, filter the check boxes to select what product/s you are interested in. 
+<a href="https://www.microsoft.com/en-us/microsoft-365/roadmap">https://www.microsoft.com/en-us/microsoft-365/roadmap</a>  </p>
+</li>
+<li>
+<p>Microsoft 365 Compliance Documentation 
+<a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/">https://docs.microsoft.com/en-us/microsoft-365/compliance/</a> </p>
+<p>Review the <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-faq?view=o365-worldwide">FAQ</a> for Compliance Manager to answer a question you might have about using Compliance Score in the past and how it is part of Compliance Manager solution. </p>
+</li>
+</ul>
+<h3 id="knowledgebase-from-customer-experience-engineering-team">Knowledgebase from Customer Experience Engineering Team<a class="headerlink" href="#knowledgebase-from-customer-experience-engineering-team" title="Permanent link">⚓︎</a></h3>
+<p>Ready to become the hero of your organization? Learn more about deploying Microsoft Information Protection &amp; Compliance features with the resources below: </p>
+<ul>
+<li>Join our Preview Program<ul>
+<li><a href="https://aka.ms/MIPC/JoinPreviews">https://aka.ms/MIPC/JoinPreviews</a></li>
+<li><a href="https://aka.ms/MIPC/Previews">https://aka.ms/MIPC/Previews</a> </li>
+</ul>
+</li>
+<li>Visit all Community Resources
+<a href="https://aka.ms/MIPC/CommunityResources">https://aka.ms/MIPC/CommunityResources</a>  </li>
+<li>Learn from our webinar series and YouTube video series
+<a href="https://aka.ms/MIPC/Webinars">https://aka.ms/MIPC/Webinars</a> and 
+<a href="http://aka.ms/MIPC/YouTube">http://aka.ms/MIPC/YouTube</a> </li>
+<li>Read our latest blog posts 
+<a href="https://aka.ms/MIPblog">https://aka.ms/MIPblog</a> and 
+<a href="https://aka.ms/CompBlog">https://aka.ms/CompBlog</a>  </li>
+<li>Train End Users for adoption of labels: <ul>
+<li><a href="../../enduser/sensitivity/">Sensitivity Labels</a></li>
+<li><a href="../../enduser/retention/">Retention Labels</a> </li>
+</ul>
+</li>
+<li>Ask us on <span class="twemoji" style="color: #999"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg></span> Yammer 
+<a href="https://aka.ms/MIPC/AskMIPTeam">https://aka.ms/MIPC/AskMIPTeam</a>  </li>
+<li>Follow us on <span class="twemoji" style="color: #1DA1F2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></span> Twitter
+<a href="https://twitter.com/MIPnews">https://twitter.com/MIPnews</a> using the tag #MicrosoftIP   </li>
+<li>Email us –  <a href="mailto:mipsccxe@microsoft.com">mipsccxe@microsoft.com</a></li>
+</ul>
+<h2 id="appendix">Appendix<a class="headerlink" href="#appendix" title="Permanent link">⚓︎</a></h2>
+<p>This section contains links to the information regarding license requirements and provides additional links to additional information related to Microsoft Information Protection &amp; Compliance.</p>
+<h4 id="license-requirements">License Requirements<a class="headerlink" href="#license-requirements" title="Permanent link">⚓︎</a></h4>
+<p>Below contains the necessary licenses for specific solutions outlined in the Deployment Acceleration Guide. While this information is current as of the writing of this document, refer to <a href="https://docs.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#office-365-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business">Microsoft 365 Licensing Guidance for Security &amp; Compliance</a> for the latest information as it may change. </p>
+<p>Compliance Manager is available to organizations with Office 365 and Microsoft 365 licenses. Assessment availability and management capabilities depend on your licensing agreement. <a href="https://go.microsoft.com/fwlink/?linkid=2132371">View service description details</a>.  </p>
+<p>Customers with Office 365 E1/A1/E3/A3/G3 and Microsoft 365 E1/A1/E3/A3/G3 licenses will be able to access the Data Protection Baseline assessment and be able to purchase premium assessments.</p>
+<p>Customers with Office 365 E5/A5/G5 and Microsoft 365 E5/A5/G5 licenses will be able to access Data Protection Baseline, GDPR, NIST 800-53 and ISO 27001 out-of-the-box assessments. They will also be able to create custom assessments. </p>
+<p>Starting July 1, 2021, all SKUs will be able to purchase premium assessments.</p>
+<p>In addition, for G5 customers will get additional Cybersecurity Maturity Model Certification (CMMC) Levels 1 through 5 out-of-the-box assessments.  </p>
+<p>We do offer a trial SKU for Premium templates so you can try up to 25 out for 30 days. </p>
+<p>If you do not have the required license, you can add trial SKUs to try out the E5 or Premium assessments. To add premium assessments, you will want to add the <strong>Compliance Manager Premium Assessment Add-On Trial</strong> from your license, this will give you the opportunity to try out up to 25 premium assessments.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please <a href="mailto:mipsccxe@microsoft.com">email the CxE team</a> with any suggestions related to products, webinars, blogs, or ideas for additional training. All support issues should be directed through the appropriate channels of support or community forums. </p>
+</div>
+
+    <!-- Last update of source file -->
+    
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://microsoft.github.io/ComplianceCxE/privacy/">🔒 Privacy Policy</a> | <a href="javascript:cookieConsent.reset()">🍪 Cookie Settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/microsoft/ComplianceCxE/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://aka.ms/MIPC/AskMIPTeam" target="_blank" rel="noopener" title="aka.ms" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M500.676 159.486a12.779 12.779 0 0 0-6.4-8.282 13.954 13.954 0 0 0-10.078-1.125L457.8 156.7l-.043-.2-22.3 5.785-1.243.333-.608-2.17A369.037 369.037 0 0 0 347.538 4.289a14.1 14.1 0 0 0-19.784-.463l-102.9 102.747H24.947A24.9 24.9 0 0 0 0 131.417V380.38a24.963 24.963 0 0 0 24.918 24.9h200.068L328.072 508a13.667 13.667 0 0 0 19.327 0c.126-.126.249-.255.37-.385a368.025 368.025 0 0 0 69.577-107.374 403.45 403.45 0 0 0 17.3-50.8v-.028l20.406 5.336.029-.073L483.345 362a20.253 20.253 0 0 0 2.619.5 13.359 13.359 0 0 0 4.139-.072 13.5 13.5 0 0 0 10.515-9.924 415.855 415.855 0 0 0 .058-193.013ZM337.125 24.65l.013.014h-.013Zm-110.2 165.161L174.311 281.1a11.338 11.338 0 0 0-1.489 5.655v46.189a22.04 22.04 0 0 1-22.041 22h-3.4a22.068 22.068 0 0 1-22.081-21.982v-45.668a11.532 11.532 0 0 0-1.388-5.51l-51.6-92.2a21.988 21.988 0 0 1 19.264-32.726h3.268a22.059 22.059 0 0 1 19.611 11.916l36.357 70.281 37.515-70.512a22.066 22.066 0 0 1 38.556-.695 21.7 21.7 0 0 1 0 21.967Zm110.22-165.138a348.147 348.147 0 0 1 75.8 141.335l.564 1.952-114.134 29.6v-66.143a25.006 25.006 0 0 0-24.947-24.9h-19.361Zm60.5 367.305v-.043l-.014.014a347.19 347.19 0 0 1-60.177 95.227l-82.2-81.893h19.177a24.978 24.978 0 0 0 24.947-24.9v-66.2l114.6 29.862a385.191 385.191 0 0 1-16.33 47.933Zm84-52.45.015.014-50.618-13.131L299.379 292.1v-72.528l119.746-30.99 4.468-1.157 39.54-10.253 18.511-4.816a393 393 0 0 1 0 167.172Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../scripts/extlinks.js"></script>
+      
+        <script src="../../scripts/cookie-consent.js"></script>
+      
+        <script src="../../scripts/consent-init.js"></script>
+      
+    
+  </body>
+</html>
