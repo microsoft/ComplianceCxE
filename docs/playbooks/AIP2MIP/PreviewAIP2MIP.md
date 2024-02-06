@@ -30,7 +30,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 
 `📅 Coming Soon to private preview` 
 
-- Sensitivity toolbar added to File/SaveAs
+- None
 
 `⭐ Available today in private preview` 
 
@@ -39,7 +39,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 
 `✳️ Graduated to public preview` 
 
-- Tracking and revocation of encrypted documents 
+- None
 
 
 `✅ Graduated to general availability` 
@@ -54,6 +54,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 - Emails inherit the highest sensitivity from their attachments
 - Ability to assign different labels to users between Files and Emails
 - Double-Key Encryption as an outcome of labeling in Word, Excel, PowerPoint, Outlook
+- Tracking and revocation of encrypted documents 
 
 #### Program Requirements
 
