@@ -26,11 +26,11 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `July 11, 2023`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `February 6, 2024`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `📅 Coming Soon to private preview` 
 
-- None
+- Advanced configurations for Block, Warn, Justify before sending emails based on sensitivity labels
 
 `⭐ Available today in private preview` 
 
@@ -67,7 +67,7 @@ As of `July 11, 2023`, the following features are available in the private previ
 
 > 💡 Tip: We recommend using test tenants wherever possible, but keep in mind that only users enrolled in the Insider Beta channel are affected. So you can choose to enroll your production environment since only users in the Beta channel would see the preview features.
 
-<p align="center"><a href="https://aka.ms/JoinCompliancePrivacyCCP" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195403048-0d147259-99c5-4487-9fb7-e235882b4a79.png" alt="Join Alpha Preview"/></a></p>
+<p align="center"><a href="https://aka.ms/JoinCCP" target="_blank"><img src="https://user-images.githubusercontent.com/43501191/195403048-0d147259-99c5-4487-9fb7-e235882b4a79.png" alt="Join Alpha Preview"/></a></p>
 
 
 ### 2. Beta Preview
