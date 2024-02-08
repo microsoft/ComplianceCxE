@@ -26,15 +26,15 @@ This is ideal for limited testing by your information protection team who are co
 
 #### Available features
 
-As of `February 6, 2024`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
+As of `February 7, 2024`, the following features are available in the private preview. Note there may be other features included in the private preview if they've already graduated to the public preview.
 
 `📅 Coming Soon to private preview` 
 
-- Advanced configurations for Block, Warn, Justify before sending emails based on sensitivity labels
+- None
 
 `⭐ Available today in private preview` 
 
-- None
+- Advanced configurations for Block, Warn, Justify before sending emails based on sensitivity labels
 
 
 `✳️ Graduated to public preview` 
