@@ -13,3 +13,13 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
+  build-me: 
+    name: Build-Me
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      deployments: read
+      packages: none
+      pull-requests: write
+      security-events: write
