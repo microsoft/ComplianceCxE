@@ -391,15 +391,14 @@ If your third party like Titus write their labels into document properties, you 
 
 	How to configure:
 
-	This predicate requires additional configuration before the policy can even be created if used on OneDrive or SharePoint locations. Please refer to this DLP documentation: Create a DLP policy to protect documents - Microsoft Purview (compliance) | 	Microsoft Learn to learn how to create a managed property to use for “Document property is”. 
+	This predicate requires additional configuration before the policy can even be created if used on OneDrive or SharePoint locations. Please refer to this DLP documentation: https://learn.microsoft.com/en-us/purview/protect-documents-that-have-fci-or-other-properties#before-you-create-the-dlp-policy to learn how to create a managed property to use for “Document property is”. 
 	This predicate can be configured both in advanced or common rules. 
 
 	How to test:
 	We recommend following the above steps to ensure proper configuration and testing this predicate first in DLP with a small subset of files to make sure it’s accurately detecting the document property you’re looking for. Then test with auto-labeling in 	simulation to verify the results match. 
 
 	Limitations:
-	After the managed schema is configured as a property in SharePoint and OneDrive, the policy will only be able to detect content that’s been indexed (the content is newly uploaded or if that content is old but edited after managed schema was configured).
-	Custom document properties aren’t crawled for labels with encryption. Remove the encryption and the crawled property will show up. 
+	After the managed schema is configured as a property in SharePoint and OneDrive, the policy will only be able to detect content that’s been indexed (the content is newly uploaded or if that content is old but edited after managed schema was configured). 
 	There is an option to re-index a whole site, but this can cause massive load on the search system and does not have a defined SLA for re-indexing as SharePoint and OneDrive will re-index files as they can to ensure the system isn’t throttled. 
 
 2.	Apply a default label to files at rest
