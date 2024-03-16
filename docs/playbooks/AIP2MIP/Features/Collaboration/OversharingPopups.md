@@ -103,9 +103,9 @@ Create a JSON file with content for the customized popups:
 
  ![image](https://github.com/microsoft/ComplianceCxE/assets/25543918/48a9f7b6-e2ef-4f63-92c4-3216021a9841)
 
-The above content could be uploaded for DLP using below steps:
+The above content could be uploaded for DLP using Purview portal or using the below cmdlets:
 
-```$content = Get-Content "path to the JSON file" | Out-String```
+```$content = Get-Content "path to the JSON file" -Encoding utf8| Out-String```
 
 ```New/Set-DlpComplianceRule -Name <Rule_name> -Policy <Policy_name> -NotifyPolicyTipCustomDialog $content -NotifyPolicyTipDisplayOption Dialog```
 
