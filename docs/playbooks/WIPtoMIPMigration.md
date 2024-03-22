@@ -1,4 +1,4 @@
-# Migrating from WIP to Microsoft Purview for more comprehensive and powerful data security in your organization
+# Migrating from WIP to Microsoft Purview for more comprehensive data security in your organization
 Microsoft has announced sunset of certain capabilities within the solution known as Windows Information Protection (WIP), previously referred to as Enterprise Data Protection (EDP) by the end of Q3CY24. Below we will share more details about the scope of the deprecation and our recommendations to leverage Microsoft Purview Information Protection and Data Loss Prevention for your multi-cloud and multi-platform data protection needs. Microsoft Purview goes beyond WIP capabilities and provides more granular enforcement actions and classification techniques – Sensitive Info Types, Exact Data Match, and ML driven trainable classifiers can be used. Unlike WIP, Purview is also not limited to Windows devices as it also supports macOS. 
 
 ## How does deprecation impact WIP users?
