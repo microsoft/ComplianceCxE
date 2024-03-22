@@ -18,3 +18,10 @@ WIP provided customers with the following key capabilities:
 •	Granular controls to designate different levels of data access restrictions
 •	Remote wipe sensitive data at rest
 
+## Leverage Endpoint DLP to define work vs non-work data boundaries
+To prevent users from egressing data via activities such as printing, copying to USB drives, network shares, or uploading to sensitive domains, you can define groups of unsanctioned devices such as printers and USB removeable drives or domains such as dropbox.com. Learn more here: Configure endpoint DLP settings - Microsoft Purview (compliance) | Microsoft Learn
+Defining apps/URLs as corporate or work, or enterprise network, and defining an action to enforce data that moves out of those domains
+This example will use WIP’s Network Boundary and Allowed App configuration as examples.
+
+Network boundary:
+
