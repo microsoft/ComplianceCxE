@@ -24,4 +24,7 @@ Defining apps/URLs as corporate or work, or enterprise network, and defining an 
 This example will use WIP’s Network Boundary and Allowed App configuration as examples.
 
 Network boundary:
+<figure>
+    <img src="docs/playbooks/img/WIP2MIP1.png"/> 
+</figure>
 
